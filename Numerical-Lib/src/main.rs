@@ -1,5 +1,3 @@
-extern crate Numerical_Lib;
-extern crate stopwatch;
 extern crate rand;
 extern crate time;
 
@@ -14,9 +12,7 @@ use lib::simd_operator::simd_cos;
 use lib::simd_operator::simd_tan;
 use lib::simd_operator::simd_cot;
 use lib::simd_operator::simd_exp;
-use std::time::{SystemTime};
 use rand::Rng;
-use time::*;
 
 fn main() {
     //generate the random seed
