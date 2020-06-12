@@ -446,7 +446,7 @@ pub fn simd_cot(a: &[f32]) -> Vec<f32> {
 
         let result = sa.chunks_exact(4)
             .map(f32x4::from_slice_unaligned)
-            .map(|sa| sa.sin())
+            .map(|sa| sa.cos()/sa.sin())
             .sum::<f32x4>();
         v.push(result.extract(0));
         v.push(result.extract(1));
@@ -504,7 +504,7 @@ pub fn simd_exp(a: &[f32]) -> Vec<f32> {
         v.push(result.extract(3));
     }
     //adjust different size of input a and b
-    if r != 0{
+    if r != 0{ 
         if r == 1{
             let re0 = a[a.len()-1].exp();
             v.push(re0);

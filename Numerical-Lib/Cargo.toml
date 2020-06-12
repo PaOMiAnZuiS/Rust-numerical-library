@@ -8,3 +8,6 @@ edition = "2018"
 
 [dependencies]
 packed_simd = "0.3.3"
+stopwatch = "0.0.7"
+rand = "0.3.17"
+time = "0.1"
