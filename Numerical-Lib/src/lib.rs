@@ -2,7 +2,7 @@ pub mod simd_operator{
 
 use packed_simd::f32x4;
 
-pub fn simd_add(a: &[f32], b: &[f32]) -> Vec<f32> {
+pub fn simd_add(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -58,7 +58,18 @@ pub fn simd_add(a: &[f32], b: &[f32]) -> Vec<f32> {
     
 }
 
-pub fn simd_sub(a: &[f32], b: &[f32]) -> Vec<f32> {
+pub fn simd_static_add(a: &Vec<f32>, b: &Vec<f32>) -> f32x4 {
+    assert!(a.len() % 4 == 0);
+    assert!(b.len() % 4 == 0);
+
+    a.chunks_exact(4)
+        .map(f32x4::from_slice_unaligned)
+        .zip(b.chunks_exact(4).map(f32x4::from_slice_unaligned))
+        .map(|(a, b)| a + b)
+        .sum::<f32x4>()
+}
+
+pub fn simd_sub(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -114,7 +125,7 @@ pub fn simd_sub(a: &[f32], b: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_pro(a: &[f32], b: &[f32]) -> Vec<f32> {
+pub fn simd_pro(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -170,7 +181,7 @@ pub fn simd_pro(a: &[f32], b: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_div(a: &[f32], b: &[f32]) -> Vec<f32> {
+pub fn simd_div(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -226,7 +237,7 @@ pub fn simd_div(a: &[f32], b: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_mod(a: &[f32], b: &[f32]) -> Vec<f32> {
+pub fn simd_mod(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -282,7 +293,7 @@ pub fn simd_mod(a: &[f32], b: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_sin(a: &[f32]) -> Vec<f32> {
+pub fn simd_sin(a: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -332,7 +343,7 @@ pub fn simd_sin(a: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_cos(a: &[f32]) -> Vec<f32> {
+pub fn simd_cos(a: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -382,7 +393,7 @@ pub fn simd_cos(a: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_tan(a: &[f32]) -> Vec<f32>{
+pub fn simd_tan(a: &Vec<f32>) -> Vec<f32>{
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -432,7 +443,7 @@ pub fn simd_tan(a: &[f32]) -> Vec<f32>{
 }
 
 
-pub fn simd_cot(a: &[f32]) -> Vec<f32> {
+pub fn simd_cot(a: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
@@ -482,7 +493,7 @@ pub fn simd_cot(a: &[f32]) -> Vec<f32> {
 }
 
 
-pub fn simd_exp(a: &[f32]) -> Vec<f32> {
+pub fn simd_exp(a: &Vec<f32>) -> Vec<f32> {
     //store the result of opration
     let mut v:Vec<f32> = Vec::new();
 
