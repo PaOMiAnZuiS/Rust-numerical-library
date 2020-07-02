@@ -58,15 +58,7 @@ pub fn simd_add(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     
 }
 
-pub fn simd_static_add(a: &Vec<T>, b: &Vec<T>) -> Vec<T>）(t:i32,f32){
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..1000{
-        let g3:T = a[i] + b[i];
-        output.push(g3);
-    }
-    output;
-}
+
 
 pub fn simd_sub(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //store the result of opration

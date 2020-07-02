@@ -24,7 +24,7 @@ fn main() {
 
     //generate the random seed
     let mut rng =rand::thread_rng();
-    //rust limit the length of array
+    //generate two vec to store the input
     let mut input1 = vec![];
     let mut input2 = vec![];
 
@@ -47,7 +47,7 @@ fn main() {
     //println!("result of simd add is:{:?}", &add);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_add--------------------------------------");
+    println!("--------------------------------not_simd_add------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -67,7 +67,7 @@ fn main() {
     //println!("result of simd sub is:{:?}", &sub);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_sub--------------------------------------");
+    println!("--------------------------------not_simd_sub------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -88,7 +88,7 @@ fn main() {
     //println!("result of simd pro is:{:?}", &pro);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_pro--------------------------------------");
+    println!("--------------------------------not_simd_pro------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -108,7 +108,7 @@ fn main() {
     //println!("result of simd div is:{:?}", &div);
     println!("{:?}",end-start);
        
-    println!("--------------------------------normal_div--------------------------------------");
+    println!("--------------------------------not_simd_div------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -129,7 +129,7 @@ fn main() {
     //println!("result of simd mod is:{:?}", &modi);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_mod--------------------------------------");
+    println!("--------------------------------not_simd_mod------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -149,7 +149,7 @@ fn main() {
     //println!("result of simd sin is:{:?}", &sin);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_sin--------------------------------------");
+    println!("--------------------------------not_simd_sin------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -170,7 +170,7 @@ fn main() {
     //println!("result of simd cos is:{:?}", &cos);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_cos--------------------------------------");
+    println!("--------------------------------not_simd_cos------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -190,7 +190,7 @@ fn main() {
     //println!("result of simd tan is:{:?}", &tan);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_tan--------------------------------------");
+    println!("--------------------------------not_simd_tan------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -211,7 +211,7 @@ fn main() {
     //println!("result of simd cot is:{:?}", &cot);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_cot--------------------------------------");
+    println!("--------------------------------not_simd_cot------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
@@ -232,7 +232,7 @@ fn main() {
     //println!("result of simd exp is:{:?}", &exp);
     println!("{:?}",end-start);
 
-    println!("--------------------------------normal_exp--------------------------------------");
+    println!("--------------------------------not_simd_exp------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
