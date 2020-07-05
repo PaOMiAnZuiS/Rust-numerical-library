@@ -13,6 +13,8 @@ use lib::simd_operator::simd_cos;
 use lib::simd_operator::simd_tan;
 use lib::simd_operator::simd_cot;
 use lib::simd_operator::simd_exp;
+//use lib::simd_operator::normaladd;
+//use lib::simd_operator::addition;
 use rand::Rng;
 
 fn main() {
@@ -28,7 +30,7 @@ fn main() {
     let mut input1 = vec![];
     let mut input2 = vec![];
 
-    for i in 0..1000{
+    for i in 0..100{
         let g1:f32 = rng.gen();
         let g2:f32 = rng.gen();
         input1.push(g1);
@@ -44,19 +46,26 @@ fn main() {
     let start = time::now();
     let add = simd_add(&input1,&input2);
     let end = time::now();
-    //println!("result of simd add is:{:?}", &add);
+    println!("result of simd add is:{:?}", &add);
     println!("{:?}",end-start);
 
+    /**println!("--------------------------------normal_add------------------------------------");
+
+    let start = time::now();
+    let add = addition(&input1,&input2);
+    let end = time::now();
+    println!("result of simd add is:{:?}", &add);
+    println!("{:?}",end-start);**/
     println!("--------------------------------not_simd_add------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i] + input2[i];
         output.push(g3);
     }
     let end = time::now();
-    //println!("result of add is:{:?}", &output);
+    println!("result of add is:{:?}", &output);
     println!("{:?}",end-start);
 
     println!("--------------------------------simd_sub----------------------------------------");
@@ -64,19 +73,19 @@ fn main() {
     let start = time::now();
     let sub = simd_sub(&input1,&input2);
     let end = time::now();
-    //println!("result of simd sub is:{:?}", &sub);
+    println!("result of simd sub is:{:?}", &sub);
     println!("{:?}",end-start);
 
     println!("--------------------------------not_simd_sub------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i] - input2[i];
         output.push(g3);
     }
     let end = time::now();
-    //println!("result of sub is:{:?}", &output);
+    println!("result of sub is:{:?}", &output);
     println!("{:?}",end-start);
 
 
@@ -92,7 +101,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i] * input2[i];
         output.push(g3);
     }
@@ -112,7 +121,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i] / input2[i];
         output.push(g3);
     }
@@ -133,7 +142,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i] % input2[i];
         output.push(g3);
     }
@@ -153,7 +162,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i].sin();
         output.push(g3);
     }
@@ -174,7 +183,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i].cos();
         output.push(g3);
     }
@@ -194,7 +203,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i].sin()/input1[i].cos();
         output.push(g3);
     }
@@ -215,7 +224,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i].cos()/input1[i].sin();
         output.push(g3);
     }
@@ -236,7 +245,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..1000{
+    for i in 0..100{
         let g3:f32 = input1[i].exp();
         output.push(g3);
     }
