@@ -13,6 +13,8 @@ use lib::simd_operator::simd_cos;
 use lib::simd_operator::simd_tan;
 use lib::simd_operator::simd_cot;
 use lib::simd_operator::simd_exp;
+use lib::simd_operator::simd_add_i32;
+use lib::simd_operator::simd_add_f32;
 //use lib::simd_operator::normaladd;
 //use lib::simd_operator::addition;
 use rand::Rng;
@@ -29,33 +31,39 @@ fn main() {
     //generate two vec to store the input
     let mut input1 = vec![];
     let mut input2 = vec![];
+    let mut input3 = vec![];
+    let mut input4 = vec![];
 
     for i in 0..100{
         let g1:f32 = rng.gen();
         let g2:f32 = rng.gen();
+        let g3:i32 = rng.gen();
+        let g4:i32 = rng.gen();
         input1.push(g1);
         input2.push(g2);
+        input3.push(g3);
+        input4.push(g4);
     }
 
     println!("The first input:{:?}",&input1);
     println!("");
     println!("The second input:{:?}",&input2);
 
-    println!("--------------------------------simd_add----------------------------------------");
+    println!("--------------------------------f32_add----------------------------------------");
 
     let start = time::now();
-    let add = simd_add(&input1,&input2);
+    let add = simd_add_f32(&input1,&input2);
     let end = time::now();
     println!("result of simd add is:{:?}", &add);
     println!("{:?}",end-start);
 
-    /**println!("--------------------------------normal_add------------------------------------");
+    println!("--------------------------------i32_add------------------------------------");
 
     let start = time::now();
-    let add = addition(&input1,&input2);
+    let add = simd_add_i32(&input3,&input4);
     let end = time::now();
     println!("result of simd add is:{:?}", &add);
-    println!("{:?}",end-start);**/
+    println!("{:?}",end-start);
     println!("--------------------------------not_simd_add------------------------------------");
 
     let mut output = vec![];
