@@ -15,6 +15,9 @@ use lib::simd_operator::simd_cot;
 use lib::simd_operator::simd_exp;
 use lib::simd_operator::simd_add_i32;
 use lib::simd_operator::simd_add_f32;
+use lib::simd_operator::sdot_f32x4;
+use lib::simd_operator::sdot_f32x8;
+use lib::simd_operator::sdot_f32x16;
 //use lib::simd_operator::normaladd;
 //use lib::simd_operator::addition;
 use rand::Rng;
@@ -26,6 +29,8 @@ fn main() {
         printf("Hello, World!");
     }**/
 
+    //define the size of input arrays
+    let n = 1000000;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input
@@ -34,7 +39,7 @@ fn main() {
     let mut input3 = vec![];
     let mut input4 = vec![];
 
-    for i in 0..100{
+    for i in 0..n{
         let g1:f32 = rng.gen();
         let g2:f32 = rng.gen();
         let g3:i32 = rng.gen();
@@ -45,35 +50,71 @@ fn main() {
         input4.push(g4);
     }
 
-    println!("The first input:{:?}",&input1);
+    //println!("The first input:{:?}",&input1);
     println!("");
-    println!("The second input:{:?}",&input2);
+    //println!("The second input:{:?}",&input2);
 
-    println!("--------------------------------f32_add----------------------------------------");
-
+    //this is only for test
     let start = time::now();
-    let add = simd_add_f32(&input1,&input2);
+    sdot_f32x4(&input1,&input2);
     let end = time::now();
-    println!("result of simd add is:{:?}", &add);
+
+    println!("--------------------------------forloop_dotproduct------------------------------");
+    
+    let mut output = 0.0;
+    let start = time::now();
+    //if length of a and b are not equal, return false
+    if input1.len() != input2.len(){
+        panic!("The length of input arrays must be same");
+    }
+    for i in 0..n{
+        let g3:f32 = input1[i] * input2[i];
+        output = output + g3;
+    }
+    let end = time::now();
+    //println!("result of dot product is:{:?}", &output);
     println!("{:?}",end-start);
 
-    println!("--------------------------------i32_add------------------------------------");
+    println!("--------------------------------sdot_f32x4--------------------------------------");
+
+    let start = time::now();
+    let dotpro = sdot_f32x4(&input1,&input2);
+    let end = time::now();
+    //println!("result of simd dot product is:{:?}", &dotpro);
+    println!("{:?}",end-start);
+    println!("--------------------------------sdot_f32X8--------------------------------------");
+
+    let start = time::now();
+    let dotpro = sdot_f32x8(&input1,&input2);
+    let end = time::now();
+    //println!("result of simd dot product is:{:?}", &dotpro);
+    println!("{:?}",end-start);
+    println!("--------------------------------sdot_f32X16-------------------------------------");
+
+    let start = time::now();
+    let dotpro = sdot_f32x16(&input1,&input2);
+    let end = time::now();
+    //println!("result of simd dot product is:{:?}", &dotpro);
+    println!("{:?}",end-start);
+    
+    println!("--------------------------------i32_add-----------------------------------------");
 
     let start = time::now();
     let add = simd_add_i32(&input3,&input4);
     let end = time::now();
-    println!("result of simd add is:{:?}", &add);
+    //println!("result of simd add is:{:?}", &add);
     println!("{:?}",end-start);
+
     println!("--------------------------------not_simd_add------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i] + input2[i];
         output.push(g3);
     }
     let end = time::now();
-    println!("result of add is:{:?}", &output);
+    //println!("result of add is:{:?}", &output);
     println!("{:?}",end-start);
 
     println!("--------------------------------simd_sub----------------------------------------");
@@ -81,19 +122,19 @@ fn main() {
     let start = time::now();
     let sub = simd_sub(&input1,&input2);
     let end = time::now();
-    println!("result of simd sub is:{:?}", &sub);
+    //println!("result of simd sub is:{:?}", &sub);
     println!("{:?}",end-start);
 
     println!("--------------------------------not_simd_sub------------------------------------");
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i] - input2[i];
         output.push(g3);
     }
     let end = time::now();
-    println!("result of sub is:{:?}", &output);
+    //println!("result of sub is:{:?}", &output);
     println!("{:?}",end-start);
 
 
@@ -109,7 +150,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i] * input2[i];
         output.push(g3);
     }
@@ -129,7 +170,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i] / input2[i];
         output.push(g3);
     }
@@ -150,7 +191,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i] % input2[i];
         output.push(g3);
     }
@@ -170,7 +211,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i].sin();
         output.push(g3);
     }
@@ -191,7 +232,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i].cos();
         output.push(g3);
     }
@@ -211,7 +252,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i].sin()/input1[i].cos();
         output.push(g3);
     }
@@ -232,7 +273,7 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i].cos()/input1[i].sin();
         output.push(g3);
     }
@@ -253,12 +294,11 @@ fn main() {
 
     let mut output = vec![];
     let start = time::now();
-    for i in 0..100{
+    for i in 0..n{
         let g3:f32 = input1[i].exp();
         output.push(g3);
     }
     let end = time::now();
     //println!("result of exp is:{:?}", &output);
     println!("{:?}",end-start);
-
 }

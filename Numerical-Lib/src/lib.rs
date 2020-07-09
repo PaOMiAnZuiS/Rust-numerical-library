@@ -2,6 +2,8 @@ pub mod simd_operator{
 
 use packed_simd::f32x4;
 use packed_simd::i32x4;
+use packed_simd::f32x8;
+use packed_simd::f32x16;
 use std::ops::Add;
 
 
@@ -125,6 +127,55 @@ pub fn simd_add_i32(a: &Vec<i32>, b: &Vec<i32>) -> Vec<i32> {
     }
     //return v
     v
+}
+
+pub fn sdot_f32x4(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    a.chunks_exact(4)
+        .map(f32x4::from_slice_unaligned)
+        .zip(b.chunks_exact(4).map(f32x4::from_slice_unaligned))
+        .map(|(a, b)| a * b)
+        .sum::<f32x4>()
+        .sum()
+}
+pub fn sdot_f32x8(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    a.chunks_exact(8)
+        .map(f32x8::from_slice_unaligned)
+        .zip(b.chunks_exact(8).map(f32x8::from_slice_unaligned))
+        .map(|(a, b)| a * b)
+        .sum::<f32x8>()
+        .sum()
+}
+pub fn sdot_f32x16(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    a.chunks_exact(16)
+        .map(f32x16::from_slice_unaligned)
+        .zip(b.chunks_exact(16).map(f32x16::from_slice_unaligned))
+        .map(|(a, b)| a * b)
+        .sum::<f32x16>()
+        .sum()
+}
+pub fn sadd_f32x8(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    a.chunks_exact(8)
+        .map(f32x8::from_slice_unaligned)
+        .zip(b.chunks_exact(8).map(f32x8::from_slice_unaligned))
+        .map(|(a, b)| a + b)
+        .sum::<f32x8>()
+        .sum()
 }
 
 pub fn simd_add(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
