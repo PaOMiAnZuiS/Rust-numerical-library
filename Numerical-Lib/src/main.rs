@@ -1,6 +1,7 @@
 extern crate rand;
 extern crate time;
 extern crate libc;
+extern crate rayon;
 
 mod lib;
 use lib::simd_operator::simd_add;
@@ -27,6 +28,8 @@ use lib::simd_operator::u16dot;
 use lib::simd_operator::f32nrm2;
 use lib::simd_operator::f64nrm2;
 use lib::simd_operator::i32nrm2;
+use lib::simd_operator::f32sum;
+use lib::simd_operator::f32sum_rayon;
 //use lib::simd_operator::normaladd;
 //use lib::simd_operator::addition;
 use rand::Rng;
@@ -39,7 +42,7 @@ fn main() {
     }**/
 
     //define the size of input arrays
-    let n = 100001;
+    let n = 1000000;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input
@@ -85,7 +88,30 @@ fn main() {
     let start = time::now();
     sdot_f32x4(&f32a,&f32b);
     let end = time::now();
+    println!("--------------------------------forloop_sum-------------------------------------");
 
+    let mut output = 0.0;
+    let start = time::now();
+    for i in 0..n{
+        output += f32a[i];
+    }
+    let end = time::now();
+    println!("result is:{:?}", &output);
+    println!("{:?}",end-start);
+    println!("--------------------------------fa32sum-----------------------------------------");
+
+    let start = time::now();
+    let dotpro = f32sum(&f32a);
+    let end = time::now();
+    println!("result is:{:?}", &dotpro);
+    println!("{:?}",end-start);
+    println!("--------------------------------fa32sum_rayon-----------------------------------");
+
+    let start = time::now();
+    let dotpro = f32sum_rayon(&f32a);
+    let end = time::now();
+    println!("result is:{:?}", &dotpro);
+    println!("{:?}",end-start);
     println!("--------------------------------forloop_dotproduct------------------------------");
     
     let mut output = 0.0;

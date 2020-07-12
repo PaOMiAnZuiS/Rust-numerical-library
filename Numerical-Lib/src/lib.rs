@@ -1,3 +1,5 @@
+extern crate rayon;
+
 pub mod simd_operator{
 
 use packed_simd::f32x4;
@@ -13,15 +15,51 @@ use packed_simd::u16x32;
 use packed_simd::u32x16;
 use packed_simd::u64x8;
 use std::ops::Add;
+use rayon::prelude::*;
+
+pub fn f32sum(a: &Vec<f32> ) -> f32{
+    let residual = a.len()%4;
+
+    let sa = &a[0..a.len()-residual];
+
+    let mut result = sa.chunks_exact(4)
+        .map(f32x4::from_slice_unaligned) 
+        .sum::<f32x4>()
+        .sum();
+
+    if residual != 0{
+        for i in (a.len()-residual)..a.len(){
+            result += a[i];
+        }
+    }
+    result
+}
+pub fn f32sum_rayon(a: &Vec<f32> ) -> f32{
+    let residual = a.len()%4;
+
+    let sa = &a[0..a.len()-residual];
+
+    let mut result = sa.par_chunks(4)
+        .map(f32x4::from_slice_unaligned) 
+        .sum::<f32x4>()
+        .sum();
+
+    if residual != 0{
+        for i in (a.len()-residual)..a.len(){
+            result += a[i];
+        }
+    }
+    result
+}
 
 pub fn sdot_f32x4(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
         panic!("The lengths of input arrays must be same");
     }
-    a.chunks_exact(4)
+    a.par_chunks(4)
         .map(f32x4::from_slice_unaligned)
-        .zip(b.chunks_exact(4).map(f32x4::from_slice_unaligned))
+        .zip(b.par_chunks(4).map(f32x4::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<f32x4>()
         .sum()
@@ -34,9 +72,9 @@ pub fn sdot_f32x8(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
     if a.len() < 8{
         panic!("The lengths of input arrays must larger than 16");
     }
-    a.chunks_exact(8)
+    a.par_chunks(8)
         .map(f32x8::from_slice_unaligned)
-        .zip(b.chunks_exact(8).map(f32x8::from_slice_unaligned))
+        .zip(b.par_chunks(8).map(f32x8::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<f32x8>()
         .sum()
@@ -49,9 +87,9 @@ pub fn sdot_f32x16(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
     if a.len() < 16{
         panic!("The lengths of input arrays must larger than 16");
     }
-    a.chunks_exact(16)
+    a.par_chunks(16)
         .map(f32x16::from_slice_unaligned)
-        .zip(b.chunks_exact(16).map(f32x16::from_slice_unaligned))
+        .zip(b.par_chunks(16).map(f32x16::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<f32x16>()
         .sum()
@@ -69,9 +107,9 @@ pub fn f32dot(a: &Vec<f32>, b: &Vec<f32>) -> f32 {
 
     let sa = &a[0..a.len()-residual];
 
-    let mut result = sa.chunks_exact(16)
+    let mut result = sa.par_chunks(16)
         .map(f32x16::from_slice_unaligned)
-        .zip(b.chunks_exact(16).map(f32x16::from_slice_unaligned))
+        .zip(b.par_chunks(16).map(f32x16::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<f32x16>()
         .sum();
@@ -98,9 +136,9 @@ pub fn f64dot(a: &Vec<f64>, b: &Vec<f64>) -> f64 {
 
     let sa = &a[0..a.len()-residual];
 
-    let mut result = sa.chunks_exact(8)
+    let mut result = sa.par_chunks(8)
         .map(f64x8::from_slice_unaligned)
-        .zip(b.chunks_exact(8).map(f64x8::from_slice_unaligned))
+        .zip(b.par_chunks(8).map(f64x8::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<f64x8>()
         .sum();
@@ -124,9 +162,9 @@ pub fn u8dot(a: &Vec<u8>, b: &Vec<u8>) -> u8 {
 
     let sa = &a[0..a.len()-residual];
 
-    let mut result = sa.chunks_exact(64)
+    let mut result = sa.par_chunks(64)
         .map(u8x64::from_slice_unaligned)
-        .zip(b.chunks_exact(64).map(u8x64::from_slice_unaligned))
+        .zip(b.par_chunks(64).map(u8x64::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<u8x64>()
         .wrapping_sum();
@@ -150,9 +188,9 @@ pub fn u16dot(a: &Vec<u16>, b: &Vec<u16>) -> u16 {
 
     let sa = &a[0..a.len()-residual];
 
-    let mut result = sa.chunks_exact(32)
+    let mut result = sa.par_chunks(32)
         .map(u16x32::from_slice_unaligned)
-        .zip(b.chunks_exact(32).map(u16x32::from_slice_unaligned))
+        .zip(b.par_chunks(32).map(u16x32::from_slice_unaligned))
         .map(|(a, b)| a * b)
         .sum::<u16x32>()
         .wrapping_sum();
@@ -171,20 +209,21 @@ pub fn f32nrm2(a: &Vec<f32>) -> f32 {
         panic!("The lengths of input arrays must larger than 16");
     }
 
-    a.chunks_exact(16)
+    a.par_chunks(16)
         .map(f32x16::from_slice_unaligned)
         .map(|a| a*a)
         .sum::<f32x16>()
         .sum()
         .sqrt()
 }
+
 pub fn f64nrm2(a: &Vec<f64>) -> f64 {
 
     if a.len() < 8{
         panic!("The lengths of input arrays must larger than 16");
     }
 
-    a.chunks_exact(8)
+    a.par_chunks(8)
         .map(f64x8::from_slice_unaligned)
         .map(|a| a*a)
         .sum::<f64x8>()
@@ -198,7 +237,7 @@ pub fn i32nrm2(a: &Vec<i32>) -> i32 {
         panic!("The lengths of input arrays must larger than 16");
     }
 
-    a.chunks_exact(16)
+    a.par_chunks(16)
         .map(i32x16::from_slice_unaligned)
         .map(|a| a*a)
         .sum::<i32x16>()
@@ -210,7 +249,7 @@ pub fn i64nrm2(a: &Vec<i64>) -> i64 {
         panic!("The lengths of input arrays must larger than 8");
     }
 
-    a.chunks_exact(8)
+    a.par_chunks(8)
         .map(i64x8::from_slice_unaligned)
         .map(|a| a*a)
         .sum::<i64x8>()
@@ -222,7 +261,7 @@ pub fn i128nrm2(a: &Vec<i128>) -> i128 {
         panic!("The lengths of input arrays must larger than 16");
     }
 
-    a.chunks_exact(4)
+    a.par_chunks(4)
         .map(i128x4::from_slice_unaligned)
         .map(|a| a*a)
         .sum::<i128x4>()
