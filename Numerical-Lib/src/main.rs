@@ -2,36 +2,11 @@ extern crate rand;
 extern crate time;
 extern crate libc;
 extern crate rayon;
+extern crate rustc_cfg;
 
 mod lib;
-use lib::simd_operator::simd_add;
-use lib::simd_operator::simd_sub;
-use lib::simd_operator::simd_pro;
-use lib::simd_operator::simd_div;
-use lib::simd_operator::simd_mod;
-use lib::simd_operator::simd_sin;
-use lib::simd_operator::simd_cos;
-use lib::simd_operator::simd_tan;
-use lib::simd_operator::simd_cot;
-use lib::simd_operator::simd_exp;
-use lib::simd_operator::simd_add_i32;
-use lib::simd_operator::simd_add_f32;
-use lib::simd_operator::sdot_f32x4;
-use lib::simd_operator::sdot_f32x8;
-use lib::simd_operator::sdot_f32x16;
-
-use lib::simd_operator::f32dot;
-use lib::simd_operator::f64dot;
-use lib::simd_operator::u8dot;
-use lib::simd_operator::u16dot;
-
-use lib::simd_operator::f32nrm2;
-use lib::simd_operator::f64nrm2;
-use lib::simd_operator::i32nrm2;
-use lib::simd_operator::f32sum;
-use lib::simd_operator::f32sum_rayon;
-//use lib::simd_operator::normaladd;
-//use lib::simd_operator::addition;
+//import all the simd_operator
+use lib::simd_operator::*;
 use rand::Rng;
 
 fn main() {
@@ -48,36 +23,76 @@ fn main() {
     //generate two vec to store the input
     let mut f32a = vec![];
     let mut f32b = vec![];
-    let mut i32a = vec![];
-    let mut i32b = vec![];
     let mut f64a = vec![];
     let mut f64b = vec![];
     let mut u8a = vec![];
     let mut u8b = vec![];
     let mut u16a = vec![];
     let mut u16b = vec![];
+    let mut u32a = vec![];
+    let mut u32b = vec![];
+    let mut u64a = vec![];
+    let mut u64b = vec![];
+    let mut i8a = vec![];
+    let mut i8b = vec![];
+    let mut i16a = vec![];
+    let mut i16b = vec![];
+    let mut i32a = vec![];
+    let mut i32b = vec![];
+    let mut i64a = vec![];
+    let mut i64b = vec![];
+    let mut usizea = vec![];
+    let mut usizeb = vec![];
 
     for i in 0..n{
         let g1:f32 = rng.gen();
         let g2:f32 = rng.gen();
-        let g3:i32 = rng.gen();
-        let g4:i32 = rng.gen();
         let g5:f64 = rng.gen();
         let g6:f64 = rng.gen();
+
         let g7:u8 = rng.gen();
         let g8:u8 = rng.gen();
         let g9:u16 = rng.gen();
         let g10:u16 = rng.gen();
+        let g11:u32 = rng.gen();
+        let g12:u32 = rng.gen();
+        let g13:u64 = rng.gen();
+        let g14:u64 = rng.gen();
+
+        let g17:i8 = rng.gen();
+        let g18:i8 = rng.gen();
+        let g19:i16 = rng.gen();
+        let g20:i16 = rng.gen();
+        let g21:i32 = rng.gen();
+        let g22:i32 = rng.gen();
+        let g23:i64 = rng.gen();
+        let g24:i64 = rng.gen();
+
+        let g25:usize = rng.gen();
+        let g26:usize = rng.gen();
+
         f32a.push(g1);
         f32b.push(g2);
-        i32a.push(g3);
-        i32b.push(g4);
         f64a.push(g5);
         f64b.push(g6);
         u8a.push(g7);
         u8b.push(g8);
         u16a.push(g9);
         u16b.push(g10);
+        u32a.push(g11);
+        u32b.push(g12);
+        u64a.push(g13);
+        u64b.push(g14);
+        i8a.push(g17);
+        i8b.push(g18);
+        i16a.push(g19);
+        i16b.push(g20);
+        i32a.push(g21);
+        i32b.push(g22);
+        i64a.push(g23);
+        i64b.push(g24);
+        usizea.push(g25);
+        usizeb.push(g26);
     }
 
     //println!("The first input:{:?}",&input1);
@@ -86,10 +101,9 @@ fn main() {
 
     //this is only for test
     let start = time::now();
-    sdot_f32x4(&f32a,&f32b);
+    f32sum(&f32a,16);
     let end = time::now();
     println!("--------------------------------forloop_sum-------------------------------------");
-
     let mut output = 0.0;
     let start = time::now();
     for i in 0..n{
@@ -98,19 +112,82 @@ fn main() {
     let end = time::now();
     println!("result is:{:?}", &output);
     println!("{:?}",end-start);
-    println!("--------------------------------fa32sum-----------------------------------------");
+    println!("--------------------------------f32sum-----------------------------------------");
 
     let start = time::now();
-    let dotpro = f32sum(&f32a);
+    let f32sum = f32sum(&f32a,16);
     let end = time::now();
-    println!("result is:{:?}", &dotpro);
+    println!("result is:{:?}", &f32sum);
     println!("{:?}",end-start);
-    println!("--------------------------------fa32sum_rayon-----------------------------------");
+    println!("--------------------------------f64sum-----------------------------------------");
 
     let start = time::now();
-    let dotpro = f32sum_rayon(&f32a);
+    let f64sum = f64sum(&f64a,8);
     let end = time::now();
-    println!("result is:{:?}", &dotpro);
+    println!("result is:{:?}", &f64sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------u8sum-----------------------------------------");
+
+    let start = time::now();
+    let u8sum = u8sum(&u8a,64);
+    let end = time::now();
+    println!("result is:{:?}", &u8sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------u16sum-----------------------------------------");
+
+    let start = time::now();
+    let u16sum = u16sum(&u16a,32);
+    let end = time::now();
+    println!("result is:{:?}", &u16sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------u32sum-----------------------------------------");
+
+    let start = time::now();
+    let u32sum = u32sum(&u32a,16);
+    let end = time::now();
+    println!("result is:{:?}", &u32sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------u64sum-----------------------------------------");
+
+    let start = time::now();
+    let u64sum = u64sum(&u64a,8);
+    let end = time::now();
+    println!("result is:{:?}", &u64sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------i8sum-----------------------------------------");
+
+    let start = time::now();
+    let i8sum = i8sum(&i8a,64);
+    let end = time::now();
+    println!("result is:{:?}", &i8sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------i16sum-----------------------------------------");
+
+    let start = time::now();
+    let i16sum = i16sum(&i16a,32);
+    let end = time::now();
+    println!("result is:{:?}", &i16sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------i32sum-----------------------------------------");
+
+    let start = time::now();
+    let i32sum = i32sum(&i32a,16);
+    let end = time::now();
+    println!("result is:{:?}", &i32sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------i64sum-----------------------------------------");
+
+    let start = time::now();
+    let i64sum = i64sum(&i64a,8);
+    let end = time::now();
+    println!("result is:{:?}", &i64sum);
+    println!("{:?}",end-start);
+    println!("--------------------------------usizesum----------------------------------------");
+
+    let start = time::now();
+    let usizesum = usizesum(&usizea,8);
+    let end = time::now();
+    println!("result is:{:?}", &usizesum);
     println!("{:?}",end-start);
     println!("--------------------------------forloop_dotproduct------------------------------");
     
@@ -124,59 +201,89 @@ fn main() {
     println!("result is:{:?}", &output);
     println!("{:?}",end-start);
 
-    println!("--------------------------------sdot_f32x4--------------------------------------");
-
-    let start = time::now();
-    let dotpro = sdot_f32x4(&f32a,&f32b);
-    let end = time::now();
-    println!("result is:{:?}", &dotpro);
-    println!("{:?}",end-start);
-    println!("--------------------------------sdot_f32X8--------------------------------------");
-
-    let start = time::now();
-    let dotpro = sdot_f32x8(&f32a,&f32b);
-    let end = time::now();
-    println!("result is:{:?}", &dotpro);
-    println!("{:?}",end-start);
-    println!("--------------------------------sdot_f32X16-------------------------------------");
-
-    let start = time::now();
-    let dotpro = sdot_f32x16(&f32a,&f32b);
-    let end = time::now();
-    println!("result is:{:?}", &dotpro);
-    println!("{:?}",end-start);
     println!("--------------------------------f32dot------------------------------------------");
 
     let start = time::now();
-    let dotpro = f32dot(&f32a,&f32b);
+    let f32dot = f32dot(&f32a,&f32b,16);
     let end = time::now();
-    println!("result is:{:?}", &dotpro);
+    println!("result is:{:?}", &f32dot);
     println!("{:?}",end-start);
 
     println!("--------------------------------f64dot------------------------------------------");
 
     let start = time::now();
-    let dotpro = f64dot(&f64a,&f64b);
+    let f64dot = f64dot(&f64a,&f64b,8);
     let end = time::now();
-    println!("result is:{:?}", &dotpro);
+    println!("result is:{:?}", &f64dot);
     println!("{:?}",end-start);
-/**
-    println!("--------------------------------u8dot-------------------------------------------");
+
+    println!("--------------------------------u8dot------------------------------------------");
 
     let start = time::now();
-    let dotpro = u8dot(&u8a,&u8b);
+    let u8dot = u8dot(&u8a,&u8b,64);
     let end = time::now();
-    println!("result is:{:?}", &dotpro);
+    println!("result is:{:?}", &u8dot);
     println!("{:?}",end-start);
 
     println!("--------------------------------u16dot------------------------------------------");
 
     let start = time::now();
-    let dotpro = u16dot(&u16a,&u16b);
+    let u16dot = u16dot(&u16a,&u16b,32);
     let end = time::now();
-    println!("result is:{:?}", &dotpro);
+    println!("result is:{:?}", &u16dot);
     println!("{:?}",end-start);
-**/
+    println!("--------------------------------u32dot------------------------------------------");
+
+    let start = time::now();
+    let u32dot = u32dot(&u32a,&u32b,16);
+    let end = time::now();
+    println!("result is:{:?}", &u32dot);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------u64dot------------------------------------------");
+
+    let start = time::now();
+    let u64dot = u64dot(&u64a,&u64b,8);
+    let end = time::now();
+    println!("result is:{:?}", &u64dot);
+    println!("{:?}",end-start);
+    println!("--------------------------------i8dot------------------------------------------");
+
+    let start = time::now();
+    let i8dot = i8dot(&i8a,&i8b,64);
+    let end = time::now();
+    println!("result is:{:?}", &i8dot);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------i16dot------------------------------------------");
+
+    let start = time::now();
+    let i16dot = i16dot(&i16a,&i16b,32);
+    let end = time::now();
+    println!("result is:{:?}", &i16dot);
+    println!("{:?}",end-start);
+    println!("--------------------------------i32dot------------------------------------------");
+
+    let start = time::now();
+    let i32dot = i32dot(&i32a,&i32b,16);
+    let end = time::now();
+    println!("result is:{:?}", &i32dot);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------i64dot------------------------------------------");
+
+    let start = time::now();
+    let i64dot = i64dot(&i64a,&i64b,8);
+    let end = time::now();
+    println!("result is:{:?}", &i64dot);
+    println!("{:?}",end-start);
+    println!("--------------------------------usizedot----------------------------------------");
+
+    let start = time::now();
+    let usizedot = usizedot(&usizea,&usizeb,8);
+    let end = time::now();
+    println!("result is:{:?}", &usizedot);
+    println!("{:?}",end-start);
     println!("--------------------------------forloop_EuclideanNorm---------------------------");
     let mut output = 0.0;
     let start = time::now();
