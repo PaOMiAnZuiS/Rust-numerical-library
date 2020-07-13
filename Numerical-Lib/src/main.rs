@@ -298,14 +298,14 @@ fn main() {
     println!("--------------------------------f32nrm2-----------------------------------------");
 
     let start = time::now();
-    let nrm = f32nrm2(&f32a);
+    let nrm = f32nrm2(&f32a,16);
     let end = time::now();
     println!("result is:{:?}", &nrm);
     println!("{:?}",end-start);  
     println!("--------------------------------f64nrm2-----------------------------------------");
 
     let start = time::now();
-    let nrm = f64nrm2(&f64a);
+    let nrm = f64nrm2(&f64a,8);
     let end = time::now();
     println!("result is:{:?}", &nrm);
     println!("{:?}",end-start);  

@@ -1843,111 +1843,77 @@ pub fn usizedot(a: &Vec<usize>, b: &Vec<usize>, w:u8) -> usize {
     }
 }
 
-pub fn f32nrm2(a: &Vec<f32>) -> f32 {
-
-    if a.len() < 16{
-        panic!("The lengths of input arrays must larger than 16");
+pub fn f32nrm2(a: &Vec<f32>,w:u8) -> f32 {
+    if w == 16{
+        a.par_chunks(16)
+            .map(f32x16::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f32x16>()
+            .sum()
+            .sqrt()
+    }
+    else if w == 8{
+        a.par_chunks(8)
+            .map(f32x8::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f32x8>()
+            .sum()
+            .sqrt()
+    }
+    else if w == 4{
+        a.par_chunks(4)
+            .map(f32x4::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f32x4>()
+            .sum()
+            .sqrt()
+    }
+    else if w == 2{
+        a.par_chunks(2)
+            .map(f32x2::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f32x2>()
+            .sum()
+            .sqrt()
+    }
+    else {
+        panic!("The width of simd type not exist");
     }
 
-    a.par_chunks(16)
-        .map(f32x16::from_slice_unaligned)
-        .map(|a| a*a)
-        .sum::<f32x16>()
-        .sum()
-        .sqrt()
+}   
+
+pub fn f64nrm2(a: &Vec<f64>,w:u8) -> f64 {
+    if w == 8{
+        a.par_chunks(8)
+            .map(f64x8::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f64x8>()
+            .sum()
+            .sqrt()
+    }
+    else if w == 4{
+        a.par_chunks(4)
+            .map(f64x4::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f64x4>()
+            .sum()
+            .sqrt()
+    }
+    else if w == 2{
+        a.par_chunks(2)
+            .map(f64x2::from_slice_unaligned)
+            .map(|a| a*a)
+            .sum::<f64x2>()
+            .sum()
+            .sqrt()
+    }
+    else {
+        panic!("The width of simd type not exist");
+    }
+
 }
 
-pub fn f64nrm2(a: &Vec<f64>) -> f64 {
 
-    if a.len() < 8{
-        panic!("The lengths of input arrays must larger than 16");
-    }
-
-    a.par_chunks(8)
-        .map(f64x8::from_slice_unaligned)
-        .map(|a| a*a)
-        .sum::<f64x8>()
-        .sum()
-        .sqrt()
-}
-
-pub fn i32nrm2(a: &Vec<i32>) -> i32 {
-
-    if a.len() < 16{
-        panic!("The lengths of input arrays must larger than 16");
-    }
-
-    a.par_chunks(16)
-        .map(i32x16::from_slice_unaligned)
-        .map(|a| a*a)
-        .sum::<i32x16>()
-        .wrapping_sum()
-}
-pub fn i64nrm2(a: &Vec<i64>) -> i64 {
-
-    if a.len() < 8{
-        panic!("The lengths of input arrays must larger than 8");
-    }
-
-    a.par_chunks(8)
-        .map(i64x8::from_slice_unaligned)
-        .map(|a| a*a)
-        .sum::<i64x8>()
-        .wrapping_sum()
-}
-pub fn i128nrm2(a: &Vec<i128>) -> i128 {
-
-    if a.len() < 4{
-        panic!("The lengths of input arrays must larger than 16");
-    }
-
-    a.par_chunks(4)
-        .map(i128x4::from_slice_unaligned)
-        .map(|a| a*a)
-        .sum::<i128x4>()
-        .wrapping_sum()
-}
-
-/**
-pub fn addition<T:Add>(a: &Vec<T>, b: &Vec<T>) -> Vec<T> {   //store the result of opration
-    let mut v:Vec<f32> = Vec::new();
-
-    let len = a.len()/4;
-    //calculate the residual
-    let r = a.len() % 4;
-    //if length of a and b are not equal, return false
-    if a.len() != b.len(){
-        panic!("The length of input arrays must be same");
-    }
-    //simd add
-
-    a.chunks_exact(25)
-        .map(f32x4::from_slice_unaligned)
-        .zip(b.chunks_exact(25).map(f32x4::from_slice_unaligned))
-        .map(|(a, b)| a + b)
-        .sum::<f32x4>()
-}
-
-pub fn normaladd(a: &Vec<f32>, b: &Vec<f32>) -> f32x4 {
-    //store the result of opration
-    let mut v:Vec<f32> = Vec::new();
-
-    let len = a.len()/4;
-    //calculate the residual
-    let r = a.len() % 4;
-    //if length of a and b are not equal, return false
-    if a.len() != b.len(){
-        panic!("The length of input arrays must be same");
-    }
-    //simd add
-
-    a.chunks_exact(25)
-        .map(f32x4::from_slice_unaligned)
-        .zip(b.chunks_exact(25).map(f32x4::from_slice_unaligned))
-        .map(|(a, b)| a + b)
-        .sum::<f32x4>()
-
-}**/
 pub fn simd_add_f32(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
     //if length of a and b are not equal, return false
     if a.len() != b.len(){

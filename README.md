@@ -21,17 +21,16 @@ Supervisor: Timo Betcke
 |         | i32sum(a: &Vec<i32>,w: u8) (options for w: 2,4,8,16) | Sum all of the elements in the i32 array |
 |         | i64sum(a: &Vec<i64>,w: u8) (options for w: 2,4,8) | Sum all of the elements in the i64 array |
 |         | i128sum(a: &Vec<i128>,w: u8) (options for w: 1,2,4) | Sum all of the elements in the i128 array |
-
-| Dot product | f32dot(a:&Vec<f32>, b:&Vec<f32>, w:u8) | Dot product two vectors in type of f32 |
-|       | f64dot(a:&Vec<f64>, b:&Vec<f64>, w:u8) | Dot product two vectors in type of f64 |
-|       | u8dot(a:&Vec<u8>, b:&Vec<u8>, w:u8) | Dot product two vectors in type of u8 |
-|       | u16dot(a:&Vec<u16>, b:&Vec<u16>, w:u8) | Dot product two vectors in type of u16 |
-|       | u32dot(a:&Vec<u32>, b:&Vec<u32>, w:u8) | Dot product two vectors in type of u32 |
-|       | u64dot(a:&Vec<u64>, b:&Vec<u64>, w:u8) | Dot product two vectors in type of u64 |
-|       | i8dot(a:&Vec<i8>, b:&Vec<i8>, w:u8) | Dot product two vectors in type of i8 |
-|       | i16dot(a:&Vec<i16>, b:&Vec<i16>, w:u8) | Dot product two vectors in type of i16 |
-|       | i32dot(a:&Vec<i32>, b:&Vec<i32>, w:u8) | Dot product two vectors in type of i32 |
-|       | i64dot(a:&Vec<i64>, b:&Vec<i64>, w:u8) | Dot product two vectors in type of i64 |
-|       | usizedot(a:&Vec<usize>, b:&Vec<usize>, w:u8) | Dot product two vectors in type of usize |
-| Norm | f32nrm2 | Find the norm in the vector in type of f32 |
-|           | f64nrm2 | Find the norm in the vector in type of f64 |
+| Dot product | f32dot(a:&Vec<f32>, b:&Vec<f32>, w:u8)  (options for w: 2,4,8,16)| Dot product two vectors in type of f32 |
+|       | f64dot(a:&Vec<f64>, b:&Vec<f64>, w:u8)  (options for w: 2,4,8) | Dot product two vectors in type of f64 |
+|       | u8dot(a:&Vec<u8>, b:&Vec<u8>, w:u8)  (options for w: 2,4,8,16,32,64) | Dot product two vectors in type of u8 |
+|       | u16dot(a:&Vec<u16>, b:&Vec<u16>, w:u8)  (options for w: 2,4,8,16,32) | Dot product two vectors in type of u16 |
+|       | u32dot(a:&Vec<u32>, b:&Vec<u32>, w:u8)  (options for w: 2,4,8,16) | Dot product two vectors in type of u32 |
+|       | u64dot(a:&Vec<u64>, b:&Vec<u64>, w:u8)  (options for w: 2,4,8) | Dot product two vectors in type of u64 |
+|       | i8dot(a:&Vec<i8>, b:&Vec<i8>, w:u8)  (options for w: 2,4,8,16,32,64) | Dot product two vectors in type of i8 |
+|       | i16dot(a:&Vec<i16>, b:&Vec<i16>, w:u8)  (options for w: 2,4,8,16,32) | Dot product two vectors in type of i16 |
+|       | i32dot(a:&Vec<i32>, b:&Vec<i32>, w:u8)  (options for w: 2,4,8,16) | Dot product two vectors in type of i32 |
+|       | i64dot(a:&Vec<i64>, b:&Vec<i64>, w:u8)  (options for w: 2,4,8) | Dot product two vectors in type of i64 |
+|       | usizedot(a:&Vec<usize>, b:&Vec<usize>, w:u8)  (options for w: 2,4,8)| Dot product two vectors in type of usize |
+| Norm | f32nrm2(a: &Vec<f32>,w:u8)  (options for w: 2,4,8,16) | Find the norm in the vector in type of f32 |
+|           | f64nrm2(a: &Vec<f64>,w:u8)  (options for w: 2,4,8) | Find the norm in the vector in type of f64 |
