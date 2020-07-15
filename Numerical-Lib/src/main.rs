@@ -8,6 +8,8 @@ mod lib;
 //import all the simd_operator
 use lib::simd_operator::*;
 use rand::Rng;
+use libc::size_t;
+
 
 fn main() {
 
@@ -15,7 +17,9 @@ fn main() {
     extern {
         printf("Hello, World!");
     }**/
-
+    //let input = 4;
+    //let output = unsafe { double_input(input) };
+   //println!("{} * 2 = {}", input, output);
     //define the size of input arrays
     let n = 1000000;
     //generate the random seed
@@ -98,11 +102,13 @@ fn main() {
     //println!("The first input:{:?}",&input1);
     println!("");
     //println!("The second input:{:?}",&input2);
-
+    //unsafe { hello(); }
     //this is only for test
+    //unsafe { hello(); }
     let start = time::now();
     f32sum(&f32a,16);
     let end = time::now();
+
     println!("--------------------------------forloop_sum-------------------------------------");
     let mut output = 0.0;
     let start = time::now();
@@ -298,19 +304,19 @@ fn main() {
     println!("--------------------------------f32nrm2-----------------------------------------");
 
     let start = time::now();
-    let nrm = f32nrm2(&f32a,16);
+    let f32nrm = f32nrm2(&f32a,16);
     let end = time::now();
-    println!("result is:{:?}", &nrm);
+    println!("result is:{:?}", &f32nrm);
     println!("{:?}",end-start);  
     println!("--------------------------------f64nrm2-----------------------------------------");
 
     let start = time::now();
-    let nrm = f64nrm2(&f64a,8);
+    let f64nrm = f64nrm2(&f64a,8);
     let end = time::now();
-    println!("result is:{:?}", &nrm);
+    println!("result is:{:?}", &f64nrm);
     println!("{:?}",end-start);  
 
-    println!("--------------------------------simd_sub----------------------------------------");
+    println!("--------------------------------simd_add----------------------------------------");
     
     let start = time::now();
     let sub = simd_add(&f32a,&f32b);
@@ -412,13 +418,6 @@ fn main() {
     //println!("result of mod is:{:?}", &output);
     println!("{:?}",end-start);
 
-    println!("--------------------------------simd_sin----------------------------------------");
-
-    let start = time::now();
-    let sin = simd_sin(&f32a);
-    let end = time::now();
-    //println!("result of simd sin is:{:?}", &sin);
-    println!("{:?}",end-start);
 
     println!("--------------------------------not_simd_sin------------------------------------");
 
@@ -432,14 +431,14 @@ fn main() {
     //println!("result of sin is:{:?}", &output);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------simd_cos----------------------------------------");
+    println!("--------------------------------simd_sin----------------------------------------");
 
     let start = time::now();
-    let cos = simd_cos(&f32a);
+    let sin = simd_sin(&mut f32a);
     let end = time::now();
-    //println!("result of simd cos is:{:?}", &cos);
+    //println!("result of simd sin is:{:?}", &sin);
     println!("{:?}",end-start);
+
 
     println!("--------------------------------not_simd_cos------------------------------------");
 
@@ -453,13 +452,14 @@ fn main() {
     //println!("result of cos is:{:?}", &output);
     println!("{:?}",end-start);
 
-    println!("--------------------------------simd_tan----------------------------------------");
+    println!("--------------------------------simd_cos----------------------------------------");
 
     let start = time::now();
-    let tan = simd_tan(&f32a);
+    let cos = simd_cos(&mut f32a);
     let end = time::now();
-    //println!("result of simd tan is:{:?}", &tan);
+    //println!("result of simd cos is:{:?}", &cos);
     println!("{:?}",end-start);
+
 
     println!("--------------------------------not_simd_tan------------------------------------");
 
@@ -473,14 +473,14 @@ fn main() {
     //println!("result of tan is:{:?}", &output);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------simd_cot----------------------------------------");
+    println!("--------------------------------simd_tan----------------------------------------");
 
     let start = time::now();
-    let cot = simd_cot(&f32a);
+    let tan = simd_tan(&mut f32a);
     let end = time::now();
-    //println!("result of simd cot is:{:?}", &cot);
+    //println!("result of simd tan is:{:?}", &tan);
     println!("{:?}",end-start);
+
 
     println!("--------------------------------not_simd_cot------------------------------------");
 
@@ -494,17 +494,15 @@ fn main() {
     //println!("result of cot is:{:?}", &output);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------simd_exp----------------------------------------");
+    println!("--------------------------------simd_cot----------------------------------------");
 
     let start = time::now();
-    let exp = simd_exp(&f32a);
+    let cot = simd_cot(&mut f32a);
     let end = time::now();
-    //println!("result of simd exp is:{:?}", &exp);
+    //println!("result of simd cot is:{:?}", &cot);
     println!("{:?}",end-start);
 
     println!("--------------------------------not_simd_exp------------------------------------");
-
     let mut output = vec![];
     let start = time::now();
     for i in 0..n{
@@ -514,4 +512,13 @@ fn main() {
     let end = time::now();
     //println!("result of exp is:{:?}", &output);
     println!("{:?}",end-start);
+    println!("--------------------------------simd_exp----------------------------------------");
+
+    let start = time::now();
+    let exp = simd_exp(&mut f32a);
+    let end = time::now();
+    //println!("result of simd exp is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
 }
