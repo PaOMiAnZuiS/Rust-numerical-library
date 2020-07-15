@@ -1913,231 +1913,172 @@ pub fn f64nrm2(a: &Vec<f64>,w:u8) -> f64 {
 
 }
 
-pub fn simd_add(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
+pub fn f32add(a: &mut Vec<f32>, b: &Vec<f32>){
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
+        panic!("The length of input arrays must be same");
     }
 
-    let len = a.len()/4;
-    let r = a.len() % 4;
-
-
-    //store the result of op[][ration
-    let mut v:Vec<f32> = Vec::new();
-
-    //simd sub
-    for i in 0..len{
-        let start = i*4;
-        let end = (i+1)*4;
-        let sa = &a[start..end];
-        let sb = &b[start..end];
-
-        let result = sa.par_chunks(4)
-            .map(f32x4::from_slice_unaligned)
-            .zip(sb.par_chunks(4).map(f32x4::from_slice_unaligned))
-            .map(|(sa, sb)| sa - sb)
-            .sum::<f32x4>();
-        v.push(result.extract(0));
-        v.push(result.extract(1));
-        v.push(result.extract(2));
-        v.push(result.extract(3));
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai += *bi;
     }
-    //adjust different size of input a and b
-    if r != 0{
-        for i in len*4..a.len(){
-            let g3:f32 = a[i] + b[i];
-            v.push(g3);
-        }
-    }
-    //return v
-    v
+
 }
-pub fn simd_sub(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
+
+pub fn f64add(a: &mut Vec<f64>, b: &Vec<f64>){
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai += *bi;
+    }
+
+}
+
+pub fn f32sub(a: &mut Vec<f32>, b: &Vec<f32>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai -= *bi;
+    }
+}
+
+pub fn f64sub(a: &mut Vec<f64>, b: &Vec<f64>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai -= *bi;
+    }
+}
+
+
+pub fn f32pro(a: &mut Vec<f32>, b: &Vec<f32>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *bi * *ai;
+    }
+}
+
+pub fn f64pro(a: &mut Vec<f64>, b: &Vec<f64>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *bi * *ai;
+    }
+}
+
+
+pub fn f32div(a: &mut Vec<f32>, b: &Vec<f32>) {
 
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
         panic!("The length of input arrays must be same");
     }
 
-    let len = a.len()/4;
-    let r = a.len() % 4;
-
-
-    //store the result of op[][ration
-    let mut v:Vec<f32> = Vec::new();
-
-    //simd sub
-    for i in 0..len{
-        let start = i*4;
-        let end = (i+1)*4;
-        let sa = &a[start..end];
-        let sb = &b[start..end];
-
-        let result = sa.chunks_exact(4)
-            .map(f32x4::from_slice_unaligned)
-            .zip(sb.chunks_exact(4).map(f32x4::from_slice_unaligned))
-            .map(|(sa, sb)| sa - sb)
-            .sum::<f32x4>();
-        v.push(result.extract(0));
-        v.push(result.extract(1));
-        v.push(result.extract(2));
-        v.push(result.extract(3));
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *ai / *bi;
     }
-    //adjust different size of input a and b
-    if r != 0{
-        for i in len*4..a.len(){
-            let g3:f32 = a[i] - b[i];
-            v.push(g3);
-        }
-    }
-    //return v
-    v
 }
+pub fn f64div(a: &mut Vec<f64>, b: &Vec<f64>) {
 
-
-pub fn simd_pro(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
-    //store the result of opration
-    let mut v:Vec<f32> = Vec::new();
-
-    let len = a.len()/4;
-    let r = a.len() % 4;
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
         panic!("The length of input arrays must be same");
     }
-    //simd add
-    for i in 0..len{
-        let start = i*4;
-        let end = (i+1)*4;
-        let sa = &a[start..end];
-        let sb = &b[start..end];
 
-        let result = sa.chunks_exact(4)
-            .map(f32x4::from_slice_unaligned)
-            .zip(sb.chunks_exact(4).map(f32x4::from_slice_unaligned))
-            .map(|(sa, sb)| sa * sb)
-            .sum::<f32x4>();
-        v.push(result.extract(0));
-        v.push(result.extract(1));
-        v.push(result.extract(2));
-        v.push(result.extract(3));
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *ai / *bi;
     }
-    //adjust different size of input a and b
-    if r != 0{
-        for i in len*4..a.len(){
-            let g3:f32 = a[i] * b[i];
-            v.push(g3);
-        }
-    }
-    //return v
-    v
 }
 
 
-pub fn simd_div(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
-    //store the result of opration
-    let mut v:Vec<f32> = Vec::new();
-
-    let len = a.len()/4;
-    let r = a.len() % 4;
+pub fn f32mod(a: &mut Vec<f32>, b: &Vec<f32>) {
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
         panic!("The length of input arrays must be same");
     }
-    //simd add
-    for i in 0..len{
-        let start = i*4;
-        let end = (i+1)*4;
-        let sa = &a[start..end];
-        let sb = &b[start..end];
 
-        let result = sa.chunks_exact(4)
-            .map(f32x4::from_slice_unaligned)
-            .zip(sb.chunks_exact(4).map(f32x4::from_slice_unaligned))
-            .map(|(sa, sb)| sa / sb)
-            .sum::<f32x4>();
-        v.push(result.extract(0));
-        v.push(result.extract(1));
-        v.push(result.extract(2));
-        v.push(result.extract(3));
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *ai % *bi;
     }
-    //adjust different size of input a and b
-    if r != 0{
-        for i in len*4..a.len(){
-            let g3:f32 = a[i] / b[i];
-            v.push(g3);
-        }
-    }
-    //return v
-    v
 }
 
-
-pub fn simd_mod(a: &Vec<f32>, b: &Vec<f32>) -> Vec<f32> {
-    //store the result of opration
-    let mut v:Vec<f32> = Vec::new();
-
-    let len = a.len()/4;
-    let r = a.len() % 4;
+pub fn f64mod(a: &mut Vec<f64>, b: &Vec<f64>) {
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
         panic!("The length of input arrays must be same");
     }
-    //simd add
-    for i in 0..len{
-        let start = i*4;
-        let end = (i+1)*4;
-        let sa = &a[start..end];
-        let sb = &b[start..end];
 
-        let result = sa.chunks_exact(4)
-            .map(f32x4::from_slice_unaligned)
-            .zip(sb.chunks_exact(4).map(f32x4::from_slice_unaligned))
-            .map(|(sa, sb)| sa % sb)
-            .sum::<f32x4>();
-        v.push(result.extract(0));
-        v.push(result.extract(1));
-        v.push(result.extract(2));
-        v.push(result.extract(3));
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *ai % *bi;
     }
-    //adjust different size of input a and b
-    if r != 0{
-        for i in len*4..a.len(){
-            let g3:f32 = a[i] % b[i];
-            v.push(g3);
-        }
-    }
-    //return v
-    v
 }
 
 
-pub fn simd_sin(a: &mut Vec<f32>) {
+pub fn f32sin(a: &mut Vec<f32>) {
+    a.par_iter_mut()
+     .for_each(|a| *a = a.sin());
+}
+
+pub fn f64sin(a: &mut Vec<f64>) {
     a.par_iter_mut()
      .for_each(|a| *a = a.sin());
 }
 
 
-pub fn simd_cos(a: &mut Vec<f32>) {
+pub fn f32cos(a: &mut Vec<f32>) {
+    a.par_iter_mut()
+     .for_each(|a| *a = a.cos());
+}
+
+pub fn f64cos(a: &mut Vec<f64>) {
     a.par_iter_mut()
      .for_each(|a| *a = a.cos());
 }
 
 
-pub fn simd_tan(a: &mut Vec<f32>){
+pub fn f32tan(a: &mut Vec<f32>){
     a.par_iter_mut()
      .for_each(|a| *a = a.tan());
 }
 
+pub fn f64tan(a: &mut Vec<f64>){
+    a.par_iter_mut()
+     .for_each(|a| *a = a.tan());
+}
 
-pub fn simd_cot(a: &mut Vec<f32>){
+pub fn f32cot(a: &mut Vec<f32>){
+    a.par_iter_mut()
+     .for_each(|a| *a = a.cos()/a.sin());
+}
+pub fn f64cot(a: &mut Vec<f64>){
     a.par_iter_mut()
      .for_each(|a| *a = a.cos()/a.sin());
 }
 
 
-pub fn simd_exp(a: &mut Vec<f32>) {
+pub fn f32exp(a: &mut Vec<f32>) {
+    a.par_iter_mut()
+     .for_each(|a| *a = a.exp());
+
+}
+
+pub fn f64exp(a: &mut Vec<f64>) {
     a.par_iter_mut()
      .for_each(|a| *a = a.exp());
 
