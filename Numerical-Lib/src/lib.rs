@@ -1918,7 +1918,7 @@ pub fn f32add(a: &mut Vec<f32>, b: &Vec<f32>){
     if a.len() != b.len(){
         panic!("The length of input arrays must be same");
     }
-
+    
     for (ai, bi) in a.iter_mut().zip(b) {
         *ai += *bi;
     }
@@ -2078,7 +2078,7 @@ pub fn f32exp(a: &mut Vec<f32>) {
 
 }
 
-pub fn f64exp(a: &mut Vec<f64>) {
+pub fn f64exp(a: &mut Vec<f64git>) {
     a.par_iter_mut()
      .for_each(|a| *a = a.exp());
 
