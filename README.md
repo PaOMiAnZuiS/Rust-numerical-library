@@ -9,7 +9,7 @@ Supervisor: Timo Betcke
 
 This library using packed_simd and rayon to accelerate the numerical operation.
 
-Here are the comparation of the performances between this library and Intel-MKL:
+###Here are the comparation of the performances between this library and Intel-MKL:
 
 MKL-cblas_dasum:
 
@@ -36,7 +36,16 @@ RNL-f32dot:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32dot.png)
 
+MKL-cblas_dnrm2:
 
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dnrm2.png)
+
+
+RNL-f32nrm2:
+
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32nrm2.png)
+
+##Document:
 
 | Operation | Function | Description |
 | ----------- | ----------- | ------------ |
