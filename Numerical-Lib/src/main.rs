@@ -122,14 +122,14 @@ fn main() {
     let start = time::now();
     let f32sum = f32sum(&f32a,16);
     let end = time::now();
-    println!("result is:{:?}", &f32sum);
+    //println!("result is:{:?}", &f32sum);
     println!("{:?}",end-start);
     println!("--------------------------------f64sum-----------------------------------------");
 
     let start = time::now();
     let f64sum = f64sum(&f64a,8);
     let end = time::now();
-    println!("result is:{:?}", &f64sum);
+    //println!("result is:{:?}", &f64sum);
     println!("{:?}",end-start);
     println!("--------------------------------u8sum-----------------------------------------");
 

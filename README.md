@@ -9,6 +9,10 @@ Supervisor: Timo Betcke
 
 This library using packed_simd and rayon to accelerate the numerical operation.
 
+Here are the comparation of the performances between this library and Intel-MKL:
+
+
+
 
 | Operation | Function | Description |
 | ----------- | ----------- | ------------ |
