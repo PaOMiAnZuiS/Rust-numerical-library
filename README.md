@@ -9,7 +9,7 @@ Supervisor: Timo Betcke
 
 This library using packed_simd and rayon to accelerate the numerical operation.
 
-###Here are the comparation of the performances between this library and Intel-MKL:
+**Here are the comparation of the performances between this library and Intel-MKL**
 
 MKL-cblas_dasum:
 
@@ -45,7 +45,7 @@ RNL-f32nrm2:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32nrm2.png)
 
-##Document:
+***Document:***
 
 | Operation | Function | Description |
 | ----------- | ----------- | ------------ |
@@ -74,6 +74,8 @@ RNL-f32nrm2:
 |       | usizedot(a:&Vec<usize>, b:&Vec<usize>, w:u8)  (options for w: 2,4,8)| Dot product two vectors in type of usize |
 | Norm | f32nrm2(a: &Vec<f32>, w:u8)  (options for w: 2,4,8,16) | Find the norm in the vector in type of f32 |
 |           | f64nrm2(a: &Vec<f64>, w:u8)  (options for w: 2,4,8) | Find the norm in the vector in type of f64 |
+| Scale | f32scal(a: &mut Vec<f32>, b: f32) | Array a scale b, store the result in array a |
+|           | f64scal(a: &mut Vec<f64>, b: f64) | Array a scale b, store the result in array a |
 | Add | f32add(a: &mut Vec<f32>, b: &Vec<f32>) | Array a add array b, store the result in array a |
 |         | f64add(a: &mut Vec<f64>, b: &Vec<f64>) | Array a add array b, store the results in array a |
 | Sub | f32sub(a: &mut Vec<f32>, b: &Vec<f32>) | Array a sub array b, store the result in array a  |

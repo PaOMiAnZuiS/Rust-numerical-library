@@ -1913,6 +1913,19 @@ pub fn f64nrm2(a: &Vec<f64>,w:u8) -> f64 {
 
 }
 
+
+pub fn f32scal(a: &mut Vec<f32>, b: &f32){
+    a.par_iter_mut()
+     .for_each(|a| *a = *a * *b);
+
+}
+pub fn f64scal(a: &mut Vec<f64>, b: &f64){
+    a.par_iter_mut()
+     .for_each(|a| *a = *a * *b);
+
+}
+
+
 pub fn f32add(a: &mut Vec<f32>, b: &Vec<f32>){
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
@@ -2083,5 +2096,6 @@ pub fn f64exp(a: &mut Vec<f64>) {
      .for_each(|a| *a = a.exp());
 
 }
+
 
 }

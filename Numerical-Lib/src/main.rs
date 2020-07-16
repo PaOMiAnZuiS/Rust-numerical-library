@@ -115,7 +115,7 @@ fn main() {
         output += f32a[i];
     }
     let end = time::now();
-    println!("result is:{:?}", &output);
+    //println!("result is:{:?}", &output);
     println!("{:?}",end-start);
     println!("--------------------------------f32sum-----------------------------------------");
 
@@ -150,14 +150,14 @@ fn main() {
     let start = time::now();
     let u32sum = u32sum(&u32a,16);
     let end = time::now();
-    println!("result is:{:?}", &u32sum);
+    //println!("result is:{:?}", &u32sum);
     println!("{:?}",end-start);
     println!("--------------------------------u64sum-----------------------------------------");
 
     let start = time::now();
     let u64sum = u64sum(&u64a,8);
     let end = time::now();
-    println!("result is:{:?}", &u64sum);
+    //println!("result is:{:?}", &u64sum);
     println!("{:?}",end-start);
     println!("--------------------------------i8sum-----------------------------------------");
 
@@ -597,5 +597,21 @@ fn main() {
     //println!("result of simd exp is:{:?}", &f64a);
     println!("{:?}",end-start);
 
+    println!("--------------------------------f32scal-----------------------------------------");
+
+    let start = time::now();
+    f32scal(&mut f32a, &f32b[0]);
+    let end = time::now();
+    //println!("result of simd exp is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------f64scal-----------------------------------------");
+
+    let start = time::now();
+    f64scal(&mut f64a, &f64b[0]);
+    let end = time::now();
+    //println!("result of simd exp is:{:?}", &f32a);
+    println!("{:?}",end-start);
 
 }
