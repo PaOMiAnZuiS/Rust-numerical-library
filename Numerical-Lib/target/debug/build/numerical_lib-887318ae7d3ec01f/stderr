@@ -1,0 +1,5 @@
+src/main.c:10:10: fatal error: 'mkl.h' file not found
+#include <mkl.h>
+         ^~~~~~~
+1 error generated.
+ar: MKL-Rust.o: No such file or directory

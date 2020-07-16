@@ -9,18 +9,22 @@ mod lib;
 use lib::simd_operator::*;
 use rand::Rng;
 use libc::size_t;
-
-
+#[link(name = "MKL-Rust")]
+extern {
+    fn double_input(input: libc::c_int) -> libc::c_int;
+}
+ 
 fn main() {
 
     /**#[link(name = "snappy")]
     extern {
         printf("Hello, World!");
     }**/
-    //let input = 4;
-    //let output = unsafe { double_input(input) };
-   //println!("{} * 2 = {}", input, output);
     //define the size of input arrays
+    
+    let input = 4;
+    let output = unsafe { double_input(input) };
+    println!("{} * 2 = {}", input, output);
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();

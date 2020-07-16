@@ -11,6 +11,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+int double_input(int input) {
+    return input * 2;
+}
+
+double cblas_f32sum(n,double input[]){
+    return cblas_dasum(n,double_a,0);
+}
+
 int main(int argc, const char * argv[]) {
    // Construct the matrices
     const int n =  100000; // length of the matrix
