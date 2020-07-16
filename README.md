@@ -10,10 +10,19 @@ Supervisor: Timo Betcke
 This library using packed_simd and rayon to accelerate the numerical operation.
 
 Here are the comparation of the performances between this library and Intel-MKL:
-MKL-cblas_dsum:
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dsum.png)
+
+MKL-cblas_dasum:
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dasum.png)
+
 RNL-f32sum:
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/f32sum.png)
+
+MKL-cblas_sasum:
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dasum.png)
+
+RNL-f64sum:
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/f64sum.png)
+
 
 
 | Operation | Function | Description |
