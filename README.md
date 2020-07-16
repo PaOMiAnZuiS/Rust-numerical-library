@@ -17,15 +17,15 @@ MKL-cblas_dasum:
 
 RNL-f32sum:
 
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/f32sum.png)
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32sum.png)
 
 MKL-cblas_sasum:
 
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dasum.png)
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_sasum.png)
 
 RNL-f64sum:
 
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/f64sum.png)
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNl-f64sum.png)
 
 
 
