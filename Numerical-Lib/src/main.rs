@@ -211,7 +211,7 @@ fn main() {
     let start = time::now();
     let f32dot = f32dot(&f32a,&f32b,16);
     let end = time::now();
-    println!("result is:{:?}", &f32dot);
+    //println!("result is:{:?}", &f32dot);
     println!("{:?}",end-start);
 
     println!("--------------------------------f64dot------------------------------------------");
