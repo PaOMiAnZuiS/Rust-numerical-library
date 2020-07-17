@@ -1,0 +1,2 @@
+cargo:rustc-link-search=native=/Users/yingyuhang/Desktop/学习/Rust-numerical-library/Numerical-Lib/target/debug/build/numerical_lib-58c90f718942af00/out
+cargo:rustc-link-lib=static=MKL-Rust

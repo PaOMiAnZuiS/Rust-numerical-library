@@ -1,5 +1,6 @@
+clang: warning: /opt/intel/compilers_and_libraries_2020.1.216/mac/mkl/include: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: /Users/yingyuhang/Desktop/学习/Rust-numerical-library/Numerical-Lib/target/debug/build/numerical_lib-887318ae7d3ec01f/out/MKL-Rust.o: 'linker' input unused [-Wunused-command-line-argument]
 src/main.c:10:10: fatal error: 'mkl.h' file not found
 #include <mkl.h>
          ^~~~~~~
 1 error generated.
-ar: MKL-Rust.o: No such file or directory

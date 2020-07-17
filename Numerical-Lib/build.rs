@@ -5,7 +5,7 @@ use std::path::Path;
 fn main() {
     let out_dir = env::var("OUT_DIR").unwrap();
  
-    Command::new("cc").args(&["src/main.c", "-O3","-c", "-fPIC", "-o"])
+    Command::new("cc").args(&["src/main.c", "-O3","-c", "-fPIC", "-o","-I", "/opt/intel/compilers_and_libraries_2020.1.216/mac/mkl/include"])
         .arg(&format!("{}/MKL-Rust.o", out_dir))
         .status().unwrap();
  
