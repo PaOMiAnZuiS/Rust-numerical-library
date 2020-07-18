@@ -3,16 +3,9 @@ use std::process::Command;
 use std::path::Path;
  
 fn main() {
-    let out_dir = env::var("OUT_DIR").unwrap();
- 
-    Command::new("cc").args(&["src/main.c", "-O3","-c", "-fPIC", "-o","-I", "/opt/intel/compilers_and_libraries_2020.1.216/mac/mkl/include"])
-        .arg(&format!("{}/MKL-Rust.o", out_dir))
-        .status().unwrap();
- 
-    Command::new("ar").args(&["crus", "libMKL-Rust.a", "MKL-Rust.o"])
-        .current_dir(&Path::new(&out_dir))
-        .status().unwrap();
- 
-    println!("cargo:rustc-link-search=native={}", out_dir);
-    println!("cargo:rustc-link-lib=static=MKL-Rust");
+	let mkl_path = Path::new("/opt/intel/compilers_and_libraries_2020.1.216/mac/mkl/include");
+    cc::Build::new()
+        .file("src/main.c")
+        .include(mkl_path)
+        .compile("MKL-Rust");
 }
