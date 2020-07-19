@@ -13,24 +13,21 @@ use libc::size_t;
 extern {
     //fn double_input(input: libc::c_double) -> libc::c_double;
     fn third_input(input: libc::c_double) -> libc::c_double;
-    //fn cblas_f32sum(input: libc::c_)
+    fn MKL_cblas_dasum(input: [libc::c_double;2]) ->libc::c_double;
 }
 
  
 fn main() {
 
-    /**#[link(name = "snappy")]
-    extern {
-        printf("Hello, World!");
-    }**/
-    //define the size of input arrays
+    println!("--------------------------------MKL---------------------------------------------");
     
-    //let input = 4.0;
-    //let output = unsafe { double_input(input) };
-    //println!("{} * 2 = {}", input, output);
     let input  = 4.0;
     let output = unsafe { third_input(input) };
     println!("{} * 2 = {}", input, output);
+
+    let input = [4.0,5.0];
+    let output = unsafe { MKL_cblas_dasum(input) };
+    println!("{}", output);
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
@@ -112,9 +109,8 @@ fn main() {
     //println!("The first input:{:?}",&input1);
     println!("");
     //println!("The second input:{:?}",&input2);
-    //unsafe { hello(); }
+
     //this is only for test
-    //unsafe { hello(); }
     let start = time::now();
     f32sum(&f32a,16);
     let end = time::now();
