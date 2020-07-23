@@ -28,7 +28,7 @@ fn main() {
     //let input = 4.0;
     //let output = unsafe { MKL_cblas_dasum(input) };
     println!("{}", output);
-    let n = 100000;
+    let n = 10;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input
@@ -113,7 +113,58 @@ fn main() {
     //this is only for test
     let start = time::now();
     f32sum(&f32a,16);
+    let end = time::now(); 
+    println!("--------------------------------for_loop_rot------------------------------------");
+
+    let mut output = vec![];
+    let mut output1 = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = 2.0 * f32a[i] + 3.0 * f32b[i];
+        let g4:f32 = 2.0 * f32b[i] - 3.0 * f32a[i];
+        output.push(g3);
+        output1.push(g4);
+    }
     let end = time::now();
+    //println!("result of output1 is:{:?}", &output);
+    //println!("result of output2 is:{:?}", &output1);
+    println!("{:?}",end-start);
+    println!("--------------------------------f32rot-----------------------------------------");
+
+    let start = time::now();
+    f32rot(&mut f32a, &mut f32b, &2.0, &3.0);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    //println!("result is:{:?}", &f32b);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------f64rot-----------------------------------------");
+
+    let start = time::now();
+    f64rot(&mut f64a, &mut f64b, &2.0, &3.0);
+    let end = time::now();
+    //println!("result is:{:?}", &f64a);
+    //println!("result is:{:?}", &f64b);
+    println!("{:?}",end-start);
+    println!("--------------------------------f32swap-----------------------------------------");
+
+    let start = time::now();
+    f32swap(&mut f32a, &mut f32b);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    //println!("result is:{:?}", &f32b);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------f64swap-----------------------------------------");
+
+    let start = time::now();
+    f64swap(&mut f64a, &mut f64b);
+    let end = time::now();
+    //println!("result is:{:?}", &f64a);
+    //println!("result is:{:?}", &f64b);
+    println!("{:?}",end-start);
     println!("--------------------------------for_loop_sum------------------------------------");
     let mut output = 0.0;
     let start = time::now();
@@ -637,7 +688,7 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-    println!("--------------------------------f32aopy-----------------------------------------");
+    println!("--------------------------------f32copy-----------------------------------------");
 
     let start = time::now();
     f32copy(&mut f32a, &f32b);
@@ -650,6 +701,38 @@ fn main() {
 
     let start = time::now();
     f64copy(&mut f64a, &f64b);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+    println!("--------------------------------for_loop_sub------------------------------------");
+
+    let mut output = vec![];
+    let mut output1 = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = 2.0 * f32a[i] + 3.0 * f32b[i];
+        let g4:f32 = 2.0 * f32b[i] - 3.0 * f32b[i];
+        output.push(g3);
+        output1.push(g4);
+    }
+    let end = time::now();
+    println!("result of output1 is:{:?}", &output);
+    println!("result of output2 is:{:?}", &output1);
+    println!("{:?}",end-start);
+    println!("--------------------------------f32rot-----------------------------------------");
+
+    let start = time::now();
+    f32rot(&mut f32a, &mut f32b, &2.0, &3.0);
+    let end = time::now();
+    println!("result is:{:?}", &f32a);
+    println!("result is:{:?}", &f32b);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------f64rot-----------------------------------------");
+
+    let start = time::now();
+    f64rot(&mut f64a, &mut f64b, &2.0, &3.0);
     let end = time::now();
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);

@@ -86,6 +86,10 @@ RNL-f32nrm2:
 |           | f64axpy(a: &mut Vec<f64>, b: &Vec<f64> , s:&f64 ) |  a := a*s + b where: s is a scalar, a and b are vectors each with a number of elements that equals n |
 | Copy | f32copy(a: &mut Vec<f32>, b: &Vec<f32>) | Copy all of the elements of b into a |
 |           | f64copy(a: &mut Vec<f64>, b: &Vec<f64>) | Copy all of the elements of b into a  |
+| Rotation | f32rot(a: &mut Vec<f32>, b: &Vec<f32>,  c: &f32, s: &f32) | Performs rotation of points in the plane |
+|           | f64rot(a: &mut Vec<f64>, b: &Vec<f64> , c: &f64, s: &f64) | Performs rotation of points in the plane  |
+| Swap | f32swap(a: &mut Vec<f32>, b: &Vec<f32>) | Swap all of the elements in a and b by index |
+|           | f64swap(a: &mut Vec<f64>, b: &Vec<f64>) | Swap all of the elements in a and b by index  |
 | Add | f32add(a: &mut Vec<f32>, b: &Vec<f32>) | Array a add array b, store the result in array a |
 |         | f64add(a: &mut Vec<f64>, b: &Vec<f64>) | Array a add array b, store the results in array a |
 | Sub | f32sub(a: &mut Vec<f32>, b: &Vec<f32>) | Array a sub array b, store the result in array a  |

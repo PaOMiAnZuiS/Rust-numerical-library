@@ -2123,6 +2123,7 @@ pub fn f32copy(a: &mut Vec<f32>, b: &Vec<f32>) {
         *ai = *bi;
     }
 }
+
 pub fn f64copy(a: &mut Vec<f64>, b: &Vec<f64>) {
     //if length of a and b are not equal, return false
     if a.len() != b.len(){
@@ -2134,6 +2135,57 @@ pub fn f64copy(a: &mut Vec<f64>, b: &Vec<f64>) {
     }
 }
 
+pub fn f32rot(a: &mut Vec<f32>, b: &mut Vec<f32>, c: &f32, s: &f32) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    for (ai, bi) in a.iter_mut().zip(b) {
+        let ac = ai.clone();
+        *ai = c* *ai + s* *bi;  
+        *bi = c* *bi - s* ac;   
+
+    }
+}
+
+pub fn f64rot(a: &mut Vec<f64>, b: &mut Vec<f64>, c: &f64, s: &f64) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        let ac = ai.clone();
+        *ai = c* *ai + s* *bi;        
+        *bi = c* *bi - s* ac;
+    }
+}
+
+pub fn f32swap(a: &mut Vec<f32>, b: &mut Vec<f32>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    for (ai, bi) in a.iter_mut().zip(b) {
+        let ac = ai.clone();
+        *ai = *bi;  
+        *bi = ac;   
+
+    }
+}
+
+pub fn f64swap(a: &mut Vec<f64>, b: &mut Vec<f64>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        let ac = ai.clone();
+        *ai = *bi;        
+        *bi = ac;
+    }
+}
 
 pub fn f32sin(a: &mut Vec<f32>) {
     a.par_iter_mut()
