@@ -130,3 +130,7 @@ RNL-f32swap:
 |         | f64cot(a: &mut Vec<f64>) | Do cot() operation for each element in array a |
 | Exp | f32exp(a: &mut Vec<f32>) | Do exp() operation for each element in array a  |
 |        | f64exp(a: &mut Vec<f64>) | Do exp() operation for each element in array a |
+| Max | f32max(a: &Vec<f32>) | Find the maximum element in the f32 array  |
+|         | f64max(a: &Vec<f64>) | Find the maximum element in the f64 array |
+| MIn | f32min(a: &Vec<f32>) | Find the minimum element in the f32 array  |
+|        | f64min(a: &Vec<f64>) | Find the minimum element in the f64 array |

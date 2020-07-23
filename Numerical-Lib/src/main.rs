@@ -708,7 +708,7 @@ fn main() {
     println!("--------------------------------f32max-----------------------------------------");
 
     let start = time::now();
-    let x = f32max(&mut f32a);
+    let x = f32max(&f32a);
     let end = time::now();
     //println!("result is:{:?}", &x);
     println!("{:?}",end-start);
@@ -717,7 +717,7 @@ fn main() {
     println!("--------------------------------f64max-----------------------------------------");
 
     let start = time::now();
-    let x = f64max(&mut f64a);
+    let x = f64max(&f64a);
     let end = time::now();
     //println!("result is:{:?}", &x);
     println!("{:?}",end-start);;
@@ -725,7 +725,7 @@ fn main() {
     println!("--------------------------------f32min-----------------------------------------");
 
     let start = time::now();
-    let x = f32min(&mut f32a);
+    let x = f32min(&f32a);
     let end = time::now();
     //println!("result is:{:?}", &x);
     println!("{:?}",end-start);
@@ -734,7 +734,7 @@ fn main() {
     println!("--------------------------------f64min-----------------------------------------");
 
     let start = time::now();
-    let x = f64min(&mut f64a);
+    let x = f64min(&f64a);
     let end = time::now();
     //println!("result is:{:?}", &x);
     println!("{:?}",end-start);

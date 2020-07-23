@@ -2176,9 +2176,9 @@ pub fn f64swap(a: &mut Vec<f64>, b: &mut Vec<f64>) {
 }
 
 
-pub fn f32max(a: &mut Vec<f32>) -> f32{
+pub fn f32max(a: &Vec<f32>) -> f32{
     let mut x:f32  = a[0];
-    for ai in a.iter_mut() {
+    for ai in a.iter() {
         if x < *ai{
             x = *ai;
         }
@@ -2186,9 +2186,9 @@ pub fn f32max(a: &mut Vec<f32>) -> f32{
     x
 }
 
-pub fn f64max(a: &mut Vec<f64>) -> f64{
+pub fn f64max(a: &Vec<f64>) -> f64{
     let mut x:f64  = a[0];
-    for ai in a.iter_mut() {
+    for ai in a.iter() {
         if x < *ai{
             x = *ai;
         }
@@ -2196,9 +2196,9 @@ pub fn f64max(a: &mut Vec<f64>) -> f64{
     x
 }
 
-pub fn f32min(a: &mut Vec<f32>) -> f32{
+pub fn f32min(a: &Vec<f32>) -> f32{
     let mut x:f32  = a[0];
-    for ai in a.iter_mut() {
+    for ai in a.iter() {
         if x > *ai{
             x = *ai;
         }
@@ -2206,9 +2206,9 @@ pub fn f32min(a: &mut Vec<f32>) -> f32{
     x
 }
 
-pub fn f64min(a: &mut Vec<f64>) -> f64{
+pub fn f64min(a: &Vec<f64>) -> f64{
     let mut x:f64  = a[0];
-    for ai in a.iter_mut() {
+    for ai in a.iter() {
         if x > *ai{
             x = *ai;
         }
