@@ -2113,6 +2113,27 @@ pub fn f64mod(a: &mut Vec<f64>, b: &Vec<f64>) {
     }
 }
 
+pub fn f32copy(a: &mut Vec<f32>, b: &Vec<f32>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *bi;
+    }
+}
+pub fn f64copy(a: &mut Vec<f64>, b: &Vec<f64>) {
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai = *bi;
+    }
+}
+
 
 pub fn f32sin(a: &mut Vec<f32>) {
     a.par_iter_mut()

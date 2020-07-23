@@ -637,4 +637,21 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
+    println!("--------------------------------f32aopy-----------------------------------------");
+
+    let start = time::now();
+    f32copy(&mut f32a, &f32b);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------f64copy-----------------------------------------");
+
+    let start = time::now();
+    f64copy(&mut f64a, &f64b);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
 }
