@@ -1,4 +1,7 @@
-# Rust-numerical-library(RNL)
+# Rust-numerical-library(RNL) 
+
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/rustacean-flat-happy.svg)
+
 
 This is a library for fast numerical evaluation.
 
