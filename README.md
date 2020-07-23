@@ -51,6 +51,15 @@ RNL-f32nrm2:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32nrm2.png)
 
+MKL-cblas_sswap:
+
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_sswap.png)
+
+
+RNL-f32swap:
+
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32swap.png)
+
 ***Document:***
 
 | Operation | Function | Description |
