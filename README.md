@@ -1,16 +1,15 @@
 # Rust-numerical-library(RNL) 
 
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/rustacean-flat-happy.svg)
-
-
-This is a library for fast numerical evaluation.
+***Introduction:***
 
 This is a MSc Scintific Computing project from University College London.
 
 Author: Yuhang Ying
 Supervisor: Timo Betcke
 
-This library using packed_simd and rayon to accelerate the numerical operation.
+This is a library for fast numerical evaluation.This library using packed_simd and rayon to accelerate the numerical operation.
+
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/rustacean-flat-happy.svg)
 
 ***Hint:***
 
