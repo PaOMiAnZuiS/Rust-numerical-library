@@ -9,6 +9,11 @@ Supervisor: Timo Betcke
 
 This library using packed_simd and rayon to accelerate the numerical operation.
 
+***Hint:***
+
+To use the API of MKL, users should find the location of mkl library on his system, and paste it into "mkl_path" in build.rs.
+
+
 **Here are the comparation of the performances between this library and Intel-MKL**
 
 

@@ -12,8 +12,8 @@ use libc::size_t;
 #[link(name = "MKL-Rust")]
 extern {
     //fn double_input(input: libc::c_double) -> libc::c_double;
-    fn third_input(input: libc::c_double) -> libc::c_double;
-    fn MKL_cblas_dasum(input: [libc::c_double;2]) ->libc::c_double;
+    fn third_input(input: [libc::c_double;5]) -> libc::c_double;
+    fn MKL_cblas_dasum(input: libc::c_double) -> libc::c_double;
 }
 
  
@@ -21,13 +21,13 @@ fn main() {
 
     println!("--------------------------------MKL---------------------------------------------");
     
-    let input  = 4.0;
+    let input  = [1000.0, 2.0, 3.4, 7.0, 50.0];
     let output = unsafe { third_input(input) };
-    println!("{} * 2 = {}", input, output);
+    //println!("{} * 2 = {}", input[0], output);
 
-    let input = [4.0,5.0];
+    let input = 4.0;
     let output = unsafe { MKL_cblas_dasum(input) };
-    println!("{}", output);
+    //println!("{}", output);
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
