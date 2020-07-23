@@ -11,7 +11,8 @@
 #include <time.h>
 
 double test(double input[]){
-
+	input[0] = 1.0;
+	input[1] = 2.0;
 	return input[0];
 }
 double third_input(double input[]) {
@@ -22,15 +23,15 @@ double third_input(double input[]) {
 }
 
 double MKL_cblas_dasum(double input){
-	double double_a[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+	double double_a[5] = {input, 2.0, 3.4, 7.0, 50.0};
 
-	double double_b[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
-	float float_a[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+	//double double_b[5] = {input, 2.0, 3.4, 7.0, 50.0};
+	//float float_a[5] = {input, 2.0, 3.4, 7.0, 50.0};
 	
-	//double result1 = cblas_dasum(5,double_a,0);
+	double result1 = cblas_dasum(5,double_a,0);
 	//double result2 = cblas_sasum(5,float_a,0);
-	double result3 = cblas_ddot(5,double_a,0,double_b,0);
-	printf("result is: %f",result3);
+	//double result3 = cblas_ddot(5,double_a,0,double_b,0);
+	printf("result is: %f",result1);
 
-	return input;
+	return result1;
 }

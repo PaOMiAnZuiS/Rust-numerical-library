@@ -23,11 +23,11 @@ fn main() {
     
     let input  = [1000.0, 2.0, 3.4, 7.0, 50.0];
     let output = unsafe { third_input(input) };
-    //println!("{} * 2 = {}", input[0], output);
+    println!("{} * 2 = {}", input[0], output);
 
-    let input = 4.0;
-    let output = unsafe { MKL_cblas_dasum(input) };
-    //println!("{}", output);
+    //let input = 4.0;
+    //let output = unsafe { MKL_cblas_dasum(input) };
+    println!("{}", output);
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
@@ -608,7 +608,7 @@ fn main() {
     let start = time::now();
     f32scal(&mut f32a, &f32b[0]);
     let end = time::now();
-    //println!("result of simd exp is:{:?}", &f32a);
+    //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
 
@@ -617,7 +617,24 @@ fn main() {
     let start = time::now();
     f64scal(&mut f64a, &f64b[0]);
     let end = time::now();
-    //println!("result of simd exp is:{:?}", &f32a);
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------f32axpy-----------------------------------------");
+
+    let start = time::now();
+    f32axpy(&mut f32a, &f32b, &10.0);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------f64axpy-----------------------------------------");
+
+    let start = time::now();
+    f64axpy(&mut f64a, &f64b, &10.0);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
 }

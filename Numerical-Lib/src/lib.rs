@@ -931,6 +931,7 @@ pub fn usizesum(a: &Vec<usize> ,w: u8) -> usize{
 }
 
 
+
 pub fn f32dot(a: &Vec<f32>, b: &Vec<f32>, w: u8) -> f32 {
     if a.len() != b.len(){
             panic!("The lengths of input arrays must be same");
@@ -1017,6 +1018,7 @@ pub fn f32dot(a: &Vec<f32>, b: &Vec<f32>, w: u8) -> f32 {
         }
     }
 }
+
 
 pub fn f64dot(a: &Vec<f64>, b: &Vec<f64>, w:u8) -> f64 {
     if a.len() != b.len(){
@@ -1972,6 +1974,28 @@ pub fn f64scal(a: &mut Vec<f64>, b: &f64){
 
 }
 
+
+pub fn f32axpy(a: &mut Vec<f32>, b: &Vec<f32>, s: &f32){
+//if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai += *bi * s;
+    }
+}
+
+
+pub fn f64axpy(a: &mut Vec<f64>, b: &Vec<f64>, s: &f64){
+    //if length of a and b are not equal, return false
+    if a.len() != b.len(){
+        panic!("The length of input arrays must be same");
+    }
+    for (ai, bi) in a.iter_mut().zip(b) {
+        *ai += *bi * s;
+    }
+
+}
 
 pub fn f32add(a: &mut Vec<f32>, b: &Vec<f32>){
     //if length of a and b are not equal, return false
