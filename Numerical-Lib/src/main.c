@@ -10,17 +10,19 @@
 #include <stdlib.h>
 #include <time.h>
 
-double test(double input[]){
-	input[0] = 1.0;
-	input[1] = 2.0;
-	return input[0];
-}
-double third_input(const double *numbers, size_t length) {
+struct Array {
+	const double *pointer;
+	size_t length;
+};
+
+double third_input(struct Array arr) {
 
 	printf("-------------MKL_cblas_dasum-------------\n");
     
-    return *(numbers+2);
+    return *(arr.pointer+2);
 }
+
+
 
 double MKL_cblas_dasum(double input){
 	double double_a[5] = {input, 2.0, 3.4, 7.0, 50.0};

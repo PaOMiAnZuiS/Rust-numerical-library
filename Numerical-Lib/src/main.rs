@@ -12,10 +12,14 @@ use libc::size_t;
 #[link(name = "MKL-Rust")]
 extern {
     //fn double_input(input: libc::c_double) -> libc::c_double;
-    fn third_input(pointer: *const f64, len: size_t) -> f64;
+    fn third_input(input: Array) -> f64;
     fn MKL_cblas_dasum(input: libc::c_double) -> libc::c_double;
 }
 
+struct Array{
+   pointer: *const f64,
+   length: size_t,
+}
  
 fn main() {
 
@@ -23,7 +27,11 @@ fn main() {
     
     let input  = [1000.0, 2.0, 3.4, 7.0, 50.0];
     let inputslice = &input[0] as *const f64;
-    let output = unsafe { third_input(inputslice,5) };
+    let arr = Array{
+        pointer: inputslice,
+        length:5,
+    };
+    let output = unsafe { third_input(arr) };
     println!("Input first input:{} The third input:{}", input[0], output);
 
     //let input = 4.0;
