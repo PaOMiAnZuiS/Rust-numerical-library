@@ -12,7 +12,7 @@ use libc::size_t;
 #[link(name = "MKL-Rust")]
 extern {
     //fn double_input(input: libc::c_double) -> libc::c_double;
-    fn third_input(input: [libc::c_double;5]) -> libc::c_double;
+    fn third_input(pointer: *const f64, len: size_t) -> f64;
     fn MKL_cblas_dasum(input: libc::c_double) -> libc::c_double;
 }
 
@@ -22,8 +22,9 @@ fn main() {
     println!("--------------------------------MKL---------------------------------------------");
     
     let input  = [1000.0, 2.0, 3.4, 7.0, 50.0];
-    let output = unsafe { third_input(input) };
-    println!("{} * 2 = {}", input[0], output);
+    let inputslice = &input[0] as *const f64;
+    let output = unsafe { third_input(inputslice,5) };
+    println!("Input first input:{} The third input:{}", input[0], output);
 
     //let input = 4.0;
     //let output = unsafe { MKL_cblas_dasum(input) };

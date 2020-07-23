@@ -15,11 +15,11 @@ double test(double input[]){
 	input[1] = 2.0;
 	return input[0];
 }
-double third_input(double input[]) {
+double third_input(const double *numbers, size_t length) {
 
 	printf("-------------MKL_cblas_dasum-------------\n");
     
-    return test(input);
+    return *(numbers+2);
 }
 
 double MKL_cblas_dasum(double input){

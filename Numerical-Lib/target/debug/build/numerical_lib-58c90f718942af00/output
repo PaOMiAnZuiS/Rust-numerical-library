@@ -13,6 +13,10 @@ CRATE_CC_NO_DEFAULTS = None
 DEBUG = Some("true")
 CARGO_CFG_TARGET_FEATURE = Some("cmpxchg16b,fxsr,mmx,sse,sse2,sse3,ssse3")
 running: "cc" "-O3" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-arch" "x86_64" "-I" "/opt/intel/compilers_and_libraries_2020.1.216/mac/mkl/include" "-Wall" "-Wextra" "-o" "/Users/yingyuhang/Desktop/\xe5\xad\xa6\xe4\xb9\xa0/Rust-numerical-library/Numerical-Lib/target/debug/build/numerical_lib-58c90f718942af00/out/src/main.o" "-c" "src/main.c"
+cargo:warning=src/main.c:18:50: warning: unused parameter 'length' [-Wunused-parameter]
+cargo:warning=double third_input(const double *numbers, size_t length) {
+cargo:warning=                                                 ^
+cargo:warning=1 warning generated.
 exit code: 0
 AR_x86_64-apple-darwin = None
 AR_x86_64_apple_darwin = None
