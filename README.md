@@ -1,4 +1,4 @@
-# Rust-numerical-library
+# Rust-numerical-library(RNL)
 
 This is a library for fast numerical evaluation.
 
@@ -14,7 +14,7 @@ This library using packed_simd and rayon to accelerate the numerical operation.
 To use the API of MKL, users should find the location of mkl library on his system, and paste it into "mkl_path" in build.rs.
 
 
-**Here are the comparation of the performances between this library and Intel-MKL**
+**Here are some screenshots of comparation of the performances between this library(RNL) and Intel-MKL**
 
 
 MKL-cblas_sasum:
@@ -33,24 +33,6 @@ RNL-f64sum:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f64sum.png)
 
-MKL-cblas_sdot:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_ddot.png)
-
-
-RNL-f32dot:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32dot.png)
-
-MKL-cblas_snrm2:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_snrm2.png)
-
-
-RNL-f32nrm2:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32nrm2.png)
-
 MKL-cblas_sswap:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_sswap.png)
@@ -60,7 +42,9 @@ RNL-f32swap:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32swap.png)
 
-***Compare performance with MKL***
+***Compare the performance of RNL with MKL***
+
+(Those results are measured under the situation when the lengths of arrays are 100000)
 
 | Function | library | TImes(nanos) | 
 | ---------- | ------- | --------------- |  
@@ -80,8 +64,12 @@ RNL-f32swap:
 |          | RNL-f32rot | 34000 | 
 | Scale | MKL_cblas-sscal | 493000 | 
 |          | RNL-f32scal | 57000 | 
+| Max | MKL_cblas-isamax | 2000 |
+|         | RNL-f32max | 1000 |
+| Min  | MKL_cblas_isamin | 1000 | 
+|         | RNL-f32min | 1000 | 
 
-(Those result are under situation when the length of array is 100000)
+(Updating...)
 
 ***Document:***
 
