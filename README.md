@@ -33,7 +33,7 @@ RNL-f64sum:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f64sum.png)
 
-MKL-cblas_ddot:
+MKL-cblas_sdot:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_ddot.png)
 
@@ -42,7 +42,7 @@ RNL-f32dot:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32dot.png)
 
-MKL-cblas_dnrm2:
+MKL-cblas_snrm2:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dnrm2.png)
 
@@ -59,6 +59,21 @@ MKL-cblas_sswap:
 RNL-f32swap:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32swap.png)
+
+***Compare performance with MKL***
+
+| Function | library | TImes(nanos) | 
+| Sum | MKL-cblas_sasum | 26000 |
+|         | RNL-f32sum | 60000 |
+|         | MKL-cblas_dasum | 56000|
+|         | RNL-f64sum | 89000 |
+| Dot product | MKL-cblas_sdot | 71000 |
+|        | RNL-f32dot | 110000 | 
+| Norm | MKL-cblas_snrm2 | 129000 |
+|           | RNL- f32nrm2 | 85000 |
+
+
+(Those result are under situation when the length of array is 100000)
 
 ***Document:***
 
