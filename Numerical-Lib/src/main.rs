@@ -10,7 +10,7 @@ use lib::simd_operator::*;
 use rand::Rng;
 use libc::size_t;
 #[link(name = "MKL-Rust")]
-extern {
+extern "C" {
     //fn double_input(input: libc::c_double) -> libc::c_double;
     fn third_input(input: Array) -> f64;
     fn MKL_cblas_dasum(input: libc::c_double) -> libc::c_double;
@@ -31,12 +31,13 @@ fn main() {
         pointer: inputslice,
         length:5,
     };
-    let output = unsafe { third_input(arr) };
-    println!("Input first input:{} The third input:{}", input[0], output);
+    //let output = unsafe { third_input(arr) };
+    //println!("Input first input:{} The third input:{}", input[0], output);
 
-    //let input = 4.0;
+    let input = 4.0;
+    
     //let output = unsafe { MKL_cblas_dasum(input) };
-    println!("{}", output);
+    //println!("{}", output);
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
@@ -729,7 +730,7 @@ fn main() {
     let x = f64max(&f64a);
     let end = time::now();
     //println!("result is:{:?}", &x);
-    println!("{:?}",end-start);;
+    println!("{:?}",end-start);
     
     println!("--------------------------------f32min-----------------------------------------");
 
