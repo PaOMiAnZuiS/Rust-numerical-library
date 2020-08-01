@@ -18,27 +18,9 @@ To use the API of MKL, users should find the location of mkl library on his syst
 
 **Here are some screenshots of comparation of the performances between this library(RNL) and Intel-MKL**
 
-
-MKL-cblas_sasum:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_sasum.png)
-
-RNL-f32sum:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f32sum.png)
-
-MKL-cblas_dasum:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_dasum.png)
-
-RNL-f64sum:
-
-![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-f64sum.png)
-
 MKL-cblas_sswap:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/MKL-cblas_sswap.png)
-
 
 RNL-f32swap:
 
