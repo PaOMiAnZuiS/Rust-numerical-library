@@ -6,8 +6,42 @@ use packed_simd::*;
 use rustc_cfg::Cfg;
 use rayon::prelude::*;
 
+pub trait ASub<Rhs = Self> {
+    type Output;
+    #[must_use]
+    fn sub(self, rhs: Rhs) -> Self::Output;
+}
 
+impl ASub<f32> for f32{
+    type Output = f32;
 
+    fn sub(self, other: f32) -> f32{
+        self - other
+    }
+}
+
+impl ASub<f64> for f64{
+    type Output = f64;
+
+    fn sub(self, other: f64) -> f64{
+        self - other
+    }
+}
+
+pub fn fsum<T:std::ops::Add<Output = T>>(a:T,b:T) -> T{
+    a+b
+}
+/*
+pub fn f3sum<T:std::marker::Sync>(a:&Vec<T>) -> T{
+    let residual = a.len()%16;
+    let sa = &a[0..a.len()-residual];
+
+    a.par_chunks(16) 
+        .map(f32x16::from_slice_unaligned) 
+        .sum::<f32x16>()
+        .sum()
+}
+*/
 pub fn f32sum(a: &Vec<f32>, w: u8) -> f32{
     match w{
         16 => {

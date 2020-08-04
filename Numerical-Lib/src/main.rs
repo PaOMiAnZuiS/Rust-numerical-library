@@ -20,7 +20,7 @@ struct Array{
    pointer: *const f64,
    length: size_t,
 }
- 
+
 fn main() {
 
     println!("--------------------------------MKL---------------------------------------------");
