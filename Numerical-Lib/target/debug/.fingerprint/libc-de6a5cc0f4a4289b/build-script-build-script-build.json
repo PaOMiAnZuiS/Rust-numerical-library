@@ -1,0 +1,1 @@
+{"rustc":4969374374717656167,"features":"[\"default\", \"std\"]","target":10088282520713642473,"profile":6299028598154287785,"path":1955016823495967094,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/libc-de6a5cc0f4a4289b/dep-build-script-build-script-build"}}],"rustflags":["--emit=asm"],"metadata":14998826085014762512,"config":0}

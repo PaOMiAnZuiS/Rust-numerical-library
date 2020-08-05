@@ -1,0 +1,1 @@
+{"rustc":4969374374717656167,"features":"[\"read\"]","target":2969822998723457667,"profile":8128692632493113445,"path":1065705019722265265,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/gimli-c1be8a93ac3f8dca/dep-lib-gimli"}}],"rustflags":["--emit=asm"],"metadata":2892955674895201627,"config":0}

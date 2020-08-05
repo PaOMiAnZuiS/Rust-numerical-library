@@ -1,0 +1,1 @@
+{"rustc":4969374374717656167,"features":"[]","target":10429514197457385088,"profile":28792303236208994,"path":4866043252109243264,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/rayon-core-1750abf9d2cdeda6/dep-build-script-build-script-build"}}],"rustflags":["--emit","asm"],"metadata":14590378261418540923,"config":0}
