@@ -1,104 +1,103 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 7
-	.intel_syntax noprefix
 	.globl	__ZN11unicode_xid6tables16derived_property12XID_Continue17he75d3d87a9cf0c2cE
 	.p2align	4, 0x90
 __ZN11unicode_xid6tables16derived_property12XID_Continue17he75d3d87a9cf0c2cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	xor	eax, eax
-	cmp	edi, 43052
-	mov	ecx, 368
-	cmovb	rcx, rax
-	lea	rax, [rip + l___unnamed_1]
-	cmp	dword ptr [rax + 8*rcx + 1472], edi
-	lea	rdx, [rcx + 184]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 736], edi
-	lea	rcx, [rdx + 92]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 368], edi
-	lea	rdx, [rcx + 46]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 184], edi
-	lea	rcx, [rdx + 23]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 96], edi
-	lea	rdx, [rcx + 12]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 48], edi
-	lea	rcx, [rdx + 6]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 24], edi
-	lea	rdx, [rcx + 3]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 8], edi
-	lea	rcx, [rdx + 1]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 8], edi
-	lea	rdx, [rcx + 1]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx], edi
-	setbe	cl
-	cmp	dword ptr [rax + 8*rdx + 4], edi
-	setae	al
-	and	al, cl
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	xorl	%eax, %eax
+	cmpl	$43052, %edi
+	movl	$368, %ecx
+	cmovbq	%rax, %rcx
+	leaq	184(%rcx), %rdx
+	leaq	l___unnamed_1(%rip), %rax
+	cmpl	%edi, 1472(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	92(%rdx), %rcx
+	cmpl	%edi, 736(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	46(%rcx), %rdx
+	cmpl	%edi, 368(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	23(%rdx), %rcx
+	cmpl	%edi, 184(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	12(%rcx), %rdx
+	cmpl	%edi, 96(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	6(%rdx), %rcx
+	cmpl	%edi, 48(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	3(%rcx), %rdx
+	cmpl	%edi, 24(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	1(%rdx), %rcx
+	cmpl	%edi, 8(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	1(%rcx), %rdx
+	cmpl	%edi, 8(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	cmpl	%edi, (%rax,%rdx,8)
+	setbe	%cl
+	cmpl	%edi, 4(%rax,%rdx,8)
+	setae	%al
+	andb	%cl, %al
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN11unicode_xid6tables16derived_property9XID_Start17h49330b0fce5cc8feE
 	.p2align	4, 0x90
 __ZN11unicode_xid6tables16derived_property9XID_Start17h49330b0fce5cc8feE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	xor	eax, eax
-	cmp	edi, 43020
-	mov	ecx, 314
-	cmovb	rcx, rax
-	lea	rax, [rip + l___unnamed_2]
-	cmp	dword ptr [rax + 8*rcx + 1256], edi
-	lea	rdx, [rcx + 157]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 632], edi
-	lea	rcx, [rdx + 79]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 312], edi
-	lea	rdx, [rcx + 39]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 160], edi
-	lea	rcx, [rdx + 20]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 80], edi
-	lea	rdx, [rcx + 10]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 40], edi
-	lea	rcx, [rdx + 5]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 16], edi
-	lea	rdx, [rcx + 2]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx + 8], edi
-	lea	rcx, [rdx + 1]
-	cmova	rcx, rdx
-	cmp	dword ptr [rax + 8*rcx + 8], edi
-	lea	rdx, [rcx + 1]
-	cmova	rdx, rcx
-	cmp	dword ptr [rax + 8*rdx], edi
-	setbe	cl
-	cmp	dword ptr [rax + 8*rdx + 4], edi
-	setae	al
-	and	al, cl
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	xorl	%eax, %eax
+	cmpl	$43020, %edi
+	movl	$314, %ecx
+	cmovbq	%rax, %rcx
+	leaq	157(%rcx), %rdx
+	leaq	l___unnamed_2(%rip), %rax
+	cmpl	%edi, 1256(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	79(%rdx), %rcx
+	cmpl	%edi, 632(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	39(%rcx), %rdx
+	cmpl	%edi, 312(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	20(%rdx), %rcx
+	cmpl	%edi, 160(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	10(%rcx), %rdx
+	cmpl	%edi, 80(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	5(%rdx), %rcx
+	cmpl	%edi, 40(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	2(%rcx), %rdx
+	cmpl	%edi, 16(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	leaq	1(%rdx), %rcx
+	cmpl	%edi, 8(%rax,%rdx,8)
+	cmovaq	%rdx, %rcx
+	leaq	1(%rcx), %rdx
+	cmpl	%edi, 8(%rax,%rcx,8)
+	cmovaq	%rcx, %rdx
+	cmpl	%edi, (%rax,%rdx,8)
+	setbe	%cl
+	cmpl	%edi, 4(%rax,%rdx,8)
+	setae	%al
+	andb	%cl, %al
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.section	__TEXT,__const

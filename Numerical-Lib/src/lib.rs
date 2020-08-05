@@ -31,6 +31,7 @@ impl ASub<f64> for f64{
 pub fn fsum<T:std::ops::Add<Output = T>>(a:T,b:T) -> T{
     a+b
 }
+
 /*
 pub fn f3sum<T:std::marker::Sync>(a:&Vec<T>) -> T{
     let residual = a.len()%16;
@@ -42,6 +43,7 @@ pub fn f3sum<T:std::marker::Sync>(a:&Vec<T>) -> T{
         .sum()
 }
 */
+
 pub fn f32sum(a: &Vec<f32>, w: u8) -> f32{
     match w{
         16 => {

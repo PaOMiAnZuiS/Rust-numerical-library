@@ -1,15 +1,14 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 7
-	.intel_syntax noprefix
 	.globl	__ZN54_$LT$libc..unix..DIR$u20$as$u20$core..clone..Clone$GT$5clone17ha7ba172b3306b51dE
 	.p2align	4, 0x90
 __ZN54_$LT$libc..unix..DIR$u20$as$u20$core..clone..Clone$GT$5clone17ha7ba172b3306b51dE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
 	ud2
 	.cfi_endproc
 
@@ -17,1052 +16,1072 @@ __ZN54_$LT$libc..unix..DIR$u20$as$u20$core..clone..Clone$GT$5clone17ha7ba172b330
 	.p2align	4, 0x90
 __ZN58_$LT$libc..unix..timeval$u20$as$u20$core..clone..Clone$GT$5clone17h0ce105539af03601E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	mov	edx, dword ptr [rdi + 8]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	movl	8(%rdi), %edx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN57_$LT$libc..unix..rusage$u20$as$u20$core..clone..Clone$GT$5clone17h9d726070d2377446E
 	.p2align	4, 0x90
 __ZN57_$LT$libc..unix..rusage$u20$as$u20$core..clone..Clone$GT$5clone17h9d726070d2377446E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 144
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	112(%rsi), %ymm0
+	vmovups	%ymm0, 112(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN60_$LT$libc..unix..ipv6_mreq$u20$as$u20$core..clone..Clone$GT$5clone17h939de96848eabc35E
 	.p2align	4, 0x90
 __ZN60_$LT$libc..unix..ipv6_mreq$u20$as$u20$core..clone..Clone$GT$5clone17h939de96848eabc35E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, dword ptr [rsi + 16]
-	mov	dword ptr [rdi + 16], ecx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movl	16(%rsi), %ecx
+	movl	%ecx, 16(%rdi)
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN56_$LT$libc..unix..iovec$u20$as$u20$core..clone..Clone$GT$5clone17h211d32117219e7c5E
 	.p2align	4, 0x90
 __ZN56_$LT$libc..unix..iovec$u20$as$u20$core..clone..Clone$GT$5clone17h211d32117219e7c5E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	mov	rdx, qword ptr [rdi + 8]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	movq	8(%rdi), %rdx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN57_$LT$libc..unix..pollfd$u20$as$u20$core..clone..Clone$GT$5clone17h5b32eb1b11918542E
 	.p2align	4, 0x90
 __ZN57_$LT$libc..unix..pollfd$u20$as$u20$core..clone..Clone$GT$5clone17h5b32eb1b11918542E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN58_$LT$libc..unix..winsize$u20$as$u20$core..clone..Clone$GT$5clone17h071e891a27aefff3E
 	.p2align	4, 0x90
 __ZN58_$LT$libc..unix..winsize$u20$as$u20$core..clone..Clone$GT$5clone17h071e891a27aefff3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN57_$LT$libc..unix..linger$u20$as$u20$core..clone..Clone$GT$5clone17hd1506750178cdf57E
 	.p2align	4, 0x90
 __ZN57_$LT$libc..unix..linger$u20$as$u20$core..clone..Clone$GT$5clone17hd1506750178cdf57E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	eax, dword ptr [rdi]
-	mov	edx, dword ptr [rdi + 4]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %eax
+	movl	4(%rdi), %edx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN57_$LT$libc..unix..sigval$u20$as$u20$core..clone..Clone$GT$5clone17h446eb838927ccaa7E
 	.p2align	4, 0x90
 __ZN57_$LT$libc..unix..sigval$u20$as$u20$core..clone..Clone$GT$5clone17h446eb838927ccaa7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN54_$LT$libc..unix..tms$u20$as$u20$core..clone..Clone$GT$5clone17hacd6eb7cc2aa0c6fE
 	.p2align	4, 0x90
 __ZN54_$LT$libc..unix..tms$u20$as$u20$core..clone..Clone$GT$5clone17hacd6eb7cc2aa0c6fE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN59_$LT$libc..unix..protoent$u20$as$u20$core..clone..Clone$GT$5clone17h469306794ed1f9dcE
 	.p2align	4, 0x90
 __ZN59_$LT$libc..unix..protoent$u20$as$u20$core..clone..Clone$GT$5clone17h469306794ed1f9dcE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	16(%rsi), %rcx
+	movq	%rcx, 16(%rdi)
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN64_$LT$libc..unix..bsd..sockaddr$u20$as$u20$core..clone..Clone$GT$5clone17h7077082112ef7223E
 	.p2align	4, 0x90
 __ZN64_$LT$libc..unix..bsd..sockaddr$u20$as$u20$core..clone..Clone$GT$5clone17h7077082112ef7223E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..sockaddr_in6$u20$as$u20$core..clone..Clone$GT$5clone17hd9202aee5f2b8fa1E
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..sockaddr_in6$u20$as$u20$core..clone..Clone$GT$5clone17hd9202aee5f2b8fa1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, dword ptr [rsi + 24]
-	mov	dword ptr [rdi + 24], ecx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %xmm0
+	vmovups	12(%rsi), %xmm1
+	vmovups	%xmm1, 12(%rdi)
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN62_$LT$libc..unix..bsd..passwd$u20$as$u20$core..clone..Clone$GT$5clone17h3b8f373260f2a297E
 	.p2align	4, 0x90
 __ZN62_$LT$libc..unix..bsd..passwd$u20$as$u20$core..clone..Clone$GT$5clone17h3b8f373260f2a297E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 9
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	64(%rsi), %rcx
+	movq	%rcx, 64(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN62_$LT$libc..unix..bsd..fd_set$u20$as$u20$core..clone..Clone$GT$5clone17h6c03aa92124b8dfbE
 	.p2align	4, 0x90
 __ZN62_$LT$libc..unix..bsd..fd_set$u20$as$u20$core..clone..Clone$GT$5clone17h6c03aa92124b8dfbE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 32
-	rep movsdi es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN58_$LT$libc..unix..bsd..tm$u20$as$u20$core..clone..Clone$GT$5clone17h03e005086eefa201E
 	.p2align	4, 0x90
 __ZN58_$LT$libc..unix..bsd..tm$u20$as$u20$core..clone..Clone$GT$5clone17h03e005086eefa201E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 48]
-	mov	qword ptr [rdi + 48], rcx
-	mov	rcx, qword ptr [rsi + 40]
-	mov	qword ptr [rdi + 40], rcx
-	mov	rcx, qword ptr [rsi + 32]
-	mov	qword ptr [rdi + 32], rcx
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	24(%rsi), %ymm1
+	vmovups	%ymm1, 24(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN62_$LT$libc..unix..bsd..msghdr$u20$as$u20$core..clone..Clone$GT$5clone17h527eb4e0f6876a4fE
 	.p2align	4, 0x90
 __ZN62_$LT$libc..unix..bsd..msghdr$u20$as$u20$core..clone..Clone$GT$5clone17h527eb4e0f6876a4fE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 40]
-	mov	qword ptr [rdi + 40], rcx
-	mov	rcx, qword ptr [rsi + 32]
-	mov	qword ptr [rdi + 32], rcx
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	16(%rsi), %ymm1
+	vmovups	%ymm1, 16(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN63_$LT$libc..unix..bsd..cmsghdr$u20$as$u20$core..clone..Clone$GT$5clone17h93a79c66b2031310E
 	.p2align	4, 0x90
 __ZN63_$LT$libc..unix..bsd..cmsghdr$u20$as$u20$core..clone..Clone$GT$5clone17h93a79c66b2031310E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, dword ptr [rsi + 8]
-	mov	dword ptr [rdi + 8], ecx
-	mov	rcx, qword ptr [rsi]
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movl	8(%rsi), %ecx
+	movl	%ecx, 8(%rdi)
+	movq	(%rsi), %rcx
+	movq	%rcx, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..if_nameindex$u20$as$u20$core..clone..Clone$GT$5clone17hf383cafce93142aaE
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..if_nameindex$u20$as$u20$core..clone..Clone$GT$5clone17hf383cafce93142aaE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	eax, dword ptr [rdi]
-	mov	rdx, qword ptr [rdi + 8]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %eax
+	movq	8(%rdi), %rdx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN67_$LT$libc..unix..bsd..sockaddr_un$u20$as$u20$core..clone..Clone$GT$5clone17h0fe88f032baa9272E
 	.p2align	4, 0x90
 __ZN67_$LT$libc..unix..bsd..sockaddr_un$u20$as$u20$core..clone..Clone$GT$5clone17h0fe88f032baa9272E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 106
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	74(%rsi), %ymm3
+	vmovups	%ymm3, 74(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN63_$LT$libc..unix..bsd..utsname$u20$as$u20$core..clone..Clone$GT$5clone17h18fc8067512406ccE
 	.p2align	4, 0x90
 __ZN63_$LT$libc..unix..bsd..utsname$u20$as$u20$core..clone..Clone$GT$5clone17h18fc8067512406ccE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 1280
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movl	$1280, %edx
+	callq	_memcpy
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4libc4unix3bsd5apple9siginfo_t7si_addr17h4d9f5656668d3a1cE
 	.p2align	4, 0x90
 __ZN4libc4unix3bsd5apple9siginfo_t7si_addr17h4d9f5656668d3a1cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi + 24]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	24(%rdi), %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4libc4unix3bsd5apple9siginfo_t8si_value17h28652bfe90f3563aE
 	.p2align	4, 0x90
 __ZN4libc4unix3bsd5apple9siginfo_t8si_value17h28652bfe90f3563aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi + 32]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	32(%rdi), %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..apple..aiocb$u20$as$u20$core..clone..Clone$GT$5clone17h34c1fe7ab3bc882cE
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..apple..aiocb$u20$as$u20$core..clone..Clone$GT$5clone17h34c1fe7ab3bc882cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 10
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	48(%rsi), %ymm2
+	vmovups	%ymm2, 48(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$libc..unix..bsd..apple..glob_t$u20$as$u20$core..clone..Clone$GT$5clone17h7d714f2c4dfa8be7E
 	.p2align	4, 0x90
 __ZN69_$LT$libc..unix..bsd..apple..glob_t$u20$as$u20$core..clone..Clone$GT$5clone17h7d714f2c4dfa8be7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 11
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	56(%rsi), %ymm2
+	vmovups	%ymm2, 56(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN72_$LT$libc..unix..bsd..apple..siginfo_t$u20$as$u20$core..clone..Clone$GT$5clone17h0679493933b128b3E
 	.p2align	4, 0x90
 __ZN72_$LT$libc..unix..bsd..apple..siginfo_t$u20$as$u20$core..clone..Clone$GT$5clone17h0679493933b128b3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 13
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	96(%rsi), %rcx
+	movq	%rcx, 96(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN72_$LT$libc..unix..bsd..apple..sigaction$u20$as$u20$core..clone..Clone$GT$5clone17h41b46c9fdea2b234E
 	.p2align	4, 0x90
 __ZN72_$LT$libc..unix..bsd..apple..sigaction$u20$as$u20$core..clone..Clone$GT$5clone17h41b46c9fdea2b234E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..apple..dqblk$u20$as$u20$core..clone..Clone$GT$5clone17h6f20560a331f60a9E
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..apple..dqblk$u20$as$u20$core..clone..Clone$GT$5clone17h6f20560a331f60a9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 56]
-	mov	qword ptr [rdi + 56], rcx
-	mov	rcx, qword ptr [rsi + 48]
-	mov	qword ptr [rdi + 48], rcx
-	mov	rcx, qword ptr [rsi + 40]
-	mov	qword ptr [rdi + 40], rcx
-	mov	rcx, qword ptr [rsi + 32]
-	mov	qword ptr [rdi + 32], rcx
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN72_$LT$libc..unix..bsd..apple..if_msghdr$u20$as$u20$core..clone..Clone$GT$5clone17h4844cb3d6d995e10E
 	.p2align	4, 0x90
 __ZN72_$LT$libc..unix..bsd..apple..if_msghdr$u20$as$u20$core..clone..Clone$GT$5clone17h4844cb3d6d995e10E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 28
-	rep movsdi es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	80(%rsi), %ymm3
+	vmovups	%ymm3, 80(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..apple..lconv$u20$as$u20$core..clone..Clone$GT$5clone17h5a16677d2d0f0483E
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..apple..lconv$u20$as$u20$core..clone..Clone$GT$5clone17h5a16677d2d0f0483E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 12
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$libc..unix..bsd..apple..proc_taskallinfo$u20$as$u20$core..clone..Clone$GT$5clone17hf37775141382aeb9E
 	.p2align	4, 0x90
 __ZN79_$LT$libc..unix..bsd..apple..proc_taskallinfo$u20$as$u20$core..clone..Clone$GT$5clone17hf37775141382aeb9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 232
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	224(%rsi), %rcx
+	movq	%rcx, 224(%rdi)
+	vmovups	192(%rsi), %ymm0
+	vmovups	%ymm0, 192(%rdi)
+	vmovups	160(%rsi), %ymm0
+	vmovups	%ymm0, 160(%rdi)
+	vmovups	128(%rsi), %ymm0
+	vmovups	%ymm0, 128(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$libc..unix..bsd..apple..xucred$u20$as$u20$core..clone..Clone$GT$5clone17ha93c86c51600a3a1E
 	.p2align	4, 0x90
 __ZN69_$LT$libc..unix..bsd..apple..xucred$u20$as$u20$core..clone..Clone$GT$5clone17ha93c86c51600a3a1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 19
-	rep movsdi es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	44(%rsi), %ymm2
+	vmovups	%ymm2, 44(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN74_$LT$libc..unix..bsd..apple..mach_header$u20$as$u20$core..clone..Clone$GT$5clone17hbc861c337720d8afE
 	.p2align	4, 0x90
 __ZN74_$LT$libc..unix..bsd..apple..mach_header$u20$as$u20$core..clone..Clone$GT$5clone17hbc861c337720d8afE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, dword ptr [rsi + 24]
-	mov	dword ptr [rdi + 24], ecx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %xmm0
+	vmovups	12(%rsi), %xmm1
+	vmovups	%xmm1, 12(%rdi)
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN78_$LT$libc..unix..bsd..apple..segment_command$u20$as$u20$core..clone..Clone$GT$5clone17ha2ef151148d9dcaeE
 	.p2align	4, 0x90
 __ZN78_$LT$libc..unix..bsd..apple..segment_command$u20$as$u20$core..clone..Clone$GT$5clone17ha2ef151148d9dcaeE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 48]
-	mov	qword ptr [rdi + 48], rcx
-	mov	rcx, qword ptr [rsi + 40]
-	mov	qword ptr [rdi + 40], rcx
-	mov	rcx, qword ptr [rsi + 32]
-	mov	qword ptr [rdi + 32], rcx
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	24(%rsi), %ymm1
+	vmovups	%ymm1, 24(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN74_$LT$libc..unix..bsd..apple..sockaddr_dl$u20$as$u20$core..clone..Clone$GT$5clone17hd04e10830803bdcaE
 	.p2align	4, 0x90
 __ZN74_$LT$libc..unix..bsd..apple..sockaddr_dl$u20$as$u20$core..clone..Clone$GT$5clone17hd04e10830803bdcaE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, dword ptr [rsi + 16]
-	mov	dword ptr [rdi + 16], ecx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movl	16(%rsi), %ecx
+	movl	%ecx, 16(%rdi)
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN75_$LT$libc..unix..bsd..apple..sockaddr_ctl$u20$as$u20$core..clone..Clone$GT$5clone17hf3fa0107b11342a9E
 	.p2align	4, 0x90
 __ZN75_$LT$libc..unix..bsd..apple..sockaddr_ctl$u20$as$u20$core..clone..Clone$GT$5clone17hf3fa0107b11342a9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN71_$LT$libc..unix..bsd..apple..ipc_perm$u20$as$u20$core..clone..Clone$GT$5clone17h85548db96033c1efE
 	.p2align	4, 0x90
 __ZN71_$LT$libc..unix..bsd..apple..ipc_perm$u20$as$u20$core..clone..Clone$GT$5clone17h85548db96033c1efE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	16(%rsi), %rcx
+	movq	%rcx, 16(%rdi)
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$libc..unix..bsd..apple..sembuf$u20$as$u20$core..clone..Clone$GT$5clone17he5eaf6577a07962fE
 	.p2align	4, 0x90
 __ZN69_$LT$libc..unix..bsd..apple..sembuf$u20$as$u20$core..clone..Clone$GT$5clone17he5eaf6577a07962fE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	ecx, dword ptr [rdi]
-	movzx	eax, word ptr [rdi + 4]
-	shl	rax, 32
-	or	rax, rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %ecx
+	movzwl	4(%rdi), %eax
+	shlq	$32, %rax
+	orq	%rcx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN70_$LT$libc..unix..bsd..apple..in_addr$u20$as$u20$core..clone..Clone$GT$5clone17h436f612df79fcfe4E
 	.p2align	4, 0x90
 __ZN70_$LT$libc..unix..bsd..apple..in_addr$u20$as$u20$core..clone..Clone$GT$5clone17h436f612df79fcfe4E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	eax, dword ptr [rdi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN77_$LT$libc..unix..bsd..apple..sa_endpoints_t$u20$as$u20$core..clone..Clone$GT$5clone17h24ad1ed125ad55bfE
 	.p2align	4, 0x90
 __ZN77_$LT$libc..unix..bsd..apple..sa_endpoints_t$u20$as$u20$core..clone..Clone$GT$5clone17h24ad1ed125ad55bfE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 32]
-	mov	qword ptr [rdi + 32], rcx
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	32(%rsi), %rcx
+	movq	%rcx, 32(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..apple..timex$u20$as$u20$core..clone..Clone$GT$5clone17h9e27d6cdf9d56907E
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..apple..timex$u20$as$u20$core..clone..Clone$GT$5clone17h9e27d6cdf9d56907E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 136
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	128(%rsi), %rcx
+	movq	%rcx, 128(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$libc..unix..bsd..apple..kevent$u20$as$u20$core..clone..Clone$GT$5clone17h6855de1b3d4c6a18E
 	.p2align	4, 0x90
 __ZN69_$LT$libc..unix..bsd..apple..kevent$u20$as$u20$core..clone..Clone$GT$5clone17h6855de1b3d4c6a18E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi + 24]
-	mov	qword ptr [rdi + 24], rcx
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rdi + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN71_$LT$libc..unix..bsd..apple..semid_ds$u20$as$u20$core..clone..Clone$GT$5clone17hab7ce04e273a35e0E
 	.p2align	4, 0x90
 __ZN71_$LT$libc..unix..bsd..apple..semid_ds$u20$as$u20$core..clone..Clone$GT$5clone17hab7ce04e273a35e0E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 18
-	rep movsdi es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	64(%rsi), %rcx
+	movq	%rcx, 64(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN78_$LT$libc..unix..bsd..apple..proc_threadinfo$u20$as$u20$core..clone..Clone$GT$5clone17h932672aaf24aad0cE
 	.p2align	4, 0x90
 __ZN78_$LT$libc..unix..bsd..apple..proc_threadinfo$u20$as$u20$core..clone..Clone$GT$5clone17h932672aaf24aad0cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 14
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	80(%rsi), %ymm3
+	vmovups	%ymm3, 80(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$libc..unix..bsd..apple..statfs$u20$as$u20$core..clone..Clone$GT$5clone17hb8a47b4d40c5172aE
 	.p2align	4, 0x90
 __ZN69_$LT$libc..unix..bsd..apple..statfs$u20$as$u20$core..clone..Clone$GT$5clone17hb8a47b4d40c5172aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 2168
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movl	$2168, %edx
+	callq	_memcpy
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$libc..unix..bsd..apple..dirent$u20$as$u20$core..clone..Clone$GT$5clone17h2ed72129d7a39e59E
 	.p2align	4, 0x90
 __ZN69_$LT$libc..unix..bsd..apple..dirent$u20$as$u20$core..clone..Clone$GT$5clone17h2ed72129d7a39e59E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 1048
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movl	$1048, %edx
+	callq	_memcpy
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$libc..unix..bsd..apple..pthread_rwlock_t$u20$as$u20$core..clone..Clone$GT$5clone17h22b2ac4d30d8a9f0E
 	.p2align	4, 0x90
 __ZN79_$LT$libc..unix..bsd..apple..pthread_rwlock_t$u20$as$u20$core..clone..Clone$GT$5clone17h22b2ac4d30d8a9f0E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 200
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	192(%rsi), %rcx
+	movq	%rcx, 192(%rdi)
+	vmovups	160(%rsi), %ymm0
+	vmovups	%ymm0, 160(%rdi)
+	vmovups	128(%rsi), %ymm0
+	vmovups	%ymm0, 128(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$libc..unix..bsd..apple..sockaddr_storage$u20$as$u20$core..clone..Clone$GT$5clone17h8f20f76509d90940E
 	.p2align	4, 0x90
 __ZN79_$LT$libc..unix..bsd..apple..sockaddr_storage$u20$as$u20$core..clone..Clone$GT$5clone17h8f20f76509d90940E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 16
-	rep movsq es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$libc..unix..bsd..apple..utmpx$u20$as$u20$core..clone..Clone$GT$5clone17h5cfd3d51497ce96bE
 	.p2align	4, 0x90
 __ZN68_$LT$libc..unix..bsd..apple..utmpx$u20$as$u20$core..clone..Clone$GT$5clone17h5cfd3d51497ce96bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 640
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movl	$640, %edx
+	callq	_memcpy
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4libc4unix3bsd5apple16__DARWIN_ALIGN3217h49233a09cda6f889E
 	.p2align	4, 0x90
 __ZN4libc4unix3bsd5apple16__DARWIN_ALIGN3217h49233a09cda6f889E:
 	.cfi_startproc
-	mov	rax, rdi
-	add	rax, 3
+	movq	%rdi, %rax
+	addq	$3, %rax
 	jb	LBB49_2
-	and	rax, -4
-	ret
+	andq	$-4, %rax
+	retq
 LBB49_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_1]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_1(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN75_$LT$libc..unix..bsd..apple..b64..if_data$u20$as$u20$core..clone..Clone$GT$5clone17h5999c46ea7c17ec5E
 	.p2align	4, 0x90
 __ZN75_$LT$libc..unix..bsd..apple..b64..if_data$u20$as$u20$core..clone..Clone$GT$5clone17h5999c46ea7c17ec5E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	ecx, 24
-	rep movsdi es:[rdi], [rsi]
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN87_$LT$libc..unix..bsd..apple..b64..__darwin_mcontext64$u20$as$u20$core..clone..Clone$GT$5clone17h64a2aa4377fdd5e4E
 	.p2align	4, 0x90
 __ZN87_$LT$libc..unix..bsd..apple..b64..__darwin_mcontext64$u20$as$u20$core..clone..Clone$GT$5clone17h64a2aa4377fdd5e4E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 712
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movl	$712, %edx
+	callq	_memcpy
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN95_$LT$libc..unix..bsd..apple..b64..__darwin_x86_thread_state64$u20$as$u20$core..clone..Clone$GT$5clone17h01e018b4c7552fcbE
 	.p2align	4, 0x90
 __ZN95_$LT$libc..unix..bsd..apple..b64..__darwin_x86_thread_state64$u20$as$u20$core..clone..Clone$GT$5clone17h01e018b4c7552fcbE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 168
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	160(%rsi), %rcx
+	movq	%rcx, 160(%rdi)
+	vmovups	128(%rsi), %ymm0
+	vmovups	%ymm0, 128(%rdi)
+	vmovups	(%rsi), %ymm0
+	vmovups	32(%rsi), %ymm1
+	vmovups	64(%rsi), %ymm2
+	vmovups	96(%rsi), %ymm3
+	vmovups	%ymm3, 96(%rdi)
+	vmovups	%ymm2, 64(%rdi)
+	vmovups	%ymm1, 32(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN94_$LT$libc..unix..bsd..apple..b64..__darwin_x86_float_state64$u20$as$u20$core..clone..Clone$GT$5clone17h4b69d7df4399fd97E
 	.p2align	4, 0x90
 __ZN94_$LT$libc..unix..bsd..apple..b64..__darwin_x86_float_state64$u20$as$u20$core..clone..Clone$GT$5clone17h4b69d7df4399fd97E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	edx, 524
-	call	_memcpy
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movl	$524, %edx
+	callq	_memcpy
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN86_$LT$libc..unix..bsd..apple..b64..align..max_align_t$u20$as$u20$core..clone..Clone$GT$5clone17h14ca53810b93b320E
 	.p2align	4, 0x90
 __ZN86_$LT$libc..unix..bsd..apple..b64..align..max_align_t$u20$as$u20$core..clone..Clone$GT$5clone17h14ca53810b93b320E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	movaps	xmm0, xmmword ptr [rsi]
-	movaps	xmmword ptr [rdi], xmm0
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovaps	(%rsi), %xmm0
+	vmovaps	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN66_$LT$libc..unix..align..in6_addr$u20$as$u20$core..clone..Clone$GT$5clone17h5c109edb1897ba1fE
 	.p2align	4, 0x90
 __ZN66_$LT$libc..unix..align..in6_addr$u20$as$u20$core..clone..Clone$GT$5clone17h5c109edb1897ba1fE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rdi + 8], rdx
-	mov	qword ptr [rdi], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.section	__TEXT,__const

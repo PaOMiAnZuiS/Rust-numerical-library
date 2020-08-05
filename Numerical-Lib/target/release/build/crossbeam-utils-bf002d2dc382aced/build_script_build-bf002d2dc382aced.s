@@ -1,167 +1,166 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 7
-	.intel_syntax noprefix
 	.private_extern	__ZN3std2rt10lang_start17hb6f88b9b37f70702E
 	.globl	__ZN3std2rt10lang_start17hb6f88b9b37f70702E
 	.p2align	4, 0x90
 __ZN3std2rt10lang_start17hb6f88b9b37f70702E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 16
-	mov	rcx, rdx
-	mov	rdx, rsi
-	mov	qword ptr [rbp - 8], rdi
-	lea	rsi, [rip + l___unnamed_1]
-	lea	rdi, [rbp - 8]
-	call	__ZN3std2rt19lang_start_internal17hebefdaa8fd585aefE
-	add	rsp, 16
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdx, %rcx
+	movq	%rsi, %rdx
+	movq	%rdi, -8(%rbp)
+	leaq	l___unnamed_1(%rip), %rsi
+	leaq	-8(%rbp), %rdi
+	callq	__ZN3std2rt19lang_start_internal17hebefdaa8fd585aefE
+	addq	$16, %rsp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN3std2rt10lang_start28_$u7b$$u7b$closure$u7d$$u7d$17he8b20fa762f5571bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	call	qword ptr [rdi]
-	xor	eax, eax
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	callq	*(%rdi)
+	xorl	%eax, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h0185d4c613671d1bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	call	qword ptr [rdi]
-	xor	eax, eax
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	callq	*(%rdi)
+	xorl	%eax, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17h3c05d10f92833337E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17h55cc9f8673548d37E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14, rdi
-	mov	rdi, qword ptr [rdi]
-	test	rdi, rdi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdi, %r14
+	movq	(%rdi), %rdi
+	testq	%rdi, %rdi
 	je	LBB4_3
-	mov	rsi, qword ptr [r14 + 8]
-	test	rsi, rsi
+	movq	8(%r14), %rsi
+	testq	%rsi, %rsi
 	je	LBB4_3
-	mov	edx, 1
-	call	___rust_dealloc
+	movl	$1, %edx
+	callq	___rust_dealloc
 LBB4_3:
-	mov	rdi, qword ptr [r14 + 24]
-	test	rdi, rdi
+	movq	24(%r14), %rdi
+	testq	%rdi, %rdi
 	je	LBB4_6
-	mov	rsi, qword ptr [r14 + 32]
-	test	rsi, rsi
+	movq	32(%r14), %rsi
+	testq	%rsi, %rsi
 	je	LBB4_6
-	mov	edx, 1
-	call	___rust_dealloc
+	movl	$1, %edx
+	callq	___rust_dealloc
 LBB4_6:
-	mov	rdi, qword ptr [r14 + 72]
-	test	rdi, rdi
+	movq	72(%r14), %rdi
+	testq	%rdi, %rdi
 	je	LBB4_7
-	mov	rsi, qword ptr [r14 + 80]
-	test	rsi, rsi
+	movq	80(%r14), %rsi
+	testq	%rsi, %rsi
 	je	LBB4_7
-	mov	edx, 1
-	call	___rust_dealloc
+	movl	$1, %edx
+	callq	___rust_dealloc
 LBB4_7:
-	mov	rbx, qword ptr [r14 + 96]
-	test	rbx, rbx
+	movq	96(%r14), %rbx
+	testq	%rbx, %rbx
 	je	LBB4_18
-	mov	rax, qword ptr [r14 + 112]
-	test	rax, rax
+	movq	112(%r14), %rax
+	testq	%rax, %rax
 	je	LBB4_15
-	lea	rax, [rax + 2*rax]
-	lea	r15, [rbx + 8*rax]
-	mov	rdi, qword ptr [rbx]
-	test	rdi, rdi
+	leaq	(%rax,%rax,2), %rax
+	leaq	(%rbx,%rax,8), %r15
+	movq	(%rbx), %rdi
+	testq	%rdi, %rdi
 	jne	LBB4_11
 	.p2align	4, 0x90
 LBB4_13:
-	add	rbx, 24
-	cmp	rbx, r15
+	addq	$24, %rbx
+	cmpq	%r15, %rbx
 	je	LBB4_14
 LBB4_10:
-	mov	rdi, qword ptr [rbx]
-	test	rdi, rdi
+	movq	(%rbx), %rdi
+	testq	%rdi, %rdi
 	je	LBB4_13
 LBB4_11:
-	mov	rsi, qword ptr [rbx + 8]
-	test	rsi, rsi
+	movq	8(%rbx), %rsi
+	testq	%rsi, %rsi
 	je	LBB4_13
-	mov	edx, 1
-	call	___rust_dealloc
-	add	rbx, 24
-	cmp	rbx, r15
+	movl	$1, %edx
+	callq	___rust_dealloc
+	addq	$24, %rbx
+	cmpq	%r15, %rbx
 	jne	LBB4_10
 LBB4_14:
-	mov	rbx, qword ptr [r14 + 96]
+	movq	96(%r14), %rbx
 LBB4_15:
-	mov	rax, qword ptr [r14 + 104]
-	test	rax, rax
+	movq	104(%r14), %rax
+	testq	%rax, %rax
 	je	LBB4_18
-	test	rbx, rbx
+	testq	%rbx, %rbx
 	je	LBB4_18
-	shl	rax, 3
-	lea	rsi, [rax + 2*rax]
-	test	rsi, rsi
+	shlq	$3, %rax
+	leaq	(%rax,%rax,2), %rsi
+	testq	%rsi, %rsi
 	je	LBB4_18
-	mov	edx, 8
-	mov	rdi, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
+	movl	$8, %edx
+	movq	%rbx, %rdi
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	___rust_dealloc
 LBB4_18:
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
@@ -170,84 +169,84 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception0
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	sub	rsp, 136
-	.cfi_offset rbx, -24
-	lea	rbx, [rbp - 136]
-	mov	rdi, rbx
-	call	__ZN7autocfg3new17ha443865bae682d93E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	subq	$136, %rsp
+	.cfi_offset %rbx, -24
+	leaq	-136(%rbp), %rbx
+	movq	%rbx, %rdi
+	callq	__ZN7autocfg3new17ha443865bae682d93E
 Ltmp0:
-	mov	esi, 1
-	mov	edx, 31
-	mov	rdi, rbx
-	call	__ZN7autocfg7AutoCfg19probe_rustc_version17h577fead98b656b4aE
+	movl	$1, %esi
+	movl	$31, %edx
+	movq	%rbx, %rdi
+	callq	__ZN7autocfg7AutoCfg19probe_rustc_version17h577fead98b656b4aE
 Ltmp1:
-	test	al, al
+	testb	%al, %al
 	je	LBB5_3
 Ltmp2:
-	lea	rdi, [rip + L___unnamed_2]
-	mov	esi, 16
-	call	__ZN7autocfg4emit17h6e55bfbfc5decc9cE
+	leaq	L___unnamed_2(%rip), %rdi
+	movl	$16, %esi
+	callq	__ZN7autocfg4emit17h6e55bfbfc5decc9cE
 Ltmp3:
 LBB5_3:
 Ltmp4:
-	lea	rsi, [rip + l___unnamed_3]
-	lea	rcx, [rip + l___unnamed_4]
-	lea	rdi, [rbp - 136]
-	mov	edx, 28
-	mov	r8d, 13
-	call	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
+	leaq	l___unnamed_3(%rip), %rsi
+	leaq	l___unnamed_4(%rip), %rcx
+	leaq	-136(%rbp), %rdi
+	movl	$28, %edx
+	movl	$13, %r8d
+	callq	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
 Ltmp5:
 Ltmp6:
-	lea	rsi, [rip + l___unnamed_5]
-	lea	rcx, [rip + l___unnamed_6]
-	lea	rdi, [rbp - 136]
-	mov	edx, 29
-	mov	r8d, 14
-	call	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
+	leaq	l___unnamed_5(%rip), %rsi
+	leaq	l___unnamed_6(%rip), %rcx
+	leaq	-136(%rbp), %rdi
+	movl	$29, %edx
+	movl	$14, %r8d
+	callq	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
 Ltmp7:
 Ltmp8:
-	lea	rsi, [rip + l___unnamed_7]
-	lea	rcx, [rip + l___unnamed_8]
-	lea	rdi, [rbp - 136]
-	mov	edx, 29
-	mov	r8d, 14
-	call	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
+	leaq	l___unnamed_7(%rip), %rsi
+	leaq	l___unnamed_8(%rip), %rcx
+	leaq	-136(%rbp), %rdi
+	movl	$29, %edx
+	movl	$14, %r8d
+	callq	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
 Ltmp9:
 Ltmp10:
-	lea	rsi, [rip + l___unnamed_9]
-	lea	rcx, [rip + l___unnamed_10]
-	lea	rdi, [rbp - 136]
-	mov	edx, 29
-	mov	r8d, 14
-	call	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
+	leaq	l___unnamed_9(%rip), %rsi
+	leaq	l___unnamed_10(%rip), %rcx
+	leaq	-136(%rbp), %rdi
+	movl	$29, %edx
+	movl	$14, %r8d
+	callq	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
 Ltmp11:
 Ltmp12:
-	lea	rsi, [rip + l___unnamed_11]
-	lea	rcx, [rip + l___unnamed_12]
-	lea	rdi, [rbp - 136]
-	mov	edx, 30
-	mov	r8d, 15
-	call	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
+	leaq	l___unnamed_11(%rip), %rsi
+	leaq	l___unnamed_12(%rip), %rcx
+	leaq	-136(%rbp), %rdi
+	movl	$30, %edx
+	movl	$15, %r8d
+	callq	__ZN7autocfg7AutoCfg13emit_type_cfg17h23a23424e08456deE
 Ltmp13:
-	lea	rdi, [rbp - 136]
-	call	__ZN4core3ptr13drop_in_place17h55cc9f8673548d37E
-	add	rsp, 136
-	pop	rbx
-	pop	rbp
-	ret
+	leaq	-136(%rbp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17h55cc9f8673548d37E
+	addq	$136, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 LBB5_9:
 Ltmp14:
-	mov	rbx, rax
-	lea	rdi, [rbp - 136]
-	call	__ZN4core3ptr13drop_in_place17h55cc9f8673548d37E
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	leaq	-136(%rbp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17h55cc9f8673548d37E
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end0:
 	.cfi_endproc
@@ -280,22 +279,22 @@ Lcst_end0:
 	.p2align	4, 0x90
 _main:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 16
-	mov	rcx, rsi
-	movsxd	rdx, edi
-	lea	rax, [rip + __ZN18build_script_build4main17h0041f96223971f0bE]
-	mov	qword ptr [rbp - 8], rax
-	lea	rsi, [rip + l___unnamed_1]
-	lea	rdi, [rbp - 8]
-	call	__ZN3std2rt19lang_start_internal17hebefdaa8fd585aefE
-	add	rsp, 16
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rsi, %rcx
+	movslq	%edi, %rdx
+	leaq	__ZN18build_script_build4main17h0041f96223971f0bE(%rip), %rax
+	movq	%rax, -8(%rbp)
+	leaq	l___unnamed_1(%rip), %rsi
+	leaq	-8(%rbp), %rdi
+	callq	__ZN3std2rt19lang_start_internal17hebefdaa8fd585aefE
+	addq	$16, %rsp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.section	__DATA,__const

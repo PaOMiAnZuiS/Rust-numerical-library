@@ -1,85 +1,84 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 7
-	.intel_syntax noprefix
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17hc4830955df74fd8bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN8num_cpus21get_num_physical_cpus17h1bdf9bf549f2f5faE
 	.p2align	4, 0x90
 __ZN8num_cpus21get_num_physical_cpus17h1bdf9bf549f2f5faE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 64
-	mov	dword ptr [rbp - 4], 0
-	mov	qword ptr [rbp - 16], 4
-	lea	rsi, [rip + l___unnamed_1]
-	lea	rdi, [rbp - 40]
-	mov	edx, 15
-	call	__ZN3std3ffi5c_str4CStr19from_bytes_with_nul17ha74c91d32424d5feE
-	cmp	qword ptr [rbp - 40], 1
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movl	$0, -4(%rbp)
+	movq	$4, -16(%rbp)
+	leaq	l___unnamed_1(%rip), %rsi
+	leaq	-40(%rbp), %rdi
+	movl	$15, %edx
+	callq	__ZN3std3ffi5c_str4CStr19from_bytes_with_nul17ha74c91d32424d5feE
+	cmpq	$1, -40(%rbp)
 	je	LBB1_5
-	mov	rdi, qword ptr [rbp - 32]
-	lea	rsi, [rbp - 4]
-	lea	rdx, [rbp - 16]
-	xor	ecx, ecx
-	xor	r8d, r8d
-	call	_sysctlbyname
-	test	eax, eax
+	movq	-32(%rbp), %rdi
+	leaq	-4(%rbp), %rsi
+	leaq	-16(%rbp), %rdx
+	xorl	%ecx, %ecx
+	xorl	%r8d, %r8d
+	callq	_sysctlbyname
+	testl	%eax, %eax
 	je	LBB1_2
-	mov	edi, 58
-	call	_sysconf
-	mov	rcx, rax
-	test	rax, rax
-	mov	eax, 1
-	cmovg	rax, rcx
-	add	rsp, 64
-	pop	rbp
-	ret
+	movl	$58, %edi
+	callq	_sysconf
+	movq	%rax, %rcx
+	testq	%rax, %rax
+	movl	$1, %eax
+	cmovgq	%rcx, %rax
+	addq	$64, %rsp
+	popq	%rbp
+	retq
 LBB1_2:
-	movsxd	rax, dword ptr [rbp - 4]
-	add	rsp, 64
-	pop	rbp
-	ret
+	movslq	-4(%rbp), %rax
+	addq	$64, %rsp
+	popq	%rbp
+	retq
 LBB1_5:
-	movups	xmm0, xmmword ptr [rbp - 32]
-	movaps	xmmword ptr [rbp - 64], xmm0
-	lea	rdi, [rip + l___unnamed_2]
-	lea	rcx, [rip + l___unnamed_3]
-	lea	r8, [rip + l___unnamed_4]
-	lea	rdx, [rbp - 64]
-	mov	esi, 27
-	call	__ZN4core6result13unwrap_failed17hb5a510096a5fc85fE
+	vmovups	-32(%rbp), %xmm0
+	vmovaps	%xmm0, -64(%rbp)
+	leaq	l___unnamed_2(%rip), %rdi
+	leaq	l___unnamed_3(%rip), %rcx
+	leaq	l___unnamed_4(%rip), %r8
+	leaq	-64(%rbp), %rdx
+	movl	$27, %esi
+	callq	__ZN4core6result13unwrap_failed17hb5a510096a5fc85fE
 	.cfi_endproc
 
 	.globl	__ZN8num_cpus12get_num_cpus17h3e8756c2d8ab5311E
 	.p2align	4, 0x90
 __ZN8num_cpus12get_num_cpus17h3e8756c2d8ab5311E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	edi, 58
-	call	_sysconf
-	test	rax, rax
-	mov	ecx, 1
-	cmovle	rax, rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	$58, %edi
+	callq	_sysconf
+	testq	%rax, %rax
+	movl	$1, %ecx
+	cmovleq	%rcx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.section	__DATA,__const

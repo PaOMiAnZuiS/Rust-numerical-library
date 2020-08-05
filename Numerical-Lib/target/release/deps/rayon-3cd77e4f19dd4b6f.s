@@ -1,143 +1,142 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 7
-	.intel_syntax noprefix
 	.p2align	4, 0x90
 __ZN36_$LT$T$u20$as$u20$core..any..Any$GT$7type_id17haa486b14bff0af04E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movabs	rax, 1229646359891580772
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movabsq	$1229646359891580772, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN3std9panicking11begin_panic17h609d246cf69f2701E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 16
-	lea	rax, [rip + l___unnamed_1]
-	mov	qword ptr [rbp - 16], rax
-	mov	qword ptr [rbp - 8], 43
-	call	__ZN4core5panic8Location6caller17hf55c9a52d6249cfcE
-	lea	rsi, [rip + l___unnamed_2]
-	lea	rdi, [rbp - 16]
-	xor	edx, edx
-	mov	rcx, rax
-	call	__ZN3std9panicking20rust_panic_with_hook17hf8b9378dd2e7986aE
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	leaq	l___unnamed_1(%rip), %rax
+	movq	%rax, -16(%rbp)
+	movq	$43, -8(%rbp)
+	callq	__ZN4core5panic8Location6caller17hf55c9a52d6249cfcE
+	leaq	l___unnamed_2(%rip), %rsi
+	leaq	-16(%rbp), %rdi
+	xorl	%edx, %edx
+	movq	%rax, %rcx
+	callq	__ZN3std9panicking20rust_panic_with_hook17hf8b9378dd2e7986aE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h682f9324315870b9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdx, rsi
-	mov	rax, qword ptr [rdi]
-	mov	rdi, qword ptr [rax]
-	mov	rsi, qword ptr [rax + 8]
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rsi, %rdx
+	movq	(%rdi), %rax
+	movq	(%rax), %rdi
+	movq	8(%rax), %rsi
+	popq	%rbp
 	jmp	__ZN40_$LT$str$u20$as$u20$core..fmt..Debug$GT$3fmt17h2760aab2290546fcE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17h3501ceb60fcb7423E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17hb763e0d1210034efE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rdi, qword ptr [rdi]
-	test	rdi, rdi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	(%rdi), %rdi
+	testq	%rdi, %rdi
 	je	LBB4_2
-	mov	rsi, qword ptr [rax + 8]
-	test	rsi, rsi
+	movq	8(%rax), %rsi
+	testq	%rsi, %rsi
 	je	LBB4_2
-	mov	edx, 1
-	pop	rbp
+	movl	$1, %edx
+	popq	%rbp
 	jmp	___rust_dealloc
 LBB4_2:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN91_$LT$std..panicking..begin_panic..PanicPayload$LT$A$GT$$u20$as$u20$core..panic..BoxMeUp$GT$3get17h501bcfc654e47ac6E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	cmp	qword ptr [rdi], 0
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	cmpq	$0, (%rdi)
 	je	LBB5_2
-	mov	rax, rdi
-	lea	rdx, [rip + l___unnamed_3]
-	pop	rbp
-	ret
+	movq	%rdi, %rax
+	leaq	l___unnamed_3(%rip), %rdx
+	popq	%rbp
+	retq
 LBB5_2:
-	call	__ZN3std7process5abort17h4dccaf05298ce780E
+	callq	__ZN3std7process5abort17h4dccaf05298ce780E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN91_$LT$std..panicking..begin_panic..PanicPayload$LT$A$GT$$u20$as$u20$core..panic..BoxMeUp$GT$8take_box17h52125099ab7fc713E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, qword ptr [rdi]
-	mov	r14, qword ptr [rdi + 8]
-	mov	qword ptr [rdi], 0
-	test	rbx, rbx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	(%rdi), %rbx
+	movq	8(%rdi), %r14
+	movq	$0, (%rdi)
+	testq	%rbx, %rbx
 	je	LBB6_3
-	mov	edi, 16
-	mov	esi, 8
-	call	___rust_alloc
-	test	rax, rax
+	movl	$16, %edi
+	movl	$8, %esi
+	callq	___rust_alloc
+	testq	%rax, %rax
 	je	LBB6_4
-	mov	qword ptr [rax], rbx
-	mov	qword ptr [rax + 8], r14
-	lea	rdx, [rip + l___unnamed_3]
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	movq	%rbx, (%rax)
+	movq	%r14, 8(%rax)
+	leaq	l___unnamed_3(%rip), %rdx
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 LBB6_3:
-	call	__ZN3std7process5abort17h4dccaf05298ce780E
+	callq	__ZN3std7process5abort17h4dccaf05298ce780E
 LBB6_4:
-	mov	edi, 16
-	mov	esi, 8
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$16, %edi
+	movl	$8, %esi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 	.cfi_endproc
 
 	.globl	__ZN5rayon4iter6extend11string_push17h2ee35a86bd7aa501E
@@ -147,210 +146,208 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception0
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r12d, edx
-	mov	r15, rsi
-	mov	r14, rdi
-	cmp	edx, 128
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movl	%edx, %r12d
+	movq	%rsi, %r15
+	movq	%rdi, %r14
+	cmpl	$128, %edx
 	jae	LBB7_1
-	mov	rbx, qword ptr [r15 + 16]
-	cmp	rbx, qword ptr [r15 + 8]
+	movq	16(%r15), %rbx
+	cmpq	8(%r15), %rbx
 	jne	LBB7_22
-	mov	r13, rbx
-	inc	r13
+	movq	%rbx, %r13
+	incq	%r13
 	je	LBB7_35
-	lea	rax, [rbx + rbx]
-	cmp	rax, r13
-	cmova	r13, rax
-	test	rbx, rbx
+	leaq	(%rbx,%rbx), %rax
+	cmpq	%r13, %rax
+	cmovaq	%rax, %r13
+	testq	%rbx, %rbx
 	je	LBB7_30
-	mov	rax, qword ptr [r15]
-	test	rax, rax
+	movq	(%r15), %rax
+	testq	%rax, %rax
 	je	LBB7_30
-	cmp	rbx, r13
+	cmpq	%r13, %rbx
 	je	LBB7_33
-	mov	edx, 1
-	mov	rdi, rax
-	mov	rsi, rbx
-	mov	rcx, r13
-	call	___rust_realloc
-	test	rax, rax
+	movl	$1, %edx
+	movq	%rax, %rdi
+	movq	%rbx, %rsi
+	movq	%r13, %rcx
+	callq	___rust_realloc
+	testq	%rax, %rax
 	jne	LBB7_34
 	jmp	LBB7_36
 LBB7_1:
-	mov	dword ptr [rbp - 44], 0
-	mov	eax, r12d
-	cmp	r12d, 2048
+	movl	$0, -44(%rbp)
+	movl	%r12d, %eax
+	cmpl	$2048, %r12d
 	jae	LBB7_2
-	shr	eax, 6
-	and	al, 31
-	or	al, -64
-	mov	byte ptr [rbp - 44], al
-	and	r12b, 63
-	or	r12b, -128
-	mov	byte ptr [rbp - 43], r12b
-	mov	r12d, 2
+	shrl	$6, %eax
+	andb	$31, %al
+	orb	$-64, %al
+	movb	%al, -44(%rbp)
+	andb	$63, %r12b
+	orb	$-128, %r12b
+	movb	%r12b, -43(%rbp)
+	movl	$2, %r12d
 	jmp	LBB7_5
 LBB7_22:
-	mov	rax, qword ptr [r15]
+	movq	(%r15), %rax
 	jmp	LBB7_23
 LBB7_2:
-	cmp	r12d, 65536
+	cmpl	$65536, %r12d
 	jae	LBB7_4
-	shr	eax, 12
-	and	al, 15
-	or	al, -32
-	mov	byte ptr [rbp - 44], al
-	mov	eax, r12d
-	shr	eax, 6
-	and	al, 63
-	or	al, -128
-	mov	byte ptr [rbp - 43], al
-	and	r12b, 63
-	or	r12b, -128
-	mov	byte ptr [rbp - 42], r12b
-	mov	r12d, 3
+	shrl	$12, %eax
+	andb	$15, %al
+	orb	$-32, %al
+	movb	%al, -44(%rbp)
+	movl	%r12d, %eax
+	shrl	$6, %eax
+	andb	$63, %al
+	orb	$-128, %al
+	movb	%al, -43(%rbp)
+	andb	$63, %r12b
+	orb	$-128, %r12b
+	movb	%r12b, -42(%rbp)
+	movl	$3, %r12d
 	jmp	LBB7_5
 LBB7_30:
-	test	r13, r13
+	testq	%r13, %r13
 	je	LBB7_31
-	mov	esi, 1
-	mov	rdi, r13
-	call	___rust_alloc
+	movl	$1, %esi
+	movq	%r13, %rdi
+	callq	___rust_alloc
 LBB7_33:
-	test	rax, rax
+	testq	%rax, %rax
 	jne	LBB7_34
 	jmp	LBB7_36
 LBB7_4:
-	shr	eax, 18
-	or	al, -16
-	mov	byte ptr [rbp - 44], al
-	mov	eax, r12d
-	shr	eax, 12
-	and	al, 63
-	or	al, -128
-	mov	byte ptr [rbp - 43], al
-	mov	eax, r12d
-	shr	eax, 6
-	and	al, 63
-	or	al, -128
-	mov	byte ptr [rbp - 42], al
-	and	r12b, 63
-	or	r12b, -128
-	mov	byte ptr [rbp - 41], r12b
-	mov	r12d, 4
+	shrl	$18, %eax
+	orb	$-16, %al
+	movb	%al, -44(%rbp)
+	movl	%r12d, %eax
+	shrl	$12, %eax
+	andb	$63, %al
+	orb	$-128, %al
+	movb	%al, -43(%rbp)
+	movl	%r12d, %eax
+	shrl	$6, %eax
+	andb	$63, %al
+	orb	$-128, %al
+	movb	%al, -42(%rbp)
+	andb	$63, %r12b
+	orb	$-128, %r12b
+	movb	%r12b, -41(%rbp)
+	movl	$4, %r12d
 LBB7_5:
-	mov	rsi, qword ptr [r15 + 8]
-	mov	rbx, qword ptr [r15 + 16]
-	mov	rax, rsi
-	sub	rax, rbx
-	cmp	rax, r12
+	movq	8(%r15), %rsi
+	movq	16(%r15), %rbx
+	movq	%rsi, %rax
+	subq	%rbx, %rax
+	cmpq	%r12, %rax
 	jae	LBB7_6
-	mov	r13, rbx
-	add	r13, r12
+	movq	%rbx, %r13
+	addq	%r12, %r13
 	jb	LBB7_19
-	lea	rax, [rsi + rsi]
-	cmp	rax, r13
-	cmova	r13, rax
-	test	rsi, rsi
+	leaq	(%rsi,%rsi), %rax
+	cmpq	%r13, %rax
+	cmovaq	%rax, %r13
+	testq	%rsi, %rsi
 	je	LBB7_13
-	mov	rdi, qword ptr [r15]
-	test	rdi, rdi
+	movq	(%r15), %rdi
+	testq	%rdi, %rdi
 	je	LBB7_13
-	cmp	rsi, r13
+	cmpq	%r13, %rsi
 	je	LBB7_17
-	mov	edx, 1
-	mov	rcx, r13
-	call	___rust_realloc
+	movl	$1, %edx
+	movq	%r13, %rcx
+	callq	___rust_realloc
 	jmp	LBB7_16
 LBB7_6:
-	mov	rdi, qword ptr [r15]
+	movq	(%r15), %rdi
 	jmp	LBB7_7
 LBB7_13:
-	test	r13, r13
+	testq	%r13, %r13
 	je	LBB7_14
-	mov	esi, 1
-	mov	rdi, r13
-	call	___rust_alloc
+	movl	$1, %esi
+	movq	%r13, %rdi
+	callq	___rust_alloc
 LBB7_16:
-	mov	rdi, rax
+	movq	%rax, %rdi
 LBB7_17:
-	test	rdi, rdi
+	testq	%rdi, %rdi
 	jne	LBB7_18
 LBB7_36:
-	mov	esi, 1
-	mov	rdi, r13
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$1, %esi
+	movq	%r13, %rdi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 LBB7_31:
-	mov	eax, 1
+	movl	$1, %eax
 LBB7_34:
-	mov	qword ptr [r15], rax
-	mov	qword ptr [r15 + 8], r13
+	movq	%rax, (%r15)
+	movq	%r13, 8(%r15)
 LBB7_23:
-	mov	byte ptr [rax + rbx], r12b
-	inc	rbx
+	movb	%r12b, (%rax,%rbx)
+	incq	%rbx
 	jmp	LBB7_24
 LBB7_14:
-	mov	edi, 1
+	movl	$1, %edi
 LBB7_18:
-	mov	qword ptr [r15], rdi
-	mov	qword ptr [r15 + 8], r13
+	movq	%rdi, (%r15)
+	movq	%r13, 8(%r15)
 LBB7_7:
-	add	rdi, rbx
-	lea	rsi, [rbp - 44]
-	mov	rdx, r12
-	call	_memcpy
-	add	rbx, r12
+	addq	%rbx, %rdi
+	leaq	-44(%rbp), %rsi
+	movq	%r12, %rdx
+	callq	_memcpy
+	addq	%r12, %rbx
 LBB7_24:
-	mov	qword ptr [r15 + 16], rbx
-	mov	rax, qword ptr [r15 + 16]
-	mov	qword ptr [r14 + 16], rax
-	mov	rax, qword ptr [r15]
-	mov	rcx, qword ptr [r15 + 8]
-	mov	qword ptr [r14 + 8], rcx
-	mov	qword ptr [r14], rax
-	mov	rax, r14
-	add	rsp, 8
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	movq	%rbx, 16(%r15)
+	movq	16(%r15), %rax
+	movq	%rax, 16(%r14)
+	vmovups	(%r15), %xmm0
+	vmovups	%xmm0, (%r14)
+	movq	%r14, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB7_35:
 Ltmp2:
-	call	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
+	callq	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
 Ltmp3:
 	jmp	LBB7_20
 LBB7_19:
 Ltmp0:
-	call	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
+	callq	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
 Ltmp1:
 LBB7_20:
 	ud2
 LBB7_37:
 Ltmp4:
-	mov	rbx, rax
-	mov	rdi, r15
-	call	__ZN4core3ptr13drop_in_place17hb763e0d1210034efE
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	movq	%r15, %rdi
+	callq	__ZN4core3ptr13drop_in_place17hb763e0d1210034efE
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end0:
 	.cfi_endproc
@@ -383,1786 +380,1784 @@ Lcst_end0:
 	.p2align	4, 0x90
 __ZN97_$LT$rayon..iter..noop..NoopReducer$u20$as$u20$rayon..iter..plumbing..Reducer$LT$$LP$$RP$$GT$$GT$6reduce17hf5f303b3670e2e97E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN92_$LT$rayon..str..CharIndicesProducer$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17hc7762959cc55b40eE
 	.p2align	4, 0x90
 __ZN92_$LT$rayon..str..CharIndicesProducer$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17hc7762959cc55b40eE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rdi, qword ptr [rsi + 8]
-	mov	r9, qword ptr [rsi + 16]
-	mov	rcx, r9
-	shr	rcx
-	cmp	rcx, r9
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	8(%rsi), %rdi
+	movq	16(%rsi), %r9
+	movq	%r9, %rcx
+	shrq	%rcx
+	cmpq	%r9, %rcx
 	je	LBB9_4
-	lea	r8, [rdi + rcx]
-	mov	r10, r9
-	sub	r10, rcx
-	xor	edx, edx
+	leaq	(%rdi,%rcx), %r8
+	movq	%r9, %r10
+	subq	%rcx, %r10
+	xorl	%edx, %edx
 	.p2align	4, 0x90
 LBB9_2:
-	cmp	byte ptr [r8 + rdx], -65
+	cmpb	$-65, (%r8,%rdx)
 	jg	LBB9_6
-	inc	rdx
-	cmp	r10, rdx
+	incq	%rdx
+	cmpq	%rdx, %r10
 	jne	LBB9_2
 	.p2align	4, 0x90
 LBB9_4:
-	test	rcx, rcx
+	testq	%rcx, %rcx
 	je	LBB9_12
-	cmp	byte ptr [rdi + rcx - 1], -64
-	lea	rcx, [rcx - 1]
+	cmpb	$-64, -1(%rdi,%rcx)
+	leaq	-1(%rcx), %rcx
 	jl	LBB9_4
 	jmp	LBB9_7
 LBB9_6:
-	add	rcx, rdx
+	addq	%rdx, %rcx
 	jb	LBB9_17
 LBB9_7:
-	test	rcx, rcx
+	testq	%rcx, %rcx
 	je	LBB9_12
-	mov	r8, r9
-	sub	r8, rcx
+	movq	%r9, %r8
+	subq	%rcx, %r8
 	je	LBB9_13
 	jbe	LBB9_11
-	cmp	byte ptr [rdi + rcx], -65
+	cmpb	$-65, (%rdi,%rcx)
 	jle	LBB9_11
 LBB9_13:
-	mov	rsi, qword ptr [rsi]
-	mov	rdx, rsi
-	add	rdx, rcx
+	movq	(%rsi), %rsi
+	movq	%rsi, %rdx
+	addq	%rcx, %rdx
 	jb	LBB9_16
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdi
-	add	rdi, rcx
-	mov	qword ptr [rax + 16], rcx
-	mov	qword ptr [rax + 24], rdx
-	mov	qword ptr [rax + 32], rdi
-	mov	qword ptr [rax + 40], r8
-	pop	rbp
-	ret
+	movq	%rsi, (%rax)
+	movq	%rdi, 8(%rax)
+	addq	%rcx, %rdi
+	movq	%rcx, 16(%rax)
+	movq	%rdx, 24(%rax)
+	movq	%rdi, 32(%rax)
+	movq	%r8, 40(%rax)
+	popq	%rbp
+	retq
 LBB9_12:
-	mov	rcx, qword ptr [rsi + 16]
-	mov	qword ptr [rax + 16], rcx
-	mov	rcx, qword ptr [rsi]
-	mov	rdx, qword ptr [rsi + 8]
-	mov	qword ptr [rax + 8], rdx
-	mov	qword ptr [rax], rcx
-	mov	qword ptr [rax + 32], 0
-	pop	rbp
-	ret
+	movq	16(%rsi), %rcx
+	movq	%rcx, 16(%rax)
+	vmovups	(%rsi), %xmm0
+	vmovups	%xmm0, (%rax)
+	movq	$0, 32(%rax)
+	popq	%rbp
+	retq
 LBB9_11:
-	lea	r8, [rip + l___unnamed_4]
-	mov	rsi, r9
-	xor	edx, edx
-	call	__ZN4core3str16slice_error_fail17h6b29707aec812690E
+	leaq	l___unnamed_4(%rip), %r8
+	movq	%r9, %rsi
+	xorl	%edx, %edx
+	callq	__ZN4core3str16slice_error_fail17h6b29707aec812690E
 LBB9_16:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_5]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_5(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB9_17:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_6]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_6(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN86_$LT$rayon..str..BytesProducer$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17h17742120c9d12805E
 	.p2align	4, 0x90
 __ZN86_$LT$rayon..str..BytesProducer$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17h17742120c9d12805E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, rdx
-	shr	rcx
-	cmp	rcx, rdx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rdx, %rcx
+	shrq	%rcx
+	cmpq	%rdx, %rcx
 	je	LBB10_4
-	lea	r8, [rsi + rcx]
-	mov	r9, rdx
-	sub	r9, rcx
-	xor	edi, edi
+	leaq	(%rsi,%rcx), %r8
+	movq	%rdx, %r9
+	subq	%rcx, %r9
+	xorl	%edi, %edi
 	.p2align	4, 0x90
 LBB10_2:
-	cmp	byte ptr [r8 + rdi], -65
+	cmpb	$-65, (%r8,%rdi)
 	jg	LBB10_6
-	inc	rdi
-	cmp	r9, rdi
+	incq	%rdi
+	cmpq	%rdi, %r9
 	jne	LBB10_2
 	.p2align	4, 0x90
 LBB10_4:
-	test	rcx, rcx
+	testq	%rcx, %rcx
 	je	LBB10_12
-	cmp	byte ptr [rsi + rcx - 1], -64
-	lea	rcx, [rcx - 1]
+	cmpb	$-64, -1(%rsi,%rcx)
+	leaq	-1(%rcx), %rcx
 	jl	LBB10_4
 	jmp	LBB10_7
 LBB10_6:
-	add	rcx, rdi
+	addq	%rdi, %rcx
 	jb	LBB10_15
 LBB10_7:
-	test	rcx, rcx
+	testq	%rcx, %rcx
 	je	LBB10_12
-	cmp	rcx, rdx
+	cmpq	%rdx, %rcx
 	je	LBB10_13
 	jae	LBB10_11
-	cmp	byte ptr [rsi + rcx], -65
+	cmpb	$-65, (%rsi,%rcx)
 	jle	LBB10_11
 LBB10_13:
-	sub	rdx, rcx
-	mov	qword ptr [rax], rsi
-	add	rsi, rcx
-	mov	qword ptr [rax + 8], rcx
-	mov	qword ptr [rax + 16], rsi
-	mov	qword ptr [rax + 24], rdx
-	pop	rbp
-	ret
+	subq	%rcx, %rdx
+	movq	%rsi, (%rax)
+	addq	%rcx, %rsi
+	movq	%rcx, 8(%rax)
+	movq	%rsi, 16(%rax)
+	movq	%rdx, 24(%rax)
+	popq	%rbp
+	retq
 LBB10_12:
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	mov	qword ptr [rax + 16], 0
-	pop	rbp
-	ret
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	movq	$0, 16(%rax)
+	popq	%rbp
+	retq
 LBB10_11:
-	lea	r8, [rip + l___unnamed_4]
-	mov	rdi, rsi
-	mov	rsi, rdx
-	xor	edx, edx
-	call	__ZN4core3str16slice_error_fail17h6b29707aec812690E
+	leaq	l___unnamed_4(%rip), %r8
+	movq	%rsi, %rdi
+	movq	%rdx, %rsi
+	xorl	%edx, %edx
+	callq	__ZN4core3str16slice_error_fail17h6b29707aec812690E
 LBB10_15:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_6]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_6(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN78_$LT$rayon..range..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h0383412423953ca5E
 	.p2align	4, 0x90
 __ZN78_$LT$rayon..range..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h0383412423953ca5E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	al, byte ptr [rdi + 1]
-	xor	ecx, ecx
-	sub	al, byte ptr [rdi]
-	movzx	eax, al
-	cmovb	eax, ecx
-	movzx	edx, al
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	1(%rdi), %al
+	xorl	%ecx, %ecx
+	subb	(%rdi), %al
+	movzbl	%al, %eax
+	cmovbl	%ecx, %eax
+	movzbl	%al, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN85_$LT$rayon..range..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h372d3064d39f36c3E
 	.p2align	4, 0x90
 __ZN85_$LT$rayon..range..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h372d3064d39f36c3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	al, byte ptr [rdi + 1]
-	xor	ecx, ecx
-	sub	al, byte ptr [rdi]
-	movzx	eax, al
-	cmovb	eax, ecx
-	movzx	eax, al
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	1(%rdi), %al
+	xorl	%ecx, %ecx
+	subb	(%rdi), %al
+	movzbl	%al, %eax
+	cmovbl	%ecx, %eax
+	movzbl	%al, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range..IterProducer$LT$u8$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h0d2fcc37833dabd4E
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range..IterProducer$LT$u8$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h0d2fcc37833dabd4E:
 	.cfi_startproc
-	xor	eax, eax
-	mov	ecx, esi
-	sub	cl, dil
-	movzx	ecx, cl
-	cmovb	ecx, eax
-	movzx	eax, cl
-	cmp	rax, rdx
+	xorl	%eax, %eax
+	movl	%esi, %ecx
+	subb	%dil, %cl
+	movzbl	%cl, %ecx
+	cmovbl	%eax, %ecx
+	movzbl	%cl, %eax
+	cmpq	%rdx, %rax
 	jb	LBB13_2
-	add	dl, dil
-	movzx	ecx, sil
-	shl	ecx, 24
-	movzx	edx, dl
-	mov	esi, edx
-	shl	esi, 16
-	shl	edx, 8
-	movzx	eax, dil
-	or	eax, ecx
-	or	eax, esi
-	or	eax, edx
-	ret
+	addb	%dil, %dl
+	movzbl	%sil, %ecx
+	shll	$24, %ecx
+	movzbl	%dl, %edx
+	movl	%edx, %esi
+	shll	$16, %esi
+	shll	$8, %edx
+	movzbl	%dil, %eax
+	orl	%ecx, %eax
+	orl	%esi, %eax
+	orl	%edx, %eax
+	retq
 LBB13_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + l___unnamed_7]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	l___unnamed_7(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$rayon..range..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h1379973846ea45e9E
 	.p2align	4, 0x90
 __ZN79_$LT$rayon..range..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h1379973846ea45e9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	eax, word ptr [rdi + 2]
-	xor	ecx, ecx
-	sub	ax, word ptr [rdi]
-	cmovb	eax, ecx
-	movzx	edx, ax
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	2(%rdi), %eax
+	xorl	%ecx, %ecx
+	subw	(%rdi), %ax
+	cmovbl	%ecx, %eax
+	movzwl	%ax, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN86_$LT$rayon..range..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17he37c060e573a8bb0E
 	.p2align	4, 0x90
 __ZN86_$LT$rayon..range..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17he37c060e573a8bb0E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	eax, word ptr [rdi + 2]
-	xor	ecx, ecx
-	sub	ax, word ptr [rdi]
-	cmovb	eax, ecx
-	movzx	eax, ax
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	2(%rdi), %eax
+	xorl	%ecx, %ecx
+	subw	(%rdi), %ax
+	cmovbl	%ecx, %eax
+	movzwl	%ax, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range..IterProducer$LT$u16$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h27f0ef31ad77a764E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range..IterProducer$LT$u16$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h27f0ef31ad77a764E:
 	.cfi_startproc
-	xor	eax, eax
-	mov	ecx, esi
-	sub	cx, di
-	cmovb	ecx, eax
-	movzx	eax, cx
-	cmp	rax, rdx
+	xorl	%eax, %eax
+	movl	%esi, %ecx
+	subw	%di, %cx
+	cmovbl	%eax, %ecx
+	movzwl	%cx, %eax
+	cmpq	%rdx, %rax
 	jb	LBB16_2
-	lea	eax, [rdi + rdx]
-	movzx	ecx, si
-	shl	rcx, 48
-	movzx	edx, ax
-	mov	rsi, rdx
-	shl	rsi, 32
-	shl	rdx, 16
-	movzx	eax, di
-	or	rax, rcx
-	or	rax, rsi
-	or	rax, rdx
-	ret
+	leal	(%rdi,%rdx), %eax
+	movzwl	%si, %ecx
+	shlq	$48, %rcx
+	movzwl	%ax, %edx
+	movq	%rdx, %rsi
+	shlq	$32, %rsi
+	shlq	$16, %rdx
+	movzwl	%di, %eax
+	orq	%rcx, %rax
+	orq	%rsi, %rax
+	orq	%rdx, %rax
+	retq
 LBB16_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + l___unnamed_8]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	l___unnamed_8(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$rayon..range..Iter$LT$u32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h9fb9a779e390b5baE
 	.p2align	4, 0x90
 __ZN79_$LT$rayon..range..Iter$LT$u32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h9fb9a779e390b5baE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	edx, dword ptr [rdi + 4]
-	xor	eax, eax
-	sub	edx, dword ptr [rdi]
-	cmovb	edx, eax
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	4(%rdi), %edx
+	xorl	%eax, %eax
+	subl	(%rdi), %edx
+	cmovbl	%eax, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN86_$LT$rayon..range..Iter$LT$u32$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h32562ddc1ccac3d8E
 	.p2align	4, 0x90
 __ZN86_$LT$rayon..range..Iter$LT$u32$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h32562ddc1ccac3d8E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	eax, dword ptr [rdi + 4]
-	xor	ecx, ecx
-	sub	eax, dword ptr [rdi]
-	cmovb	eax, ecx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	4(%rdi), %eax
+	xorl	%ecx, %ecx
+	subl	(%rdi), %eax
+	cmovbl	%ecx, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range..IterProducer$LT$u32$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h59b0fca3330e9461E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range..IterProducer$LT$u32$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h59b0fca3330e9461E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	r8d, r8d
-	mov	edi, edx
-	sub	edi, esi
-	cmovb	edi, r8d
-	cmp	rdi, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%r8d, %r8d
+	movl	%edx, %edi
+	subl	%esi, %edi
+	cmovbl	%r8d, %edi
+	cmpq	%rcx, %rdi
 	jb	LBB19_2
-	add	ecx, esi
-	mov	dword ptr [rax], esi
-	mov	dword ptr [rax + 4], ecx
-	mov	dword ptr [rax + 8], ecx
-	mov	dword ptr [rax + 12], edx
-	pop	rbp
-	ret
+	addl	%esi, %ecx
+	movl	%esi, (%rax)
+	movl	%ecx, 4(%rax)
+	movl	%ecx, 8(%rax)
+	movl	%edx, 12(%rax)
+	popq	%rbp
+	retq
 LBB19_2:
-	lea	rdi, [rip + l___unnamed_9]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	leaq	l___unnamed_9(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range..Iter$LT$usize$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h78d548c5af34e6b0E
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range..Iter$LT$usize$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h78d548c5af34e6b0E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rcx, qword ptr [rdi + 8]
-	xor	eax, eax
-	sub	rcx, qword ptr [rdi]
-	cmovae	rax, rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	8(%rdi), %rcx
+	xorl	%eax, %eax
+	subq	(%rdi), %rcx
+	cmovaeq	%rcx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN91_$LT$rayon..range..IterProducer$LT$usize$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h2b4ede23f6b85905E
 	.p2align	4, 0x90
 __ZN91_$LT$rayon..range..IterProducer$LT$usize$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h2b4ede23f6b85905E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	r8d, r8d
-	mov	rdi, rdx
-	sub	rdi, rsi
-	cmovae	r8, rdi
-	cmp	r8, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%r8d, %r8d
+	movq	%rdx, %rdi
+	subq	%rsi, %rdi
+	cmovaeq	%rdi, %r8
+	cmpq	%rcx, %r8
 	jb	LBB21_2
-	add	rcx, rsi
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rcx
-	mov	qword ptr [rax + 16], rcx
-	mov	qword ptr [rax + 24], rdx
-	pop	rbp
-	ret
+	addq	%rsi, %rcx
+	movq	%rsi, (%rax)
+	movq	%rcx, 8(%rax)
+	movq	%rcx, 16(%rax)
+	movq	%rdx, 24(%rax)
+	popq	%rbp
+	retq
 LBB21_2:
-	lea	rdi, [rip + l___unnamed_10]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	leaq	l___unnamed_10(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN78_$LT$rayon..range..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hbbe1266d5c096669E
 	.p2align	4, 0x90
 __ZN78_$LT$rayon..range..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hbbe1266d5c096669E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	al, byte ptr [rdi + 1]
-	xor	ecx, ecx
-	sub	al, byte ptr [rdi]
-	movzx	eax, al
-	cmovle	eax, ecx
-	movzx	edx, al
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	1(%rdi), %al
+	xorl	%ecx, %ecx
+	subb	(%rdi), %al
+	movzbl	%al, %eax
+	cmovlel	%ecx, %eax
+	movzbl	%al, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN85_$LT$rayon..range..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h9677374d45809fa7E
 	.p2align	4, 0x90
 __ZN85_$LT$rayon..range..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h9677374d45809fa7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	al, byte ptr [rdi + 1]
-	xor	ecx, ecx
-	sub	al, byte ptr [rdi]
-	movzx	eax, al
-	cmovle	eax, ecx
-	movzx	eax, al
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	1(%rdi), %al
+	xorl	%ecx, %ecx
+	subb	(%rdi), %al
+	movzbl	%al, %eax
+	cmovlel	%ecx, %eax
+	movzbl	%al, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range..IterProducer$LT$i8$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17h0872d07295758b88E
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range..IterProducer$LT$i8$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17h0872d07295758b88E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	edx, esi
-	mov	eax, edi
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	%esi, %edx
+	movl	%edi, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range..IterProducer$LT$i8$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17hf7748474fdf63d92E
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range..IterProducer$LT$i8$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17hf7748474fdf63d92E:
 	.cfi_startproc
-	xor	eax, eax
-	mov	ecx, esi
-	sub	cl, dil
-	movzx	ecx, cl
-	cmovle	ecx, eax
-	movzx	eax, cl
-	cmp	rax, rdx
+	xorl	%eax, %eax
+	movl	%esi, %ecx
+	subb	%dil, %cl
+	movzbl	%cl, %ecx
+	cmovlel	%eax, %ecx
+	movzbl	%cl, %eax
+	cmpq	%rdx, %rax
 	jb	LBB25_2
-	add	dl, dil
-	movzx	ecx, sil
-	shl	ecx, 24
-	movzx	edx, dl
-	mov	esi, edx
-	shl	esi, 16
-	shl	edx, 8
-	movzx	eax, dil
-	or	eax, ecx
-	or	eax, esi
-	or	eax, edx
-	ret
+	addb	%dil, %dl
+	movzbl	%sil, %ecx
+	shll	$24, %ecx
+	movzbl	%dl, %edx
+	movl	%edx, %esi
+	shll	$16, %esi
+	shll	$8, %edx
+	movzbl	%dil, %eax
+	orl	%ecx, %eax
+	orl	%esi, %eax
+	orl	%edx, %eax
+	retq
 LBB25_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + l___unnamed_11]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	l___unnamed_11(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$rayon..range..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h30044e201f22e393E
 	.p2align	4, 0x90
 __ZN79_$LT$rayon..range..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h30044e201f22e393E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	eax, word ptr [rdi + 2]
-	xor	ecx, ecx
-	sub	ax, word ptr [rdi]
-	cmovle	eax, ecx
-	movzx	edx, ax
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	2(%rdi), %eax
+	xorl	%ecx, %ecx
+	subw	(%rdi), %ax
+	cmovlel	%ecx, %eax
+	movzwl	%ax, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN86_$LT$rayon..range..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h668a092bc9cbff53E
 	.p2align	4, 0x90
 __ZN86_$LT$rayon..range..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h668a092bc9cbff53E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	eax, word ptr [rdi + 2]
-	xor	ecx, ecx
-	sub	ax, word ptr [rdi]
-	cmovle	eax, ecx
-	movzx	eax, ax
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	2(%rdi), %eax
+	xorl	%ecx, %ecx
+	subw	(%rdi), %ax
+	cmovlel	%ecx, %eax
+	movzwl	%ax, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range..IterProducer$LT$i16$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17h367f873de1d6d414E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range..IterProducer$LT$i16$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17h367f873de1d6d414E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	edx, esi
-	mov	eax, edi
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	%esi, %edx
+	movl	%edi, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range..IterProducer$LT$i16$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17hd029079ec61abb40E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range..IterProducer$LT$i16$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17hd029079ec61abb40E:
 	.cfi_startproc
-	xor	eax, eax
-	mov	ecx, esi
-	sub	cx, di
-	cmovle	ecx, eax
-	movzx	eax, cx
-	cmp	rax, rdx
+	xorl	%eax, %eax
+	movl	%esi, %ecx
+	subw	%di, %cx
+	cmovlel	%eax, %ecx
+	movzwl	%cx, %eax
+	cmpq	%rdx, %rax
 	jb	LBB29_2
-	lea	eax, [rdi + rdx]
-	movzx	ecx, si
-	shl	rcx, 48
-	movzx	edx, ax
-	mov	rsi, rdx
-	shl	rsi, 32
-	shl	rdx, 16
-	movzx	eax, di
-	or	rax, rcx
-	or	rax, rsi
-	or	rax, rdx
-	ret
+	leal	(%rdi,%rdx), %eax
+	movzwl	%si, %ecx
+	shlq	$48, %rcx
+	movzwl	%ax, %edx
+	movq	%rdx, %rsi
+	shlq	$32, %rsi
+	shlq	$16, %rdx
+	movzwl	%di, %eax
+	orq	%rcx, %rax
+	orq	%rsi, %rax
+	orq	%rdx, %rax
+	retq
 LBB29_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + l___unnamed_12]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	l___unnamed_12(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$rayon..range..Iter$LT$i32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h73b20856885b9ee3E
 	.p2align	4, 0x90
 __ZN79_$LT$rayon..range..Iter$LT$i32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h73b20856885b9ee3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	edx, dword ptr [rdi + 4]
-	xor	eax, eax
-	sub	edx, dword ptr [rdi]
-	cmovle	edx, eax
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	4(%rdi), %edx
+	xorl	%eax, %eax
+	subl	(%rdi), %edx
+	cmovlel	%eax, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN86_$LT$rayon..range..Iter$LT$i32$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h8a1e07064e084af7E
 	.p2align	4, 0x90
 __ZN86_$LT$rayon..range..Iter$LT$i32$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h8a1e07064e084af7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	eax, dword ptr [rdi + 4]
-	xor	ecx, ecx
-	sub	eax, dword ptr [rdi]
-	cmovle	eax, ecx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	4(%rdi), %eax
+	xorl	%ecx, %ecx
+	subl	(%rdi), %eax
+	cmovlel	%ecx, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range..IterProducer$LT$i32$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17h07d9abb11f40f1a8E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range..IterProducer$LT$i32$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17h07d9abb11f40f1a8E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	edx, esi
-	mov	eax, edi
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	%esi, %edx
+	movl	%edi, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range..IterProducer$LT$i32$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h763aad211cd01f55E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range..IterProducer$LT$i32$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h763aad211cd01f55E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	r8d, r8d
-	mov	edi, edx
-	sub	edi, esi
-	cmovle	edi, r8d
-	cmp	rdi, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%r8d, %r8d
+	movl	%edx, %edi
+	subl	%esi, %edi
+	cmovlel	%r8d, %edi
+	cmpq	%rcx, %rdi
 	jb	LBB33_2
-	add	ecx, esi
-	mov	dword ptr [rax], esi
-	mov	dword ptr [rax + 4], ecx
-	mov	dword ptr [rax + 8], ecx
-	mov	dword ptr [rax + 12], edx
-	pop	rbp
-	ret
+	addl	%esi, %ecx
+	movl	%esi, (%rax)
+	movl	%ecx, 4(%rax)
+	movl	%ecx, 8(%rax)
+	movl	%edx, 12(%rax)
+	popq	%rbp
+	retq
 LBB33_2:
-	lea	rdi, [rip + l___unnamed_13]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	leaq	l___unnamed_13(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range..Iter$LT$isize$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h752fc79d8f269a5aE
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range..Iter$LT$isize$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h752fc79d8f269a5aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rcx, qword ptr [rdi + 8]
-	xor	eax, eax
-	sub	rcx, qword ptr [rdi]
-	cmovg	rax, rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	8(%rdi), %rcx
+	xorl	%eax, %eax
+	subq	(%rdi), %rcx
+	cmovgq	%rcx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN91_$LT$rayon..range..IterProducer$LT$isize$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17hca3606b123d67477E
 	.p2align	4, 0x90
 __ZN91_$LT$rayon..range..IterProducer$LT$isize$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$9into_iter17hca3606b123d67477E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdx, rsi
-	mov	rax, rdi
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rsi, %rdx
+	movq	%rdi, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN91_$LT$rayon..range..IterProducer$LT$isize$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h004425135cd6d12cE
 	.p2align	4, 0x90
 __ZN91_$LT$rayon..range..IterProducer$LT$isize$GT$$u20$as$u20$rayon..iter..plumbing..Producer$GT$8split_at17h004425135cd6d12cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	r8d, r8d
-	mov	rdi, rdx
-	sub	rdi, rsi
-	cmovg	r8, rdi
-	cmp	r8, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%r8d, %r8d
+	movq	%rdx, %rdi
+	subq	%rsi, %rdi
+	cmovgq	%rdi, %r8
+	cmpq	%rcx, %r8
 	jb	LBB36_2
-	add	rcx, rsi
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rcx
-	mov	qword ptr [rax + 16], rcx
-	mov	qword ptr [rax + 24], rdx
-	pop	rbp
-	ret
+	addq	%rsi, %rcx
+	movq	%rsi, (%rax)
+	movq	%rcx, 8(%rax)
+	movq	%rcx, 16(%rax)
+	movq	%rdx, 24(%rax)
+	popq	%rbp
+	retq
 LBB36_2:
-	lea	rdi, [rip + l___unnamed_14]
-	call	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
+	leaq	l___unnamed_14(%rip), %rdi
+	callq	__ZN3std9panicking11begin_panic17h609d246cf69f2701E
 	.cfi_endproc
 
 	.globl	__ZN97_$LT$core..ops..range..Range$LT$u64$GT$$u20$as$u20$rayon..range..UnindexedRangeLen$LT$u64$GT$$GT$3len17h9ff2ff9000d36d5aE
 	.p2align	4, 0x90
 __ZN97_$LT$core..ops..range..Range$LT$u64$GT$$u20$as$u20$rayon..range..UnindexedRangeLen$LT$u64$GT$$GT$3len17h9ff2ff9000d36d5aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rcx, qword ptr [rdi + 8]
-	xor	eax, eax
-	sub	rcx, qword ptr [rdi]
-	cmovae	rax, rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	8(%rdi), %rcx
+	xorl	%eax, %eax
+	subq	(%rdi), %rcx
+	cmovaeq	%rcx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$rayon..range..Iter$LT$u64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h21b1876aca31cb26E
 	.p2align	4, 0x90
 __ZN79_$LT$rayon..range..Iter$LT$u64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h21b1876aca31cb26E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi + 8]
-	xor	edx, edx
-	sub	rax, qword ptr [rdi]
-	cmovae	rdx, rax
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	8(%rdi), %rax
+	xorl	%edx, %edx
+	subq	(%rdi), %rax
+	cmovaeq	%rax, %rdx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN98_$LT$rayon..range..IterProducer$LT$u64$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17h5a50480d315ef0b7E
 	.p2align	4, 0x90
 __ZN98_$LT$rayon..range..IterProducer$LT$u64$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17h5a50480d315ef0b7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	ecx, ecx
-	mov	rdi, rdx
-	sub	rdi, rsi
-	cmovb	rdi, rcx
-	shr	rdi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%ecx, %ecx
+	movq	%rdx, %rdi
+	subq	%rsi, %rdi
+	cmovbq	%rcx, %rdi
+	shrq	%rdi
 	je	LBB39_2
-	add	rdi, rsi
-	mov	qword ptr [rax + 24], rdi
-	mov	qword ptr [rax + 32], rdx
-	mov	ecx, 1
-	mov	rdx, rdi
+	addq	%rsi, %rdi
+	movq	%rdi, 24(%rax)
+	movq	%rdx, 32(%rax)
+	movl	$1, %ecx
+	movq	%rdi, %rdx
 LBB39_2:
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	mov	qword ptr [rax + 16], rcx
-	pop	rbp
-	ret
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	movq	%rcx, 16(%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN79_$LT$rayon..range..Iter$LT$i64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17he588bd98b2084eaaE
 	.p2align	4, 0x90
 __ZN79_$LT$rayon..range..Iter$LT$i64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17he588bd98b2084eaaE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi + 8]
-	xor	edx, edx
-	sub	rax, qword ptr [rdi]
-	cmovg	rdx, rax
-	mov	eax, 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	8(%rdi), %rax
+	xorl	%edx, %edx
+	subq	(%rdi), %rax
+	cmovgq	%rax, %rdx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN98_$LT$rayon..range..IterProducer$LT$i64$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17hef2ebe25a98278bfE
 	.p2align	4, 0x90
 __ZN98_$LT$rayon..range..IterProducer$LT$i64$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17hef2ebe25a98278bfE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	ecx, ecx
-	mov	rdi, rdx
-	sub	rdi, rsi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%ecx, %ecx
+	movq	%rdx, %rdi
+	subq	%rsi, %rdi
 	jle	LBB41_3
-	shr	rdi
+	shrq	%rdi
 	je	LBB41_3
-	add	rdi, rsi
-	mov	qword ptr [rax + 24], rdi
-	mov	qword ptr [rax + 32], rdx
-	mov	ecx, 1
-	mov	rdx, rdi
+	addq	%rsi, %rdi
+	movq	%rdi, 24(%rax)
+	movq	%rdx, 32(%rax)
+	movl	$1, %ecx
+	movq	%rdi, %rdx
 LBB41_3:
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	mov	qword ptr [rax + 16], rcx
-	pop	rbp
-	ret
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	movq	%rcx, 16(%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN99_$LT$core..ops..range..Range$LT$u128$GT$$u20$as$u20$rayon..range..UnindexedRangeLen$LT$u128$GT$$GT$3len17h41b7baf14fc178c2E
 	.p2align	4, 0x90
 __ZN99_$LT$core..ops..range..Range$LT$u128$GT$$u20$as$u20$rayon..range..UnindexedRangeLen$LT$u128$GT$$GT$3len17h41b7baf14fc178c2E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi + 16]
-	xor	ecx, ecx
-	sub	rax, qword ptr [rdi]
-	mov	rdx, qword ptr [rdi + 24]
-	sbb	rdx, qword ptr [rdi + 8]
-	cmovb	rax, rcx
-	cmovb	rdx, rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	16(%rdi), %rax
+	movq	24(%rdi), %rdx
+	xorl	%ecx, %ecx
+	subq	(%rdi), %rax
+	sbbq	8(%rdi), %rdx
+	cmovbq	%rcx, %rax
+	cmovbq	%rcx, %rdx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN80_$LT$rayon..range..Iter$LT$u128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h49b9c154c3eae380E
 	.p2align	4, 0x90
 __ZN80_$LT$rayon..range..Iter$LT$u128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h49b9c154c3eae380E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdx, qword ptr [rdi + 16]
-	xor	eax, eax
-	sub	rdx, qword ptr [rdi]
-	mov	rcx, qword ptr [rdi + 24]
-	sbb	rcx, qword ptr [rdi + 8]
-	cmovb	rdx, rax
-	cmovb	rcx, rax
-	xor	eax, eax
-	test	rcx, rcx
-	sete	al
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	16(%rdi), %rdx
+	movq	24(%rdi), %rcx
+	xorl	%eax, %eax
+	subq	(%rdi), %rdx
+	sbbq	8(%rdi), %rcx
+	cmovbq	%rax, %rdx
+	cmovbq	%rax, %rcx
+	xorl	%eax, %eax
+	testq	%rcx, %rcx
+	sete	%al
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN99_$LT$rayon..range..IterProducer$LT$u128$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17he2daa08267ed2e50E
 	.p2align	4, 0x90
 __ZN99_$LT$rayon..range..IterProducer$LT$u128$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17he2daa08267ed2e50E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	r10d, r10d
-	mov	r9, rcx
-	sub	r9, rsi
-	mov	r11, r8
-	sbb	r11, rdx
-	cmovb	r9, r10
-	cmovb	r11, r10
-	shrd	r9, r11, 1
-	shr	r11
-	mov	rdi, r9
-	or	rdi, r11
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%r10d, %r10d
+	movq	%rcx, %r9
+	subq	%rsi, %r9
+	movq	%r8, %r11
+	sbbq	%rdx, %r11
+	cmovbq	%r10, %r9
+	cmovbq	%r10, %r11
+	shrdq	$1, %r11, %r9
+	shrq	%r11
+	movq	%r9, %rdi
+	orq	%r11, %rdi
 	je	LBB44_1
-	add	r9, rsi
-	adc	r11, rdx
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	mov	qword ptr [rax + 40], r9
-	mov	qword ptr [rax + 48], r11
-	mov	qword ptr [rax + 56], rcx
-	mov	qword ptr [rax + 64], r8
-	mov	edx, 1
-	mov	rcx, r9
-	mov	r8, r11
+	addq	%rsi, %r9
+	adcq	%rdx, %r11
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	movq	%r9, 40(%rax)
+	movq	%r11, 48(%rax)
+	movq	%rcx, 56(%rax)
+	movq	%r8, 64(%rax)
+	movl	$1, %edx
+	movq	%r9, %rcx
+	movq	%r11, %r8
 	jmp	LBB44_3
 LBB44_1:
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	xor	edx, edx
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	xorl	%edx, %edx
 LBB44_3:
-	mov	qword ptr [rax + 16], rcx
-	mov	qword ptr [rax + 24], r8
-	mov	qword ptr [rax + 32], rdx
-	pop	rbp
-	ret
+	movq	%rcx, 16(%rax)
+	movq	%r8, 24(%rax)
+	movq	%rdx, 32(%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN99_$LT$core..ops..range..Range$LT$i128$GT$$u20$as$u20$rayon..range..UnindexedRangeLen$LT$u128$GT$$GT$3len17h139a1fa92cb93967E
 	.p2align	4, 0x90
 __ZN99_$LT$core..ops..range..Range$LT$i128$GT$$u20$as$u20$rayon..range..UnindexedRangeLen$LT$u128$GT$$GT$3len17h139a1fa92cb93967E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, qword ptr [rdi]
-	mov	rsi, qword ptr [rdi + 8]
-	mov	rcx, qword ptr [rdi + 24]
-	mov	rdi, qword ptr [rdi + 16]
-	mov	rax, rdi
-	sub	rax, r8
-	mov	rdx, rcx
-	sbb	rdx, rsi
-	xor	r9d, r9d
-	cmp	r8, rdi
-	sbb	rsi, rcx
-	cmovge	rax, r9
-	cmovge	rdx, r9
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %r8
+	movq	8(%rdi), %rsi
+	movq	24(%rdi), %rcx
+	movq	16(%rdi), %rdi
+	movq	%rdi, %rax
+	subq	%r8, %rax
+	movq	%rcx, %rdx
+	sbbq	%rsi, %rdx
+	xorl	%r9d, %r9d
+	cmpq	%rdi, %r8
+	sbbq	%rcx, %rsi
+	cmovgeq	%r9, %rax
+	cmovgeq	%r9, %rdx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN80_$LT$rayon..range..Iter$LT$i128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h938cfc9edf200a11E
 	.p2align	4, 0x90
 __ZN80_$LT$rayon..range..Iter$LT$i128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h938cfc9edf200a11E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, qword ptr [rdi]
-	mov	rcx, qword ptr [rdi + 8]
-	mov	rax, qword ptr [rdi + 24]
-	mov	rdi, qword ptr [rdi + 16]
-	mov	rdx, rdi
-	sub	rdx, r8
-	mov	rsi, rax
-	sbb	rsi, rcx
-	xor	r9d, r9d
-	cmp	r8, rdi
-	sbb	rcx, rax
-	cmovge	rdx, r9
-	cmovge	rsi, r9
-	xor	eax, eax
-	test	rsi, rsi
-	sete	al
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %r8
+	movq	8(%rdi), %rcx
+	movq	24(%rdi), %rax
+	movq	16(%rdi), %rdi
+	movq	%rdi, %rdx
+	subq	%r8, %rdx
+	movq	%rax, %rsi
+	sbbq	%rcx, %rsi
+	xorl	%r9d, %r9d
+	cmpq	%rdi, %r8
+	sbbq	%rax, %rcx
+	cmovgeq	%r9, %rdx
+	cmovgeq	%r9, %rsi
+	xorl	%eax, %eax
+	testq	%rsi, %rsi
+	sete	%al
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN99_$LT$rayon..range..IterProducer$LT$i128$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17h71bfe2f3bfe99762E
 	.p2align	4, 0x90
 __ZN99_$LT$rayon..range..IterProducer$LT$i128$GT$$u20$as$u20$rayon..iter..plumbing..UnindexedProducer$GT$5split17h71bfe2f3bfe99762E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r9, rcx
-	sub	r9, rsi
-	mov	r10, r8
-	sbb	r10, rdx
-	mov	rax, rdi
-	cmp	rsi, rcx
-	mov	rdi, rdx
-	sbb	rdi, r8
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rcx, %r9
+	subq	%rsi, %r9
+	movq	%r8, %r10
+	sbbq	%rdx, %r10
+	cmpq	%rcx, %rsi
+	movq	%rdx, %rdi
+	sbbq	%r8, %rdi
 	jge	LBB47_2
-	shrd	r9, r10, 1
-	shr	r10
-	mov	rdi, r9
-	or	rdi, r10
+	shrdq	$1, %r10, %r9
+	shrq	%r10
+	movq	%r9, %rdi
+	orq	%r10, %rdi
 	je	LBB47_2
-	add	r9, rsi
-	adc	r10, rdx
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	mov	qword ptr [rax + 40], r9
-	mov	qword ptr [rax + 48], r10
-	mov	qword ptr [rax + 56], rcx
-	mov	qword ptr [rax + 64], r8
-	mov	edx, 1
-	mov	rcx, r9
-	mov	r8, r10
+	addq	%rsi, %r9
+	adcq	%rdx, %r10
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	movq	%r9, 40(%rax)
+	movq	%r10, 48(%rax)
+	movq	%rcx, 56(%rax)
+	movq	%r8, 64(%rax)
+	movl	$1, %edx
+	movq	%r9, %rcx
+	movq	%r10, %r8
 	jmp	LBB47_4
 LBB47_2:
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], rdx
-	xor	edx, edx
+	movq	%rsi, (%rax)
+	movq	%rdx, 8(%rax)
+	xorl	%edx, %edx
 LBB47_4:
-	mov	qword ptr [rax + 16], rcx
-	mov	qword ptr [rax + 24], r8
-	mov	qword ptr [rax + 32], rdx
-	pop	rbp
-	ret
+	movq	%rcx, 16(%rax)
+	movq	%r8, 24(%rax)
+	movq	%rdx, 32(%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN95_$LT$rayon..range_inclusive..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h822e46c1d181146bE
 	.p2align	4, 0x90
 __ZN95_$LT$rayon..range_inclusive..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h822e46c1d181146bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	cl, byte ptr [rdi]
-	mov	dl, byte ptr [rdi + 1]
-	xor	eax, eax
-	cmp	cl, dl
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	(%rdi), %cl
+	movb	1(%rdi), %dl
+	xorl	%eax, %eax
+	cmpb	%dl, %cl
 	ja	LBB48_3
-	cmp	byte ptr [rdi + 2], 0
+	cmpb	$0, 2(%rdi)
 	jne	LBB48_3
-	xor	eax, eax
-	sub	dl, cl
-	movzx	ecx, dl
-	cmovb	ecx, eax
-	movzx	eax, cl
-	inc	rax
+	xorl	%eax, %eax
+	subb	%cl, %dl
+	movzbl	%dl, %ecx
+	cmovbl	%eax, %ecx
+	movzbl	%cl, %eax
+	incq	%rax
 LBB48_3:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range_inclusive..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h70663d0d3cb8a031E
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range_inclusive..Iter$LT$u8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h70663d0d3cb8a031E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	sil, byte ptr [rdi]
-	mov	cl, byte ptr [rdi + 1]
-	xor	edx, edx
-	mov	eax, ecx
-	sub	al, sil
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	(%rdi), %sil
+	movb	1(%rdi), %cl
+	xorl	%edx, %edx
+	movl	%ecx, %eax
+	subb	%sil, %al
 	jb	LBB49_5
-	cmp	byte ptr [rdi + 2], 0
+	cmpb	$0, 2(%rdi)
 	jne	LBB49_5
-	inc	cl
+	incb	%cl
 	jne	LBB49_4
-	movzx	edx, al
-	inc	rdx
+	movzbl	%al, %edx
+	incq	%rdx
 LBB49_5:
-	mov	eax, 1
-	pop	rbp
-	ret
+	movl	$1, %eax
+	popq	%rbp
+	retq
 LBB49_4:
-	xor	eax, eax
-	sub	cl, sil
-	movzx	ecx, cl
-	cmovb	ecx, eax
-	movzx	edx, cl
-	mov	eax, 1
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	subb	%sil, %cl
+	movzbl	%cl, %ecx
+	cmovbl	%eax, %ecx
+	movzbl	%cl, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN96_$LT$rayon..range_inclusive..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17hcc4977cd330deca6E
 	.p2align	4, 0x90
 __ZN96_$LT$rayon..range_inclusive..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17hcc4977cd330deca6E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	edx, word ptr [rdi]
-	movzx	ecx, word ptr [rdi + 2]
-	xor	eax, eax
-	cmp	dx, cx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	(%rdi), %edx
+	movzwl	2(%rdi), %ecx
+	xorl	%eax, %eax
+	cmpw	%cx, %dx
 	ja	LBB50_3
-	cmp	byte ptr [rdi + 4], 0
+	cmpb	$0, 4(%rdi)
 	jne	LBB50_3
-	xor	eax, eax
-	sub	cx, dx
-	cmovb	ecx, eax
-	movzx	eax, cx
-	inc	rax
+	xorl	%eax, %eax
+	subw	%dx, %cx
+	cmovbl	%eax, %ecx
+	movzwl	%cx, %eax
+	incq	%rax
 LBB50_3:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range_inclusive..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hce98180baede8927E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range_inclusive..Iter$LT$u16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hce98180baede8927E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	eax, word ptr [rdi]
-	movzx	ecx, word ptr [rdi + 2]
-	xor	edx, edx
-	cmp	cx, ax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	(%rdi), %eax
+	movzwl	2(%rdi), %ecx
+	xorl	%edx, %edx
+	cmpw	%ax, %cx
 	jb	LBB51_5
-	cmp	byte ptr [rdi + 4], 0
+	cmpb	$0, 4(%rdi)
 	jne	LBB51_5
-	mov	edx, ecx
-	inc	dx
+	movl	%ecx, %edx
+	incw	%dx
 	jne	LBB51_4
-	sub	ecx, eax
-	movzx	edx, cx
-	inc	rdx
+	subl	%eax, %ecx
+	movzwl	%cx, %edx
+	incq	%rdx
 LBB51_5:
-	mov	eax, 1
-	pop	rbp
-	ret
+	movl	$1, %eax
+	popq	%rbp
+	retq
 LBB51_4:
-	xor	ecx, ecx
-	sub	dx, ax
-	cmovb	edx, ecx
-	movzx	edx, dx
-	mov	eax, 1
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	subw	%ax, %dx
+	cmovbl	%ecx, %edx
+	movzwl	%dx, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN95_$LT$rayon..range_inclusive..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h0f0b9a1b00e9c96cE
 	.p2align	4, 0x90
 __ZN95_$LT$rayon..range_inclusive..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h0f0b9a1b00e9c96cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	cl, byte ptr [rdi]
-	mov	dl, byte ptr [rdi + 1]
-	xor	eax, eax
-	cmp	dl, cl
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	(%rdi), %cl
+	movb	1(%rdi), %dl
+	xorl	%eax, %eax
+	cmpb	%cl, %dl
 	jl	LBB52_3
-	cmp	byte ptr [rdi + 2], 0
+	cmpb	$0, 2(%rdi)
 	jne	LBB52_3
-	xor	eax, eax
-	sub	dl, cl
-	movzx	ecx, dl
-	cmovle	ecx, eax
-	movzx	eax, cl
-	inc	rax
+	xorl	%eax, %eax
+	subb	%cl, %dl
+	movzbl	%dl, %ecx
+	cmovlel	%eax, %ecx
+	movzbl	%cl, %eax
+	incq	%rax
 LBB52_3:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$rayon..range_inclusive..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h63efba2416e02f34E
 	.p2align	4, 0x90
 __ZN88_$LT$rayon..range_inclusive..Iter$LT$i8$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h63efba2416e02f34E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	al, byte ptr [rdi]
-	mov	cl, byte ptr [rdi + 1]
-	xor	edx, edx
-	cmp	cl, al
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movb	(%rdi), %al
+	movb	1(%rdi), %cl
+	xorl	%edx, %edx
+	cmpb	%al, %cl
 	jl	LBB53_5
-	cmp	byte ptr [rdi + 2], 0
+	cmpb	$0, 2(%rdi)
 	jne	LBB53_5
-	mov	edx, ecx
-	inc	dl
+	movl	%ecx, %edx
+	incb	%dl
 	jno	LBB53_4
-	xor	edx, edx
-	sub	cl, al
-	movzx	eax, cl
-	cmovle	eax, edx
-	movzx	edx, al
-	inc	rdx
+	xorl	%edx, %edx
+	subb	%al, %cl
+	movzbl	%cl, %eax
+	cmovlel	%edx, %eax
+	movzbl	%al, %edx
+	incq	%rdx
 LBB53_5:
-	mov	eax, 1
-	pop	rbp
-	ret
+	movl	$1, %eax
+	popq	%rbp
+	retq
 LBB53_4:
-	xor	ecx, ecx
-	sub	dl, al
-	movzx	eax, dl
-	cmovle	eax, ecx
-	movzx	edx, al
-	mov	eax, 1
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	subb	%al, %dl
+	movzbl	%dl, %eax
+	cmovlel	%ecx, %eax
+	movzbl	%al, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN96_$LT$rayon..range_inclusive..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h82a82ff526f758c9E
 	.p2align	4, 0x90
 __ZN96_$LT$rayon..range_inclusive..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..IndexedParallelIterator$GT$3len17h82a82ff526f758c9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	edx, word ptr [rdi]
-	movzx	ecx, word ptr [rdi + 2]
-	xor	eax, eax
-	cmp	cx, dx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	(%rdi), %edx
+	movzwl	2(%rdi), %ecx
+	xorl	%eax, %eax
+	cmpw	%dx, %cx
 	jl	LBB54_3
-	cmp	byte ptr [rdi + 4], 0
+	cmpb	$0, 4(%rdi)
 	jne	LBB54_3
-	xor	eax, eax
-	sub	cx, dx
-	cmovle	ecx, eax
-	movzx	eax, cx
-	inc	rax
+	xorl	%eax, %eax
+	subw	%dx, %cx
+	cmovlel	%eax, %ecx
+	movzwl	%cx, %eax
+	incq	%rax
 LBB54_3:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range_inclusive..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hf85d1078b7f76351E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range_inclusive..Iter$LT$i16$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hf85d1078b7f76351E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movzx	ecx, word ptr [rdi]
-	movzx	eax, word ptr [rdi + 2]
-	xor	edx, edx
-	cmp	ax, cx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movzwl	(%rdi), %ecx
+	movzwl	2(%rdi), %eax
+	xorl	%edx, %edx
+	cmpw	%cx, %ax
 	jl	LBB55_5
-	cmp	byte ptr [rdi + 4], 0
+	cmpb	$0, 4(%rdi)
 	jne	LBB55_5
-	mov	edx, eax
-	inc	dx
+	movl	%eax, %edx
+	incw	%dx
 	jno	LBB55_4
-	xor	edx, edx
-	sub	ax, cx
-	cmovle	eax, edx
-	movzx	edx, ax
-	inc	rdx
+	xorl	%edx, %edx
+	subw	%cx, %ax
+	cmovlel	%edx, %eax
+	movzwl	%ax, %edx
+	incq	%rdx
 LBB55_5:
-	mov	eax, 1
-	pop	rbp
-	ret
+	movl	$1, %eax
+	popq	%rbp
+	retq
 LBB55_4:
-	xor	eax, eax
-	sub	dx, cx
-	cmovle	edx, eax
-	movzx	edx, dx
-	mov	eax, 1
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	subw	%cx, %dx
+	cmovlel	%eax, %edx
+	movzwl	%dx, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range_inclusive..Iter$LT$u32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hbf6d3eb38b3a5075E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range_inclusive..Iter$LT$u32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hbf6d3eb38b3a5075E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	eax, dword ptr [rdi]
-	mov	ecx, dword ptr [rdi + 4]
-	xor	edx, edx
-	cmp	ecx, eax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %eax
+	movl	4(%rdi), %ecx
+	xorl	%edx, %edx
+	cmpl	%eax, %ecx
 	jb	LBB56_5
-	cmp	byte ptr [rdi + 8], 0
+	cmpb	$0, 8(%rdi)
 	jne	LBB56_5
-	mov	edx, ecx
-	inc	edx
+	movl	%ecx, %edx
+	incl	%edx
 	jne	LBB56_4
-	sub	rcx, rax
-	inc	rcx
-	mov	rdx, rcx
+	subq	%rax, %rcx
+	incq	%rcx
+	movq	%rcx, %rdx
 LBB56_5:
-	mov	eax, 1
-	pop	rbp
-	ret
+	movl	$1, %eax
+	popq	%rbp
+	retq
 LBB56_4:
-	xor	ecx, ecx
-	sub	edx, eax
-	cmovb	edx, ecx
-	mov	eax, 1
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	subl	%eax, %edx
+	cmovbl	%ecx, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range_inclusive..Iter$LT$i32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h9917e75cfd1f8cebE
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range_inclusive..Iter$LT$i32$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h9917e75cfd1f8cebE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	ecx, dword ptr [rdi]
-	mov	eax, dword ptr [rdi + 4]
-	xor	edx, edx
-	cmp	eax, ecx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %ecx
+	movl	4(%rdi), %eax
+	xorl	%edx, %edx
+	cmpl	%ecx, %eax
 	jl	LBB57_5
-	cmp	byte ptr [rdi + 8], 0
+	cmpb	$0, 8(%rdi)
 	jne	LBB57_5
-	mov	edx, eax
-	inc	edx
+	movl	%eax, %edx
+	incl	%edx
 	jno	LBB57_4
-	xor	edx, edx
-	sub	eax, ecx
-	cmovle	eax, edx
-	inc	rax
-	mov	rdx, rax
+	xorl	%edx, %edx
+	subl	%ecx, %eax
+	cmovlel	%edx, %eax
+	incq	%rax
+	movq	%rax, %rdx
 LBB57_5:
-	mov	eax, 1
-	pop	rbp
-	ret
+	movl	$1, %eax
+	popq	%rbp
+	retq
 LBB57_4:
-	xor	eax, eax
-	sub	edx, ecx
-	cmovle	edx, eax
-	mov	eax, 1
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	subl	%ecx, %edx
+	cmovlel	%eax, %edx
+	movl	$1, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range_inclusive..Iter$LT$u64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h97df73a7049b7604E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range_inclusive..Iter$LT$u64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h97df73a7049b7604E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, qword ptr [rdi]
-	mov	rcx, qword ptr [rdi + 8]
-	xor	edx, edx
-	mov	rsi, rcx
-	mov	eax, 1
-	sub	rsi, r8
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %r8
+	movq	8(%rdi), %rcx
+	xorl	%edx, %edx
+	movq	%rcx, %rsi
+	movl	$1, %eax
+	subq	%r8, %rsi
 	jb	LBB58_5
-	cmp	byte ptr [rdi + 16], 0
+	cmpb	$0, 16(%rdi)
 	jne	LBB58_5
-	inc	rcx
+	incq	%rcx
 	jne	LBB58_4
-	xor	eax, eax
-	inc	rsi
-	setne	al
-	mov	rdx, rsi
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	incq	%rsi
+	setne	%al
+	movq	%rsi, %rdx
+	popq	%rbp
+	retq
 LBB58_4:
-	xor	edx, edx
-	sub	rcx, r8
-	cmovae	rdx, rcx
+	xorl	%edx, %edx
+	subq	%r8, %rcx
+	cmovaeq	%rcx, %rdx
 LBB58_5:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN89_$LT$rayon..range_inclusive..Iter$LT$i64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hce9c064dfeb80bc5E
 	.p2align	4, 0x90
 __ZN89_$LT$rayon..range_inclusive..Iter$LT$i64$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17hce9c064dfeb80bc5E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rcx, qword ptr [rdi]
-	mov	rsi, qword ptr [rdi + 8]
-	xor	edx, edx
-	mov	eax, 1
-	cmp	rsi, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rcx
+	movq	8(%rdi), %rsi
+	xorl	%edx, %edx
+	movl	$1, %eax
+	cmpq	%rcx, %rsi
 	jl	LBB59_5
-	cmp	byte ptr [rdi + 16], 0
+	cmpb	$0, 16(%rdi)
 	jne	LBB59_5
-	mov	rdi, rsi
-	xor	edx, edx
-	inc	rdi
+	movq	%rsi, %rdi
+	xorl	%edx, %edx
+	incq	%rdi
 	jno	LBB59_4
-	sub	rsi, rcx
-	cmovg	rdx, rsi
-	xor	eax, eax
-	inc	rdx
-	setne	al
-	pop	rbp
-	ret
+	subq	%rcx, %rsi
+	cmovgq	%rsi, %rdx
+	xorl	%eax, %eax
+	incq	%rdx
+	setne	%al
+	popq	%rbp
+	retq
 LBB59_4:
-	sub	rdi, rcx
-	cmovg	rdx, rdi
+	subq	%rcx, %rdi
+	cmovgq	%rdi, %rdx
 LBB59_5:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN90_$LT$rayon..range_inclusive..Iter$LT$u128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h8dee574bf2bdeda0E
 	.p2align	4, 0x90
 __ZN90_$LT$rayon..range_inclusive..Iter$LT$u128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h8dee574bf2bdeda0E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r9, qword ptr [rdi]
-	mov	r8, qword ptr [rdi + 8]
-	mov	rsi, qword ptr [rdi + 24]
-	mov	rcx, qword ptr [rdi + 16]
-	xor	edx, edx
-	cmp	rcx, r9
-	mov	rax, rsi
-	sbb	rax, r8
-	mov	al, 1
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %r9
+	movq	8(%rdi), %r8
+	movq	24(%rdi), %rsi
+	movq	16(%rdi), %rcx
+	xorl	%edx, %edx
+	cmpq	%r9, %rcx
+	movq	%rsi, %rax
+	sbbq	%r8, %rax
+	movb	$1, %al
 	jb	LBB60_7
-	cmp	byte ptr [rdi + 32], 0
+	cmpb	$0, 32(%rdi)
 	jne	LBB60_7
-	mov	rdx, rcx
-	add	rdx, 1
-	mov	rax, rsi
-	adc	rax, 0
+	movq	%rcx, %rdx
+	addq	$1, %rdx
+	movq	%rsi, %rax
+	adcq	$0, %rax
 	jae	LBB60_6
-	sub	rcx, r9
-	sbb	rsi, r8
+	subq	%r9, %rcx
+	sbbq	%r8, %rsi
 	jne	LBB60_4
-	inc	rcx
-	setne	al
-	mov	rdx, rcx
+	incq	%rcx
+	setne	%al
+	movq	%rcx, %rdx
 LBB60_7:
-	movzx	eax, al
-	pop	rbp
-	ret
+	movzbl	%al, %eax
+	popq	%rbp
+	retq
 LBB60_6:
-	xor	ecx, ecx
-	sub	rdx, r9
-	sbb	rax, r8
-	cmovb	rdx, rcx
-	cmovb	rax, rcx
-	test	rax, rax
-	sete	al
-	movzx	eax, al
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	subq	%r9, %rdx
+	sbbq	%r8, %rax
+	cmovbq	%rcx, %rdx
+	cmovbq	%rcx, %rax
+	testq	%rax, %rax
+	sete	%al
+	movzbl	%al, %eax
+	popq	%rbp
+	retq
 LBB60_4:
-	xor	eax, eax
-	movzx	eax, al
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	movzbl	%al, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN90_$LT$rayon..range_inclusive..Iter$LT$i128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h987cd0ec82601853E
 	.p2align	4, 0x90
 __ZN90_$LT$rayon..range_inclusive..Iter$LT$i128$GT$$u20$as$u20$rayon..iter..ParallelIterator$GT$7opt_len17h987cd0ec82601853E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, qword ptr [rdi]
-	mov	r9, qword ptr [rdi + 8]
-	mov	rcx, qword ptr [rdi + 24]
-	mov	r11, qword ptr [rdi + 16]
-	xor	edx, edx
-	cmp	r11, r8
-	mov	rsi, rcx
-	sbb	rsi, r9
-	mov	sil, 1
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %r8
+	movq	8(%rdi), %r9
+	movq	24(%rdi), %rcx
+	movq	16(%rdi), %r11
+	xorl	%edx, %edx
+	cmpq	%r8, %r11
+	movq	%rcx, %rsi
+	sbbq	%r9, %rsi
+	movb	$1, %sil
 	jl	LBB61_7
-	cmp	byte ptr [rdi + 32], 0
+	cmpb	$0, 32(%rdi)
 	jne	LBB61_7
-	mov	rsi, r11
-	add	rsi, 1
-	mov	rdi, rcx
-	adc	rdi, 0
-	setns	r10b
-	test	rcx, rcx
-	setns	dl
-	cmp	dl, r10b
-	setne	al
-	and	al, dl
-	cmp	al, 1
+	movq	%r11, %rsi
+	addq	$1, %rsi
+	movq	%rcx, %rdi
+	adcq	$0, %rdi
+	setns	%r10b
+	testq	%rcx, %rcx
+	setns	%dl
+	cmpb	%r10b, %dl
+	setne	%al
+	andb	%dl, %al
+	cmpb	$1, %al
 	jne	LBB61_6
-	mov	rdx, r11
-	sub	rdx, r8
-	mov	rax, rcx
-	sbb	rax, r9
-	xor	esi, esi
-	cmp	r8, r11
-	sbb	r9, rcx
-	cmovge	rdx, rsi
-	cmovge	rax, rsi
-	test	rax, rax
+	movq	%r11, %rdx
+	subq	%r8, %rdx
+	movq	%rcx, %rax
+	sbbq	%r9, %rax
+	xorl	%esi, %esi
+	cmpq	%r11, %r8
+	sbbq	%rcx, %r9
+	cmovgeq	%rsi, %rdx
+	cmovgeq	%rsi, %rax
+	testq	%rax, %rax
 	jne	LBB61_4
-	inc	rdx
-	setne	sil
+	incq	%rdx
+	setne	%sil
 LBB61_7:
-	movzx	eax, sil
-	pop	rbp
-	ret
+	movzbl	%sil, %eax
+	popq	%rbp
+	retq
 LBB61_6:
-	mov	rdx, rsi
-	sub	rdx, r8
-	mov	rax, rdi
-	sbb	rax, r9
-	xor	ecx, ecx
-	cmp	r8, rsi
-	sbb	r9, rdi
-	cmovge	rdx, rcx
-	cmovge	rax, rcx
-	test	rax, rax
-	sete	sil
-	movzx	eax, sil
-	pop	rbp
-	ret
+	movq	%rsi, %rdx
+	subq	%r8, %rdx
+	movq	%rdi, %rax
+	sbbq	%r9, %rax
+	xorl	%ecx, %ecx
+	cmpq	%rsi, %r8
+	sbbq	%rdi, %r9
+	cmovgeq	%rcx, %rdx
+	cmovgeq	%rcx, %rax
+	testq	%rax, %rax
+	sete	%sil
+	movzbl	%sil, %eax
+	popq	%rbp
+	retq
 LBB61_4:
-	movzx	eax, sil
-	pop	rbp
-	ret
+	movzbl	%sil, %eax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN5rayon3str63_$LT$impl$u20$rayon..str..private..Pattern$u20$for$u20$char$GT$17__rayon_private__17h10030ab25983f4a1E
 	.p2align	4, 0x90
 __ZN5rayon3str63_$LT$impl$u20$rayon..str..private..Pattern$u20$for$u20$char$GT$17__rayon_private__17h10030ab25983f4a1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN54_$LT$rayon..str..Chars$u20$as$u20$core..fmt..Debug$GT$3fmt17h4e1c29d4de668fccE
 	.p2align	4, 0x90
 __ZN54_$LT$rayon..str..Chars$u20$as$u20$core..fmt..Debug$GT$3fmt17h4e1c29d4de668fccE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_15]
-	lea	r14, [rbp - 40]
-	mov	ecx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_16]
-	lea	r8, [rip + l___unnamed_17]
-	lea	rcx, [rbp - 24]
-	mov	edx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_15(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$5, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_16(%rip), %rsi
+	leaq	l___unnamed_17(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$5, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN60_$LT$rayon..str..CharIndices$u20$as$u20$core..fmt..Debug$GT$3fmt17h5d82d159d4f50368E
 	.p2align	4, 0x90
 __ZN60_$LT$rayon..str..CharIndices$u20$as$u20$core..fmt..Debug$GT$3fmt17h5d82d159d4f50368E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_18]
-	lea	r14, [rbp - 40]
-	mov	ecx, 11
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_16]
-	lea	r8, [rip + l___unnamed_17]
-	lea	rcx, [rbp - 24]
-	mov	edx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_18(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$11, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_16(%rip), %rsi
+	leaq	l___unnamed_17(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$5, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN54_$LT$rayon..str..Bytes$u20$as$u20$core..fmt..Debug$GT$3fmt17h3851fc26d7dcbfecE
 	.p2align	4, 0x90
 __ZN54_$LT$rayon..str..Bytes$u20$as$u20$core..fmt..Debug$GT$3fmt17h3851fc26d7dcbfecE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_19]
-	lea	r14, [rbp - 40]
-	mov	ecx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_16]
-	lea	r8, [rip + l___unnamed_17]
-	lea	rcx, [rbp - 24]
-	mov	edx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_19(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$5, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_16(%rip), %rsi
+	leaq	l___unnamed_17(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$5, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN60_$LT$rayon..str..EncodeUtf16$u20$as$u20$core..fmt..Debug$GT$3fmt17h8b2aba4c1f335a7eE
 	.p2align	4, 0x90
 __ZN60_$LT$rayon..str..EncodeUtf16$u20$as$u20$core..fmt..Debug$GT$3fmt17h8b2aba4c1f335a7eE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_20]
-	lea	r14, [rbp - 40]
-	mov	ecx, 11
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_16]
-	lea	r8, [rip + l___unnamed_17]
-	lea	rcx, [rbp - 24]
-	mov	edx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_20(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$11, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_16(%rip), %rsi
+	leaq	l___unnamed_17(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$5, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN54_$LT$rayon..str..Lines$u20$as$u20$core..fmt..Debug$GT$3fmt17h1a5669ad4300a870E
 	.p2align	4, 0x90
 __ZN54_$LT$rayon..str..Lines$u20$as$u20$core..fmt..Debug$GT$3fmt17h1a5669ad4300a870E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_21]
-	lea	r14, [rbp - 48]
-	mov	ecx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 24], rbx
-	lea	rdx, [rip + l___unnamed_17]
-	lea	rsi, [rbp - 24]
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_21(%rip), %rdx
+	leaq	-48(%rbp), %r14
+	movl	$5, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_17(%rip), %rdx
+	leaq	-24(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN64_$LT$rayon..str..SplitWhitespace$u20$as$u20$core..fmt..Debug$GT$3fmt17h23955c99902b6a40E
 	.p2align	4, 0x90
 __ZN64_$LT$rayon..str..SplitWhitespace$u20$as$u20$core..fmt..Debug$GT$3fmt17h23955c99902b6a40E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_22]
-	lea	r14, [rbp - 48]
-	mov	ecx, 15
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 24], rbx
-	lea	rdx, [rip + l___unnamed_17]
-	lea	rsi, [rbp - 24]
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_22(%rip), %rdx
+	leaq	-48(%rbp), %r14
+	movl	$15, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_17(%rip), %rdx
+	leaq	-24(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.section	__DATA,__const

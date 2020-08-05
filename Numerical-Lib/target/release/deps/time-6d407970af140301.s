@@ -1,354 +1,353 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 7
-	.intel_syntax noprefix
 	.p2align	4, 0x90
 __ZN36_$LT$T$u20$as$u20$core..any..Any$GT$7type_id17hcfb9724396b342c0E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movabs	rax, 1229646359891580772
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movabsq	$1229646359891580772, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN3std4sync4once4Once9call_once28_$u7b$$u7b$closure$u7d$$u7d$17hfd05b33f032e826dE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	test	byte ptr [rax], 1
-	mov	byte ptr [rax], 0
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	testb	$1, (%rax)
+	movb	$0, (%rax)
 	je	LBB1_1
-	lea	rdi, [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	pop	rbp
+	leaq	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %rdi
+	popq	%rbp
 	jmp	_mach_timebase_info
 LBB1_1:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_2]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_2(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN3std9panicking11begin_panic17h747b3a393d9a2f04E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 16
-	mov	qword ptr [rbp - 16], rdi
-	mov	qword ptr [rbp - 8], rsi
-	mov	rdi, rdx
-	call	__ZN4core5panic8Location6caller17hf55c9a52d6249cfcE
-	lea	rsi, [rip + l___unnamed_3]
-	lea	rdi, [rbp - 16]
-	xor	edx, edx
-	mov	rcx, rax
-	call	__ZN3std9panicking20rust_panic_with_hook17hf8b9378dd2e7986aE
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -16(%rbp)
+	movq	%rsi, -8(%rbp)
+	movq	%rdx, %rdi
+	callq	__ZN4core5panic8Location6caller17hf55c9a52d6249cfcE
+	leaq	l___unnamed_3(%rip), %rsi
+	leaq	-16(%rbp), %rdi
+	xorl	%edx, %edx
+	movq	%rax, %rcx
+	callq	__ZN3std9panicking20rust_panic_with_hook17hf8b9378dd2e7986aE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h008344371f89fbcfE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdi, qword ptr [rdi]
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rdi
+	popq	%rbp
 	jmp	__ZN41_$LT$char$u20$as$u20$core..fmt..Debug$GT$3fmt17haa902be045284592E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h14d493801ad39cd2E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdi, qword ptr [rdi]
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rdi
+	popq	%rbp
 	jmp	__ZN46_$LT$time..Fmt$u20$as$u20$core..fmt..Debug$GT$3fmt17hde5380b111a3cf1aE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h2d39029c91dd9808E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rsi
-	mov	r14, qword ptr [rdi]
-	mov	rdi, rsi
-	call	__ZN4core3fmt9Formatter15debug_lower_hex17h8530fbaeba13f4d9E
-	test	al, al
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rsi, %rbx
+	movq	(%rdi), %r14
+	movq	%rsi, %rdi
+	callq	__ZN4core3fmt9Formatter15debug_lower_hex17h8530fbaeba13f4d9E
+	testb	%al, %al
 	je	LBB5_1
-	mov	rdi, r14
-	mov	rsi, rbx
-	pop	rbx
-	pop	r14
-	pop	rbp
+	movq	%r14, %rdi
+	movq	%rbx, %rsi
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$i64$GT$3fmt17ha8bb237a95553570E
 LBB5_1:
-	mov	rdi, rbx
-	call	__ZN4core3fmt9Formatter15debug_upper_hex17hf8fda15ec43a1e68E
-	mov	rdi, r14
-	mov	rsi, rbx
-	test	al, al
+	movq	%rbx, %rdi
+	callq	__ZN4core3fmt9Formatter15debug_upper_hex17hf8fda15ec43a1e68E
+	movq	%r14, %rdi
+	movq	%rbx, %rsi
+	testb	%al, %al
 	je	LBB5_4
-	pop	rbx
-	pop	r14
-	pop	rbp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$i64$GT$3fmt17h13194bd83ca37803E
 LBB5_4:
-	pop	rbx
-	pop	r14
-	pop	rbp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h45ac8dca8fcbccc9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdi, rsi
-	lea	rsi, [rip + l___unnamed_4]
-	mov	edx, 2
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rsi, %rdi
+	leaq	l___unnamed_4(%rip), %rsi
+	movl	$2, %edx
+	popq	%rbp
 	jmp	__ZN4core3fmt9Formatter3pad17he4a76f49c06ce69bE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h617a509890c3a058E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, qword ptr [rdi]
-	lea	rdx, [rip + l___unnamed_5]
-	lea	r14, [rbp - 40]
-	mov	ecx, 10
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_6]
-	lea	r8, [rip + l___unnamed_7]
-	lea	rcx, [rbp - 24]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	(%rdi), %rbx
+	leaq	l___unnamed_5(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$10, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_6(%rip), %rsi
+	leaq	l___unnamed_7(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h641465e203af7c3eE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rsi
-	mov	r14, qword ptr [rdi]
-	mov	rdi, rsi
-	call	__ZN4core3fmt9Formatter15debug_lower_hex17h8530fbaeba13f4d9E
-	test	al, al
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rsi, %rbx
+	movq	(%rdi), %r14
+	movq	%rsi, %rdi
+	callq	__ZN4core3fmt9Formatter15debug_lower_hex17h8530fbaeba13f4d9E
+	testb	%al, %al
 	je	LBB8_1
-	mov	rdi, r14
-	mov	rsi, rbx
-	pop	rbx
-	pop	r14
-	pop	rbp
+	movq	%r14, %rdi
+	movq	%rbx, %rsi
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$i32$GT$3fmt17h45ae8797392b15d4E
 LBB8_1:
-	mov	rdi, rbx
-	call	__ZN4core3fmt9Formatter15debug_upper_hex17hf8fda15ec43a1e68E
-	mov	rdi, r14
-	mov	rsi, rbx
-	test	al, al
+	movq	%rbx, %rdi
+	callq	__ZN4core3fmt9Formatter15debug_upper_hex17hf8fda15ec43a1e68E
+	movq	%r14, %rdi
+	movq	%rbx, %rsi
+	testb	%al, %al
 	je	LBB8_4
-	pop	rbx
-	pop	r14
-	pop	rbp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$i32$GT$3fmt17h7218a38926162563E
 LBB8_4:
-	pop	rbx
-	pop	r14
-	pop	rbp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h69cdd3d9dcc40841E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	mov	rdi, qword ptr [rax]
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	movq	(%rax), %rdi
+	popq	%rbp
 	jmp	__ZN45_$LT$time..Tm$u20$as$u20$core..fmt..Debug$GT$3fmt17ha600475a5d25b0e2E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17ha9ef42ffeecb933bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rsi
-	mov	r14, qword ptr [rdi]
-	mov	rdi, rsi
-	call	__ZN4core3fmt9Formatter15debug_lower_hex17h8530fbaeba13f4d9E
-	test	al, al
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rsi, %rbx
+	movq	(%rdi), %r14
+	movq	%rsi, %rdi
+	callq	__ZN4core3fmt9Formatter15debug_lower_hex17h8530fbaeba13f4d9E
+	testb	%al, %al
 	je	LBB10_1
-	mov	rdi, r14
-	mov	rsi, rbx
-	pop	rbx
-	pop	r14
-	pop	rbp
+	movq	%r14, %rdi
+	movq	%rbx, %rsi
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17h45355469eb7ddf8bE
 LBB10_1:
-	mov	rdi, rbx
-	call	__ZN4core3fmt9Formatter15debug_upper_hex17hf8fda15ec43a1e68E
-	mov	rdi, r14
-	mov	rsi, rbx
-	test	al, al
+	movq	%rbx, %rdi
+	callq	__ZN4core3fmt9Formatter15debug_upper_hex17hf8fda15ec43a1e68E
+	movq	%r14, %rdi
+	movq	%rbx, %rsi
+	testb	%al, %al
 	je	LBB10_4
-	pop	rbx
-	pop	r14
-	pop	rbp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u64$GT$3fmt17ha26765e3e26c1816E
 LBB10_4:
-	pop	rbx
-	pop	r14
-	pop	rbp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
 	jmp	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u64$GT$3fmt17hb00db9d5e1e54df6E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17hf60a1247b6f0af99E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdx, rsi
-	mov	rax, qword ptr [rdi]
-	mov	rdi, qword ptr [rax]
-	mov	rsi, qword ptr [rax + 8]
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rsi, %rdx
+	movq	(%rdi), %rax
+	movq	(%rax), %rdi
+	movq	8(%rax), %rsi
+	popq	%rbp
 	jmp	__ZN40_$LT$str$u20$as$u20$core..fmt..Debug$GT$3fmt17h2760aab2290546fcE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h22f145ccee285b48E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdi, qword ptr [rdi]
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rdi
+	popq	%rbp
 	jmp	__ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rdx, rsi
-	mov	rax, qword ptr [rdi]
-	mov	rsi, qword ptr [rdi + 8]
-	mov	rdi, rax
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rsi, %rdx
+	movq	(%rdi), %rax
+	movq	8(%rdi), %rsi
+	movq	%rax, %rdi
+	popq	%rbp
 	jmp	__ZN42_$LT$str$u20$as$u20$core..fmt..Display$GT$3fmt17hd4dee1c1c4ccf892E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ops8function6FnOnce40call_once$u7b$$u7b$vtable.shim$u7d$$u7d$17h44b3344f84c27fadE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	test	byte ptr [rax], 1
-	mov	byte ptr [rax], 0
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	testb	$1, (%rax)
+	movb	$0, (%rax)
 	je	LBB14_1
-	lea	rdi, [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	pop	rbp
+	leaq	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %rdi
+	popq	%rbp
 	jmp	_mach_timebase_info
 LBB14_1:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_2]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_2(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17h135d84835f9919a1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
@@ -357,61 +356,61 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception0
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	cmp	byte ptr [rdi], 2
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	cmpb	$2, (%rdi)
 	jae	LBB16_1
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB16_1:
-	mov	r15, rdi
-	mov	rbx, qword ptr [rdi + 8]
-	mov	rdi, qword ptr [rbx]
-	mov	rax, qword ptr [rbx + 8]
+	movq	%rdi, %r15
+	movq	8(%rdi), %rbx
+	movq	(%rbx), %rdi
+	movq	8(%rbx), %rax
 Ltmp0:
-	call	qword ptr [rax]
+	callq	*(%rax)
 Ltmp1:
-	mov	rax, qword ptr [rbx + 8]
-	mov	rsi, qword ptr [rax + 8]
-	test	rsi, rsi
+	movq	8(%rbx), %rax
+	movq	8(%rax), %rsi
+	testq	%rsi, %rsi
 	je	LBB16_4
-	mov	rdi, qword ptr [rbx]
-	mov	rdx, qword ptr [rax + 16]
-	call	___rust_dealloc
+	movq	(%rbx), %rdi
+	movq	16(%rax), %rdx
+	callq	___rust_dealloc
 LBB16_4:
-	mov	rdi, qword ptr [r15 + 8]
-	mov	esi, 24
-	mov	edx, 8
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
+	movq	8(%r15), %rdi
+	movl	$24, %esi
+	movl	$8, %edx
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	___rust_dealloc
 LBB16_6:
 Ltmp2:
-	mov	r14, rax
-	mov	rdi, qword ptr [rbx]
-	mov	rsi, qword ptr [rbx + 8]
-	call	__ZN5alloc5alloc8box_free17hdce2be92455cee80E
-	mov	rdi, qword ptr [r15 + 8]
-	call	__ZN5alloc5alloc8box_free17h71ded8805d742520E
-	mov	rdi, r14
-	call	__Unwind_Resume
+	movq	%rax, %r14
+	movq	(%rbx), %rdi
+	movq	8(%rbx), %rsi
+	callq	__ZN5alloc5alloc8box_free17hdce2be92455cee80E
+	movq	8(%r15), %rdi
+	callq	__ZN5alloc5alloc8box_free17h71ded8805d742520E
+	movq	%r14, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end0:
 	.cfi_endproc
@@ -439,445 +438,438 @@ Lcst_end0:
 	.p2align	4, 0x90
 __ZN4core3ptr13drop_in_place17hfbf67dab9d628559E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rdi, qword ptr [rdi]
-	test	rdi, rdi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	(%rdi), %rdi
+	testq	%rdi, %rdi
 	je	LBB17_2
-	mov	rsi, qword ptr [rax + 8]
-	test	rsi, rsi
+	movq	8(%rax), %rsi
+	testq	%rsi, %rsi
 	je	LBB17_2
-	mov	edx, 1
-	pop	rbp
+	movl	$1, %edx
+	popq	%rbp
 	jmp	___rust_dealloc
 LBB17_2:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rcx, qword ptr [rdi]
-	mov	rdx, qword ptr [rdi + 8]
-	mov	rax, qword ptr [rcx]
-	mov	rsi, qword ptr [rcx + 8]
-	mov	rdx, qword ptr [rdx]
-	mov	rcx, qword ptr [rdi + 16]
-	mov	rcx, qword ptr [rcx]
-	lea	r8, [rip + l___unnamed_8]
-	mov	rdi, rax
-	call	__ZN4core3str16slice_error_fail17h6b29707aec812690E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rcx
+	movq	8(%rdi), %rdx
+	movq	(%rcx), %rax
+	movq	8(%rcx), %rsi
+	movq	(%rdx), %rdx
+	movq	16(%rdi), %rcx
+	movq	(%rcx), %rcx
+	leaq	l___unnamed_8(%rip), %r8
+	movq	%rax, %rdi
+	callq	__ZN4core3str16slice_error_fail17h6b29707aec812690E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN50_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$10write_char17heb37c40d5db7a3a3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r12
-	push	rbx
-	sub	rsp, 16
-	.cfi_offset rbx, -48
-	.cfi_offset r12, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	ebx, esi
-	mov	r15, qword ptr [rdi]
-	cmp	esi, 128
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r12
+	pushq	%rbx
+	subq	$16, %rsp
+	.cfi_offset %rbx, -48
+	.cfi_offset %r12, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movl	%esi, %ebx
+	movq	(%rdi), %r15
+	cmpl	$128, %esi
 	jae	LBB19_1
-	mov	rsi, qword ptr [r15 + 16]
-	cmp	rsi, qword ptr [r15 + 8]
+	movq	16(%r15), %rsi
+	cmpq	8(%r15), %rsi
 	jne	LBB19_22
-	mov	r14, rsi
-	inc	r14
+	movq	%rsi, %r14
+	incq	%r14
 	je	LBB19_35
-	lea	rax, [rsi + rsi]
-	cmp	rax, r14
-	cmova	r14, rax
-	test	rsi, rsi
+	leaq	(%rsi,%rsi), %rax
+	cmpq	%r14, %rax
+	cmovaq	%rax, %r14
+	testq	%rsi, %rsi
 	je	LBB19_29
-	mov	rax, qword ptr [r15]
-	test	rax, rax
+	movq	(%r15), %rax
+	testq	%rax, %rax
 	je	LBB19_29
-	cmp	rsi, r14
+	cmpq	%r14, %rsi
 	je	LBB19_32
-	mov	edx, 1
-	mov	rdi, rax
-	mov	rcx, r14
-	call	___rust_realloc
-	test	rax, rax
+	movl	$1, %edx
+	movq	%rax, %rdi
+	movq	%r14, %rcx
+	callq	___rust_realloc
+	testq	%rax, %rax
 	jne	LBB19_33
 	jmp	LBB19_36
 LBB19_1:
-	mov	dword ptr [rbp - 36], 0
-	mov	eax, ebx
-	cmp	ebx, 2048
+	movl	$0, -36(%rbp)
+	movl	%ebx, %eax
+	cmpl	$2048, %ebx
 	jae	LBB19_2
-	shr	eax, 6
-	and	al, 31
-	or	al, -64
-	mov	byte ptr [rbp - 36], al
-	and	bl, 63
-	or	bl, -128
-	mov	byte ptr [rbp - 35], bl
-	mov	r14d, 2
+	shrl	$6, %eax
+	andb	$31, %al
+	orb	$-64, %al
+	movb	%al, -36(%rbp)
+	andb	$63, %bl
+	orb	$-128, %bl
+	movb	%bl, -35(%rbp)
+	movl	$2, %r14d
 	jmp	LBB19_5
 LBB19_22:
-	mov	rax, qword ptr [r15]
+	movq	(%r15), %rax
 	jmp	LBB19_23
 LBB19_2:
-	cmp	ebx, 65536
+	cmpl	$65536, %ebx
 	jae	LBB19_4
-	shr	eax, 12
-	and	al, 15
-	or	al, -32
-	mov	byte ptr [rbp - 36], al
-	mov	eax, ebx
-	shr	eax, 6
-	and	al, 63
-	or	al, -128
-	mov	byte ptr [rbp - 35], al
-	and	bl, 63
-	or	bl, -128
-	mov	byte ptr [rbp - 34], bl
-	mov	r14d, 3
+	shrl	$12, %eax
+	andb	$15, %al
+	orb	$-32, %al
+	movb	%al, -36(%rbp)
+	movl	%ebx, %eax
+	shrl	$6, %eax
+	andb	$63, %al
+	orb	$-128, %al
+	movb	%al, -35(%rbp)
+	andb	$63, %bl
+	orb	$-128, %bl
+	movb	%bl, -34(%rbp)
+	movl	$3, %r14d
 	jmp	LBB19_5
 LBB19_29:
-	test	r14, r14
+	testq	%r14, %r14
 	je	LBB19_30
-	mov	esi, 1
-	mov	rdi, r14
-	call	___rust_alloc
+	movl	$1, %esi
+	movq	%r14, %rdi
+	callq	___rust_alloc
 LBB19_32:
-	test	rax, rax
+	testq	%rax, %rax
 	je	LBB19_36
 LBB19_33:
-	mov	rsi, qword ptr [r15 + 16]
+	movq	16(%r15), %rsi
 	jmp	LBB19_34
 LBB19_4:
-	shr	eax, 18
-	or	al, -16
-	mov	byte ptr [rbp - 36], al
-	mov	eax, ebx
-	shr	eax, 12
-	and	al, 63
-	or	al, -128
-	mov	byte ptr [rbp - 35], al
-	mov	eax, ebx
-	shr	eax, 6
-	and	al, 63
-	or	al, -128
-	mov	byte ptr [rbp - 34], al
-	and	bl, 63
-	or	bl, -128
-	mov	byte ptr [rbp - 33], bl
-	mov	r14d, 4
+	shrl	$18, %eax
+	orb	$-16, %al
+	movb	%al, -36(%rbp)
+	movl	%ebx, %eax
+	shrl	$12, %eax
+	andb	$63, %al
+	orb	$-128, %al
+	movb	%al, -35(%rbp)
+	movl	%ebx, %eax
+	shrl	$6, %eax
+	andb	$63, %al
+	orb	$-128, %al
+	movb	%al, -34(%rbp)
+	andb	$63, %bl
+	orb	$-128, %bl
+	movb	%bl, -33(%rbp)
+	movl	$4, %r14d
 LBB19_5:
-	mov	rsi, qword ptr [r15 + 8]
-	mov	rbx, qword ptr [r15 + 16]
-	mov	rax, rsi
-	sub	rax, rbx
-	cmp	rax, r14
+	movq	8(%r15), %rsi
+	movq	16(%r15), %rbx
+	movq	%rsi, %rax
+	subq	%rbx, %rax
+	cmpq	%r14, %rax
 	jae	LBB19_6
-	mov	r12, rbx
-	add	r12, r14
+	movq	%rbx, %r12
+	addq	%r14, %r12
 	jb	LBB19_35
-	lea	rax, [rsi + rsi]
-	cmp	rax, r12
-	cmova	r12, rax
-	test	rsi, rsi
+	leaq	(%rsi,%rsi), %rax
+	cmpq	%r12, %rax
+	cmovaq	%rax, %r12
+	testq	%rsi, %rsi
 	je	LBB19_12
-	mov	rdi, qword ptr [r15]
-	test	rdi, rdi
+	movq	(%r15), %rdi
+	testq	%rdi, %rdi
 	je	LBB19_12
-	cmp	rsi, r12
+	cmpq	%r12, %rsi
 	je	LBB19_16
-	mov	edx, 1
-	mov	rcx, r12
-	call	___rust_realloc
+	movl	$1, %edx
+	movq	%r12, %rcx
+	callq	___rust_realloc
 	jmp	LBB19_15
 LBB19_6:
-	mov	rdi, qword ptr [r15]
+	movq	(%r15), %rdi
 	jmp	LBB19_19
 LBB19_12:
-	test	r12, r12
+	testq	%r12, %r12
 	je	LBB19_13
-	mov	esi, 1
-	mov	rdi, r12
-	call	___rust_alloc
+	movl	$1, %esi
+	movq	%r12, %rdi
+	callq	___rust_alloc
 LBB19_15:
-	mov	rdi, rax
+	movq	%rax, %rdi
 LBB19_16:
-	test	rdi, rdi
+	testq	%rdi, %rdi
 	je	LBB19_38
-	mov	rbx, qword ptr [r15 + 16]
+	movq	16(%r15), %rbx
 	jmp	LBB19_18
 LBB19_30:
-	mov	eax, 1
+	movl	$1, %eax
 LBB19_34:
-	mov	qword ptr [r15], rax
-	mov	qword ptr [r15 + 8], r14
+	movq	%rax, (%r15)
+	movq	%r14, 8(%r15)
 LBB19_23:
-	mov	byte ptr [rax + rsi], bl
-	inc	qword ptr [r15 + 16]
+	movb	%bl, (%rax,%rsi)
+	incq	16(%r15)
 	jmp	LBB19_20
 LBB19_13:
-	mov	edi, 1
+	movl	$1, %edi
 LBB19_18:
-	mov	qword ptr [r15], rdi
-	mov	qword ptr [r15 + 8], r12
+	movq	%rdi, (%r15)
+	movq	%r12, 8(%r15)
 LBB19_19:
-	add	rdi, rbx
-	lea	rsi, [rbp - 36]
-	mov	rdx, r14
-	call	_memcpy
-	add	rbx, r14
-	mov	qword ptr [r15 + 16], rbx
+	addq	%rbx, %rdi
+	leaq	-36(%rbp), %rsi
+	movq	%r14, %rdx
+	callq	_memcpy
+	addq	%r14, %rbx
+	movq	%rbx, 16(%r15)
 LBB19_20:
-	xor	eax, eax
-	add	rsp, 16
-	pop	rbx
-	pop	r12
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	addq	$16, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB19_35:
-	call	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
+	callq	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
 LBB19_36:
-	mov	esi, 1
-	mov	rdi, r14
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$1, %esi
+	movq	%r14, %rdi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 LBB19_38:
-	mov	esi, 1
-	mov	rdi, r12
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$1, %esi
+	movq	%r12, %rdi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN50_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$9write_fmt17hb5126bb3ad342be3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 64
-	mov	rax, qword ptr [rdi]
-	mov	qword ptr [rbp - 8], rax
-	mov	rax, qword ptr [rsi + 40]
-	mov	qword ptr [rbp - 16], rax
-	mov	rax, qword ptr [rsi + 32]
-	mov	qword ptr [rbp - 24], rax
-	mov	rax, qword ptr [rsi + 24]
-	mov	qword ptr [rbp - 32], rax
-	mov	rax, qword ptr [rsi + 16]
-	mov	qword ptr [rbp - 40], rax
-	mov	rax, qword ptr [rsi]
-	mov	rcx, qword ptr [rsi + 8]
-	mov	qword ptr [rbp - 48], rcx
-	mov	qword ptr [rbp - 56], rax
-	lea	rsi, [rip + l___unnamed_9]
-	lea	rdi, [rbp - 8]
-	lea	rdx, [rbp - 56]
-	call	__ZN4core3fmt5write17h26bd57c1fd6e9c98E
-	add	rsp, 64
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	(%rdi), %rax
+	movq	%rax, -8(%rbp)
+	vmovups	(%rsi), %ymm0
+	vmovups	16(%rsi), %ymm1
+	vmovups	%ymm1, -48(%rbp)
+	vmovups	%ymm0, -64(%rbp)
+	leaq	l___unnamed_9(%rip), %rsi
+	leaq	-8(%rbp), %rdi
+	leaq	-64(%rbp), %rdx
+	vzeroupper
+	callq	__ZN4core3fmt5write17h26bd57c1fd6e9c98E
+	addq	$64, %rsp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN50_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$9write_str17h3036b6c08e9fac69E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r15, rdx
-	mov	r14, rsi
-	mov	r13, qword ptr [rdi]
-	mov	rsi, qword ptr [r13 + 8]
-	mov	rbx, qword ptr [r13 + 16]
-	mov	rax, rsi
-	sub	rax, rbx
-	cmp	rax, rdx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdx, %r15
+	movq	%rsi, %r14
+	movq	(%rdi), %r13
+	movq	8(%r13), %rsi
+	movq	16(%r13), %rbx
+	movq	%rsi, %rax
+	subq	%rbx, %rax
+	cmpq	%rdx, %rax
 	jae	LBB21_1
-	mov	r12, rbx
-	add	r12, r15
+	movq	%rbx, %r12
+	addq	%r15, %r12
 	jb	LBB21_15
-	lea	rax, [rsi + rsi]
-	cmp	rax, r12
-	cmova	r12, rax
-	test	rsi, rsi
+	leaq	(%rsi,%rsi), %rax
+	cmpq	%r12, %rax
+	cmovaq	%rax, %r12
+	testq	%rsi, %rsi
 	je	LBB21_8
-	mov	rdi, qword ptr [r13]
-	test	rdi, rdi
+	movq	(%r13), %rdi
+	testq	%rdi, %rdi
 	je	LBB21_8
-	cmp	rsi, r12
+	cmpq	%r12, %rsi
 	je	LBB21_12
-	mov	edx, 1
-	mov	rcx, r12
-	call	___rust_realloc
+	movl	$1, %edx
+	movq	%r12, %rcx
+	callq	___rust_realloc
 	jmp	LBB21_11
 LBB21_1:
-	mov	rdi, qword ptr [r13]
+	movq	(%r13), %rdi
 	jmp	LBB21_2
 LBB21_8:
-	test	r12, r12
+	testq	%r12, %r12
 	je	LBB21_9
-	mov	esi, 1
-	mov	rdi, r12
-	call	___rust_alloc
+	movl	$1, %esi
+	movq	%r12, %rdi
+	callq	___rust_alloc
 LBB21_11:
-	mov	rdi, rax
+	movq	%rax, %rdi
 LBB21_12:
-	test	rdi, rdi
+	testq	%rdi, %rdi
 	je	LBB21_16
-	mov	rbx, qword ptr [r13 + 16]
+	movq	16(%r13), %rbx
 	jmp	LBB21_14
 LBB21_9:
-	mov	edi, 1
+	movl	$1, %edi
 LBB21_14:
-	mov	qword ptr [r13], rdi
-	mov	qword ptr [r13 + 8], r12
+	movq	%rdi, (%r13)
+	movq	%r12, 8(%r13)
 LBB21_2:
-	add	rdi, rbx
-	mov	rsi, r14
-	mov	rdx, r15
-	call	_memcpy
-	add	rbx, r15
-	mov	qword ptr [r13 + 16], rbx
-	xor	eax, eax
-	add	rsp, 8
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	%rbx, %rdi
+	movq	%r14, %rsi
+	movq	%r15, %rdx
+	callq	_memcpy
+	addq	%r15, %rbx
+	movq	%rbx, 16(%r13)
+	xorl	%eax, %eax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB21_15:
-	call	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
+	callq	__ZN5alloc7raw_vec17capacity_overflow17h023f34f5bc34c61fE
 LBB21_16:
-	mov	esi, 1
-	mov	rdi, r12
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$1, %esi
+	movq	%r12, %rdi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN5alloc5alloc8box_free17h71ded8805d742520E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	esi, 24
-	mov	edx, 8
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	$24, %esi
+	movl	$8, %edx
+	popq	%rbp
 	jmp	___rust_dealloc
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN5alloc5alloc8box_free17hdce2be92455cee80E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rsi
-	mov	rsi, qword ptr [rsi + 8]
-	test	rsi, rsi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rsi, %rax
+	movq	8(%rsi), %rsi
+	testq	%rsi, %rsi
 	je	LBB23_1
-	mov	rdx, qword ptr [rax + 16]
-	pop	rbp
+	movq	16(%rax), %rdx
+	popq	%rbp
 	jmp	___rust_dealloc
 LBB23_1:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN91_$LT$std..panicking..begin_panic..PanicPayload$LT$A$GT$$u20$as$u20$core..panic..BoxMeUp$GT$3get17h76f661f183f154b3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	cmp	qword ptr [rdi], 0
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	cmpq	$0, (%rdi)
 	je	LBB24_2
-	mov	rax, rdi
-	lea	rdx, [rip + l___unnamed_10]
-	pop	rbp
-	ret
+	movq	%rdi, %rax
+	leaq	l___unnamed_10(%rip), %rdx
+	popq	%rbp
+	retq
 LBB24_2:
-	call	__ZN3std7process5abort17h4dccaf05298ce780E
+	callq	__ZN3std7process5abort17h4dccaf05298ce780E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN91_$LT$std..panicking..begin_panic..PanicPayload$LT$A$GT$$u20$as$u20$core..panic..BoxMeUp$GT$8take_box17h757f554f02ca953fE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, qword ptr [rdi]
-	mov	r14, qword ptr [rdi + 8]
-	mov	qword ptr [rdi], 0
-	test	rbx, rbx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	(%rdi), %rbx
+	movq	8(%rdi), %r14
+	movq	$0, (%rdi)
+	testq	%rbx, %rbx
 	je	LBB25_3
-	mov	edi, 16
-	mov	esi, 8
-	call	___rust_alloc
-	test	rax, rax
+	movl	$16, %edi
+	movl	$8, %esi
+	callq	___rust_alloc
+	testq	%rax, %rax
 	je	LBB25_4
-	mov	qword ptr [rax], rbx
-	mov	qword ptr [rax + 8], r14
-	lea	rdx, [rip + l___unnamed_10]
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	movq	%rbx, (%rax)
+	movq	%r14, 8(%rax)
+	leaq	l___unnamed_10(%rip), %rdx
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 LBB25_3:
-	call	__ZN3std7process5abort17h4dccaf05298ce780E
+	callq	__ZN3std7process5abort17h4dccaf05298ce780E
 LBB25_4:
-	mov	edi, 16
-	mov	esi, 8
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$16, %edi
+	movl	$8, %esi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 	.cfi_endproc
 
 	.globl	__ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE
@@ -887,360 +879,359 @@ Lfunc_begin1:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception1
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 184
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14, rsi
-	mov	r15, rdi
-	mov	rax, qword ptr [rdi + 8]
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	andq	$-32, %rsp
+	subq	$224, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rsi, %r14
+	movq	%rdi, %r15
+	movq	8(%rdi), %rax
+	testq	%rax, %rax
 	je	LBB26_9
-	cmp	rax, 2
+	cmpq	$2, %rax
 	je	LBB26_7
-	mov	rcx, qword ptr [r15]
-	mov	eax, dword ptr [rcx + 36]
-	test	eax, eax
+	movq	(%r15), %rcx
+	movl	36(%rcx), %eax
+	testl	%eax, %eax
 	je	LBB26_45
-	mov	qword ptr [rbp - 224], rcx
-	mov	qword ptr [rbp - 216], 0
-	lea	rcx, [rip + l___unnamed_11]
-	mov	qword ptr [rbp - 208], rcx
-	mov	qword ptr [rbp - 200], 17
-	xor	ecx, ecx
-	test	eax, eax
-	setle	cl
-	lea	ecx, [rcx + rcx + 43]
-	mov	dword ptr [rbp - 52], ecx
+	movq	%rcx, 168(%rsp)
+	movq	$0, 176(%rsp)
+	leaq	l___unnamed_11(%rip), %rcx
+	movq	%rcx, 184(%rsp)
+	movq	$17, 192(%rsp)
+	xorl	%ecx, %ecx
+	testl	%eax, %eax
+	setle	%cl
+	leal	43(%rcx,%rcx), %ecx
+	movl	%ecx, 28(%rsp)
 	jns	LBB26_6
-	cmp	eax, -2147483648
+	cmpl	$-2147483648, %eax
 	je	LBB26_56
-	neg	eax
+	negl	%eax
 LBB26_6:
-	mov	eax, eax
-	mov	ecx, 2290649225
-	imul	rcx, rax
-	shr	rcx, 37
-	mov	edx, 2443359173
-	imul	rdx, rax
-	shr	rdx, 43
-	mov	dword ptr [rbp - 192], edx
-	imul	eax, edx, -60
-	add	eax, ecx
-	mov	dword ptr [rbp - 48], eax
-	lea	rax, [rbp - 224]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + __ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE]
-	mov	qword ptr [rbp - 120], rax
-	lea	rax, [rbp - 52]
-	mov	qword ptr [rbp - 112], rax
-	mov	rax, qword ptr [rip + __ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL]
-	mov	qword ptr [rbp - 104], rax
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 96], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 88], rax
-	lea	rcx, [rbp - 48]
-	mov	qword ptr [rbp - 80], rcx
-	mov	qword ptr [rbp - 72], rax
-	lea	rax, [rip + l___unnamed_12]
-	mov	qword ptr [rbp - 176], rax
-	mov	qword ptr [rbp - 168], 4
-	lea	rax, [rip + l___unnamed_13]
-	mov	qword ptr [rbp - 160], rax
-	mov	qword ptr [rbp - 152], 4
-	lea	rax, [rbp - 128]
-	mov	qword ptr [rbp - 144], rax
-	mov	qword ptr [rbp - 136], 4
-	lea	rsi, [rbp - 176]
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	movl	%eax, %eax
+	movl	$2290649225, %ecx
+	imulq	%rax, %rcx
+	shrq	$37, %rcx
+	movl	$2443359173, %edx
+	imulq	%rax, %rdx
+	shrq	$43, %rdx
+	movl	%edx, 152(%rsp)
+	imull	$-60, %edx, %eax
+	addl	%ecx, %eax
+	movl	%eax, 16(%rsp)
+	leaq	168(%rsp), %rax
+	movq	%rax, 32(%rsp)
+	leaq	__ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE(%rip), %rax
+	movq	%rax, 40(%rsp)
+	leaq	28(%rsp), %rax
+	movq	%rax, 48(%rsp)
+	movq	__ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL(%rip), %rax
+	movq	%rax, 56(%rsp)
+	leaq	152(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, 72(%rsp)
+	leaq	16(%rsp), %rcx
+	movq	%rcx, 80(%rsp)
+	movq	%rax, 88(%rsp)
+	leaq	l___unnamed_12(%rip), %rax
+	movq	%rax, 104(%rsp)
+	movq	$4, 112(%rsp)
+	leaq	l___unnamed_13(%rip), %rax
+	movq	%rax, 120(%rsp)
+	movq	$4, 128(%rsp)
+	leaq	32(%rsp), %rax
+	movq	%rax, 136(%rsp)
+	movq	$4, 144(%rsp)
+	leaq	104(%rsp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
 	jmp	LBB26_47
 LBB26_7:
-	mov	rdi, qword ptr [r15]
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	ebx, edx
-	mov	qword ptr [rbp - 48], rax
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 96], xmm0
-	movaps	xmmword ptr [rbp - 112], xmm0
-	movaps	xmmword ptr [rbp - 128], xmm0
-	mov	qword ptr [rbp - 80], 0
-	lea	rdi, [rbp - 48]
-	lea	r15, [rbp - 128]
-	mov	rsi, r15
-	call	_localtime_r
-	test	rax, rax
+	movq	(%r15), %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movl	%edx, %ebx
+	movq	%rax, 16(%rsp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 56(%rsp)
+	vmovaps	%ymm0, 32(%rsp)
+	leaq	16(%rsp), %rdi
+	leaq	32(%rsp), %r15
+	movq	%r15, %rsi
+	vzeroupper
+	callq	_localtime_r
+	testq	%rax, %rax
 	je	LBB26_54
-	mov	eax, dword ptr [rbp - 88]
-	movaps	xmm0, xmmword ptr [rbp - 128]
-	movaps	xmm1, xmmword ptr [rbp - 112]
-	mov	ecx, dword ptr [rbp - 96]
-	movaps	xmmword ptr [rbp - 128], xmm0
-	movaps	xmmword ptr [rbp - 112], xmm1
-	mov	dword ptr [rbp - 96], ecx
-	mov	dword ptr [rbp - 92], eax
-	mov	dword ptr [rbp - 88], ebx
-	mov	qword ptr [rbp - 176], r15
-	mov	qword ptr [rbp - 168], 0
-	lea	rax, [rip + l___unnamed_14]
-	mov	qword ptr [rbp - 160], rax
-	mov	qword ptr [rbp - 152], 2
-	lea	rdi, [rbp - 176]
+	movl	72(%rsp), %eax
+	vmovaps	32(%rsp), %ymm0
+	movl	64(%rsp), %ecx
+	vmovups	%ymm0, 32(%rsp)
+	movl	%ecx, 64(%rsp)
+	movl	%eax, 68(%rsp)
+	movl	%ebx, 72(%rsp)
+	movq	%r15, 104(%rsp)
+	movq	$0, 112(%rsp)
+	leaq	l___unnamed_14(%rip), %rax
+	movq	%rax, 120(%rsp)
+	movq	$2, 128(%rsp)
+	leaq	104(%rsp), %rdi
 	jmp	LBB26_46
 LBB26_9:
-	mov	r12, qword ptr [r15 + 24]
-	test	r12, r12
+	movq	24(%r15), %r12
+	testq	%r12, %r12
 	je	LBB26_49
-	mov	rcx, qword ptr [r15 + 16]
-	add	r12, rcx
-	lea	rbx, [rcx + 1]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	movq	16(%r15), %rcx
+	addq	%rcx, %r12
+	leaq	1(%rcx), %rbx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	jns	LBB26_16
 	jmp	LBB26_19
 LBB26_11:
-	shl	ecx, 6
+	shll	$6, %ecx
 LBB26_12:
-	or	eax, ecx
-	mov	esi, eax
+	orl	%ecx, %eax
+	movl	%eax, %esi
 LBB26_13:
-	mov	rdx, qword ptr [r15]
-	mov	rdi, r14
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	rbx, r13
-	test	al, al
+	movq	(%r15), %rdx
+	movq	%r14, %rdi
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movq	%r13, %rbx
+	testb	%al, %al
 	jne	LBB26_53
 LBB26_14:
-	mov	rcx, rbx
-	cmp	rbx, r12
+	movq	%rbx, %rcx
+	cmpq	%r12, %rbx
 	je	LBB26_49
-	lea	rbx, [rcx + 1]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	leaq	1(%rcx), %rbx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	js	LBB26_19
 LBB26_16:
-	cmp	esi, 37
+	cmpl	$37, %esi
 	je	LBB26_27
 LBB26_17:
-	cmp	esi, 1114112
+	cmpl	$1114112, %esi
 	je	LBB26_49
-	mov	rdi, r14
-	call	__ZN57_$LT$core..fmt..Formatter$u20$as$u20$core..fmt..Write$GT$10write_char17h3b1c8fe2b30b815fE
-	test	al, al
+	movq	%r14, %rdi
+	callq	__ZN57_$LT$core..fmt..Formatter$u20$as$u20$core..fmt..Write$GT$10write_char17h3b1c8fe2b30b815fE
+	testb	%al, %al
 	je	LBB26_14
 	jmp	LBB26_53
 	.p2align	4, 0x90
 LBB26_19:
-	cmp	rbx, r12
+	cmpq	%r12, %rbx
 	je	LBB26_25
-	movzx	eax, byte ptr [rcx + 1]
-	add	rcx, 2
-	and	eax, 63
-	mov	rbx, rcx
-	mov	ecx, esi
-	and	ecx, 31
-	cmp	sil, -33
+	movzbl	1(%rcx), %eax
+	addq	$2, %rcx
+	andl	$63, %eax
+	movq	%rcx, %rbx
+	movl	%esi, %ecx
+	andl	$31, %ecx
+	cmpb	$-33, %sil
 	jbe	LBB26_26
 LBB26_21:
-	cmp	rbx, r12
+	cmpq	%r12, %rbx
 	je	LBB26_35
-	movzx	edi, byte ptr [rbx]
-	inc	rbx
-	and	edi, 63
-	mov	rdx, rbx
-	shl	eax, 6
-	or	eax, edi
-	cmp	sil, -16
+	movzbl	(%rbx), %edi
+	incq	%rbx
+	andl	$63, %edi
+	movq	%rbx, %rdx
+	shll	$6, %eax
+	orl	%edi, %eax
+	cmpb	$-16, %sil
 	jb	LBB26_36
 LBB26_23:
-	cmp	rdx, r12
+	cmpq	%r12, %rdx
 	je	LBB26_38
-	movzx	esi, byte ptr [rdx]
-	inc	rdx
-	and	esi, 63
-	mov	rbx, rdx
+	movzbl	(%rdx), %esi
+	incq	%rdx
+	andl	$63, %esi
+	movq	%rdx, %rbx
 	jmp	LBB26_39
 LBB26_25:
-	xor	eax, eax
-	mov	rbx, r12
-	mov	ecx, esi
-	and	ecx, 31
-	cmp	sil, -33
+	xorl	%eax, %eax
+	movq	%r12, %rbx
+	movl	%esi, %ecx
+	andl	$31, %ecx
+	cmpb	$-33, %sil
 	ja	LBB26_21
 LBB26_26:
-	shl	ecx, 6
-	or	eax, ecx
-	mov	esi, eax
-	cmp	esi, 37
+	shll	$6, %ecx
+	orl	%ecx, %eax
+	movl	%eax, %esi
+	cmpl	$37, %esi
 	jne	LBB26_17
 	.p2align	4, 0x90
 LBB26_27:
-	cmp	rbx, r12
+	cmpq	%r12, %rbx
 	je	LBB26_44
-	lea	r13, [rbx + 1]
-	movzx	esi, byte ptr [rbx]
-	test	sil, sil
+	leaq	1(%rbx), %r13
+	movzbl	(%rbx), %esi
+	testb	%sil, %sil
 	jns	LBB26_13
-	cmp	r13, r12
+	cmpq	%r12, %r13
 	je	LBB26_37
-	movzx	eax, byte ptr [rbx + 1]
-	add	rbx, 2
-	and	eax, 63
-	mov	r13, rbx
-	mov	ecx, esi
-	and	ecx, 31
-	cmp	sil, -33
+	movzbl	1(%rbx), %eax
+	addq	$2, %rbx
+	andl	$63, %eax
+	movq	%rbx, %r13
+	movl	%esi, %ecx
+	andl	$31, %ecx
+	cmpb	$-33, %sil
 	jbe	LBB26_11
 LBB26_31:
-	cmp	r13, r12
+	cmpq	%r12, %r13
 	je	LBB26_40
-	movzx	edi, byte ptr [r13]
-	inc	r13
-	and	edi, 63
-	mov	rdx, r13
-	shl	eax, 6
-	or	eax, edi
-	cmp	sil, -16
+	movzbl	(%r13), %edi
+	incq	%r13
+	andl	$63, %edi
+	movq	%r13, %rdx
+	shll	$6, %eax
+	orl	%edi, %eax
+	cmpb	$-16, %sil
 	jb	LBB26_41
 LBB26_33:
-	cmp	rdx, r12
+	cmpq	%r12, %rdx
 	je	LBB26_42
-	movzx	esi, byte ptr [rdx]
-	inc	rdx
-	and	esi, 63
-	mov	r13, rdx
+	movzbl	(%rdx), %esi
+	incq	%rdx
+	andl	$63, %esi
+	movq	%rdx, %r13
 	jmp	LBB26_43
 LBB26_35:
-	xor	edi, edi
-	mov	rdx, r12
-	shl	eax, 6
-	or	eax, edi
-	cmp	sil, -16
+	xorl	%edi, %edi
+	movq	%r12, %rdx
+	shll	$6, %eax
+	orl	%edi, %eax
+	cmpb	$-16, %sil
 	jae	LBB26_23
 LBB26_36:
-	shl	ecx, 12
-	or	eax, ecx
-	mov	esi, eax
-	cmp	esi, 37
+	shll	$12, %ecx
+	orl	%ecx, %eax
+	movl	%eax, %esi
+	cmpl	$37, %esi
 	jne	LBB26_17
 	jmp	LBB26_27
 LBB26_37:
-	xor	eax, eax
-	mov	r13, r12
-	mov	ecx, esi
-	and	ecx, 31
-	cmp	sil, -33
+	xorl	%eax, %eax
+	movq	%r12, %r13
+	movl	%esi, %ecx
+	andl	$31, %ecx
+	cmpb	$-33, %sil
 	ja	LBB26_31
 	jmp	LBB26_11
 LBB26_38:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB26_39:
-	and	ecx, 7
-	shl	ecx, 18
-	shl	eax, 6
-	or	eax, ecx
-	or	eax, esi
-	mov	esi, eax
-	cmp	esi, 37
+	andl	$7, %ecx
+	shll	$18, %ecx
+	shll	$6, %eax
+	orl	%ecx, %eax
+	orl	%esi, %eax
+	movl	%eax, %esi
+	cmpl	$37, %esi
 	jne	LBB26_17
 	jmp	LBB26_27
 LBB26_40:
-	xor	edi, edi
-	mov	rdx, r12
-	shl	eax, 6
-	or	eax, edi
-	cmp	sil, -16
+	xorl	%edi, %edi
+	movq	%r12, %rdx
+	shll	$6, %eax
+	orl	%edi, %eax
+	cmpb	$-16, %sil
 	jae	LBB26_33
 LBB26_41:
-	shl	ecx, 12
+	shll	$12, %ecx
 	jmp	LBB26_12
 LBB26_42:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB26_43:
-	and	ecx, 7
-	shl	ecx, 18
-	shl	eax, 6
-	or	eax, ecx
-	or	eax, esi
-	mov	esi, eax
-	cmp	eax, 1114112
+	andl	$7, %ecx
+	shll	$18, %ecx
+	shll	$6, %eax
+	orl	%ecx, %eax
+	orl	%esi, %eax
+	movl	%eax, %esi
+	cmpl	$1114112, %eax
 	jne	LBB26_13
 LBB26_44:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_15]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_15(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB26_49:
-	xor	eax, eax
+	xorl	%eax, %eax
 	jmp	LBB26_48
 LBB26_45:
-	mov	qword ptr [rbp - 128], rcx
-	mov	qword ptr [rbp - 120], 0
-	lea	rax, [rip + l___unnamed_16]
-	mov	qword ptr [rbp - 112], rax
-	mov	qword ptr [rbp - 104], 18
-	lea	rdi, [rbp - 128]
+	movq	%rcx, 32(%rsp)
+	movq	$0, 40(%rsp)
+	leaq	l___unnamed_16(%rip), %rax
+	movq	%rax, 48(%rsp)
+	movq	$18, 56(%rsp)
+	leaq	32(%rsp), %rdi
 LBB26_46:
-	mov	rsi, r14
-	call	__ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE
+	movq	%r14, %rsi
+	vzeroupper
+	callq	__ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE
 LBB26_47:
 LBB26_48:
-	add	rsp, 184
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	leaq	-40(%rbp), %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB26_53:
-	mov	al, 1
+	movb	$1, %al
 	jmp	LBB26_48
 LBB26_54:
-	lea	rbx, [rbp - 224]
-	mov	rdi, rbx
-	call	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
-	mov	qword ptr [rbp - 192], rbx
-	mov	rax, qword ptr [rip + __ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL]
-	mov	qword ptr [rbp - 184], rax
-	lea	rax, [rip + l___unnamed_17]
-	mov	qword ptr [rbp - 176], rax
-	mov	qword ptr [rbp - 168], 1
-	mov	qword ptr [rbp - 160], 0
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	mov	qword ptr [rbp - 136], 1
+	leaq	168(%rsp), %rbx
+	movq	%rbx, %rdi
+	callq	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
+	movq	%rbx, 152(%rsp)
+	movq	__ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL(%rip), %rax
+	movq	%rax, 160(%rsp)
+	leaq	l___unnamed_17(%rip), %rax
+	movq	%rax, 104(%rsp)
+	movq	$1, 112(%rsp)
+	movq	$0, 120(%rsp)
+	leaq	152(%rsp), %rax
+	movq	%rax, 136(%rsp)
+	movq	$1, 144(%rsp)
 Ltmp3:
-	lea	rsi, [rip + l___unnamed_18]
-	lea	rdi, [rbp - 176]
-	call	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
+	leaq	l___unnamed_18(%rip), %rsi
+	leaq	104(%rsp), %rdi
+	callq	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
 Ltmp4:
 	ud2
 LBB26_56:
-	lea	rdi, [rip + _str.6]
-	lea	rdx, [rip + l___unnamed_19]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.6(%rip), %rdi
+	leaq	l___unnamed_19(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB26_57:
 Ltmp5:
-	mov	rbx, rax
-	lea	rdi, [rbp - 224]
-	call	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	leaq	168(%rsp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end1:
 	.cfi_endproc
@@ -1272,1102 +1263,1104 @@ Lcst_end1:
 	.p2align	4, 0x90
 __ZN4time7display13iso_week_days17h2dc58e0336a4c239E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	ecx, edi
-	sub	ecx, esi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	%edi, %ecx
+	subl	%esi, %ecx
 	jo	LBB27_6
-	add	ecx, 4
+	addl	$4, %ecx
 	jo	LBB27_7
-	add	ecx, 378
+	addl	$378, %ecx
 	jo	LBB27_8
-	mov	eax, edi
-	movsxd	rcx, ecx
-	imul	rdx, rcx, -1840700269
-	shr	rdx, 32
-	add	edx, ecx
-	mov	esi, edx
-	shr	esi, 31
-	sar	edx, 2
-	add	edx, esi
-	lea	esi, [8*rdx]
-	sub	edx, esi
-	add	edx, ecx
-	sub	eax, edx
+	movl	%edi, %eax
+	movslq	%ecx, %rcx
+	imulq	$-1840700269, %rcx, %rdx
+	shrq	$32, %rdx
+	addl	%ecx, %edx
+	movl	%edx, %esi
+	shrl	$31, %esi
+	sarl	$2, %edx
+	addl	%esi, %edx
+	leal	(,%rdx,8), %esi
+	subl	%esi, %edx
+	addl	%ecx, %edx
+	subl	%edx, %eax
 	jo	LBB27_9
-	add	eax, 4
+	addl	$4, %eax
 	jo	LBB27_10
-	dec	eax
-	pop	rbp
-	ret
+	decl	%eax
+	popq	%rbp
+	retq
 LBB27_6:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_20]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_20(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB27_7:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_20]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_20(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB27_8:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_21]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_21(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB27_9:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_22]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_22(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB27_10:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_22]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_22(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4time7display8iso_week17h0f13c34c76728ea5E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 88
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	ebx, edx
-	mov	qword ptr [rbp - 72], rdi
-	add	ebx, 1900
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	subq	$88, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movl	%edx, %ebx
+	movq	%rdi, -72(%rbp)
+	addl	$1900, %ebx
 	jo	LBB28_23
-	mov	r13d, r8d
-	mov	r12d, ecx
-	mov	r15d, esi
-	mov	dword ptr [rbp - 44], ebx
-	mov	edi, r8d
-	mov	esi, ecx
-	call	__ZN4time7display13iso_week_days17h2dc58e0336a4c239E
-	test	eax, eax
+	movl	%r8d, %r13d
+	movl	%ecx, %r12d
+	movl	%esi, %r15d
+	movl	%ebx, -44(%rbp)
+	movl	%r8d, %edi
+	movl	%ecx, %esi
+	callq	__ZN4time7display13iso_week_days17h2dc58e0336a4c239E
+	testl	%eax, %eax
 	js	LBB28_8
-	mov	r14d, eax
-	mov	eax, 365
-	test	bl, 3
+	movl	%eax, %r14d
+	movl	$365, %eax
+	testb	$3, %bl
 	jne	LBB28_4
-	movsxd	rax, ebx
-	imul	rax, rax, 1374389535
-	mov	rcx, rax
-	sar	rcx, 37
-	mov	rdx, rax
-	shr	rdx, 63
-	add	ecx, edx
-	imul	ecx, ecx, 100
-	cmp	ebx, ecx
-	setne	cl
-	sar	rax, 39
-	add	eax, edx
-	imul	eax, eax, 400
-	cmp	ebx, eax
-	sete	al
-	or	al, cl
-	movzx	eax, al
-	add	eax, 365
+	movslq	%ebx, %rax
+	imulq	$1374389535, %rax, %rax
+	movq	%rax, %rcx
+	sarq	$37, %rcx
+	movq	%rax, %rdx
+	shrq	$63, %rdx
+	addl	%edx, %ecx
+	imull	$100, %ecx, %ecx
+	cmpl	%ecx, %ebx
+	setne	%cl
+	sarq	$39, %rax
+	addl	%edx, %eax
+	imull	$400, %eax, %eax
+	cmpl	%eax, %ebx
+	sete	%al
+	orb	%cl, %al
+	movzbl	%al, %eax
+	addl	$365, %eax
 LBB28_4:
-	sub	r13d, eax
+	subl	%eax, %r13d
 	jo	LBB28_25
-	mov	edi, r13d
-	mov	esi, r12d
-	call	__ZN4time7display13iso_week_days17h2dc58e0336a4c239E
-	test	eax, eax
+	movl	%r13d, %edi
+	movl	%r12d, %esi
+	callq	__ZN4time7display13iso_week_days17h2dc58e0336a4c239E
+	testl	%eax, %eax
 	js	LBB28_13
-	inc	ebx
+	incl	%ebx
 	jo	LBB28_26
-	mov	dword ptr [rbp - 44], ebx
+	movl	%ebx, -44(%rbp)
 	jmp	LBB28_12
 LBB28_8:
-	dec	ebx
-	mov	dword ptr [rbp - 44], ebx
-	mov	eax, 365
-	test	bl, 3
+	decl	%ebx
+	movl	%ebx, -44(%rbp)
+	movl	$365, %eax
+	testb	$3, %bl
 	jne	LBB28_10
-	movsxd	rax, ebx
-	imul	rax, rax, 1374389535
-	mov	rcx, rax
-	sar	rcx, 37
-	mov	rdx, rax
-	shr	rdx, 63
-	add	ecx, edx
-	imul	ecx, ecx, 100
-	cmp	ebx, ecx
-	setne	cl
-	sar	rax, 39
-	add	eax, edx
-	imul	eax, eax, 400
-	cmp	ebx, eax
-	sete	al
-	or	al, cl
-	movzx	eax, al
-	add	eax, 365
+	movslq	%ebx, %rax
+	imulq	$1374389535, %rax, %rax
+	movq	%rax, %rcx
+	sarq	$37, %rcx
+	movq	%rax, %rdx
+	shrq	$63, %rdx
+	addl	%edx, %ecx
+	imull	$100, %ecx, %ecx
+	cmpl	%ecx, %ebx
+	setne	%cl
+	sarq	$39, %rax
+	addl	%edx, %eax
+	imull	$400, %eax, %eax
+	cmpl	%eax, %ebx
+	sete	%al
+	orb	%cl, %al
+	movzbl	%al, %eax
+	addl	$365, %eax
 LBB28_10:
-	add	r13d, eax
+	addl	%eax, %r13d
 	jo	LBB28_24
-	mov	edi, r13d
-	mov	esi, r12d
-	call	__ZN4time7display13iso_week_days17h2dc58e0336a4c239E
+	movl	%r13d, %edi
+	movl	%r12d, %esi
+	callq	__ZN4time7display13iso_week_days17h2dc58e0336a4c239E
 LBB28_12:
-	mov	r14d, eax
+	movl	%eax, %r14d
 LBB28_13:
-	cmp	r15d, 103
+	cmpl	$103, %r15d
 	je	LBB28_18
-	cmp	r15d, 86
+	cmpl	$86, %r15d
 	je	LBB28_19
-	cmp	r15d, 71
+	cmpl	$71, %r15d
 	jne	LBB28_16
-	lea	rsi, [rbp - 120]
-	lea	rax, [rbp - 64]
-	lea	rcx, [rbp - 44]
-	mov	qword ptr [rbp - 64], rcx
-	mov	rcx, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 56], rcx
-	lea	rcx, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 120], rcx
-	mov	qword ptr [rbp - 112], 1
-	mov	qword ptr [rbp - 104], 0
+	leaq	-120(%rbp), %rsi
+	leaq	-64(%rbp), %rax
+	leaq	-44(%rbp), %rcx
+	movq	%rcx, -64(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rcx
+	movq	%rcx, -56(%rbp)
+	leaq	l___unnamed_23(%rip), %rcx
+	movq	%rcx, -120(%rbp)
+	movq	$1, -112(%rbp)
+	movq	$0, -104(%rbp)
 	jmp	LBB28_21
 LBB28_19:
-	lea	rsi, [rbp - 120]
-	lea	rax, [rbp - 64]
-	movsxd	rcx, r14d
-	imul	rdx, rcx, -1840700269
-	shr	rdx, 32
-	add	ecx, edx
-	mov	edx, ecx
-	sar	edx, 2
-	shr	ecx, 31
-	lea	ecx, [rdx + rcx + 1]
-	mov	dword ptr [rbp - 48], ecx
+	leaq	-120(%rbp), %rsi
+	leaq	-64(%rbp), %rax
+	movslq	%r14d, %rcx
+	imulq	$-1840700269, %rcx, %rdx
+	shrq	$32, %rdx
+	addl	%edx, %ecx
+	movl	%ecx, %edx
+	sarl	$2, %edx
+	shrl	$31, %ecx
+	leal	(%rdx,%rcx), %ecx
+	addl	$1, %ecx
+	movl	%ecx, -48(%rbp)
 	jmp	LBB28_20
 LBB28_18:
-	lea	rsi, [rbp - 120]
-	lea	rax, [rbp - 64]
-	movsxd	rcx, ebx
-	imul	rdx, rcx, 1374389535
-	mov	rdi, rdx
-	shr	rdi, 63
-	shr	rdx, 32
-	sar	edx, 5
-	add	edx, edi
-	imul	edx, edx, 100
-	neg	edx
-	lea	ecx, [rcx + rdx + 100]
-	movsxd	rcx, ecx
-	imul	rdx, rcx, 1374389535
-	mov	rdi, rdx
-	shr	rdi, 63
-	shr	rdx, 32
-	sar	edx, 5
-	add	edx, edi
-	imul	edx, edx, 100
-	sub	ecx, edx
-	mov	dword ptr [rbp - 48], ecx
+	leaq	-120(%rbp), %rsi
+	leaq	-64(%rbp), %rax
+	movslq	%ebx, %rcx
+	imulq	$1374389535, %rcx, %rdx
+	movq	%rdx, %rdi
+	shrq	$63, %rdi
+	shrq	$32, %rdx
+	sarl	$5, %edx
+	addl	%edi, %edx
+	imull	$100, %edx, %edx
+	negl	%edx
+	leal	(%rcx,%rdx), %ecx
+	addl	$100, %ecx
+	movslq	%ecx, %rcx
+	imulq	$1374389535, %rcx, %rdx
+	movq	%rdx, %rdi
+	shrq	$63, %rdi
+	shrq	$32, %rdx
+	sarl	$5, %edx
+	addl	%edi, %edx
+	imull	$100, %edx, %edx
+	subl	%edx, %ecx
+	movl	%ecx, -48(%rbp)
 LBB28_20:
-	lea	rcx, [rbp - 48]
-	mov	qword ptr [rbp - 64], rcx
-	mov	rcx, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 56], rcx
-	lea	rcx, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 120], rcx
-	mov	qword ptr [rbp - 112], 1
-	lea	rcx, [rip + l___unnamed_24]
-	mov	qword ptr [rbp - 104], rcx
-	mov	qword ptr [rbp - 96], 1
+	leaq	-48(%rbp), %rcx
+	movq	%rcx, -64(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rcx
+	movq	%rcx, -56(%rbp)
+	leaq	l___unnamed_23(%rip), %rcx
+	movq	%rcx, -120(%rbp)
+	movq	$1, -112(%rbp)
+	leaq	l___unnamed_24(%rip), %rcx
+	movq	%rcx, -104(%rbp)
+	movq	$1, -96(%rbp)
 LBB28_21:
-	mov	qword ptr [rbp - 88], rax
-	mov	qword ptr [rbp - 80], 1
-	mov	rdi, qword ptr [rbp - 72]
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	movq	%rax, -88(%rbp)
+	movq	$1, -80(%rbp)
+	movq	-72(%rbp), %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
 	jmp	LBB28_22
 LBB28_16:
-	xor	eax, eax
+	xorl	%eax, %eax
 LBB28_22:
-	add	rsp, 88
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	$88, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB28_23:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_25]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_25(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB28_25:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_26]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_26(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB28_26:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_27]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_27(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB28_24:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_28]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_28(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.p2align	4, 0x90
 __ZN4time7display10parse_type17hae8f2ae3248877acE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	sub	rsp, 120
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	add	esi, -37
-	cmp	esi, 85
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	subq	$120, %rsp
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	addl	$-37, %esi
+	cmpl	$85, %esi
 	ja	LBB29_146
-	mov	rbx, rdx
-	mov	r14, rdi
-	lea	rax, [rip + LJTI29_0]
-	movsxd	rcx, dword ptr [rax + 4*rsi]
-	add	rcx, rax
-	jmp	rcx
+	movq	%rdx, %rbx
+	movq	%rdi, %r14
+	leaq	LJTI29_0(%rip), %rax
+	movslq	(%rax,%rsi,4), %rcx
+	addq	%rax, %rcx
+	jmpq	*%rcx
 LBB29_2:
-	mov	rdi, r14
-	mov	esi, 109
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$109, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_29]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_29(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 100
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$100, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_29]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_29(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 121
+	movq	%r14, %rdi
+	movl	$121, %esi
 	jmp	LBB29_75
 LBB29_7:
-	mov	rdi, r14
-	mov	esi, 72
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$72, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_30]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_30(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 77
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$77, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_30]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_30(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 83
+	movq	%r14, %rdi
+	movl	$83, %esi
 	jmp	LBB29_75
 LBB29_12:
-	mov	eax, dword ptr [rbx + 16]
-	cmp	rax, 11
+	movl	16(%rbx), %eax
+	cmpq	$11, %rax
 	ja	LBB29_147
-	lea	rsi, [rip + l___unnamed_31]
-	lea	rcx, [rip + LJTI29_1]
-	movsxd	rax, dword ptr [rcx + 4*rax]
-	add	rax, rcx
-	jmp	rax
+	leaq	l___unnamed_31(%rip), %rsi
+	leaq	LJTI29_1(%rip), %rcx
+	movslq	(%rcx,%rax,4), %rax
+	addq	%rcx, %rax
+	jmpq	*%rax
 LBB29_14:
-	lea	rsi, [rip + l___unnamed_32]
-	mov	edx, 3
+	leaq	l___unnamed_32(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_15:
-	mov	edx, dword ptr [rbx + 20]
-	mov	ecx, dword ptr [rbx + 24]
-	mov	r8d, dword ptr [rbx + 28]
-	mov	rdi, r14
-	mov	esi, 103
+	movl	20(%rbx), %edx
+	movl	24(%rbx), %ecx
+	movl	28(%rbx), %r8d
+	movq	%r14, %rdi
+	movl	$103, %esi
 	jmp	LBB29_57
 LBB29_16:
-	mov	eax, dword ptr [rbx + 36]
-	xor	ecx, ecx
-	test	eax, eax
-	setle	cl
-	lea	ecx, [rcx + rcx + 43]
-	mov	dword ptr [rbp - 140], ecx
+	movl	36(%rbx), %eax
+	xorl	%ecx, %ecx
+	testl	%eax, %eax
+	setle	%cl
+	leal	43(%rcx,%rcx), %ecx
+	movl	%ecx, -140(%rbp)
 	jns	LBB29_19
-	cmp	eax, -2147483648
+	cmpl	$-2147483648, %eax
 	je	LBB29_161
-	neg	eax
+	negl	%eax
 LBB29_19:
-	mov	eax, eax
-	mov	ecx, 2290649225
-	imul	rcx, rax
-	shr	rcx, 37
-	mov	edx, 2443359173
-	imul	rdx, rax
-	shr	rdx, 43
-	mov	dword ptr [rbp - 88], edx
-	imul	eax, edx, -60
-	add	eax, ecx
-	mov	dword ptr [rbp - 144], eax
-	lea	rax, [rbp - 140]
-	mov	qword ptr [rbp - 72], rax
-	mov	rax, qword ptr [rip + __ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL]
-	mov	qword ptr [rbp - 64], rax
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 56], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 48], rax
-	lea	rcx, [rbp - 144]
-	mov	qword ptr [rbp - 40], rcx
-	mov	qword ptr [rbp - 32], rax
-	lea	rax, [rip + l___unnamed_33]
-	mov	qword ptr [rbp - 136], rax
-	mov	qword ptr [rbp - 128], 3
-	lea	rax, [rip + l___unnamed_34]
-	mov	qword ptr [rbp - 120], rax
-	mov	qword ptr [rbp - 112], 3
-	lea	rax, [rbp - 72]
-	mov	qword ptr [rbp - 104], rax
-	mov	qword ptr [rbp - 96], 3
-	lea	rsi, [rbp - 136]
+	movl	%eax, %eax
+	movl	$2290649225, %ecx
+	imulq	%rax, %rcx
+	shrq	$37, %rcx
+	movl	$2443359173, %edx
+	imulq	%rax, %rdx
+	shrq	$43, %rdx
+	movl	%edx, -88(%rbp)
+	imull	$-60, %edx, %eax
+	addl	%ecx, %eax
+	movl	%eax, -144(%rbp)
+	leaq	-140(%rbp), %rax
+	movq	%rax, -72(%rbp)
+	movq	__ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL(%rip), %rax
+	movq	%rax, -64(%rbp)
+	leaq	-88(%rbp), %rax
+	movq	%rax, -56(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -48(%rbp)
+	leaq	-144(%rbp), %rcx
+	movq	%rcx, -40(%rbp)
+	movq	%rax, -32(%rbp)
+	leaq	l___unnamed_33(%rip), %rax
+	movq	%rax, -136(%rbp)
+	movq	$3, -128(%rbp)
+	leaq	l___unnamed_34(%rip), %rax
+	movq	%rax, -120(%rbp)
+	movq	$3, -112(%rbp)
+	leaq	-72(%rbp), %rax
+	movq	%rax, -104(%rbp)
+	movq	$3, -96(%rbp)
+	leaq	-136(%rbp), %rsi
 	jmp	LBB29_110
 LBB29_20:
-	add	rbx, 40
-	mov	qword ptr [rbp - 136], rbx
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 72], rax
-	mov	qword ptr [rbp - 64], 1
-	lea	rax, [rip + l___unnamed_35]
+	addq	$40, %rbx
+	movq	%rbx, -136(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -128(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -72(%rbp)
+	movq	$1, -64(%rbp)
+	leaq	l___unnamed_35(%rip), %rax
 	jmp	LBB29_107
 LBB29_21:
-	mov	rdi, rbx
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	qword ptr [rbp - 136], rax
-	mov	dword ptr [rbp - 128], edx
-	lea	rax, [rbp - 136]
-	mov	qword ptr [rbp - 88], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL]
+	movq	%rbx, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rax, -136(%rbp)
+	movl	%edx, -128(%rbp)
+	leaq	-136(%rbp), %rax
+	movq	%rax, -88(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL(%rip), %rax
 	jmp	LBB29_66
 LBB29_22:
-	mov	eax, dword ptr [rbx + 24]
-	cmp	rax, 6
+	movl	24(%rbx), %eax
+	cmpq	$6, %rax
 	ja	LBB29_148
-	lea	rsi, [rip + l___unnamed_36]
-	lea	rcx, [rip + LJTI29_3]
-	movsxd	rax, dword ptr [rcx + 4*rax]
-	add	rax, rcx
-	jmp	rax
+	leaq	l___unnamed_36(%rip), %rsi
+	leaq	LJTI29_3(%rip), %rcx
+	movslq	(%rcx,%rax,4), %rax
+	addq	%rcx, %rax
+	jmpq	*%rax
 LBB29_24:
-	lea	rsi, [rip + l___unnamed_37]
-	mov	edx, 3
+	leaq	l___unnamed_37(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_25:
-	cmp	dword ptr [rbx + 8], 12
-	lea	rax, [rip + l___unnamed_38]
-	lea	rsi, [rip + l___unnamed_39]
+	cmpl	$12, 8(%rbx)
+	leaq	l___unnamed_38(%rip), %rax
+	leaq	l___unnamed_39(%rip), %rsi
 	jmp	LBB29_82
 LBB29_26:
-	mov	rdi, r14
-	mov	esi, 73
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$73, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_30]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_30(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 77
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$77, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_30]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_30(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 83
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$83, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_40]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_40(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 112
+	movq	%r14, %rdi
+	movl	$112, %esi
 	jmp	LBB29_75
 LBB29_33:
-	mov	edx, dword ptr [rbx + 20]
-	mov	ecx, dword ptr [rbx + 24]
-	mov	r8d, dword ptr [rbx + 28]
-	mov	rdi, r14
-	mov	esi, 86
+	movl	20(%rbx), %edx
+	movl	24(%rbx), %ecx
+	movl	28(%rbx), %r8d
+	movq	%r14, %rdi
+	movl	$86, %esi
 	jmp	LBB29_57
 LBB29_34:
-	mov	eax, dword ptr [rbx + 28]
-	sub	eax, dword ptr [rbx + 24]
+	movl	28(%rbx), %eax
+	subl	24(%rbx), %eax
 	jo	LBB29_149
-	add	eax, 7
+	addl	$7, %eax
 	jno	LBB29_43
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_41]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_41(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_37:
-	add	rbx, 12
+	addq	$12, %rbx
 	jmp	LBB29_68
 LBB29_38:
-	lea	rsi, [rip + l___unnamed_42]
-	mov	edx, 1
+	leaq	l___unnamed_42(%rip), %rsi
+	movl	$1, %edx
 	jmp	LBB29_145
 LBB29_39:
-	mov	ecx, dword ptr [rbx + 24]
-	dec	ecx
+	movl	24(%rbx), %ecx
+	decl	%ecx
 	jo	LBB29_150
-	add	ecx, 7
+	addl	$7, %ecx
 	jo	LBB29_151
-	mov	eax, dword ptr [rbx + 28]
-	movsxd	rcx, ecx
-	imul	rdx, rcx, -1840700269
-	shr	rdx, 32
-	add	edx, ecx
-	mov	esi, edx
-	shr	esi, 31
-	sar	edx, 2
-	add	edx, esi
-	lea	esi, [8*rdx]
-	sub	edx, esi
-	add	edx, ecx
-	sub	eax, edx
+	movl	28(%rbx), %eax
+	movslq	%ecx, %rcx
+	imulq	$-1840700269, %rcx, %rdx
+	shrq	$32, %rdx
+	addl	%ecx, %edx
+	movl	%edx, %esi
+	shrl	$31, %esi
+	sarl	$2, %edx
+	addl	%esi, %edx
+	leal	(,%rdx,8), %esi
+	subl	%esi, %edx
+	addl	%ecx, %edx
+	subl	%edx, %eax
 	jo	LBB29_152
-	add	eax, 7
+	addl	$7, %eax
 	jo	LBB29_153
 LBB29_43:
-	cdqe
-	imul	rcx, rax, -1840700269
-	shr	rcx, 32
-	add	eax, ecx
-	mov	ecx, eax
-	shr	ecx, 31
-	sar	eax, 2
-	add	eax, ecx
+	cltq
+	imulq	$-1840700269, %rax, %rcx
+	shrq	$32, %rcx
+	addl	%ecx, %eax
+	movl	%eax, %ecx
+	shrl	$31, %ecx
+	sarl	$2, %eax
+	addl	%ecx, %eax
 	jmp	LBB29_104
 LBB29_44:
-	add	rbx, 12
+	addq	$12, %rbx
 	jmp	LBB29_80
 LBB29_45:
-	add	rbx, 8
+	addq	$8, %rbx
 	jmp	LBB29_68
 LBB29_46:
-	mov	rdi, r14
-	mov	esi, 72
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$72, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_30]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_30(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 77
+	movq	%r14, %rdi
+	movl	$77, %esi
 	jmp	LBB29_75
 LBB29_49:
-	mov	eax, dword ptr [rbx + 16]
-	inc	eax
+	movl	16(%rbx), %eax
+	incl	%eax
 	jo	LBB29_154
-	mov	dword ptr [rbp - 88], eax
+	movl	%eax, -88(%rbp)
 	jmp	LBB29_105
 LBB29_51:
-	mov	rdi, r14
-	mov	esi, 89
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$89, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_43]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_43(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 109
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$109, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_43]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_43(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 100
+	movq	%r14, %rdi
+	movl	$100, %esi
 	jmp	LBB29_75
 LBB29_56:
-	mov	edx, dword ptr [rbx + 20]
-	mov	ecx, dword ptr [rbx + 24]
-	mov	r8d, dword ptr [rbx + 28]
-	mov	rdi, r14
-	mov	esi, 71
+	movl	20(%rbx), %edx
+	movl	24(%rbx), %ecx
+	movl	28(%rbx), %r8d
+	movq	%r14, %rdi
+	movl	$71, %esi
 LBB29_57:
-	add	rsp, 120
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
+	addq	$120, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	__ZN4time7display8iso_week17h0f13c34c76728ea5E
 LBB29_58:
-	mov	eax, dword ptr [rbx + 8]
-	test	eax, eax
-	mov	ecx, 12
-	cmovne	ecx, eax
-	lea	eax, [rcx - 12]
-	cmp	ecx, 12
-	cmovle	eax, ecx
-	mov	dword ptr [rbp - 88], eax
+	movl	8(%rbx), %eax
+	testl	%eax, %eax
+	movl	$12, %ecx
+	cmovnel	%eax, %ecx
+	leal	-12(%rcx), %eax
+	cmpl	$12, %ecx
+	cmovlel	%ecx, %eax
+	movl	%eax, -88(%rbp)
 	jmp	LBB29_105
 LBB29_59:
-	mov	eax, dword ptr [rbx + 24]
-	cmp	rax, 6
+	movl	24(%rbx), %eax
+	cmpq	$6, %rax
 	ja	LBB29_155
-	lea	rsi, [rip + l___unnamed_44]
-	mov	edx, 6
-	lea	rcx, [rip + LJTI29_4]
-	movsxd	rax, dword ptr [rcx + 4*rax]
-	add	rax, rcx
-	jmp	rax
+	leaq	l___unnamed_44(%rip), %rsi
+	movl	$6, %edx
+	leaq	LJTI29_4(%rip), %rcx
+	movslq	(%rcx,%rax,4), %rax
+	addq	%rcx, %rax
+	jmpq	*%rax
 LBB29_61:
-	lea	rsi, [rip + l___unnamed_45]
+	leaq	l___unnamed_45(%rip), %rsi
 	jmp	LBB29_145
 LBB29_62:
-	mov	eax, 1900
-	add	eax, dword ptr [rbx + 20]
+	movl	$1900, %eax
+	addl	20(%rbx), %eax
 	jo	LBB29_156
-	cdqe
-	imul	rax, rax, 1374389535
-	mov	rcx, rax
-	shr	rcx, 63
-	sar	rax, 37
-	add	eax, ecx
+	cltq
+	imulq	$1374389535, %rax, %rax
+	movq	%rax, %rcx
+	shrq	$63, %rcx
+	sarq	$37, %rax
+	addl	%ecx, %eax
 	jmp	LBB29_104
 LBB29_64:
-	lea	rsi, [rip + l___unnamed_46]
-	mov	edx, 1
+	leaq	l___unnamed_46(%rip), %rsi
+	movl	$1, %edx
 	jmp	LBB29_145
 LBB29_65:
-	mov	qword ptr [rbp - 136], rbx
-	mov	qword ptr [rbp - 128], 1
-	lea	rax, [rbp - 136]
-	mov	qword ptr [rbp - 88], rax
-	lea	rax, [rip + __ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE]
+	movq	%rbx, -136(%rbp)
+	movq	$1, -128(%rbp)
+	leaq	-136(%rbp), %rax
+	movq	%rax, -88(%rbp)
+	leaq	__ZN4time7display60_$LT$impl$u20$core..fmt..Display$u20$for$u20$time..TmFmt$GT$3fmt17hf577ccfc1056199fE(%rip), %rax
 LBB29_66:
-	mov	qword ptr [rbp - 80], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 72], rax
-	mov	qword ptr [rbp - 64], 1
-	mov	qword ptr [rbp - 56], 0
-	lea	rax, [rbp - 88]
+	movq	%rax, -80(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -72(%rbp)
+	movq	$1, -64(%rbp)
+	movq	$0, -56(%rbp)
+	leaq	-88(%rbp), %rax
 	jmp	LBB29_109
 LBB29_67:
-	add	rbx, 4
+	addq	$4, %rbx
 LBB29_68:
-	mov	qword ptr [rbp - 136], rbx
+	movq	%rbx, -136(%rbp)
 	jmp	LBB29_106
 LBB29_69:
-	mov	rdi, r14
-	mov	esi, 101
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$101, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_43]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_43(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 98
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$98, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_43]
+	leaq	l___unnamed_43(%rip), %rsi
 LBB29_73:
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 89
+	movq	%r14, %rdi
+	movl	$89, %esi
 LBB29_75:
-	mov	rdx, rbx
-	add	rsp, 120
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
+	movq	%rbx, %rdx
+	addq	$120, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	__ZN4time7display10parse_type17hae8f2ae3248877acE
 LBB29_76:
-	mov	eax, dword ptr [rbx + 16]
-	cmp	rax, 11
+	movl	16(%rbx), %eax
+	cmpq	$11, %rax
 	ja	LBB29_157
-	lea	rsi, [rip + l___unnamed_47]
-	mov	edx, 7
-	lea	rcx, [rip + LJTI29_2]
-	movsxd	rax, dword ptr [rcx + 4*rax]
-	add	rax, rcx
-	jmp	rax
+	leaq	l___unnamed_47(%rip), %rsi
+	movl	$7, %edx
+	leaq	LJTI29_2(%rip), %rcx
+	movslq	(%rcx,%rax,4), %rax
+	addq	%rcx, %rax
+	jmpq	*%rax
 LBB29_78:
-	lea	rsi, [rip + L___unnamed_48]
+	leaq	L___unnamed_48(%rip), %rsi
 	jmp	LBB29_144
 LBB29_79:
-	add	rbx, 8
+	addq	$8, %rbx
 LBB29_80:
-	mov	qword ptr [rbp - 136], rbx
+	movq	%rbx, -136(%rbp)
 	jmp	LBB29_95
 LBB29_81:
-	cmp	dword ptr [rbx + 8], 12
-	lea	rax, [rip + l___unnamed_49]
-	lea	rsi, [rip + l___unnamed_50]
+	cmpl	$12, 8(%rbx)
+	leaq	l___unnamed_49(%rip), %rax
+	leaq	l___unnamed_50(%rip), %rsi
 LBB29_82:
-	cmovl	rsi, rax
-	mov	edx, 2
+	cmovlq	%rax, %rsi
+	movl	$2, %edx
 	jmp	LBB29_145
 LBB29_83:
-	mov	rdi, r14
-	mov	esi, 97
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	mov	r15b, 1
-	test	al, al
+	movq	%r14, %rdi
+	movl	$97, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	movb	$1, %r15b
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_40]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_40(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 98
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$98, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_40]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_40(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 101
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$101, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_40]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
-	test	al, al
+	leaq	l___unnamed_40(%rip), %rsi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
+	testb	%al, %al
 	jne	LBB29_111
-	mov	rdi, r14
-	mov	esi, 84
-	mov	rdx, rbx
-	call	__ZN4time7display10parse_type17hae8f2ae3248877acE
-	test	al, al
+	movq	%r14, %rdi
+	movl	$84, %esi
+	movq	%rbx, %rdx
+	callq	__ZN4time7display10parse_type17hae8f2ae3248877acE
+	testb	%al, %al
 	jne	LBB29_111
-	lea	rsi, [rip + l___unnamed_40]
+	leaq	l___unnamed_40(%rip), %rsi
 	jmp	LBB29_73
 LBB29_91:
-	add	rbx, 24
-	mov	qword ptr [rbp - 136], rbx
+	addq	$24, %rbx
+	movq	%rbx, -136(%rbp)
 	jmp	LBB29_101
 LBB29_92:
-	mov	eax, dword ptr [rbx + 28]
-	inc	eax
+	movl	28(%rbx), %eax
+	incl	%eax
 	jo	LBB29_158
-	mov	dword ptr [rbp - 88], eax
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 136], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 72], rax
-	mov	qword ptr [rbp - 64], 1
-	lea	rax, [rip + l___unnamed_51]
+	movl	%eax, -88(%rbp)
+	leaq	-88(%rbp), %rax
+	movq	%rax, -136(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -128(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -72(%rbp)
+	movq	$1, -64(%rbp)
+	leaq	l___unnamed_51(%rip), %rax
 	jmp	LBB29_107
 LBB29_94:
-	mov	eax, dword ptr [rbx + 8]
-	test	eax, eax
-	mov	ecx, 12
-	cmovne	ecx, eax
-	lea	eax, [rcx - 12]
-	cmp	ecx, 12
-	cmovle	eax, ecx
-	mov	dword ptr [rbp - 88], eax
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 136], rax
+	movl	8(%rbx), %eax
+	testl	%eax, %eax
+	movl	$12, %ecx
+	cmovnel	%eax, %ecx
+	leal	-12(%rcx), %eax
+	cmpl	$12, %ecx
+	cmovlel	%ecx, %eax
+	movl	%eax, -88(%rbp)
+	leaq	-88(%rbp), %rax
+	movq	%rax, -136(%rbp)
 LBB29_95:
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 72], rax
-	mov	qword ptr [rbp - 64], 1
-	lea	rax, [rip + l___unnamed_52]
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -128(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -72(%rbp)
+	movq	$1, -64(%rbp)
+	leaq	l___unnamed_52(%rip), %rax
 	jmp	LBB29_107
 LBB29_96:
-	mov	eax, 1900
-	add	eax, dword ptr [rbx + 20]
+	movl	$1900, %eax
+	addl	20(%rbx), %eax
 	jo	LBB29_159
-	mov	dword ptr [rbp - 88], eax
+	movl	%eax, -88(%rbp)
 	jmp	LBB29_100
 LBB29_98:
-	xor	eax, eax
-	cmp	dword ptr [rbx + 36], 0
-	sete	al
-	lea	rcx, [rip + l___unnamed_53]
-	lea	rsi, [rip + l___unnamed_54]
-	cmove	rsi, rcx
-	lea	rdx, [rax + 2*rax]
+	xorl	%eax, %eax
+	cmpl	$0, 36(%rbx)
+	sete	%al
+	leaq	l___unnamed_53(%rip), %rcx
+	leaq	l___unnamed_54(%rip), %rsi
+	cmoveq	%rcx, %rsi
+	leaq	(%rax,%rax,2), %rdx
 	jmp	LBB29_145
 LBB29_99:
-	mov	eax, dword ptr [rbx + 24]
-	test	eax, eax
-	mov	ecx, 7
-	cmovne	ecx, eax
-	mov	dword ptr [rbp - 88], ecx
+	movl	24(%rbx), %eax
+	testl	%eax, %eax
+	movl	$7, %ecx
+	cmovnel	%eax, %ecx
+	movl	%ecx, -88(%rbp)
 LBB29_100:
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 136], rax
+	leaq	-88(%rbp), %rax
+	movq	%rax, -136(%rbp)
 LBB29_101:
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 72], rax
-	mov	qword ptr [rbp - 64], 1
-	mov	qword ptr [rbp - 56], 0
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -128(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -72(%rbp)
+	movq	$1, -64(%rbp)
+	movq	$0, -56(%rbp)
 	jmp	LBB29_108
 LBB29_102:
-	mov	eax, 1900
-	add	eax, dword ptr [rbx + 20]
+	movl	$1900, %eax
+	addl	20(%rbx), %eax
 	jo	LBB29_160
-	cdqe
-	imul	rcx, rax, 1374389535
-	mov	rdx, rcx
-	shr	rdx, 63
-	sar	rcx, 37
-	add	ecx, edx
-	imul	ecx, ecx, 100
-	sub	eax, ecx
+	cltq
+	imulq	$1374389535, %rax, %rcx
+	movq	%rcx, %rdx
+	shrq	$63, %rdx
+	sarq	$37, %rcx
+	addl	%edx, %ecx
+	imull	$100, %ecx, %ecx
+	subl	%ecx, %eax
 LBB29_104:
-	mov	dword ptr [rbp - 88], eax
+	movl	%eax, -88(%rbp)
 LBB29_105:
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 136], rax
+	leaq	-88(%rbp), %rax
+	movq	%rax, -136(%rbp)
 LBB29_106:
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 72], rax
-	mov	qword ptr [rbp - 64], 1
-	lea	rax, [rip + l___unnamed_24]
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -128(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -72(%rbp)
+	movq	$1, -64(%rbp)
+	leaq	l___unnamed_24(%rip), %rax
 LBB29_107:
-	mov	qword ptr [rbp - 56], rax
-	mov	qword ptr [rbp - 48], 1
+	movq	%rax, -56(%rbp)
+	movq	$1, -48(%rbp)
 LBB29_108:
-	lea	rax, [rbp - 136]
+	leaq	-136(%rbp), %rax
 LBB29_109:
-	mov	qword ptr [rbp - 40], rax
-	mov	qword ptr [rbp - 32], 1
-	lea	rsi, [rbp - 72]
+	movq	%rax, -40(%rbp)
+	movq	$1, -32(%rbp)
+	leaq	-72(%rbp), %rsi
 LBB29_110:
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
-	mov	r15d, eax
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	movl	%eax, %r15d
 LBB29_111:
-	mov	eax, r15d
-	add	rsp, 120
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	movl	%r15d, %eax
+	addq	$120, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB29_112:
-	lea	rsi, [rip + l___unnamed_55]
-	mov	edx, 1
+	leaq	l___unnamed_55(%rip), %rsi
+	movl	$1, %edx
 	jmp	LBB29_145
 LBB29_135:
-	lea	rsi, [rip + l___unnamed_56]
-	mov	edx, 3
+	leaq	l___unnamed_56(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_113:
-	lea	rsi, [rip + l___unnamed_57]
-	mov	edx, 3
+	leaq	l___unnamed_57(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_115:
-	lea	rsi, [rip + l___unnamed_58]
-	mov	edx, 3
+	leaq	l___unnamed_58(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_116:
-	lea	rsi, [rip + l___unnamed_59]
-	mov	edx, 3
+	leaq	l___unnamed_59(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_117:
-	lea	rsi, [rip + l___unnamed_60]
-	mov	edx, 3
+	leaq	l___unnamed_60(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_118:
-	lea	rsi, [rip + l___unnamed_61]
-	mov	edx, 3
+	leaq	l___unnamed_61(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_119:
-	lea	rsi, [rip + l___unnamed_62]
-	mov	edx, 3
+	leaq	l___unnamed_62(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_120:
-	lea	rsi, [rip + l___unnamed_63]
-	mov	edx, 3
+	leaq	l___unnamed_63(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_121:
-	lea	rsi, [rip + l___unnamed_64]
-	mov	edx, 3
+	leaq	l___unnamed_64(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_122:
-	lea	rsi, [rip + l___unnamed_65]
-	mov	edx, 3
+	leaq	l___unnamed_65(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_123:
-	lea	rsi, [rip + l___unnamed_66]
-	mov	edx, 3
+	leaq	l___unnamed_66(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_124:
-	lea	rsi, [rip + l___unnamed_67]
-	mov	edx, 3
+	leaq	l___unnamed_67(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_125:
-	lea	rsi, [rip + l___unnamed_68]
-	mov	edx, 3
+	leaq	l___unnamed_68(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_126:
-	lea	rsi, [rip + l___unnamed_69]
-	mov	edx, 3
+	leaq	l___unnamed_69(%rip), %rsi
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_127:
-	lea	rsi, [rip + l___unnamed_70]
+	leaq	l___unnamed_70(%rip), %rsi
 LBB29_128:
-	mov	edx, 3
+	movl	$3, %edx
 	jmp	LBB29_145
 LBB29_129:
-	lea	rsi, [rip + L___unnamed_71]
+	leaq	L___unnamed_71(%rip), %rsi
 	jmp	LBB29_144
 LBB29_130:
-	lea	rsi, [rip + l___unnamed_72]
-	mov	edx, 7
+	leaq	l___unnamed_72(%rip), %rsi
+	movl	$7, %edx
 	jmp	LBB29_145
 LBB29_131:
-	lea	rsi, [rip + l___unnamed_73]
-	mov	edx, 9
+	leaq	l___unnamed_73(%rip), %rsi
+	movl	$9, %edx
 	jmp	LBB29_145
 LBB29_132:
-	lea	rsi, [rip + l___unnamed_74]
+	leaq	l___unnamed_74(%rip), %rsi
 	jmp	LBB29_145
 LBB29_133:
-	lea	rsi, [rip + L___unnamed_75]
+	leaq	L___unnamed_75(%rip), %rsi
 	jmp	LBB29_144
 LBB29_134:
-	lea	rsi, [rip + L___unnamed_76]
+	leaq	L___unnamed_76(%rip), %rsi
 	jmp	LBB29_144
 LBB29_136:
-	lea	rsi, [rip + l___unnamed_77]
+	leaq	l___unnamed_77(%rip), %rsi
 	jmp	LBB29_145
 LBB29_137:
-	lea	rsi, [rip + l___unnamed_78]
-	mov	edx, 5
+	leaq	l___unnamed_78(%rip), %rsi
+	movl	$5, %edx
 	jmp	LBB29_145
 LBB29_138:
-	lea	rsi, [rip + l___unnamed_79]
-	mov	edx, 5
+	leaq	l___unnamed_79(%rip), %rsi
+	movl	$5, %edx
 	jmp	LBB29_145
 LBB29_139:
-	lea	rsi, [rip + l___unnamed_80]
-	mov	edx, 6
+	leaq	l___unnamed_80(%rip), %rsi
+	movl	$6, %edx
 	jmp	LBB29_145
 LBB29_140:
-	lea	rsi, [rip + L___unnamed_81]
-	mov	edx, 4
+	leaq	L___unnamed_81(%rip), %rsi
+	movl	$4, %edx
 	jmp	LBB29_145
 LBB29_141:
-	lea	rsi, [rip + L___unnamed_82]
-	mov	edx, 4
+	leaq	L___unnamed_82(%rip), %rsi
+	movl	$4, %edx
 	jmp	LBB29_145
 LBB29_142:
-	lea	rsi, [rip + l___unnamed_83]
-	mov	edx, 9
+	leaq	l___unnamed_83(%rip), %rsi
+	movl	$9, %edx
 	jmp	LBB29_145
 LBB29_143:
-	lea	rsi, [rip + L___unnamed_84]
+	leaq	L___unnamed_84(%rip), %rsi
 LBB29_144:
-	mov	edx, 8
+	movl	$8, %edx
 LBB29_145:
-	mov	rdi, r14
-	add	rsp, 120
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
+	movq	%r14, %rdi
+	addq	$120, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	__ZN4core3fmt9Formatter9write_str17h957ea9717e49073dE
 LBB29_146:
-	lea	rdi, [rip + l___unnamed_85]
-	lea	rdx, [rip + l___unnamed_86]
-	mov	esi, 40
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_85(%rip), %rdi
+	leaq	l___unnamed_86(%rip), %rdx
+	movl	$40, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB29_147:
-	lea	rdi, [rip + l___unnamed_85]
-	lea	rdx, [rip + l___unnamed_87]
-	mov	esi, 40
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_85(%rip), %rdi
+	leaq	l___unnamed_87(%rip), %rdx
+	movl	$40, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB29_148:
-	lea	rdi, [rip + l___unnamed_85]
-	lea	rdx, [rip + l___unnamed_88]
-	mov	esi, 40
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_85(%rip), %rdi
+	leaq	l___unnamed_88(%rip), %rdx
+	movl	$40, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB29_149:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_89]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_89(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_150:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_90]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_90(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_151:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_91]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_91(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_152:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_92]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_92(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_153:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_93]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_93(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_154:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_94]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_94(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_155:
-	lea	rdi, [rip + l___unnamed_85]
-	lea	rdx, [rip + l___unnamed_95]
-	mov	esi, 40
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_85(%rip), %rdi
+	leaq	l___unnamed_95(%rip), %rdx
+	movl	$40, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB29_156:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_96]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_96(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_157:
-	lea	rdi, [rip + l___unnamed_85]
-	lea	rdx, [rip + l___unnamed_97]
-	mov	esi, 40
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_85(%rip), %rdi
+	leaq	l___unnamed_97(%rip), %rdx
+	movl	$40, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB29_158:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_98]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_98(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_159:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_99]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_99(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_160:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_100]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_100(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB29_161:
-	lea	rdi, [rip + _str.6]
-	lea	rdx, [rip + l___unnamed_19]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.6(%rip), %rdi
+	leaq	l___unnamed_19(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 	.p2align	2, 0x90
 	.data_region jt32
@@ -2586,1286 +2579,1308 @@ LJTI29_4:
 	.p2align	4, 0x90
 __ZN4time8duration8Duration8num_days17h69798afaadd9f056E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	testq	%rax, %rax
 	jns	LBB30_2
-	xor	ecx, ecx
-	cmp	dword ptr [rdi + 8], 0
-	setg	cl
-	add	rax, rcx
+	xorl	%ecx, %ecx
+	cmpl	$0, 8(%rdi)
+	setg	%cl
+	addq	%rcx, %rax
 LBB30_2:
-	movabs	rcx, 1749024623285053783
-	imul	rcx
-	mov	rax, rdx
-	shr	rax, 63
-	sar	rdx, 13
-	add	rax, rdx
-	pop	rbp
-	ret
+	movabsq	$1749024623285053783, %rcx
+	imulq	%rcx
+	movq	%rdx, %rax
+	shrq	$63, %rax
+	sarq	$13, %rdx
+	addq	%rdx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration11num_seconds17h285426be6fea439fE
 	.p2align	4, 0x90
 __ZN4time8duration8Duration11num_seconds17h285426be6fea439fE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	testq	%rax, %rax
 	js	LBB31_1
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB31_1:
-	xor	ecx, ecx
-	cmp	dword ptr [rdi + 8], 0
-	setg	cl
-	add	rax, rcx
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	cmpl	$0, 8(%rdi)
+	setg	%cl
+	addq	%rcx, %rax
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration16num_milliseconds17h41028e31bf71d5b5E
 	.p2align	4, 0x90
 __ZN4time8duration8Duration16num_milliseconds17h41028e31bf71d5b5E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rcx, qword ptr [rdi]
-	mov	rax, rcx
-	test	rcx, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rcx
+	movq	%rcx, %rax
+	testq	%rcx, %rcx
 	jns	LBB32_2
-	xor	eax, eax
-	cmp	dword ptr [rdi + 8], 0
-	setg	al
-	add	rax, rcx
+	xorl	%eax, %eax
+	cmpl	$0, 8(%rdi)
+	setg	%al
+	addq	%rcx, %rax
 LBB32_2:
-	imul	rax, rax, 1000
+	imulq	$1000, %rax, %rax
 	jo	LBB32_5
-	mov	edx, dword ptr [rdi + 8]
-	lea	esi, [rdx - 1000000000]
-	test	edx, edx
-	cmovle	esi, edx
-	test	rcx, rcx
-	cmovns	esi, edx
-	movsxd	rcx, esi
-	imul	rcx, rcx, 1125899907
-	mov	rdx, rcx
-	shr	rdx, 63
-	sar	rcx, 50
-	add	ecx, edx
-	movsxd	rcx, ecx
-	add	rax, rcx
+	movl	8(%rdi), %edx
+	leal	-1000000000(%rdx), %esi
+	testl	%edx, %edx
+	cmovlel	%edx, %esi
+	testq	%rcx, %rcx
+	cmovnsl	%edx, %esi
+	movslq	%esi, %rcx
+	imulq	$1125899907, %rcx, %rcx
+	movq	%rcx, %rdx
+	shrq	$63, %rdx
+	sarq	$50, %rcx
+	addl	%edx, %ecx
+	movslq	%ecx, %rcx
+	addq	%rcx, %rax
 	jo	LBB32_6
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB32_5:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_101]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_101(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB32_6:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_102]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_102(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration16num_microseconds17h0e02846392d16016E
 	.p2align	4, 0x90
 __ZN4time8duration8Duration16num_microseconds17h0e02846392d16016E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	mov	rcx, rax
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	movq	%rax, %rcx
+	testq	%rax, %rax
 	js	LBB33_1
-	imul	rdx, rcx, 1000000
+	imulq	$1000000, %rcx, %rdx
 	jno	LBB33_4
 LBB33_3:
-	xor	eax, eax
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	popq	%rbp
+	retq
 LBB33_1:
-	xor	ecx, ecx
-	cmp	dword ptr [rdi + 8], 0
-	setg	cl
-	add	rcx, rax
-	imul	rdx, rcx, 1000000
+	xorl	%ecx, %ecx
+	cmpl	$0, 8(%rdi)
+	setg	%cl
+	addq	%rax, %rcx
+	imulq	$1000000, %rcx, %rdx
 	jo	LBB33_3
 LBB33_4:
-	mov	ecx, dword ptr [rdi + 8]
-	lea	esi, [rcx - 1000000000]
-	test	ecx, ecx
-	cmovle	esi, ecx
-	test	rax, rax
-	cmovns	esi, ecx
-	movsxd	rax, esi
-	imul	rax, rax, 274877907
-	mov	rcx, rax
-	shr	rcx, 63
-	sar	rax, 38
-	add	eax, ecx
-	movsxd	rcx, eax
-	xor	eax, eax
-	add	rdx, rcx
-	setno	al
-	pop	rbp
-	ret
+	movl	8(%rdi), %ecx
+	leal	-1000000000(%rcx), %esi
+	testl	%ecx, %ecx
+	cmovlel	%ecx, %esi
+	testq	%rax, %rax
+	cmovnsl	%ecx, %esi
+	movslq	%esi, %rax
+	imulq	$274877907, %rax, %rax
+	movq	%rax, %rcx
+	shrq	$63, %rcx
+	sarq	$38, %rax
+	addl	%ecx, %eax
+	movslq	%eax, %rcx
+	xorl	%eax, %eax
+	addq	%rcx, %rdx
+	setno	%al
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration15num_nanoseconds17hadcf2d3da16593faE
 	.p2align	4, 0x90
 __ZN4time8duration8Duration15num_nanoseconds17hadcf2d3da16593faE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, qword ptr [rdi]
-	mov	rcx, rax
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	(%rdi), %rax
+	movq	%rax, %rcx
+	testq	%rax, %rax
 	js	LBB34_1
-	imul	rdx, rcx, 1000000000
+	imulq	$1000000000, %rcx, %rdx
 	jno	LBB34_4
 LBB34_3:
-	xor	eax, eax
-	pop	rbp
-	ret
+	xorl	%eax, %eax
+	popq	%rbp
+	retq
 LBB34_1:
-	xor	ecx, ecx
-	cmp	dword ptr [rdi + 8], 0
-	setg	cl
-	add	rcx, rax
-	imul	rdx, rcx, 1000000000
+	xorl	%ecx, %ecx
+	cmpl	$0, 8(%rdi)
+	setg	%cl
+	addq	%rax, %rcx
+	imulq	$1000000000, %rcx, %rdx
 	jo	LBB34_3
 LBB34_4:
-	mov	ecx, dword ptr [rdi + 8]
-	lea	esi, [rcx - 1000000000]
-	test	ecx, ecx
-	cmovle	esi, ecx
-	test	rax, rax
-	cmovns	esi, ecx
-	movsxd	rcx, esi
-	xor	eax, eax
-	add	rdx, rcx
-	setno	al
-	pop	rbp
-	ret
+	movl	8(%rdi), %ecx
+	leal	-1000000000(%rcx), %esi
+	testl	%ecx, %ecx
+	cmovlel	%ecx, %esi
+	testq	%rax, %rax
+	cmovnsl	%ecx, %esi
+	movslq	%esi, %rcx
+	xorl	%eax, %eax
+	addq	%rcx, %rdx
+	setno	%al
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration11checked_add17heab851b589141c51E
 	.p2align	4, 0x90
 __ZN4time8duration8Duration11checked_add17heab851b589141c51E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi]
-	add	rcx, qword ptr [rdx]
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	(%rsi), %rcx
+	addq	(%rdx), %rcx
 	jno	LBB35_1
 LBB35_13:
-	xor	ecx, ecx
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 LBB35_1:
-	mov	esi, dword ptr [rsi + 8]
-	add	esi, dword ptr [rdx + 8]
+	movl	8(%rsi), %esi
+	addl	8(%rdx), %esi
 	jo	LBB35_12
-	cmp	esi, 1000000000
+	cmpl	$1000000000, %esi
 	jl	LBB35_5
-	inc	rcx
+	incq	%rcx
 	jo	LBB35_13
-	add	esi, -1000000000
+	addl	$-1000000000, %esi
 LBB35_5:
-	movabs	rdx, -9223372036854776
-	xor	edi, edi
-	cmp	rcx, rdx
-	setne	dil
-	mov	edx, 255
-	cmovge	edx, edi
-	cmp	dl, -1
+	movabsq	$-9223372036854776, %rdx
+	xorl	%edi, %edi
+	cmpq	%rdx, %rcx
+	setne	%dil
+	movl	$255, %edx
+	cmovgel	%edi, %edx
+	cmpb	$-1, %dl
 	je	LBB35_13
-	test	dl, dl
+	testb	%dl, %dl
 	jne	LBB35_8
-	cmp	esi, 192000000
+	cmpl	$192000000, %esi
 	jl	LBB35_13
 LBB35_8:
-	movabs	rdx, 9223372036854775
-	xor	edi, edi
-	cmp	rcx, rdx
-	setne	dil
-	mov	edx, 255
-	cmovge	edx, edi
-	test	dl, dl
+	movabsq	$9223372036854775, %rdx
+	xorl	%edi, %edi
+	cmpq	%rdx, %rcx
+	setne	%dil
+	movl	$255, %edx
+	cmovgel	%edi, %edx
+	testb	%dl, %dl
 	jne	LBB35_10
-	cmp	esi, 807000000
-	setne	dl
+	cmpl	$807000000, %esi
+	setne	%dl
 	jl	LBB35_11
 LBB35_10:
-	cmp	dl, 1
+	cmpb	$1, %dl
 	je	LBB35_13
 LBB35_11:
-	mov	qword ptr [rax + 8], rcx
-	mov	dword ptr [rax + 16], esi
-	mov	ecx, 1
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	movq	%rcx, 8(%rax)
+	movl	%esi, 16(%rax)
+	movl	$1, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 LBB35_12:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_103]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_103(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration11checked_sub17hbe294dca313ea8afE
 	.p2align	4, 0x90
 __ZN4time8duration8Duration11checked_sub17hbe294dca313ea8afE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi]
-	sub	rcx, qword ptr [rdx]
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	(%rsi), %rcx
+	subq	(%rdx), %rcx
 	jo	LBB36_13
-	mov	esi, dword ptr [rsi + 8]
-	sub	esi, dword ptr [rdx + 8]
+	movl	8(%rsi), %esi
+	subl	8(%rdx), %esi
 	jo	LBB36_12
-	test	esi, esi
+	testl	%esi, %esi
 	jns	LBB36_5
-	dec	rcx
+	decq	%rcx
 	jo	LBB36_13
-	add	esi, 1000000000
+	addl	$1000000000, %esi
 LBB36_5:
-	movabs	rdx, -9223372036854776
-	xor	edi, edi
-	cmp	rcx, rdx
-	setne	dil
-	mov	edx, 255
-	cmovge	edx, edi
-	cmp	dl, -1
+	movabsq	$-9223372036854776, %rdx
+	xorl	%edi, %edi
+	cmpq	%rdx, %rcx
+	setne	%dil
+	movl	$255, %edx
+	cmovgel	%edi, %edx
+	cmpb	$-1, %dl
 	je	LBB36_13
-	test	dl, dl
+	testb	%dl, %dl
 	jne	LBB36_8
-	cmp	esi, 192000000
+	cmpl	$192000000, %esi
 	jl	LBB36_13
 LBB36_8:
-	movabs	rdx, 9223372036854775
-	xor	edi, edi
-	cmp	rcx, rdx
-	setne	dil
-	mov	edx, 255
-	cmovge	edx, edi
-	test	dl, dl
+	movabsq	$9223372036854775, %rdx
+	xorl	%edi, %edi
+	cmpq	%rdx, %rcx
+	setne	%dil
+	movl	$255, %edx
+	cmovgel	%edi, %edx
+	testb	%dl, %dl
 	jne	LBB36_10
-	cmp	esi, 807000000
-	setne	dl
+	cmpl	$807000000, %esi
+	setne	%dl
 	jl	LBB36_11
 LBB36_10:
-	cmp	dl, 1
+	cmpb	$1, %dl
 	jne	LBB36_11
 LBB36_13:
-	xor	ecx, ecx
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	xorl	%ecx, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 LBB36_11:
-	mov	qword ptr [rax + 8], rcx
-	mov	dword ptr [rax + 16], esi
-	mov	ecx, 1
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	movq	%rcx, 8(%rax)
+	movl	%esi, 16(%rax)
+	movl	$1, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 LBB36_12:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_104]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_104(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration8from_std17h031899658a72f952E
 	.p2align	4, 0x90
 __ZN4time8duration8Duration8from_std17h031899658a72f952E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	movabs	rdi, 9223372036854775
-	mov	ecx, 1
-	cmp	rsi, rdi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movabsq	$9223372036854775, %rdi
+	movl	$1, %ecx
+	cmpq	%rdi, %rsi
 	ja	LBB37_4
 	jne	LBB37_3
-	cmp	edx, 807000000
+	cmpl	$807000000, %edx
 	jle	LBB37_3
 LBB37_4:
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 LBB37_3:
-	mov	qword ptr [rax + 8], rsi
-	mov	dword ptr [rax + 16], edx
-	xor	ecx, ecx
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	movq	%rsi, 8(%rax)
+	movl	%edx, 16(%rax)
+	xorl	%ecx, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time8duration8Duration6to_std17hdb7cbb1eda5ca3c3E
 	.p2align	4, 0x90
 __ZN4time8duration8Duration6to_std17hdb7cbb1eda5ca3c3E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, qword ptr [rsi]
-	test	rcx, rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	(%rsi), %rcx
+	testq	%rcx, %rcx
 	js	LBB38_1
-	mov	edx, dword ptr [rsi + 8]
-	mov	esi, edx
-	shr	esi, 9
-	imul	rsi, rsi, 281475
-	shr	rsi, 39
-	add	rcx, rsi
-	imul	esi, esi, 1000000000
-	sub	edx, esi
-	mov	qword ptr [rax + 8], rcx
-	mov	dword ptr [rax + 16], edx
-	xor	ecx, ecx
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	movl	8(%rsi), %edx
+	movl	%edx, %esi
+	shrl	$9, %esi
+	imulq	$281475, %rsi, %rsi
+	shrq	$39, %rsi
+	addq	%rsi, %rcx
+	imull	$1000000000, %esi, %esi
+	subl	%esi, %edx
+	movq	%rcx, 8(%rax)
+	movl	%edx, 16(%rax)
+	xorl	%ecx, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 LBB38_1:
-	mov	ecx, 1
-	mov	qword ptr [rax], rcx
-	pop	rbp
-	ret
+	movl	$1, %ecx
+	movq	%rcx, (%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN66_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Add$GT$3add17h5df9b1bd5d039778E
 	.p2align	4, 0x90
 __ZN66_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Add$GT$3add17h5df9b1bd5d039778E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, rdx
-	mov	rax, rdi
-	add	rax, rdx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdx, %r8
+	movq	%rdi, %rax
+	addq	%rdx, %rax
 	jo	LBB39_6
-	mov	edx, esi
-	add	edx, ecx
+	movl	%esi, %edx
+	addl	%ecx, %edx
 	jo	LBB39_7
-	cmp	edx, 1000000000
+	cmpl	$1000000000, %edx
 	jl	LBB39_5
-	inc	rax
+	incq	%rax
 	jo	LBB39_8
-	add	edx, -1000000000
+	addl	$-1000000000, %edx
 LBB39_5:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB39_6:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_105]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_105(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB39_7:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_106]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_106(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB39_8:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_107]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_107(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN66_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Sub$GT$3sub17hda8c0f75c6f55ec9E
 	.p2align	4, 0x90
 __ZN66_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Sub$GT$3sub17hda8c0f75c6f55ec9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, rdx
-	mov	rax, rdi
-	sub	rax, rdx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdx, %r8
+	movq	%rdi, %rax
+	subq	%rdx, %rax
 	jo	LBB40_6
-	mov	edx, esi
-	sub	edx, ecx
+	movl	%esi, %edx
+	subl	%ecx, %edx
 	jo	LBB40_7
-	test	edx, edx
+	testl	%edx, %edx
 	js	LBB40_3
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB40_3:
-	dec	rax
+	decq	%rax
 	jo	LBB40_8
-	add	edx, 1000000000
-	pop	rbp
-	ret
+	addl	$1000000000, %edx
+	popq	%rbp
+	retq
 LBB40_6:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_108]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_108(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB40_7:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_109]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_109(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB40_8:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_110]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_110(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN77_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Mul$LT$i32$GT$$GT$3mul17h3b84f685f3515496E
 	.p2align	4, 0x90
 __ZN77_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Mul$LT$i32$GT$$GT$3mul17h3b84f685f3515496E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	movsxd	r8, edx
-	movsxd	rcx, esi
-	imul	rcx, r8
-	movabs	rdx, 1237940039285380275
-	mov	rax, rcx
-	imul	rdx
-	mov	rax, rdi
-	mov	rsi, rdx
-	shr	rsi, 63
-	sar	rdx, 26
-	add	rdx, rsi
-	imul	rdi, rdx, 1000000000
-	mov	rsi, rcx
-	sub	rsi, rdi
-	neg	rdi
-	test	rsi, rsi
-	lea	rcx, [rcx + rdi + 1000000000]
-	cmovns	rcx, rsi
-	imul	rax, r8
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movslq	%edx, %r8
+	movslq	%esi, %rcx
+	imulq	%r8, %rcx
+	movabsq	$1237940039285380275, %rdx
+	movq	%rcx, %rax
+	imulq	%rdx
+	movq	%rdx, %rax
+	shrq	$63, %rax
+	sarq	$26, %rdx
+	addq	%rax, %rdx
+	imulq	$1000000000, %rdx, %rsi
+	movq	%rcx, %rax
+	subq	%rsi, %rax
+	negq	%rsi
+	testq	%rax, %rax
+	leaq	1000000000(%rcx,%rsi), %rcx
+	cmovnsq	%rax, %rcx
+	imulq	%r8, %rdi
 	jo	LBB41_3
-	sar	rsi, 63
-	add	rsi, rdx
-	add	rax, rsi
+	sarq	$63, %rax
+	addq	%rdx, %rax
+	addq	%rax, %rdi
 	jo	LBB41_4
-	mov	edx, ecx
-	pop	rbp
-	ret
+	movq	%rdi, %rax
+	movl	%ecx, %edx
+	popq	%rbp
+	retq
 LBB41_3:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_111]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_111(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB41_4:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_111]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_111(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN77_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Div$LT$i32$GT$$GT$3div17h7dac2eb67018225dE
 	.p2align	4, 0x90
 __ZN77_$LT$time..duration..Duration$u20$as$u20$core..ops..arith..Div$LT$i32$GT$$GT$3div17h7dac2eb67018225dE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	test	edx, edx
-	je	LBB42_18
-	mov	ecx, edx
-	mov	r8d, esi
-	movabs	r10, -9223372036854775808
-	cmp	rdi, r10
-	jne	LBB42_3
-	cmp	ecx, -1
-	je	LBB42_19
-LBB42_3:
-	movsxd	rsi, ecx
-	mov	rax, rdi
-	cqo
-	idiv	rsi
-	mov	r9, rax
-	imul	rax, rsi
-	jo	LBB42_20
-	sub	rdi, rax
-	jo	LBB42_21
-	imul	rax, rdi, 1000000000
-	jo	LBB42_22
-	cmp	ecx, -1
-	jne	LBB42_8
-	cmp	rax, r10
-	je	LBB42_23
-LBB42_8:
-	cmp	r8d, -2147483648
-	jne	LBB42_10
-	cmp	ecx, -1
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	testl	%edx, %edx
 	je	LBB42_24
-LBB42_10:
-	cqo
-	idiv	rsi
-	mov	rdi, rax
-	mov	eax, r8d
-	cdq
-	idiv	ecx
-	add	edi, eax
-	jo	LBB42_25
-	cmp	edi, 1000000000
-	jl	LBB42_14
-	inc	r9
+	movl	%edx, %ecx
+	movl	%esi, %r8d
+	movabsq	$-9223372036854775808, %r10
+	cmpq	%r10, %rdi
+	jne	LBB42_3
+	cmpl	$-1, %ecx
+	je	LBB42_25
+LBB42_3:
+	movslq	%ecx, %rsi
+	movq	%rdi, %rax
+	orq	%rsi, %rax
+	shrq	$32, %rax
+	je	LBB42_4
+	movq	%rdi, %rax
+	cqto
+	idivq	%rsi
+	movq	%rax, %r9
+	movq	%r9, %rax
+	imulq	%rsi, %rax
 	jo	LBB42_26
-	add	edi, -1000000000
-	mov	rax, r9
-	mov	edx, edi
-	pop	rbp
-	ret
-LBB42_14:
-	test	edi, edi
-	js	LBB42_15
-	mov	rax, r9
-	mov	edx, edi
-	pop	rbp
-	ret
-LBB42_15:
-	dec	r9
+LBB42_7:
+	subq	%rax, %rdi
 	jo	LBB42_27
-	add	edi, 1000000000
-	mov	rax, r9
-	mov	edx, edi
-	pop	rbp
-	ret
-LBB42_18:
-	lea	rdi, [rip + _str.1]
-	lea	rdx, [rip + l___unnamed_112]
-	mov	esi, 25
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_19:
-	lea	rdi, [rip + _str.2]
-	lea	rdx, [rip + l___unnamed_112]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_20:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_113]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_21:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_114]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_22:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_115]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_23:
-	lea	rdi, [rip + _str.2]
-	lea	rdx, [rip + l___unnamed_115]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_24:
-	lea	rdi, [rip + _str.2]
-	lea	rdx, [rip + l___unnamed_116]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB42_25:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_116]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	imulq	$1000000000, %rdi, %rax
+	jo	LBB42_28
+	cmpl	$-1, %ecx
+	jne	LBB42_11
+	cmpq	%r10, %rax
+	je	LBB42_29
+LBB42_11:
+	cmpl	$-2147483648, %r8d
+	jne	LBB42_13
+	cmpl	$-1, %ecx
+	je	LBB42_30
+LBB42_13:
+	movq	%rax, %rdx
+	orq	%rsi, %rdx
+	shrq	$32, %rdx
+	je	LBB42_14
+	cqto
+	idivq	%rsi
+	movq	%rax, %rdi
+	jmp	LBB42_16
+LBB42_4:
+	movl	%edi, %eax
+	xorl	%edx, %edx
+	divl	%ecx
+	movl	%eax, %r9d
+	movq	%r9, %rax
+	imulq	%rsi, %rax
+	jno	LBB42_7
 LBB42_26:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_117]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_112(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_14:
+	xorl	%edx, %edx
+	divl	%ecx
+	movl	%eax, %edi
+LBB42_16:
+	movl	%r8d, %eax
+	cltd
+	idivl	%ecx
+	addl	%eax, %edi
+	jo	LBB42_31
+	cmpl	$1000000000, %edi
+	jl	LBB42_20
+	incq	%r9
+	jo	LBB42_32
+	addl	$-1000000000, %edi
+	movq	%r9, %rax
+	movl	%edi, %edx
+	popq	%rbp
+	retq
+LBB42_20:
+	testl	%edi, %edi
+	js	LBB42_21
+	movq	%r9, %rax
+	movl	%edi, %edx
+	popq	%rbp
+	retq
+LBB42_21:
+	decq	%r9
+	jo	LBB42_33
+	addl	$1000000000, %edi
+	movq	%r9, %rax
+	movl	%edi, %edx
+	popq	%rbp
+	retq
+LBB42_24:
+	leaq	_str.1(%rip), %rdi
+	leaq	l___unnamed_113(%rip), %rdx
+	movl	$25, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_25:
+	leaq	_str.2(%rip), %rdi
+	leaq	l___unnamed_113(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB42_27:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_118]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_114(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_28:
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_115(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_29:
+	leaq	_str.2(%rip), %rdi
+	leaq	l___unnamed_115(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_30:
+	leaq	_str.2(%rip), %rdi
+	leaq	l___unnamed_116(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_31:
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_116(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_32:
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_117(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB42_33:
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_118(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN63_$LT$time..duration..Duration$u20$as$u20$core..fmt..Display$GT$3fmt17h9db14d87f5e8b932E
 	.p2align	4, 0x90
 __ZN63_$LT$time..duration..Duration$u20$as$u20$core..fmt..Display$GT$3fmt17h9db14d87f5e8b932E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 136
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14, rsi
-	mov	rbx, qword ptr [rdi]
-	mov	ecx, dword ptr [rdi + 8]
-	test	rbx, rbx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	subq	$136, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rsi, %r14
+	movq	(%rdi), %rbx
+	movl	8(%rdi), %ecx
+	testq	%rbx, %rbx
 	js	LBB43_2
-	xor	eax, eax
-	lea	rdx, [rip + l___unnamed_54]
+	xorl	%eax, %eax
+	leaq	l___unnamed_54(%rip), %rdx
 	jmp	LBB43_8
 LBB43_2:
-	movabs	rax, -9223372036854775808
-	test	ecx, ecx
+	movabsq	$-9223372036854775808, %rax
+	testl	%ecx, %ecx
 	je	LBB43_6
-	cmp	rbx, rax
+	cmpq	%rax, %rbx
 	je	LBB43_26
-	mov	esi, 1000000000
-	sub	esi, ecx
+	movl	$1000000000, %esi
+	subl	%ecx, %esi
 	jo	LBB43_27
-	not	rbx
-	lea	rdx, [rip + l___unnamed_43]
-	mov	eax, 1
-	mov	ecx, esi
+	notq	%rbx
+	leaq	l___unnamed_43(%rip), %rdx
+	movl	$1, %eax
+	movl	%esi, %ecx
 	jmp	LBB43_8
 LBB43_6:
-	cmp	rbx, rax
+	cmpq	%rax, %rbx
 	je	LBB43_28
-	neg	rbx
-	xor	ecx, ecx
-	lea	rdx, [rip + l___unnamed_43]
-	mov	eax, 1
+	negq	%rbx
+	xorl	%ecx, %ecx
+	leaq	l___unnamed_43(%rip), %rdx
+	movl	$1, %eax
 LBB43_8:
-	mov	qword ptr [rbp - 152], rbx
-	mov	dword ptr [rbp - 144], ecx
-	mov	qword ptr [rbp - 176], rdx
-	mov	qword ptr [rbp - 168], rax
-	movabs	rdx, 1749024623285053783
-	mov	rax, rbx
-	imul	rdx
-	mov	rax, rdx
-	shr	rax, 63
-	sar	rdx, 13
-	add	rdx, rax
-	mov	qword ptr [rbp - 160], rdx
-	imul	rdx, rdx, 86400
-	mov	rax, rbx
-	sub	rax, rdx
+	movq	%rbx, -152(%rbp)
+	movl	%ecx, -144(%rbp)
+	movq	%rdx, -176(%rbp)
+	movq	%rax, -168(%rbp)
+	movabsq	$1749024623285053783, %rdx
+	movq	%rbx, %rax
+	imulq	%rdx
+	movq	%rdx, %rax
+	shrq	$63, %rax
+	sarq	$13, %rdx
+	addq	%rax, %rdx
+	movq	%rdx, -160(%rbp)
+	imulq	$86400, %rdx, %rdx
+	movq	%rbx, %rax
+	subq	%rdx, %rax
 	jo	LBB43_25
-	mov	qword ptr [rbp - 136], rax
-	add	rbx, 86399
-	cmp	rbx, 172799
-	setb	r13b
-	test	rax, rax
-	setne	r12b
-	test	ecx, ecx
-	setne	r15b
-	lea	rax, [rbp - 176]
-	mov	qword ptr [rbp - 128], rax
-	lea	rax, [rip + __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E]
-	mov	qword ptr [rbp - 120], rax
-	lea	rax, [rip + l___unnamed_119]
-	mov	qword ptr [rbp - 96], rax
-	mov	qword ptr [rbp - 88], 2
-	mov	qword ptr [rbp - 80], 0
-	lea	rax, [rbp - 128]
-	mov	qword ptr [rbp - 64], rax
-	mov	qword ptr [rbp - 56], 1
-	lea	rsi, [rbp - 96]
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
-	test	al, al
+	movq	%rax, -136(%rbp)
+	addq	$86399, %rbx
+	cmpq	$172799, %rbx
+	setb	%r13b
+	testq	%rax, %rax
+	setne	%r12b
+	testl	%ecx, %ecx
+	setne	%r15b
+	leaq	-176(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	leaq	__ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E(%rip), %rax
+	movq	%rax, -120(%rbp)
+	leaq	l___unnamed_119(%rip), %rax
+	movq	%rax, -96(%rbp)
+	movq	$2, -88(%rbp)
+	movq	$0, -80(%rbp)
+	leaq	-128(%rbp), %rax
+	movq	%rax, -64(%rbp)
+	movq	$1, -56(%rbp)
+	leaq	-96(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	testb	%al, %al
 	je	LBB43_11
 LBB43_10:
-	mov	al, 1
+	movb	$1, %al
 	jmp	LBB43_21
 LBB43_11:
-	cmp	rbx, 172799
+	cmpq	$172799, %rbx
 	jb	LBB43_13
-	lea	rax, [rbp - 160]
-	mov	qword ptr [rbp - 128], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL]
-	mov	qword ptr [rbp - 120], rax
-	lea	rax, [rip + l___unnamed_120]
-	mov	qword ptr [rbp - 96], rax
-	mov	qword ptr [rbp - 88], 2
-	mov	qword ptr [rbp - 80], 0
-	lea	rax, [rbp - 128]
-	mov	qword ptr [rbp - 64], rax
-	mov	qword ptr [rbp - 56], 1
-	lea	rsi, [rbp - 96]
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
-	test	al, al
+	leaq	-160(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL(%rip), %rax
+	movq	%rax, -120(%rbp)
+	leaq	l___unnamed_120(%rip), %rax
+	movq	%rax, -96(%rbp)
+	movq	$2, -88(%rbp)
+	movq	$0, -80(%rbp)
+	leaq	-128(%rbp), %rax
+	movq	%rax, -64(%rbp)
+	movq	$1, -56(%rbp)
+	leaq	-96(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	testb	%al, %al
 	jne	LBB43_10
 LBB43_13:
-	or	r15b, r13b
-	or	r12b, r15b
+	orb	%r13b, %r15b
+	orb	%r15b, %r12b
 	je	LBB43_20
-	mov	eax, dword ptr [rbp - 144]
-	test	eax, eax
+	movl	-144(%rbp), %eax
+	testl	%eax, %eax
 	je	LBB43_22
-	movsxd	rcx, eax
-	imul	rdx, rcx, 1125899907
-	mov	rsi, rdx
-	shr	rsi, 63
-	sar	rdx, 50
-	add	edx, esi
-	imul	esi, edx, 1000000
-	cmp	eax, esi
+	movslq	%eax, %rcx
+	imulq	$1125899907, %rcx, %rdx
+	movq	%rdx, %rsi
+	shrq	$63, %rsi
+	sarq	$50, %rdx
+	addl	%esi, %edx
+	imull	$1000000, %edx, %esi
+	cmpl	%esi, %eax
 	je	LBB43_23
-	imul	rcx, rcx, 274877907
-	mov	rdx, rcx
-	shr	rdx, 63
-	sar	rcx, 38
-	add	ecx, edx
-	imul	edx, ecx, 1000
-	cmp	eax, edx
+	imulq	$274877907, %rcx, %rcx
+	movq	%rcx, %rdx
+	shrq	$63, %rdx
+	sarq	$38, %rcx
+	addl	%edx, %ecx
+	imull	$1000, %ecx, %edx
+	cmpl	%edx, %eax
 	je	LBB43_24
-	lea	rax, [rbp - 144]
-	lea	rcx, [rbp - 136]
-	mov	qword ptr [rbp - 128], rcx
-	mov	rcx, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL]
-	mov	qword ptr [rbp - 120], rcx
-	mov	qword ptr [rbp - 112], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 104], rax
-	lea	rax, [rip + l___unnamed_121]
-	mov	qword ptr [rbp - 96], rax
-	mov	qword ptr [rbp - 88], 3
-	lea	rax, [rip + l___unnamed_122]
+	leaq	-144(%rbp), %rax
+	leaq	-136(%rbp), %rcx
+	movq	%rcx, -128(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL(%rip), %rcx
+	movq	%rcx, -120(%rbp)
+	movq	%rax, -112(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -104(%rbp)
+	leaq	l___unnamed_121(%rip), %rax
+	movq	%rax, -96(%rbp)
+	movq	$3, -88(%rbp)
+	leaq	l___unnamed_122(%rip), %rax
 	jmp	LBB43_18
 LBB43_22:
-	lea	rax, [rbp - 136]
-	mov	qword ptr [rbp - 128], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL]
-	mov	qword ptr [rbp - 120], rax
-	lea	rax, [rip + l___unnamed_123]
-	mov	qword ptr [rbp - 96], rax
-	mov	qword ptr [rbp - 88], 2
-	mov	qword ptr [rbp - 80], 0
-	lea	rax, [rbp - 128]
-	mov	qword ptr [rbp - 64], rax
-	mov	qword ptr [rbp - 56], 1
+	leaq	-136(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL(%rip), %rax
+	movq	%rax, -120(%rbp)
+	leaq	l___unnamed_123(%rip), %rax
+	movq	%rax, -96(%rbp)
+	movq	$2, -88(%rbp)
+	movq	$0, -80(%rbp)
+	leaq	-128(%rbp), %rax
+	movq	%rax, -64(%rbp)
+	movq	$1, -56(%rbp)
 	jmp	LBB43_19
 LBB43_23:
-	mov	dword ptr [rbp - 44], edx
-	lea	rax, [rbp - 136]
-	mov	qword ptr [rbp - 128], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL]
-	mov	qword ptr [rbp - 120], rax
-	lea	rax, [rbp - 44]
-	mov	qword ptr [rbp - 112], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 104], rax
-	lea	rax, [rip + l___unnamed_121]
-	mov	qword ptr [rbp - 96], rax
-	mov	qword ptr [rbp - 88], 3
-	lea	rax, [rip + l___unnamed_124]
+	movl	%edx, -44(%rbp)
+	leaq	-136(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL(%rip), %rax
+	movq	%rax, -120(%rbp)
+	leaq	-44(%rbp), %rax
+	movq	%rax, -112(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -104(%rbp)
+	leaq	l___unnamed_121(%rip), %rax
+	movq	%rax, -96(%rbp)
+	movq	$3, -88(%rbp)
+	leaq	l___unnamed_124(%rip), %rax
 	jmp	LBB43_18
 LBB43_24:
-	mov	dword ptr [rbp - 44], ecx
-	lea	rax, [rbp - 136]
-	mov	qword ptr [rbp - 128], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL]
-	mov	qword ptr [rbp - 120], rax
-	lea	rax, [rbp - 44]
-	mov	qword ptr [rbp - 112], rax
-	mov	rax, qword ptr [rip + __ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL]
-	mov	qword ptr [rbp - 104], rax
-	lea	rax, [rip + l___unnamed_121]
-	mov	qword ptr [rbp - 96], rax
-	mov	qword ptr [rbp - 88], 3
-	lea	rax, [rip + l___unnamed_125]
+	movl	%ecx, -44(%rbp)
+	leaq	-136(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i64$GT$3fmt17h6a5170735d6294a5E@GOTPCREL(%rip), %rax
+	movq	%rax, -120(%rbp)
+	leaq	-44(%rbp), %rax
+	movq	%rax, -112(%rbp)
+	movq	__ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$i32$GT$3fmt17he2ccc2060d52a2ceE@GOTPCREL(%rip), %rax
+	movq	%rax, -104(%rbp)
+	leaq	l___unnamed_121(%rip), %rax
+	movq	%rax, -96(%rbp)
+	movq	$3, -88(%rbp)
+	leaq	l___unnamed_125(%rip), %rax
 LBB43_18:
-	mov	qword ptr [rbp - 80], rax
-	mov	qword ptr [rbp - 72], 2
-	lea	rax, [rbp - 128]
-	mov	qword ptr [rbp - 64], rax
-	mov	qword ptr [rbp - 56], 2
+	movq	%rax, -80(%rbp)
+	movq	$2, -72(%rbp)
+	leaq	-128(%rbp), %rax
+	movq	%rax, -64(%rbp)
+	movq	$2, -56(%rbp)
 LBB43_19:
-	lea	rsi, [rbp - 96]
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
-	test	al, al
+	leaq	-96(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	testb	%al, %al
 	jne	LBB43_10
 LBB43_20:
-	xor	eax, eax
+	xorl	%eax, %eax
 LBB43_21:
-	add	rsp, 136
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	$136, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB43_25:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_126]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_126(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB43_26:
-	lea	rdi, [rip + _str.6]
-	lea	rdx, [rip + l___unnamed_127]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.6(%rip), %rdi
+	leaq	l___unnamed_127(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB43_27:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_128]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_128(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB43_28:
-	lea	rdi, [rip + _str.6]
-	lea	rdx, [rip + l___unnamed_129]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.6(%rip), %rdi
+	leaq	l___unnamed_129(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN70_$LT$time..duration..OutOfRangeError$u20$as$u20$core..fmt..Display$GT$3fmt17h977b9c28afa01761E
 	.p2align	4, 0x90
 __ZN70_$LT$time..duration..OutOfRangeError$u20$as$u20$core..fmt..Display$GT$3fmt17h977b9c28afa01761E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 80
-	mov	rdi, rsi
-	lea	rax, [rip + l___unnamed_130]
-	mov	qword ptr [rbp - 32], rax
-	mov	qword ptr [rbp - 24], 57
-	lea	rax, [rbp - 32]
-	mov	qword ptr [rbp - 16], rax
-	lea	rax, [rip + __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E]
-	mov	qword ptr [rbp - 8], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 80], rax
-	mov	qword ptr [rbp - 72], 1
-	mov	qword ptr [rbp - 64], 0
-	lea	rax, [rbp - 16]
-	mov	qword ptr [rbp - 48], rax
-	mov	qword ptr [rbp - 40], 1
-	lea	rsi, [rbp - 80]
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
-	add	rsp, 80
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$80, %rsp
+	movq	%rsi, %rdi
+	leaq	l___unnamed_130(%rip), %rax
+	movq	%rax, -32(%rbp)
+	movq	$57, -24(%rbp)
+	leaq	-32(%rbp), %rax
+	movq	%rax, -16(%rbp)
+	leaq	__ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E(%rip), %rax
+	movq	%rax, -8(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -80(%rbp)
+	movq	$1, -72(%rbp)
+	movq	$0, -64(%rbp)
+	leaq	-16(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	movq	$1, -40(%rbp)
+	leaq	-80(%rbp), %rsi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	addq	$80, %rsp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN69_$LT$time..duration..OutOfRangeError$u20$as$u20$std..error..Error$GT$11description17h9d26069b8819a3c6E
 	.p2align	4, 0x90
 __ZN69_$LT$time..duration..OutOfRangeError$u20$as$u20$std..error..Error$GT$11description17h9d26069b8819a3c6E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rax, [rip + l___unnamed_130]
-	mov	edx, 57
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	l___unnamed_130(%rip), %rax
+	movl	$57, %edx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time5parse8strptime17h557c892545c70853E
 	.p2align	4, 0x90
 __ZN4time5parse8strptime17h557c892545c70853E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 120
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14, rdi
-	mov	qword ptr [rbp - 56], rsi
-	mov	qword ptr [rbp - 48], rdx
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 112], xmm0
-	movaps	xmmword ptr [rbp - 128], xmm0
-	mov	dword ptr [rbp - 88], 0
-	mov	qword ptr [rbp - 96], 0
-	test	r8, r8
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	andq	$-32, %rsp
+	subq	$192, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdi, %r14
+	movq	%rsi, 16(%rsp)
+	movq	%rdx, 24(%rsp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 108(%rsp)
+	vmovaps	%ymm0, 96(%rsp)
+	testq	%r8, %r8
 	je	LBB46_21
-	mov	r15, r8
-	add	r15, rcx
-	lea	r12, [rbp - 80]
-	lea	r13, [rbp - 56]
-	lea	rax, [rcx + 1]
-	movzx	edx, byte ptr [rcx]
-	test	dl, dl
+	movq	%r8, %r15
+	addq	%rcx, %r15
+	leaq	40(%rsp), %r12
+	leaq	16(%rsp), %r13
+	leaq	1(%rcx), %rax
+	movzbl	(%rcx), %edx
+	testb	%dl, %dl
 	jns	LBB46_19
 	jmp	LBB46_3
 	.p2align	4, 0x90
 LBB46_68:
-	add	rsi, rdi
-	mov	qword ptr [rbp - 56], rsi
-	mov	qword ptr [rbp - 48], rcx
+	addq	%rdi, %rsi
+	movq	%rsi, 16(%rsp)
+	movq	%rcx, 24(%rsp)
 LBB46_69:
-	mov	rcx, rax
-	cmp	rax, r15
+	movq	%rax, %rcx
+	cmpq	%r15, %rax
 	je	LBB46_21
-	lea	rax, [rcx + 1]
-	movzx	edx, byte ptr [rcx]
-	test	dl, dl
+	leaq	1(%rcx), %rax
+	movzbl	(%rcx), %edx
+	testb	%dl, %dl
 	js	LBB46_3
 LBB46_19:
-	cmp	edx, 37
+	cmpl	$37, %edx
 	je	LBB46_49
 LBB46_20:
-	cmp	edx, 1114112
+	cmpl	$1114112, %edx
 	je	LBB46_21
-	mov	rcx, qword ptr [rbp - 48]
-	mov	edi, 10
-	test	rcx, rcx
+	movq	24(%rsp), %rcx
+	movl	$10, %edi
+	testq	%rcx, %rcx
 	je	LBB46_23
-	mov	rsi, qword ptr [rbp - 56]
-	movzx	ebx, byte ptr [rsi]
-	test	bl, bl
+	movq	16(%rsp), %rsi
+	movzbl	(%rsi), %ebx
+	testb	%bl, %bl
 	jns	LBB46_38
-	lea	r10, [rsi + rcx]
-	xor	r8d, r8d
-	mov	r11, r10
-	cmp	rcx, 1
+	leaq	(%rsi,%rcx), %r10
+	xorl	%r8d, %r8d
+	movq	%r10, %r11
+	cmpq	$1, %rcx
 	je	LBB46_27
-	lea	r11, [rsi + 2]
-	movzx	r8d, byte ptr [rsi + 1]
-	and	r8d, 63
+	leaq	2(%rsi), %r11
+	movzbl	1(%rsi), %r8d
+	andl	$63, %r8d
 LBB46_27:
-	mov	r9d, ebx
-	and	r9d, 31
-	cmp	bl, -33
+	movl	%ebx, %r9d
+	andl	$31, %r9d
+	cmpb	$-33, %bl
 	jbe	LBB46_28
-	mov	r13, r12
-	cmp	r11, r10
+	movq	%r14, 32(%rsp)
+	movq	%r13, %r14
+	movq	%r12, %r13
+	cmpq	%r10, %r11
 	je	LBB46_30
-	movzx	r12d, byte ptr [r11]
-	inc	r11
-	and	r12d, 63
-	shl	r8d, 6
-	or	r8d, r12d
-	cmp	bl, -16
+	movzbl	(%r11), %r12d
+	incq	%r11
+	andl	$63, %r12d
+	shll	$6, %r8d
+	orl	%r12d, %r8d
+	cmpb	$-16, %bl
 	jb	LBB46_33
 LBB46_34:
-	cmp	r11, r10
-	mov	r12, r13
+	cmpq	%r10, %r11
+	movq	%r13, %r12
 	je	LBB46_35
-	movzx	ebx, byte ptr [r11]
-	and	ebx, 63
+	movzbl	(%r11), %ebx
+	andl	$63, %ebx
 	jmp	LBB46_37
 	.p2align	4, 0x90
 LBB46_3:
-	cmp	rax, r15
+	cmpq	%r15, %rax
 	je	LBB46_4
-	movzx	esi, byte ptr [rcx + 1]
-	add	rcx, 2
-	and	esi, 63
-	mov	rax, rcx
-	mov	ecx, edx
-	and	ecx, 31
-	cmp	dl, -33
+	movzbl	1(%rcx), %esi
+	addq	$2, %rcx
+	andl	$63, %esi
+	movq	%rcx, %rax
+	movl	%edx, %ecx
+	andl	$31, %ecx
+	cmpb	$-33, %dl
 	jbe	LBB46_7
 LBB46_9:
-	cmp	rax, r15
+	cmpq	%r15, %rax
 	je	LBB46_10
-	movzx	ebx, byte ptr [rax]
-	inc	rax
-	and	ebx, 63
-	mov	rdi, rax
-	shl	esi, 6
-	or	esi, ebx
-	cmp	dl, -16
+	movzbl	(%rax), %ebx
+	incq	%rax
+	andl	$63, %ebx
+	movq	%rax, %rdi
+	shll	$6, %esi
+	orl	%ebx, %esi
+	cmpb	$-16, %dl
 	jb	LBB46_13
 LBB46_14:
-	cmp	rdi, r15
+	cmpq	%r15, %rdi
 	je	LBB46_15
-	movzx	edx, byte ptr [rdi]
-	inc	rdi
-	and	edx, 63
-	mov	rax, rdi
+	movzbl	(%rdi), %edx
+	incq	%rdi
+	andl	$63, %edx
+	movq	%rdi, %rax
 	jmp	LBB46_17
 LBB46_4:
-	xor	esi, esi
-	mov	rax, r15
-	mov	ecx, edx
-	and	ecx, 31
-	cmp	dl, -33
+	xorl	%esi, %esi
+	movq	%r15, %rax
+	movl	%edx, %ecx
+	andl	$31, %ecx
+	cmpb	$-33, %dl
 	ja	LBB46_9
 LBB46_7:
-	shl	ecx, 6
-	or	esi, ecx
-	mov	edx, esi
-	cmp	edx, 37
+	shll	$6, %ecx
+	orl	%ecx, %esi
+	movl	%esi, %edx
+	cmpl	$37, %edx
 	jne	LBB46_20
 	.p2align	4, 0x90
 LBB46_49:
-	cmp	rax, r15
+	cmpq	%r15, %rax
 	je	LBB46_21
-	lea	rbx, [rax + 1]
-	movzx	edx, byte ptr [rax]
-	test	dl, dl
+	leaq	1(%rax), %rbx
+	movzbl	(%rax), %edx
+	testb	%dl, %dl
 	jns	LBB46_66
-	cmp	rbx, r15
+	cmpq	%r15, %rbx
 	je	LBB46_52
-	movzx	ecx, byte ptr [rax + 1]
-	add	rax, 2
-	and	ecx, 63
-	mov	rbx, rax
-	mov	eax, edx
-	and	eax, 31
-	cmp	dl, -33
+	movzbl	1(%rax), %ecx
+	addq	$2, %rax
+	andl	$63, %ecx
+	movq	%rax, %rbx
+	movl	%edx, %eax
+	andl	$31, %eax
+	cmpb	$-33, %dl
 	jbe	LBB46_55
 LBB46_57:
-	cmp	rbx, r15
+	cmpq	%r15, %rbx
 	je	LBB46_58
-	movzx	edi, byte ptr [rbx]
-	inc	rbx
-	and	edi, 63
-	mov	rsi, rbx
-	shl	ecx, 6
-	or	ecx, edi
-	cmp	dl, -16
+	movzbl	(%rbx), %edi
+	incq	%rbx
+	andl	$63, %edi
+	movq	%rbx, %rsi
+	shll	$6, %ecx
+	orl	%edi, %ecx
+	cmpb	$-16, %dl
 	jb	LBB46_61
 LBB46_62:
-	cmp	rsi, r15
+	cmpq	%r15, %rsi
 	je	LBB46_63
-	movzx	edx, byte ptr [rsi]
-	inc	rsi
-	and	edx, 63
-	mov	rbx, rsi
+	movzbl	(%rsi), %edx
+	incq	%rsi
+	andl	$63, %edx
+	movq	%rsi, %rbx
 	jmp	LBB46_65
 LBB46_28:
-	shl	r9d, 6
-	or	r8d, r9d
-	mov	ebx, r8d
-	cmp	ebx, edx
+	shll	$6, %r9d
+	orl	%r9d, %r8d
+	movl	%r8d, %ebx
+	cmpl	%edx, %ebx
 	je	LBB46_42
 	jmp	LBB46_39
 LBB46_10:
-	xor	ebx, ebx
-	mov	rdi, r15
-	shl	esi, 6
-	or	esi, ebx
-	cmp	dl, -16
+	xorl	%ebx, %ebx
+	movq	%r15, %rdi
+	shll	$6, %esi
+	orl	%ebx, %esi
+	cmpb	$-16, %dl
 	jae	LBB46_14
 LBB46_13:
-	shl	ecx, 12
-	or	esi, ecx
-	mov	edx, esi
-	cmp	edx, 37
+	shll	$12, %ecx
+	orl	%ecx, %esi
+	movl	%esi, %edx
+	cmpl	$37, %edx
 	jne	LBB46_20
 	jmp	LBB46_49
 LBB46_52:
-	xor	ecx, ecx
-	mov	rbx, r15
-	mov	eax, edx
-	and	eax, 31
-	cmp	dl, -33
+	xorl	%ecx, %ecx
+	movq	%r15, %rbx
+	movl	%edx, %eax
+	andl	$31, %eax
+	cmpb	$-33, %dl
 	ja	LBB46_57
 LBB46_55:
-	shl	eax, 6
+	shll	$6, %eax
 	jmp	LBB46_56
 LBB46_15:
-	xor	edx, edx
+	xorl	%edx, %edx
 LBB46_17:
-	and	ecx, 7
-	shl	ecx, 18
-	shl	esi, 6
-	or	esi, ecx
-	or	esi, edx
-	mov	edx, esi
-	cmp	edx, 37
+	andl	$7, %ecx
+	shll	$18, %ecx
+	shll	$6, %esi
+	orl	%ecx, %esi
+	orl	%edx, %esi
+	movl	%esi, %edx
+	cmpl	$37, %edx
 	jne	LBB46_20
 	jmp	LBB46_49
 LBB46_30:
-	xor	r12d, r12d
-	mov	r11, r10
-	shl	r8d, 6
-	or	r8d, r12d
-	cmp	bl, -16
+	xorl	%r12d, %r12d
+	movq	%r10, %r11
+	shll	$6, %r8d
+	orl	%r12d, %r8d
+	cmpb	$-16, %bl
 	jae	LBB46_34
 LBB46_33:
-	shl	r9d, 12
-	or	r8d, r9d
-	mov	ebx, r8d
-	mov	r12, r13
-	lea	r13, [rbp - 56]
-	cmp	ebx, edx
+	shll	$12, %r9d
+	orl	%r9d, %r8d
+	movl	%r8d, %ebx
+	movq	%r13, %r12
+	movq	%r14, %r13
+	movq	32(%rsp), %r14
+	cmpl	%edx, %ebx
 	je	LBB46_42
 	jmp	LBB46_39
 LBB46_58:
-	xor	edi, edi
-	mov	rsi, r15
-	shl	ecx, 6
-	or	ecx, edi
-	cmp	dl, -16
+	xorl	%edi, %edi
+	movq	%r15, %rsi
+	shll	$6, %ecx
+	orl	%edi, %ecx
+	cmpb	$-16, %dl
 	jae	LBB46_62
 LBB46_61:
-	shl	eax, 12
+	shll	$12, %eax
 LBB46_56:
-	or	ecx, eax
-	mov	edx, ecx
+	orl	%eax, %ecx
+	movl	%ecx, %edx
 LBB46_66:
-	mov	rdi, r12
-	mov	rsi, r13
-	lea	rcx, [rbp - 128]
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	edi, dword ptr [rbp - 80]
-	mov	rax, rbx
-	cmp	edi, 15
+	movq	%r12, %rdi
+	movq	%r13, %rsi
+	leaq	96(%rsp), %rcx
+	vzeroupper
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	40(%rsp), %edi
+	movq	%rbx, %rax
+	cmpl	$15, %edi
 	je	LBB46_69
 	jmp	LBB46_67
 LBB46_35:
-	xor	ebx, ebx
+	xorl	%ebx, %ebx
 LBB46_37:
-	lea	r13, [rbp - 56]
-	and	r9d, 7
-	shl	r9d, 18
-	shl	r8d, 6
-	or	r8d, r9d
-	or	r8d, ebx
-	mov	ebx, r8d
-	cmp	r8d, 1114112
+	movq	%r14, %r13
+	andl	$7, %r9d
+	shll	$18, %r9d
+	shll	$6, %r8d
+	orl	%r9d, %r8d
+	orl	%ebx, %r8d
+	movl	%r8d, %ebx
+	cmpl	$1114112, %r8d
+	movq	32(%rsp), %r14
 	je	LBB46_40
 	.p2align	4, 0x90
 LBB46_38:
-	cmp	ebx, edx
+	cmpl	%edx, %ebx
 	jne	LBB46_39
 LBB46_42:
-	mov	edi, 1
-	cmp	edx, 128
+	movl	$1, %edi
+	cmpl	$128, %edx
 	jb	LBB46_45
-	mov	edi, 2
-	cmp	edx, 2048
+	movl	$2, %edi
+	cmpl	$2048, %edx
 	jb	LBB46_45
-	cmp	edx, 65536
-	mov	edi, 4
-	sbb	rdi, 0
+	cmpl	$65536, %edx
+	movl	$4, %edi
+	sbbq	$0, %rdi
 LBB46_45:
-	mov	qword ptr [rbp - 160], rsi
-	mov	qword ptr [rbp - 152], rcx
-	mov	qword ptr [rbp - 136], rdi
-	mov	qword ptr [rbp - 144], rcx
-	sub	rcx, rdi
+	movq	%rsi, 80(%rsp)
+	movq	%rcx, 88(%rsp)
+	movq	%rdi, 64(%rsp)
+	movq	%rcx, 72(%rsp)
+	subq	%rdi, %rcx
 	je	LBB46_68
 	jbe	LBB46_48
-	cmp	byte ptr [rsi + rdi], -65
+	cmpb	$-65, (%rsi,%rdi)
 	jg	LBB46_68
 	jmp	LBB46_48
 LBB46_63:
-	xor	edx, edx
+	xorl	%edx, %edx
 LBB46_65:
-	and	eax, 7
-	shl	eax, 18
-	shl	ecx, 6
-	or	ecx, eax
-	or	ecx, edx
-	mov	edx, ecx
-	mov	rax, rbx
-	cmp	ecx, 1114112
+	andl	$7, %eax
+	shll	$18, %eax
+	shll	$6, %ecx
+	orl	%eax, %ecx
+	orl	%edx, %ecx
+	movl	%ecx, %edx
+	movq	%rbx, %rax
+	cmpl	$1114112, %ecx
 	je	LBB46_69
 	jmp	LBB46_66
 LBB46_21:
-	mov	eax, dword ptr [rbp - 88]
-	mov	dword ptr [r14 + 44], eax
-	mov	rax, qword ptr [rbp - 96]
-	mov	qword ptr [r14 + 36], rax
-	mov	rax, qword ptr [rbp - 104]
-	mov	qword ptr [r14 + 28], rax
-	mov	rax, qword ptr [rbp - 112]
-	mov	qword ptr [r14 + 20], rax
-	mov	rax, qword ptr [rbp - 128]
-	mov	rcx, qword ptr [rbp - 120]
-	mov	qword ptr [r14 + 12], rcx
-	mov	qword ptr [r14 + 4], rax
-	xor	eax, eax
+	vmovups	108(%rsp), %ymm0
+	vmovups	%ymm0, 16(%r14)
+	vmovaps	96(%rsp), %ymm0
+	vmovups	%ymm0, 4(%r14)
+	xorl	%eax, %eax
 	jmp	LBB46_41
 LBB46_23:
 	jmp	LBB46_40
 LBB46_39:
-	mov	eax, edx
-	shl	rbx, 32
-	or	rbx, rax
-	mov	edi, 14
+	movl	%edx, %eax
+	shlq	$32, %rbx
+	orq	%rax, %rbx
+	movl	$14, %edi
 	jmp	LBB46_40
 LBB46_67:
-	mov	rbx, qword ptr [rbp - 76]
+	movq	44(%rsp), %rbx
 LBB46_40:
-	mov	dword ptr [r14 + 4], edi
-	mov	qword ptr [r14 + 8], rbx
-	mov	eax, 1
+	movl	%edi, 4(%r14)
+	movq	%rbx, 8(%r14)
+	movl	$1, %eax
 LBB46_41:
-	mov	dword ptr [r14], eax
-	mov	rax, r14
-	add	rsp, 120
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	movl	%eax, (%r14)
+	movq	%r14, %rax
+	leaq	-40(%rbp), %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	vzeroupper
+	retq
 LBB46_48:
-	lea	rax, [rbp - 160]
-	mov	qword ptr [rbp - 80], rax
-	lea	rax, [rbp - 136]
-	mov	qword ptr [rbp - 72], rax
-	lea	rax, [rbp - 144]
-	mov	qword ptr [rbp - 64], rax
-	lea	rdi, [rbp - 80]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	80(%rsp), %rax
+	movq	%rax, 40(%rsp)
+	leaq	64(%rsp), %rax
+	movq	%rax, 48(%rsp)
+	leaq	72(%rsp), %rax
+	movq	%rax, 56(%rsp)
+	leaq	40(%rsp), %rdi
+	vzeroupper
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 	.cfi_endproc
 
 	.p2align	4, 0x90
@@ -3874,3566 +3889,3568 @@ Lfunc_begin2:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception2
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 216
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r15, rdi
-	lea	eax, [rdx - 37]
-	cmp	eax, 85
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	andq	$-32, %rsp
+	subq	$256, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdi, %r15
+	leal	-37(%rdx), %eax
+	cmpl	$85, %eax
 	ja	LBB47_214
-	mov	r13, rcx
-	mov	r14, rsi
-	lea	rcx, [rip + LJTI47_0]
-	movsxd	rax, dword ptr [rcx + 4*rax]
-	add	rax, rcx
-	jmp	rax
+	movq	%rcx, %r13
+	movq	%rsi, %r14
+	leaq	LJTI47_0(%rip), %rcx
+	movslq	(%rcx,%rax,4), %rax
+	addq	%rcx, %rax
+	jmpq	*%rax
 LBB47_2:
-	lea	r12, [rbp - 72]
-	mov	rdi, r12
-	mov	rsi, r14
-	mov	edx, 109
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 72]
-	cmp	eax, 15
+	leaq	32(%rsp), %r12
+	movq	%r12, %rdi
+	movq	%r14, %rsi
+	movl	$109, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_163
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_164
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_327
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_7
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_7:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_306
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_322
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_325
 LBB47_323:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_409
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_410
 LBB47_10:
-	lea	r12, [rbp - 72]
-	mov	rdi, r12
-	mov	rsi, r14
-	mov	edx, 72
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 72]
-	cmp	eax, 15
+	leaq	32(%rsp), %r12
+	movq	%r12, %rdi
+	movq	%r14, %rsi
+	movl	$72, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_163
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_164
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_344
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_15
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_15:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_307
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_339
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_342
 LBB47_340:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_411
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_412
 LBB47_18:
-	mov	rax, qword ptr [r14 + 8]
-	cmp	rax, 3
+	movq	8(%r14), %rax
+	cmpq	$3, %rax
 	jae	LBB47_22
 LBB47_109:
-	mov	dword ptr [r15], 4
+	movl	$4, (%r15)
 	jmp	LBB47_504
 LBB47_20:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_152
-	cmp	edx, 100
+	cmpl	$100, %edx
 	jb	LBB47_127
 	jmp	LBB47_152
 LBB47_22:
-	mov	rcx, qword ptr [r14]
-	lea	rdx, [rip + l___unnamed_131]
-	lea	rsi, [rip + l___unnamed_31]
-	cmp	rcx, rsi
+	movq	(%r14), %rcx
+	leaq	l___unnamed_131(%rip), %rdx
+	leaq	l___unnamed_31(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 24906
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 110
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$24906, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$110, %edi
+	orw	%si, %di
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+24]
-	lea	rsi, [rip + l___unnamed_32]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+24(%rip), %rdx
+	leaq	l___unnamed_32(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 25926
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 98
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$25926, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$98, %edi
+	orw	%si, %di
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+48]
-	lea	rsi, [rip + l___unnamed_59]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+48(%rip), %rdx
+	leaq	l___unnamed_59(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 24909
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 114
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$24909, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$114, %edi
+	orw	%si, %di
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+72]
-	lea	rsi, [rip + l___unnamed_60]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+72(%rip), %rdx
+	leaq	l___unnamed_60(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 28737
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 114
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$28737, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$114, %edi
+	orw	%si, %di
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+96]
-	lea	rsi, [rip + l___unnamed_56]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+96(%rip), %rdx
+	leaq	l___unnamed_56(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 24909
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 121
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$24909, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$121, %edi
+	orw	%si, %di
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+120]
-	lea	rsi, [rip + l___unnamed_62]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+120(%rip), %rdx
+	leaq	l___unnamed_62(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 30026
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 110
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$30026, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$110, %edi
+	orw	%si, %di
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+144]
-	lea	rsi, [rip + l___unnamed_63]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+144(%rip), %rdx
+	leaq	l___unnamed_63(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_696
-	movzx	esi, word ptr [rcx]
-	xor	esi, 30026
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 108
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$30026, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$108, %edi
+	orw	%si, %di
 	je	LBB47_696
-	mov	r9, r13
-	mov	r8, r14
-	mov	rbx, r15
-	lea	rdx, [rip + l___unnamed_131+168]
-	lea	rsi, [rip + l___unnamed_61]
-	cmp	rcx, rsi
+	movq	%r13, %r9
+	movq	%r14, %r8
+	movq	%r15, %rbx
+	leaq	l___unnamed_131+168(%rip), %rdx
+	leaq	l___unnamed_61(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_695
-	movzx	esi, word ptr [rcx]
-	xor	esi, 30017
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 103
-	or	di, si
-	mov	r15, rbx
-	mov	r14, r8
-	mov	r13, r9
+	movzwl	(%rcx), %esi
+	xorl	$30017, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$103, %edi
+	orw	%si, %di
+	movq	%rbx, %r15
+	movq	%r8, %r14
+	movq	%r9, %r13
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+192]
-	lea	rsi, [rip + l___unnamed_64]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+192(%rip), %rdx
+	leaq	l___unnamed_64(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_695
-	movzx	esi, word ptr [rcx]
-	xor	esi, 25939
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 112
-	or	di, si
-	mov	r15, rbx
-	mov	r14, r8
-	mov	r13, r9
+	movzwl	(%rcx), %esi
+	xorl	$25939, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$112, %edi
+	orw	%si, %di
+	movq	%rbx, %r15
+	movq	%r8, %r14
+	movq	%r9, %r13
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+216]
-	lea	rsi, [rip + l___unnamed_58]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+216(%rip), %rdx
+	leaq	l___unnamed_58(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_695
-	movzx	esi, word ptr [rcx]
-	xor	esi, 25423
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 116
-	or	di, si
-	mov	r15, rbx
-	mov	r14, r8
-	mov	r13, r9
+	movzwl	(%rcx), %esi
+	xorl	$25423, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$116, %edi
+	orw	%si, %di
+	movq	%rbx, %r15
+	movq	%r8, %r14
+	movq	%r9, %r13
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+240]
-	lea	rsi, [rip + l___unnamed_65]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+240(%rip), %rdx
+	leaq	l___unnamed_65(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_695
-	movzx	esi, word ptr [rcx]
-	xor	esi, 28494
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 118
-	or	di, si
-	mov	r15, rbx
-	mov	r14, r8
-	mov	r13, r9
+	movzwl	(%rcx), %esi
+	xorl	$28494, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$118, %edi
+	orw	%si, %di
+	movq	%rbx, %r15
+	movq	%r8, %r14
+	movq	%r9, %r13
 	je	LBB47_696
-	lea	rdx, [rip + l___unnamed_131+264]
-	lea	rsi, [rip + l___unnamed_57]
-	cmp	rcx, rsi
+	leaq	l___unnamed_131+264(%rip), %rdx
+	leaq	l___unnamed_57(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_695
-	movzx	esi, word ptr [rcx]
-	xor	esi, 25924
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 99
-	or	di, si
-	mov	r15, rbx
-	mov	r14, r8
-	mov	r13, r9
+	movzwl	(%rcx), %esi
+	xorl	$25924, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$99, %edi
+	orw	%si, %di
+	movq	%rbx, %r15
+	movq	%r8, %r14
+	movq	%r9, %r13
 	jne	LBB47_109
 	jmp	LBB47_696
 LBB47_46:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	jne	LBB47_82
 	jmp	LBB47_84
 LBB47_47:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	mov	ecx, 1
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	movl	$1, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	jne	LBB47_146
 	jmp	LBB47_202
 LBB47_48:
-	mov	qword ptr [rbp - 240], r13
-	mov	qword ptr [rbp - 208], r15
-	mov	r10, qword ptr [r14 + 8]
-	test	r10, r10
+	movq	%r13, 216(%rsp)
+	movq	%r15, 176(%rsp)
+	movq	8(%r14), %r10
+	testq	%r10, %r10
 	je	LBB47_293
-	mov	r13, qword ptr [r14]
-	lea	r15, [r13 + r10]
-	mov	edi, 100000000
-	xor	eax, eax
-	mov	r11, r13
-	xor	ebx, ebx
-	mov	r9, r13
+	movq	(%r14), %r13
+	leaq	(%r10,%r13), %r15
+	movl	$100000000, %edi
+	xorl	%eax, %eax
+	movq	%r13, %r11
+	xorl	%ebx, %ebx
+	movq	%r13, %r9
 	.p2align	4, 0x90
 LBB47_50:
-	lea	rdx, [r11 + 1]
-	movzx	ecx, byte ptr [r11]
-	test	cl, cl
+	leaq	1(%r11), %rdx
+	movzbl	(%r11), %ecx
+	testb	%cl, %cl
 	js	LBB47_52
-	mov	r11, rdx
+	movq	%rdx, %r11
 	jmp	LBB47_64
 LBB47_52:
-	cmp	rdx, r15
+	cmpq	%r15, %rdx
 	je	LBB47_58
-	movzx	esi, byte ptr [r11 + 1]
-	add	r11, 2
-	and	esi, 63
-	mov	r8, r11
-	mov	r12d, ecx
-	and	r12d, 31
-	cmp	cl, -33
+	movzbl	1(%r11), %esi
+	addq	$2, %r11
+	andl	$63, %esi
+	movq	%r11, %r8
+	movl	%ecx, %r12d
+	andl	$31, %r12d
+	cmpb	$-33, %cl
 	jbe	LBB47_59
 LBB47_54:
-	mov	rdx, r14
-	cmp	r8, r15
+	movq	%r14, %rdx
+	cmpq	%r15, %r8
 	je	LBB47_60
-	movzx	r14d, byte ptr [r8]
-	inc	r8
-	and	r14d, 63
-	mov	r11, r8
-	shl	esi, 6
-	or	esi, r14d
-	cmp	cl, -16
+	movzbl	(%r8), %r14d
+	incq	%r8
+	andl	$63, %r14d
+	movq	%r8, %r11
+	shll	$6, %esi
+	orl	%r14d, %esi
+	cmpb	$-16, %cl
 	jb	LBB47_61
 LBB47_56:
-	cmp	r8, r15
+	cmpq	%r15, %r8
 	je	LBB47_62
-	movzx	ecx, byte ptr [r8]
-	inc	r8
-	and	ecx, 63
-	mov	r11, r8
+	movzbl	(%r8), %ecx
+	incq	%r8
+	andl	$63, %ecx
+	movq	%r8, %r11
 	jmp	LBB47_63
 LBB47_58:
-	xor	esi, esi
-	mov	r11, rdx
-	mov	r8, r15
-	mov	r12d, ecx
-	and	r12d, 31
-	cmp	cl, -33
+	xorl	%esi, %esi
+	movq	%rdx, %r11
+	movq	%r15, %r8
+	movl	%ecx, %r12d
+	andl	$31, %r12d
+	cmpb	$-33, %cl
 	ja	LBB47_54
 LBB47_59:
-	shl	r12d, 6
-	or	esi, r12d
-	mov	ecx, esi
+	shll	$6, %r12d
+	orl	%r12d, %esi
+	movl	%esi, %ecx
 	jmp	LBB47_64
 LBB47_60:
-	xor	r14d, r14d
-	mov	r8, r15
-	shl	esi, 6
-	or	esi, r14d
-	cmp	cl, -16
+	xorl	%r14d, %r14d
+	movq	%r15, %r8
+	shll	$6, %esi
+	orl	%r14d, %esi
+	cmpb	$-16, %cl
 	jae	LBB47_56
 LBB47_61:
-	shl	r12d, 12
-	or	esi, r12d
-	mov	ecx, esi
-	mov	r14, rdx
+	shll	$12, %r12d
+	orl	%r12d, %esi
+	movl	%esi, %ecx
+	movq	%rdx, %r14
 	jmp	LBB47_64
 LBB47_62:
-	xor	ecx, ecx
+	xorl	%ecx, %ecx
 LBB47_63:
-	mov	r14, rdx
-	and	r12d, 7
-	shl	r12d, 18
-	shl	esi, 6
-	or	esi, r12d
-	or	esi, ecx
-	mov	ecx, esi
-	cmp	esi, 1114112
+	movq	%rdx, %r14
+	andl	$7, %r12d
+	shll	$18, %r12d
+	shll	$6, %esi
+	orl	%r12d, %esi
+	orl	%ecx, %esi
+	movl	%esi, %ecx
+	cmpl	$1114112, %esi
 	je	LBB47_294
 	.p2align	4, 0x90
 LBB47_64:
-	mov	qword ptr [rbp - 192], r13
-	mov	qword ptr [rbp - 184], r10
-	mov	qword ptr [rbp - 56], rbx
-	mov	qword ptr [rbp - 72], r10
-	test	rbx, rbx
+	movq	%r13, 128(%rsp)
+	movq	%r10, 136(%rsp)
+	movq	%rbx, 16(%rsp)
+	movq	%r10, 32(%rsp)
+	testq	%rbx, %rbx
 	je	LBB47_68
-	cmp	r10, rbx
+	cmpq	%rbx, %r10
 	je	LBB47_68
 	jbe	LBB47_744
-	cmp	byte ptr [r13 + rbx], -65
+	cmpb	$-65, (%r13,%rbx)
 	jle	LBB47_744
 LBB47_68:
-	lea	rdx, [r13 + rbx]
-	mov	rsi, r10
-	sub	rsi, rbx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rsi
-	add	ecx, -48
-	cmp	ecx, 9
+	leaq	(%rbx,%r13), %rdx
+	movq	%r10, %rsi
+	subq	%rbx, %rsi
+	movq	%rdx, (%r14)
+	movq	%rsi, 8(%r14)
+	addl	$-48, %ecx
+	cmpl	$9, %ecx
 	ja	LBB47_294
-	imul	ecx, edi
-	add	eax, ecx
+	imull	%edi, %ecx
+	addl	%ecx, %eax
 	jo	LBB47_745
-	sub	rbx, r9
-	add	rbx, r11
-	movsxd	rcx, edi
-	imul	rdi, rcx, 1717986919
-	mov	rcx, rdi
-	shr	rcx, 63
-	sar	rdi, 34
-	add	edi, ecx
-	mov	r9, r11
-	cmp	r15, r11
+	subq	%r9, %rbx
+	addq	%r11, %rbx
+	movslq	%edi, %rcx
+	imulq	$1717986919, %rcx, %rdi
+	movq	%rdi, %rcx
+	shrq	$63, %rcx
+	sarq	$34, %rdi
+	addl	%ecx, %edi
+	movq	%r11, %r9
+	cmpq	%r11, %r15
 	jne	LBB47_50
 	jmp	LBB47_294
 LBB47_71:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 1
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_206
-	lea	eax, [rdx - 1]
-	cmp	eax, 7
+	leal	-1(%rdx), %eax
+	cmpl	$7, %eax
 	jae	LBB47_206
-	xor	eax, eax
-	cmp	edx, 7
-	cmovne	eax, edx
-	mov	dword ptr [r13 + 24], eax
-	mov	dword ptr [r15], 15
+	xorl	%eax, %eax
+	cmpl	$7, %edx
+	cmovnel	%edx, %eax
+	movl	%eax, 24(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_74:
-	mov	rax, qword ptr [r14 + 8]
-	test	rax, rax
+	movq	8(%r14), %rax
+	testq	%rax, %rax
 	je	LBB47_531
-	mov	rcx, qword ptr [r14]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	movq	(%r14), %rcx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	jns	LBB47_361
-	lea	r8, [rcx + rax]
-	xor	edx, edx
-	mov	rbx, r8
-	cmp	rax, 1
+	leaq	(%rcx,%rax), %r8
+	xorl	%edx, %edx
+	movq	%r8, %rbx
+	cmpq	$1, %rax
 	je	LBB47_78
-	lea	rbx, [rcx + 2]
-	movzx	edx, byte ptr [rcx + 1]
-	and	edx, 63
+	leaq	2(%rcx), %rbx
+	movzbl	1(%rcx), %edx
+	andl	$63, %edx
 LBB47_78:
-	mov	edi, esi
-	and	edi, 31
-	cmp	sil, -33
+	movl	%esi, %edi
+	andl	$31, %edi
+	cmpb	$-33, %sil
 	jbe	LBB47_308
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_356
-	movzx	r9d, byte ptr [rbx]
-	inc	rbx
-	and	r9d, 63
-	shl	edx, 6
-	or	edx, r9d
-	cmp	sil, -16
+	movzbl	(%rbx), %r9d
+	incq	%rbx
+	andl	$63, %r9d
+	shll	$6, %edx
+	orl	%r9d, %edx
+	cmpb	$-16, %sil
 	jb	LBB47_359
 LBB47_357:
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_413
-	movzx	esi, byte ptr [rbx]
-	and	esi, 63
+	movzbl	(%rbx), %esi
+	andl	$63, %esi
 	jmp	LBB47_414
 LBB47_81:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	mov	ecx, 1
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	movl	$1, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_84
 LBB47_82:
-	lea	eax, [rdx - 1]
-	cmp	eax, 31
+	leal	-1(%rdx), %eax
+	cmpl	$31, %eax
 	jae	LBB47_84
-	mov	dword ptr [r13 + 12], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 12(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_84:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 7
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$7, (%r15)
 	jmp	LBB47_504
 LBB47_85:
-	mov	rax, qword ptr [r14 + 8]
-	cmp	rax, 2
+	movq	8(%r14), %rax
+	cmpq	$2, %rax
 	jb	LBB47_86
-	mov	rcx, qword ptr [r14]
-	lea	rdx, [rip + l___unnamed_132]
-	lea	rsi, [rip + l___unnamed_49]
-	cmp	rcx, rsi
+	movq	(%r14), %rcx
+	leaq	l___unnamed_132(%rip), %rdx
+	leaq	l___unnamed_49(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_219
-	movzx	esi, word ptr [rcx]
-	cmp	esi, 28001
+	movzwl	(%rcx), %esi
+	cmpl	$28001, %esi
 	je	LBB47_219
-	lea	rdx, [rip + l___unnamed_132+24]
-	lea	rsi, [rip + l___unnamed_50]
-	cmp	rcx, rsi
+	leaq	l___unnamed_132+24(%rip), %rdx
+	leaq	l___unnamed_50(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_219
-	movzx	esi, word ptr [rcx]
-	cmp	esi, 28016
+	movzwl	(%rcx), %esi
+	cmpl	$28016, %esi
 	jne	LBB47_86
 LBB47_219:
-	mov	edx, dword ptr [rdx + 16]
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 2
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 2
+	movl	16(%rdx), %edx
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	$2, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$2, %rax
 	je	LBB47_221
-	cmp	byte ptr [rcx + 2], -65
+	cmpb	$-65, 2(%rcx)
 	jle	LBB47_744
 LBB47_221:
-	add	rcx, 2
-	add	rax, -2
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	add	edx, dword ptr [r13 + 8]
+	addq	$2, %rcx
+	addq	$-2, %rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	addl	8(%r13), %edx
 	jno	LBB47_230
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_133]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_133(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_87:
-	mov	rax, qword ptr [r14 + 8]
-	cmp	rax, 2
+	movq	8(%r14), %rax
+	cmpq	$2, %rax
 	jae	LBB47_223
 LBB47_86:
-	mov	dword ptr [r15], 2
+	movl	$2, (%r15)
 	jmp	LBB47_504
 LBB47_89:
-	mov	esi, 1
-	mov	edx, 18
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	movl	$1, %esi
+	movl	$18, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_295
-	mov	qword ptr [rbp - 88], rdx
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 112], xmm0
-	movaps	xmmword ptr [rbp - 128], xmm0
-	movaps	xmmword ptr [rbp - 144], xmm0
-	mov	qword ptr [rbp - 96], 0
-	lea	rdi, [rbp - 88]
-	lea	rsi, [rbp - 144]
-	call	_gmtime_r
-	test	rax, rax
+	movq	%rdx, 48(%rsp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 88(%rsp)
+	vmovaps	%ymm0, 64(%rsp)
+	leaq	48(%rsp), %rdi
+	leaq	64(%rsp), %rsi
+	vzeroupper
+	callq	_gmtime_r
+	testq	%rax, %rax
 	je	LBB47_746
-	movaps	xmm0, xmmword ptr [rbp - 144]
-	movaps	xmm1, xmmword ptr [rbp - 128]
-	mov	eax, dword ptr [rbp - 112]
-	movups	xmmword ptr [r13], xmm0
-	movups	xmmword ptr [r13 + 16], xmm1
-	mov	dword ptr [r13 + 32], eax
-	mov	qword ptr [r13 + 36], 0
-	mov	dword ptr [r15], 15
+	vmovaps	64(%rsp), %ymm0
+	movl	96(%rsp), %eax
+	vmovups	%ymm0, (%r13)
+	movl	%eax, 32(%r13)
+	movq	$0, 36(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_92:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_231
-	cmp	edx, 61
+	cmpl	$61, %edx
 	jae	LBB47_231
-	mov	dword ptr [r13], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, (%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_95:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 3
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$3, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_232
-	dec	edx
-	cmp	edx, 366
+	decl	%edx
+	cmpl	$366, %edx
 	jae	LBB47_232
-	mov	dword ptr [r13 + 28], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 28(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_98:
-	lea	rdi, [rbp - 72]
-	mov	rsi, r14
-	mov	edx, 72
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	edx, dword ptr [rbp - 72]
-	cmp	edx, 15
+	leaq	32(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$72, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %edx
+	cmpl	$15, %edx
 	jne	LBB47_233
-	mov	rax, qword ptr [r14 + 8]
-	mov	edx, 10
-	test	rax, rax
+	movq	8(%r14), %rax
+	movl	$10, %edx
+	testq	%rax, %rax
 	je	LBB47_297
-	mov	rcx, qword ptr [r14]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	movq	(%r14), %rcx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	jns	LBB47_420
-	lea	r8, [rcx + rax]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rax, 1
+	leaq	(%rcx,%rax), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rax
 	je	LBB47_103
-	lea	r9, [rcx + 2]
-	movzx	edi, byte ptr [rcx + 1]
-	and	edi, 63
+	leaq	2(%rcx), %r9
+	movzbl	1(%rcx), %edi
+	andl	$63, %edi
 LBB47_103:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_317
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_415
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_418
 LBB47_416:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_562
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_563
 LBB47_106:
-	mov	rax, qword ptr [r14]
-	mov	rcx, qword ptr [r14 + 8]
-	cmp	rcx, 7
+	movq	(%r14), %rax
+	movq	8(%r14), %rcx
+	cmpq	$7, %rcx
 	jae	LBB47_235
-	mov	r8b, 1
-	cmp	rcx, 5
+	movb	$1, %r8b
+	cmpq	$5, %rcx
 	jae	LBB47_240
-	mov	r8b, 1
-	cmp	rcx, 3
+	movb	$1, %r8b
+	cmpq	$3, %rcx
 	jae	LBB47_244
 	jmp	LBB47_109
 LBB47_110:
-	lea	r12, [rbp - 72]
-	mov	rdi, r12
-	mov	rsi, r14
-	mov	edx, 73
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 72]
-	cmp	eax, 15
+	leaq	32(%rsp), %r12
+	movq	%r12, %rdi
+	movq	%r14, %rsi
+	movl	$73, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_255
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_298
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_430
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_115
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_115:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_318
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_425
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_428
 LBB47_426:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_564
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_565
 LBB47_118:
-	mov	rax, qword ptr [r14 + 8]
-	test	rax, rax
+	movq	8(%r14), %rax
+	testq	%rax, %rax
 	je	LBB47_531
-	mov	rcx, qword ptr [r14]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	movq	(%r14), %rcx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	jns	LBB47_368
-	lea	r8, [rcx + rax]
-	xor	edx, edx
-	mov	rbx, r8
-	cmp	rax, 1
+	leaq	(%rcx,%rax), %r8
+	xorl	%edx, %edx
+	movq	%r8, %rbx
+	cmpq	$1, %rax
 	je	LBB47_122
-	lea	rbx, [rcx + 2]
-	movzx	edx, byte ptr [rcx + 1]
-	and	edx, 63
+	leaq	2(%rcx), %rbx
+	movzbl	1(%rcx), %edx
+	andl	$63, %edx
 LBB47_122:
-	mov	edi, esi
-	and	edi, 31
-	cmp	sil, -33
+	movl	%esi, %edi
+	andl	$31, %edi
+	cmpb	$-33, %sil
 	jbe	LBB47_309
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_363
-	movzx	r9d, byte ptr [rbx]
-	inc	rbx
-	and	r9d, 63
-	shl	edx, 6
-	or	edx, r9d
-	cmp	sil, -16
+	movzbl	(%rbx), %r9d
+	incq	%rbx
+	andl	$63, %r9d
+	shll	$6, %edx
+	orl	%r9d, %edx
+	cmpb	$-16, %sil
 	jb	LBB47_366
 LBB47_364:
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_447
-	movzx	esi, byte ptr [rbx]
-	and	esi, 63
+	movzbl	(%rbx), %esi
+	andl	$63, %esi
 	jmp	LBB47_448
 LBB47_125:
-	mov	esi, 4
-	mov	edx, 4
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	movl	$4, %esi
+	movl	$4, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_296
-	add	edx, -1900
+	addl	$-1900, %edx
 	jo	LBB47_748
 LBB47_127:
-	mov	dword ptr [r13 + 20], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 20(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_128:
-	mov	rax, qword ptr [r14 + 8]
-	test	rax, rax
+	movq	8(%r14), %rax
+	testq	%rax, %rax
 	je	LBB47_560
-	mov	rcx, qword ptr [r14]
-	lea	r8, [rcx + rax]
-	lea	r9, [rcx + 1]
-	movzx	edi, byte ptr [rcx]
-	test	dil, dil
+	movq	(%r14), %rcx
+	leaq	(%rcx,%rax), %r8
+	leaq	1(%rcx), %r9
+	movzbl	(%rcx), %edi
+	testb	%dil, %dil
 	jns	LBB47_375
-	xor	ebx, ebx
-	mov	rsi, r8
-	cmp	rax, 1
+	xorl	%ebx, %ebx
+	movq	%r8, %rsi
+	cmpq	$1, %rax
 	je	LBB47_132
-	lea	rsi, [rcx + 2]
-	movzx	ebx, byte ptr [rcx + 1]
-	and	ebx, 63
+	leaq	2(%rcx), %rsi
+	movzbl	1(%rcx), %ebx
+	andl	$63, %ebx
 LBB47_132:
-	mov	edx, edi
-	and	edx, 31
-	cmp	dil, -33
+	movl	%edi, %edx
+	andl	$31, %edx
+	cmpb	$-33, %dil
 	jbe	LBB47_310
-	cmp	rsi, r8
+	cmpq	%r8, %rsi
 	je	LBB47_370
-	movzx	r10d, byte ptr [rsi]
-	inc	rsi
-	and	r10d, 63
-	shl	ebx, 6
-	or	ebx, r10d
-	cmp	dil, -16
+	movzbl	(%rsi), %r10d
+	incq	%rsi
+	andl	$63, %r10d
+	shll	$6, %ebx
+	orl	%r10d, %ebx
+	cmpb	$-16, %dil
 	jb	LBB47_373
 LBB47_371:
-	cmp	rsi, r8
+	cmpq	%r8, %rsi
 	je	LBB47_449
-	movzx	esi, byte ptr [rsi]
-	and	esi, 63
+	movzbl	(%rsi), %esi
+	andl	$63, %esi
 	jmp	LBB47_450
 LBB47_135:
-	mov	rax, qword ptr [r14 + 8]
-	cmp	rax, 6
+	movq	8(%r14), %rax
+	cmpq	$6, %rax
 	jb	LBB47_136
-	mov	rcx, qword ptr [r14]
-	mov	edx, 6
-	lea	rsi, [rip + l___unnamed_134]
-	lea	rdi, [rip + l___unnamed_44]
-	cmp	rcx, rdi
+	movq	(%r14), %rcx
+	movl	$6, %edx
+	leaq	l___unnamed_134(%rip), %rsi
+	leaq	l___unnamed_44(%rip), %rdi
+	cmpq	%rdi, %rcx
 	je	LBB47_312
-	mov	edi, 1684960595
-	xor	edi, dword ptr [rcx]
-	movzx	ebx, word ptr [rcx + 4]
-	xor	ebx, 31073
-	or	ebx, edi
+	movl	$1684960595, %edi
+	xorl	(%rcx), %edi
+	movzwl	4(%rcx), %ebx
+	xorl	$31073, %ebx
+	orl	%edi, %ebx
 	je	LBB47_313
-	lea	rsi, [rip + l___unnamed_134+24]
-	lea	rdi, [rip + l___unnamed_45]
-	cmp	rcx, rdi
+	leaq	l___unnamed_134+24(%rip), %rsi
+	leaq	l___unnamed_45(%rip), %rdi
+	cmpq	%rdi, %rcx
 	je	LBB47_312
-	mov	edi, 1684959053
-	xor	edi, dword ptr [rcx]
-	movzx	ebx, word ptr [rcx + 4]
-	xor	ebx, 31073
-	or	ebx, edi
+	movl	$1684959053, %edi
+	xorl	(%rcx), %edi
+	movzwl	4(%rcx), %ebx
+	xorl	$31073, %ebx
+	orl	%edi, %ebx
 	je	LBB47_313
-	mov	r8b, 1
-	cmp	rax, 7
+	movb	$1, %r8b
+	cmpq	$7, %rax
 	jae	LBB47_391
 LBB47_261:
-	lea	rsi, [rip + l___unnamed_134+120]
-	lea	rdx, [rip + l___unnamed_74]
-	cmp	rcx, rdx
+	leaq	l___unnamed_134+120(%rip), %rsi
+	leaq	l___unnamed_74(%rip), %rdx
+	cmpq	%rdx, %rcx
 	je	LBB47_312
 LBB47_262:
-	mov	edx, 1684632134
-	xor	edx, dword ptr [rcx]
-	movzx	edi, word ptr [rcx + 4]
-	xor	edi, 31073
-	or	edi, edx
-	mov	edx, 6
+	movl	$1684632134, %edx
+	xorl	(%rcx), %edx
+	movzwl	4(%rcx), %edi
+	xorl	$31073, %edi
+	orl	%edx, %edi
+	movl	$6, %edx
 	je	LBB47_313
-	test	r8b, r8b
+	testb	%r8b, %r8b
 	jne	LBB47_136
-	mov	edx, 8
-	lea	rsi, [rip + l___unnamed_134+144]
-	lea	rdi, [rip + L___unnamed_75]
-	cmp	rcx, rdi
+	movl	$8, %edx
+	leaq	l___unnamed_134+144(%rip), %rsi
+	leaq	L___unnamed_75(%rip), %rdi
+	cmpq	%rdi, %rcx
 	je	LBB47_313
-	movabs	rdi, 8746382394089824595
-	cmp	qword ptr [rcx], rdi
+	movabsq	$8746382394089824595, %rdi
+	cmpq	%rdi, (%rcx)
 	jne	LBB47_136
 	jmp	LBB47_313
 LBB47_137:
-	lea	r12, [rbp - 72]
-	mov	rdi, r12
-	mov	rsi, r14
-	mov	edx, 89
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 72]
-	cmp	eax, 15
+	leaq	32(%rsp), %r12
+	movq	%r12, %rdi
+	movq	%r14, %rsi
+	movl	$89, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_163
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_164
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_471
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_142
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_142:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_319
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_466
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_469
 LBB47_467:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_566
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_567
 LBB47_145:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_202
 LBB47_146:
-	cmp	edx, 24
+	cmpl	$24, %edx
 	jae	LBB47_202
-	mov	dword ptr [r13 + 8], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 8(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_148:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_152
-	cmp	edx, 100
+	cmpl	$100, %edx
 	jae	LBB47_152
-	imul	eax, edx, 100
-	add	eax, -1900
-	add	eax, dword ptr [r13 + 20]
+	imull	$100, %edx, %eax
+	addl	$-1900, %eax
+	addl	20(%r13), %eax
 	jo	LBB47_749
-	mov	dword ptr [r13 + 20], eax
-	mov	dword ptr [r15], 15
+	movl	%eax, 20(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_152:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 5
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$5, (%r15)
 	jmp	LBB47_504
 LBB47_153:
-	mov	rax, qword ptr [r14 + 8]
-	cmp	rax, 3
+	movq	8(%r14), %rax
+	cmpq	$3, %rax
 	jae	LBB47_266
 LBB47_136:
-	mov	dword ptr [r15], 3
+	movl	$3, (%r15)
 	jmp	LBB47_504
 LBB47_155:
-	lea	r12, [rbp - 72]
-	mov	rdi, r12
-	mov	rsi, r14
-	mov	edx, 101
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 72]
-	cmp	eax, 15
+	leaq	32(%rsp), %r12
+	movq	%r12, %rdi
+	movq	%r14, %rsi
+	movl	$101, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_163
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_164
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_487
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_160
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_160:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_320
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_482
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_485
 LBB47_483:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_568
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_569
 LBB47_163:
-	mov	ebx, dword ptr [rbp - 68]
-	mov	esi, dword ptr [rbp - 64]
+	movl	36(%rsp), %ebx
+	movl	40(%rsp), %esi
 	jmp	LBB47_499
 LBB47_164:
 	jmp	LBB47_499
 LBB47_165:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_283
-	cmp	edx, 60
+	cmpl	$60, %edx
 	jae	LBB47_283
-	mov	dword ptr [r13 + 4], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 4(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_168:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	jne	LBB47_200
 	jmp	LBB47_202
 LBB47_169:
-	mov	r9, qword ptr [r14]
-	mov	r8, qword ptr [r14 + 8]
-	cmp	r8, 3
+	movq	(%r14), %r9
+	movq	8(%r14), %r8
+	cmpq	$3, %r8
 	jae	LBB47_284
 LBB47_170:
-	lea	r10, [r9 + r8]
-	xor	edx, edx
-	mov	rdi, r9
+	leaq	(%r9,%r8), %r10
+	xorl	%edx, %edx
+	movq	%r9, %rdi
 	.p2align	4, 0x90
 LBB47_171:
-	cmp	r10, rdi
+	cmpq	%rdi, %r10
 	je	LBB47_187
-	lea	rbx, [rdi + 1]
-	movzx	eax, byte ptr [rdi]
-	test	al, al
+	leaq	1(%rdi), %rbx
+	movzbl	(%rdi), %eax
+	testb	%al, %al
 	js	LBB47_173
 LBB47_185:
-	cmp	eax, 32
+	cmpl	$32, %eax
 	je	LBB47_301
 LBB47_186:
-	sub	rdx, rdi
-	add	rdx, rbx
-	mov	rdi, rbx
-	cmp	eax, 1114112
+	subq	%rdi, %rdx
+	addq	%rbx, %rdx
+	movq	%rbx, %rdi
+	cmpl	$1114112, %eax
 	jne	LBB47_171
 	jmp	LBB47_187
 LBB47_173:
-	cmp	rbx, r10
+	cmpq	%r10, %rbx
 	je	LBB47_179
-	lea	rbx, [rdi + 2]
-	movzx	ecx, byte ptr [rdi + 1]
-	and	ecx, 63
-	mov	r11, rbx
-	mov	esi, eax
-	and	esi, 31
-	cmp	al, -33
+	leaq	2(%rdi), %rbx
+	movzbl	1(%rdi), %ecx
+	andl	$63, %ecx
+	movq	%rbx, %r11
+	movl	%eax, %esi
+	andl	$31, %esi
+	cmpb	$-33, %al
 	jbe	LBB47_180
 LBB47_175:
-	mov	r12, r14
-	cmp	r11, r10
+	movq	%r14, %r12
+	cmpq	%r10, %r11
 	je	LBB47_181
-	movzx	r14d, byte ptr [r11]
-	inc	r11
-	and	r14d, 63
-	mov	rbx, r11
-	shl	ecx, 6
-	or	ecx, r14d
-	cmp	al, -16
+	movzbl	(%r11), %r14d
+	incq	%r11
+	andl	$63, %r14d
+	movq	%r11, %rbx
+	shll	$6, %ecx
+	orl	%r14d, %ecx
+	cmpb	$-16, %al
 	jb	LBB47_182
 LBB47_177:
-	cmp	r11, r10
+	cmpq	%r10, %r11
 	je	LBB47_183
-	movzx	eax, byte ptr [r11]
-	inc	r11
-	and	eax, 63
-	mov	rbx, r11
+	movzbl	(%r11), %eax
+	incq	%r11
+	andl	$63, %eax
+	movq	%r11, %rbx
 	jmp	LBB47_184
 LBB47_179:
-	xor	ecx, ecx
-	mov	r11, r10
-	mov	esi, eax
-	and	esi, 31
-	cmp	al, -33
+	xorl	%ecx, %ecx
+	movq	%r10, %r11
+	movl	%eax, %esi
+	andl	$31, %esi
+	cmpb	$-33, %al
 	ja	LBB47_175
 LBB47_180:
-	shl	esi, 6
-	or	ecx, esi
-	mov	eax, ecx
-	cmp	eax, 32
+	shll	$6, %esi
+	orl	%esi, %ecx
+	movl	%ecx, %eax
+	cmpl	$32, %eax
 	jne	LBB47_186
 	jmp	LBB47_301
 LBB47_181:
-	xor	r14d, r14d
-	mov	r11, r10
-	shl	ecx, 6
-	or	ecx, r14d
-	cmp	al, -16
+	xorl	%r14d, %r14d
+	movq	%r10, %r11
+	shll	$6, %ecx
+	orl	%r14d, %ecx
+	cmpb	$-16, %al
 	jae	LBB47_177
 LBB47_182:
-	shl	esi, 12
-	or	ecx, esi
-	mov	eax, ecx
-	mov	r14, r12
-	cmp	eax, 32
+	shll	$12, %esi
+	orl	%esi, %ecx
+	movl	%ecx, %eax
+	movq	%r12, %r14
+	cmpl	$32, %eax
 	jne	LBB47_186
 	jmp	LBB47_301
 LBB47_183:
-	xor	eax, eax
+	xorl	%eax, %eax
 LBB47_184:
-	mov	r14, r12
-	and	esi, 7
-	shl	esi, 18
-	shl	ecx, 6
-	or	ecx, esi
-	or	ecx, eax
-	mov	eax, ecx
-	cmp	ecx, 1114112
+	movq	%r12, %r14
+	andl	$7, %esi
+	shll	$18, %esi
+	shll	$6, %ecx
+	orl	%esi, %ecx
+	orl	%eax, %ecx
+	movl	%ecx, %eax
+	cmpl	$1114112, %ecx
 	jne	LBB47_185
 LBB47_187:
-	lea	rax, [rip + l___unnamed_54]
-	mov	qword ptr [r14], rax
-	mov	qword ptr [r14 + 8], 0
-	mov	dword ptr [r15], 15
+	leaq	l___unnamed_54(%rip), %rax
+	movq	%rax, (%r14)
+	movq	$0, 8(%r14)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_188:
-	lea	r12, [rbp - 72]
-	mov	rdi, r12
-	mov	rsi, r14
-	mov	edx, 97
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 72]
-	cmp	eax, 15
+	leaq	32(%rsp), %r12
+	movq	%r12, %rdi
+	movq	%r14, %rsi
+	movl	$97, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	32(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_291
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_300
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_510
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_193
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_193:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_321
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_505
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_508
 LBB47_506:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_570
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_571
 LBB47_196:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_292
-	dec	edx
-	cmp	edx, 12
+	decl	%edx
+	cmpl	$12, %edx
 	jae	LBB47_292
-	mov	dword ptr [r13 + 16], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 16(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_199:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 2
-	mov	rdi, r14
-	mov	ecx, 1
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	movl	$1, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_202
 LBB47_200:
-	lea	eax, [rdx - 1]
-	cmp	eax, 12
+	leal	-1(%rdx), %eax
+	cmpl	$12, %eax
 	jae	LBB47_202
-	xor	eax, eax
-	cmp	edx, 12
-	cmovne	eax, edx
-	mov	dword ptr [r13 + 8], eax
-	mov	dword ptr [r15], 15
+	xorl	%eax, %eax
+	cmpl	$12, %edx
+	cmovnel	%edx, %eax
+	movl	%eax, 8(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_202:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 2
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$2, (%r15)
 	jmp	LBB47_504
 LBB47_203:
-	movups	xmm0, xmmword ptr [r14]
-	movaps	xmmword ptr [rbp - 208], xmm0
-	mov	esi, 1
-	mov	edx, 1
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	vmovups	(%r14), %xmm0
+	vmovaps	%xmm0, 176(%rsp)
+	movl	$1, %esi
+	movl	$1, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_206
-	cmp	edx, 7
+	cmpl	$7, %edx
 	jae	LBB47_206
-	mov	dword ptr [r13 + 24], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 24(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_206:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 6
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$6, (%r15)
 	jmp	LBB47_504
 LBB47_207:
-	mov	rax, qword ptr [r14 + 8]
-	test	rax, rax
+	movq	8(%r14), %rax
+	testq	%rax, %rax
 	je	LBB47_531
-	mov	rcx, qword ptr [r14]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	movq	(%r14), %rcx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	jns	LBB47_385
-	lea	r8, [rcx + rax]
-	xor	edx, edx
-	mov	rbx, r8
-	cmp	rax, 1
+	leaq	(%rcx,%rax), %r8
+	xorl	%edx, %edx
+	movq	%r8, %rbx
+	cmpq	$1, %rax
 	je	LBB47_211
-	lea	rbx, [rcx + 2]
-	movzx	edx, byte ptr [rcx + 1]
-	and	edx, 63
+	leaq	2(%rcx), %rbx
+	movzbl	1(%rcx), %edx
+	andl	$63, %edx
 LBB47_211:
-	mov	edi, esi
-	and	edi, 31
-	cmp	sil, -33
+	movl	%esi, %edi
+	andl	$31, %edi
+	cmpb	$-33, %sil
 	jbe	LBB47_311
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_380
-	movzx	r9d, byte ptr [rbx]
-	inc	rbx
-	and	r9d, 63
-	shl	edx, 6
-	or	edx, r9d
-	cmp	sil, -16
+	movzbl	(%rbx), %r9d
+	incq	%rbx
+	andl	$63, %r9d
+	shll	$6, %edx
+	orl	%r9d, %edx
+	cmpb	$-16, %sil
 	jb	LBB47_383
 LBB47_381:
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_529
-	movzx	esi, byte ptr [rbx]
-	and	esi, 63
+	movzbl	(%rbx), %esi
+	andl	$63, %esi
 	jmp	LBB47_530
 LBB47_214:
-	mov	dword ptr [r15], 13
-	mov	dword ptr [r15 + 4], edx
+	movl	$13, (%r15)
+	movl	%edx, 4(%r15)
 	jmp	LBB47_504
 LBB47_223:
-	mov	rcx, qword ptr [r14]
-	lea	rdx, [rip + l___unnamed_135]
-	lea	rsi, [rip + l___unnamed_38]
-	cmp	rcx, rsi
+	movq	(%r14), %rcx
+	leaq	l___unnamed_135(%rip), %rdx
+	leaq	l___unnamed_38(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_227
-	movzx	esi, word ptr [rcx]
-	cmp	esi, 19777
+	movzwl	(%rcx), %esi
+	cmpl	$19777, %esi
 	je	LBB47_227
-	lea	rdx, [rip + l___unnamed_135+24]
-	lea	rsi, [rip + l___unnamed_39]
-	cmp	rcx, rsi
+	leaq	l___unnamed_135+24(%rip), %rdx
+	leaq	l___unnamed_39(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_227
-	movzx	esi, word ptr [rcx]
-	cmp	esi, 19792
+	movzwl	(%rcx), %esi
+	cmpl	$19792, %esi
 	jne	LBB47_86
 LBB47_227:
-	mov	edx, dword ptr [rdx + 16]
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 2
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 2
+	movl	16(%rdx), %edx
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	$2, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$2, %rax
 	je	LBB47_229
-	cmp	byte ptr [rcx + 2], -65
+	cmpb	$-65, 2(%rcx)
 	jle	LBB47_744
 LBB47_229:
-	add	rcx, 2
-	add	rax, -2
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	add	edx, dword ptr [r13 + 8]
+	addq	$2, %rcx
+	addq	$-2, %rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	addl	8(%r13), %edx
 	jo	LBB47_751
 LBB47_230:
-	mov	dword ptr [r13 + 8], edx
-	mov	dword ptr [r15], 15
+	movl	%edx, 8(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_231:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 0
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$0, (%r15)
 	jmp	LBB47_504
 LBB47_232:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 8
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$8, (%r15)
 	jmp	LBB47_504
 LBB47_233:
-	mov	ebx, dword ptr [rbp - 68]
-	mov	esi, dword ptr [rbp - 64]
+	movl	36(%rsp), %ebx
+	movl	40(%rsp), %esi
 LBB47_234:
-	mov	dword ptr [r15], edx
+	movl	%edx, (%r15)
 	jmp	LBB47_502
 LBB47_235:
-	mov	edx, 7
-	lea	rsi, [rip + l___unnamed_136]
-	lea	rdi, [rip + l___unnamed_47]
-	cmp	rax, rdi
+	movl	$7, %edx
+	leaq	l___unnamed_136(%rip), %rsi
+	leaq	l___unnamed_47(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	mov	edi, 1970168138
-	xor	edi, dword ptr [rax]
-	mov	ebx, 2037539189
-	xor	ebx, dword ptr [rax + 3]
-	or	ebx, edi
+	movl	$1970168138, %edi
+	xorl	(%rax), %edi
+	movl	$2037539189, %ebx
+	xorl	3(%rax), %ebx
+	orl	%edi, %ebx
 	je	LBB47_405
-	cmp	rcx, 8
-	setb	r8b
+	cmpq	$8, %rcx
+	setb	%r8b
 	jb	LBB47_240
-	mov	edx, 8
-	lea	rsi, [rip + l___unnamed_136+24]
-	lea	rdi, [rip + L___unnamed_48]
-	cmp	rax, rdi
+	movl	$8, %edx
+	leaq	l___unnamed_136+24(%rip), %rsi
+	leaq	L___unnamed_48(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	movabs	rdi, 8751164182992414022
-	cmp	qword ptr [rax], rdi
+	movabsq	$8751164182992414022, %rdi
+	cmpq	%rdi, (%rax)
 	je	LBB47_405
 LBB47_240:
-	mov	edx, 5
-	lea	rsi, [rip + l___unnamed_136+48]
-	lea	rdi, [rip + l___unnamed_78]
-	cmp	rax, rdi
+	movl	$5, %edx
+	leaq	l___unnamed_136+48(%rip), %rsi
+	leaq	l___unnamed_78(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	mov	edi, 1668440397
-	xor	edi, dword ptr [rax]
-	movzx	ebx, byte ptr [rax + 4]
-	xor	ebx, 104
-	or	ebx, edi
+	movl	$1668440397, %edi
+	xorl	(%rax), %edi
+	movzbl	4(%rax), %ebx
+	xorl	$104, %ebx
+	orl	%edi, %ebx
 	je	LBB47_405
-	lea	rsi, [rip + l___unnamed_136+72]
-	lea	rdi, [rip + l___unnamed_79]
-	cmp	rax, rdi
+	leaq	l___unnamed_136+72(%rip), %rsi
+	leaq	l___unnamed_79(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	mov	edi, 1769107521
-	xor	edi, dword ptr [rax]
-	movzx	ebx, byte ptr [rax + 4]
-	xor	ebx, 108
-	or	ebx, edi
+	movl	$1769107521, %edi
+	xorl	(%rax), %edi
+	movzbl	4(%rax), %ebx
+	xorl	$108, %ebx
+	orl	%edi, %ebx
 	je	LBB47_405
 LBB47_244:
-	mov	edx, 3
-	lea	rsi, [rip + l___unnamed_136+96]
-	lea	rdi, [rip + l___unnamed_56]
-	cmp	rax, rdi
+	movl	$3, %edx
+	leaq	l___unnamed_136+96(%rip), %rsi
+	leaq	l___unnamed_56(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	movzx	edi, word ptr [rax]
-	xor	edi, 24909
-	movzx	ebx, byte ptr [rax + 2]
-	xor	ebx, 121
-	or	bx, di
+	movzwl	(%rax), %edi
+	xorl	$24909, %edi
+	movzbl	2(%rax), %ebx
+	xorl	$121, %ebx
+	orw	%di, %bx
 	je	LBB47_405
-	cmp	rcx, 4
+	cmpq	$4, %rcx
 	jae	LBB47_395
 LBB47_247:
-	cmp	rcx, 7
+	cmpq	$7, %rcx
 	jb	LBB47_250
-	mov	edx, 7
-	lea	rsi, [rip + l___unnamed_136+216]
-	lea	rdi, [rip + l___unnamed_77]
-	cmp	rax, rdi
+	movl	$7, %edx
+	leaq	l___unnamed_136+216(%rip), %rsi
+	leaq	l___unnamed_77(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	mov	edi, 1869898575
-	xor	edi, dword ptr [rax]
-	mov	ebx, 1919246959
-	xor	ebx, dword ptr [rax + 3]
-	or	ebx, edi
+	movl	$1869898575, %edi
+	xorl	(%rax), %edi
+	movl	$1919246959, %ebx
+	xorl	3(%rax), %ebx
+	orl	%edi, %ebx
 	je	LBB47_405
 LBB47_250:
-	test	r8b, r8b
+	testb	%r8b, %r8b
 	jne	LBB47_109
-	mov	edx, 8
-	lea	rsi, [rip + l___unnamed_136+240]
-	lea	rdi, [rip + L___unnamed_84]
-	cmp	rax, rdi
+	movl	$8, %edx
+	leaq	l___unnamed_136+240(%rip), %rsi
+	leaq	L___unnamed_84(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	movabs	rdi, 8243102914963531076
-	lea	rbx, [rdi + 1247754]
-	cmp	rbx, qword ptr [rax]
+	movabsq	$8243102914963531076, %rdi
+	leaq	1247754(%rdi), %rbx
+	cmpq	(%rax), %rbx
 	je	LBB47_405
-	lea	rsi, [rip + l___unnamed_136+264]
-	lea	rbx, [rip + L___unnamed_76]
-	cmp	rax, rbx
+	leaq	l___unnamed_136+264(%rip), %rsi
+	leaq	L___unnamed_76(%rip), %rbx
+	cmpq	%rbx, %rax
 	je	LBB47_405
-	cmp	rdi, qword ptr [rax]
+	cmpq	(%rax), %rdi
 	jne	LBB47_109
 	jmp	LBB47_405
 LBB47_255:
-	mov	ebx, dword ptr [rbp - 68]
-	mov	esi, dword ptr [rbp - 64]
+	movl	36(%rsp), %ebx
+	movl	40(%rsp), %esi
 	jmp	LBB47_442
 LBB47_266:
-	mov	rcx, qword ptr [r14]
-	lea	rdx, [rip + l___unnamed_137]
-	lea	rsi, [rip + l___unnamed_36]
-	cmp	rcx, rsi
+	movq	(%r14), %rcx
+	leaq	l___unnamed_137(%rip), %rdx
+	leaq	l___unnamed_36(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 30035
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 110
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$30035, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$110, %edi
+	orw	%si, %di
 	je	LBB47_280
-	lea	rdx, [rip + l___unnamed_137+24]
-	lea	rsi, [rip + l___unnamed_37]
-	cmp	rcx, rsi
+	leaq	l___unnamed_137+24(%rip), %rdx
+	leaq	l___unnamed_37(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 28493
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 110
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$28493, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$110, %edi
+	orw	%si, %di
 	je	LBB47_280
-	lea	rdx, [rip + l___unnamed_137+48]
-	lea	rsi, [rip + l___unnamed_67]
-	cmp	rcx, rsi
+	leaq	l___unnamed_137+48(%rip), %rdx
+	leaq	l___unnamed_67(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 30036
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 101
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$30036, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$101, %edi
+	orw	%si, %di
 	je	LBB47_280
-	lea	rdx, [rip + l___unnamed_137+72]
-	lea	rsi, [rip + l___unnamed_68]
-	cmp	rcx, rsi
+	leaq	l___unnamed_137+72(%rip), %rdx
+	leaq	l___unnamed_68(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 25943
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 100
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$25943, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$100, %edi
+	orw	%si, %di
 	je	LBB47_280
-	lea	rdx, [rip + l___unnamed_137+96]
-	lea	rsi, [rip + l___unnamed_66]
-	cmp	rcx, rsi
+	leaq	l___unnamed_137+96(%rip), %rdx
+	leaq	l___unnamed_66(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 26708
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 117
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$26708, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$117, %edi
+	orw	%si, %di
 	je	LBB47_280
-	lea	rdx, [rip + l___unnamed_137+120]
-	lea	rsi, [rip + l___unnamed_69]
-	cmp	rcx, rsi
+	leaq	l___unnamed_137+120(%rip), %rdx
+	leaq	l___unnamed_69(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 29254
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 105
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$29254, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$105, %edi
+	orw	%si, %di
 	je	LBB47_280
-	lea	rdx, [rip + l___unnamed_137+144]
-	lea	rsi, [rip + l___unnamed_70]
-	cmp	rcx, rsi
+	leaq	l___unnamed_137+144(%rip), %rdx
+	leaq	l___unnamed_70(%rip), %rsi
+	cmpq	%rsi, %rcx
 	je	LBB47_280
-	movzx	esi, word ptr [rcx]
-	xor	esi, 24915
-	movzx	edi, byte ptr [rcx + 2]
-	xor	edi, 116
-	or	di, si
+	movzwl	(%rcx), %esi
+	xorl	$24915, %esi
+	movzbl	2(%rcx), %edi
+	xorl	$116, %edi
+	orw	%si, %di
 	jne	LBB47_136
 LBB47_280:
-	mov	edx, dword ptr [rdx + 16]
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 3
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 3
+	movl	16(%rdx), %edx
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	$3, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$3, %rax
 	je	LBB47_282
-	cmp	byte ptr [rcx + 3], -65
+	cmpb	$-65, 3(%rcx)
 	jle	LBB47_744
 LBB47_282:
-	add	rcx, 3
-	add	rax, -3
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	mov	dword ptr [r13 + 24], edx
-	mov	dword ptr [r15], 15
+	addq	$3, %rcx
+	addq	$-3, %rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	movl	%edx, 24(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_283:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 1
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$1, (%r15)
 	jmp	LBB47_504
 LBB47_284:
-	lea	rax, [rip + l___unnamed_53]
-	cmp	r9, rax
+	leaq	l___unnamed_53(%rip), %rax
+	cmpq	%rax, %r9
 	je	LBB47_288
-	movzx	eax, word ptr [r9]
-	xor	eax, 21589
-	movzx	ecx, byte ptr [r9 + 2]
-	xor	ecx, 67
-	or	cx, ax
+	movzwl	(%r9), %eax
+	xorl	$21589, %eax
+	movzbl	2(%r9), %ecx
+	xorl	$67, %ecx
+	orw	%ax, %cx
 	je	LBB47_288
-	lea	rax, [rip + l___unnamed_138]
-	cmp	r9, rax
+	leaq	l___unnamed_138(%rip), %rax
+	cmpq	%rax, %r9
 	je	LBB47_288
-	movzx	eax, word ptr [r9]
-	xor	eax, 19783
-	movzx	ecx, byte ptr [r9 + 2]
-	xor	ecx, 84
-	or	cx, ax
+	movzwl	(%r9), %eax
+	xorl	$19783, %eax
+	movzbl	2(%r9), %ecx
+	xorl	$84, %ecx
+	orw	%ax, %cx
 	jne	LBB47_170
 LBB47_288:
-	mov	qword ptr [rbp - 192], r9
-	mov	qword ptr [rbp - 184], r8
-	mov	qword ptr [rbp - 56], 3
-	mov	qword ptr [rbp - 72], r8
-	cmp	r8, 3
+	movq	%r9, 128(%rsp)
+	movq	%r8, 136(%rsp)
+	movq	$3, 16(%rsp)
+	movq	%r8, 32(%rsp)
+	cmpq	$3, %r8
 	je	LBB47_290
-	cmp	byte ptr [r9 + 3], -65
+	cmpb	$-65, 3(%r9)
 	jle	LBB47_744
 LBB47_290:
-	add	r9, 3
-	mov	qword ptr [r14], r9
-	add	r8, -3
-	mov	qword ptr [r14 + 8], r8
+	addq	$3, %r9
+	movq	%r9, (%r14)
+	addq	$-3, %r8
+	movq	%r8, 8(%r14)
 	jmp	LBB47_379
 LBB47_291:
-	mov	ebx, dword ptr [rbp - 68]
-	mov	esi, dword ptr [rbp - 64]
+	movl	36(%rsp), %ebx
+	movl	40(%rsp), %esi
 	jmp	LBB47_522
 LBB47_292:
-	movaps	xmm0, xmmword ptr [rbp - 208]
-	movups	xmmword ptr [r14], xmm0
-	mov	dword ptr [r15], 4
+	vmovaps	176(%rsp), %xmm0
+	vmovups	%xmm0, (%r14)
+	movl	$4, (%r15)
 	jmp	LBB47_504
 LBB47_293:
-	xor	eax, eax
+	xorl	%eax, %eax
 LBB47_294:
-	mov	rcx, qword ptr [rbp - 240]
-	mov	dword ptr [rcx + 40], eax
-	mov	rax, qword ptr [rbp - 208]
-	mov	dword ptr [rax], 15
+	movq	216(%rsp), %rcx
+	movl	%eax, 40(%rcx)
+	movq	176(%rsp), %rax
+	movl	$15, (%rax)
 	jmp	LBB47_504
 LBB47_295:
-	mov	dword ptr [r15], 11
+	movl	$11, (%r15)
 	jmp	LBB47_504
 LBB47_296:
-	mov	dword ptr [r15], 5
+	movl	$5, (%r15)
 	jmp	LBB47_504
 LBB47_297:
-	mov	dword ptr [r15], edx
+	movl	%edx, (%r15)
 	jmp	LBB47_502
 LBB47_298:
 	jmp	LBB47_442
 LBB47_300:
 	jmp	LBB47_522
 LBB47_301:
-	mov	qword ptr [rbp - 192], r9
-	mov	qword ptr [rbp - 184], r8
-	mov	qword ptr [rbp - 56], rdx
-	mov	qword ptr [rbp - 72], r8
-	test	rdx, rdx
+	movq	%r9, 128(%rsp)
+	movq	%r8, 136(%rsp)
+	movq	%rdx, 16(%rsp)
+	movq	%r8, 32(%rsp)
+	testq	%rdx, %rdx
 	je	LBB47_305
-	cmp	r8, rdx
+	cmpq	%rdx, %r8
 	je	LBB47_305
 	jbe	LBB47_744
-	cmp	byte ptr [r9 + rdx], -65
+	cmpb	$-65, (%r9,%rdx)
 	jle	LBB47_744
 LBB47_305:
-	add	r9, rdx
-	sub	r8, rdx
-	mov	qword ptr [r14], r9
-	mov	qword ptr [r14 + 8], r8
-	mov	dword ptr [r15], 15
+	addq	%rdx, %r9
+	subq	%rdx, %r8
+	movq	%r9, (%r14)
+	movq	%r8, 8(%r14)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_306:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_326
 LBB47_307:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_343
 LBB47_308:
-	shl	edi, 6
+	shll	$6, %edi
 	jmp	LBB47_360
 LBB47_309:
-	shl	edi, 6
+	shll	$6, %edi
 	jmp	LBB47_367
 LBB47_310:
-	shl	edx, 6
+	shll	$6, %edx
 	jmp	LBB47_374
 LBB47_311:
-	shl	edi, 6
+	shll	$6, %edi
 	jmp	LBB47_384
 LBB47_317:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_419
 LBB47_318:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_429
 LBB47_319:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_470
 LBB47_320:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_486
 LBB47_321:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_509
 LBB47_322:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_323
 LBB47_325:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_326:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_327:
-	cmp	esi, 47
+	cmpl	$47, %esi
 	jne	LBB47_338
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 224], 1
-	mov	qword ptr [rbp - 88], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 192(%rsp)
+	movq	%rcx, 48(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_330
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_750
 LBB47_330:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 56]
-	mov	rsi, r14
-	mov	edx, 100
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 56]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	16(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$100, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	16(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_500
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_642
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_587
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_335
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_335:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_532
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_582
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_585
 LBB47_583:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_622
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_623
 LBB47_338:
-	mov	eax, 14
-	mov	ebx, 47
+	movl	$14, %eax
+	movl	$47, %ebx
 	jmp	LBB47_499
 LBB47_339:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_340
 LBB47_342:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_343:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_344:
-	cmp	esi, 58
+	cmpl	$58, %esi
 	jne	LBB47_355
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 224], 1
-	mov	qword ptr [rbp - 88], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 192(%rsp)
+	movq	%rcx, 48(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_347
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_750
 LBB47_347:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 56]
-	mov	rsi, r14
-	mov	edx, 77
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 56]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	16(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$77, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	16(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_500
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_642
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_597
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_352
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_352:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_533
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_592
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_595
 LBB47_593:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_624
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_625
 LBB47_355:
-	mov	eax, 14
-	mov	ebx, 58
+	movl	$14, %eax
+	movl	$58, %ebx
 	jmp	LBB47_499
 LBB47_356:
-	xor	r9d, r9d
-	mov	rbx, r8
-	shl	edx, 6
-	or	edx, r9d
-	cmp	sil, -16
+	xorl	%r9d, %r9d
+	movq	%r8, %rbx
+	shll	$6, %edx
+	orl	%r9d, %edx
+	cmpb	$-16, %sil
 	jae	LBB47_357
 LBB47_359:
-	shl	edi, 12
+	shll	$12, %edi
 LBB47_360:
-	or	edx, edi
-	mov	esi, edx
+	orl	%edi, %edx
+	movl	%edx, %esi
 LBB47_361:
-	cmp	esi, 10
+	cmpl	$10, %esi
 	je	LBB47_386
-	movabs	rax, 42949672974
+	movabsq	$42949672974, %rax
 	jmp	LBB47_390
 LBB47_363:
-	xor	r9d, r9d
-	mov	rbx, r8
-	shl	edx, 6
-	or	edx, r9d
-	cmp	sil, -16
+	xorl	%r9d, %r9d
+	movq	%r8, %rbx
+	shll	$6, %edx
+	orl	%r9d, %edx
+	cmpb	$-16, %sil
 	jae	LBB47_364
 LBB47_366:
-	shl	edi, 12
+	shll	$12, %edi
 LBB47_367:
-	or	edx, edi
-	mov	esi, edx
+	orl	%edi, %edx
+	movl	%edx, %esi
 LBB47_368:
-	cmp	esi, 37
+	cmpl	$37, %esi
 	je	LBB47_386
-	movabs	rax, 158913789966
+	movabsq	$158913789966, %rax
 	jmp	LBB47_390
 LBB47_370:
-	xor	r10d, r10d
-	mov	rsi, r8
-	shl	ebx, 6
-	or	ebx, r10d
-	cmp	dil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %rsi
+	shll	$6, %ebx
+	orl	%r10d, %ebx
+	cmpb	$-16, %dil
 	jae	LBB47_371
 LBB47_373:
-	shl	edx, 12
+	shll	$12, %edx
 LBB47_374:
-	or	ebx, edx
-	mov	edi, ebx
+	orl	%edx, %ebx
+	movl	%ebx, %edi
 LBB47_375:
-	cmp	edi, 90
+	cmpl	$90, %edi
 	jne	LBB47_451
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 1
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$1, %rax
 	je	LBB47_378
-	cmp	byte ptr [r9], -65
+	cmpb	$-65, (%r9)
 	jle	LBB47_744
 LBB47_378:
-	dec	rax
-	mov	qword ptr [r14], r9
-	mov	qword ptr [r14 + 8], rax
+	decq	%rax
+	movq	%r9, (%r14)
+	movq	%rax, 8(%r14)
 LBB47_379:
-	mov	dword ptr [r13 + 36], 0
-	mov	dword ptr [r15], 15
+	movl	$0, 36(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_380:
-	xor	r9d, r9d
-	mov	rbx, r8
-	shl	edx, 6
-	or	edx, r9d
-	cmp	sil, -16
+	xorl	%r9d, %r9d
+	movq	%r8, %rbx
+	shll	$6, %edx
+	orl	%r9d, %edx
+	cmpb	$-16, %sil
 	jae	LBB47_381
 LBB47_383:
-	shl	edi, 12
+	shll	$12, %edi
 LBB47_384:
-	or	edx, edi
-	mov	esi, edx
+	orl	%edi, %edx
+	movl	%edx, %esi
 LBB47_385:
-	cmp	esi, 9
+	cmpl	$9, %esi
 	jne	LBB47_389
 LBB47_386:
-	mov	qword ptr [rbp - 192], rcx
-	inc	rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 1
+	movq	%rcx, 128(%rsp)
+	incq	%rcx
+	movq	%rax, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$1, %rax
 	je	LBB47_388
-	cmp	byte ptr [rcx], -65
+	cmpb	$-65, (%rcx)
 	jle	LBB47_744
 LBB47_388:
-	dec	rax
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	mov	dword ptr [r15], 15
+	decq	%rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_389:
-	movabs	rax, 38654705678
+	movabsq	$38654705678, %rax
 LBB47_390:
-	mov	qword ptr [r15], rax
+	movq	%rax, (%r15)
 	jmp	LBB47_503
 LBB47_391:
-	mov	edx, 7
-	lea	rsi, [rip + l___unnamed_134+48]
-	lea	rbx, [rip + l___unnamed_72]
-	cmp	rcx, rbx
+	movl	$7, %edx
+	leaq	l___unnamed_134+48(%rip), %rsi
+	leaq	l___unnamed_72(%rip), %rbx
+	cmpq	%rbx, %rcx
 	je	LBB47_313
-	mov	ebx, 1936029012
-	xor	ebx, dword ptr [rcx]
-	mov	edi, 2036425843
-	xor	edi, dword ptr [rcx + 3]
-	or	edi, ebx
+	movl	$1936029012, %ebx
+	xorl	(%rcx), %ebx
+	movl	$2036425843, %edi
+	xorl	3(%rcx), %edi
+	orl	%ebx, %edi
 	je	LBB47_313
-	cmp	rax, 9
+	cmpq	$9, %rax
 	jae	LBB47_576
-	cmp	rax, 8
+	cmpq	$8, %rax
 	jne	LBB47_261
 	jmp	LBB47_578
 LBB47_395:
-	mov	edx, 4
-	lea	rsi, [rip + l___unnamed_136+120]
-	lea	rdi, [rip + L___unnamed_81]
-	cmp	rax, rdi
+	movl	$4, %edx
+	leaq	l___unnamed_136+120(%rip), %rsi
+	leaq	L___unnamed_81(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	cmp	dword ptr [rax], 1701737802
+	cmpl	$1701737802, (%rax)
 	je	LBB47_405
-	lea	rsi, [rip + l___unnamed_136+144]
-	lea	rdi, [rip + L___unnamed_82]
-	cmp	rax, rdi
+	leaq	l___unnamed_136+144(%rip), %rsi
+	leaq	L___unnamed_82(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	cmp	dword ptr [rax], 2037151050
+	cmpl	$2037151050, (%rax)
 	je	LBB47_405
-	cmp	rcx, 6
+	cmpq	$6, %rcx
 	jb	LBB47_247
-	mov	edx, 6
-	lea	rsi, [rip + l___unnamed_136+168]
-	lea	rdi, [rip + l___unnamed_80]
-	cmp	rax, rdi
+	movl	$6, %edx
+	leaq	l___unnamed_136+168(%rip), %rsi
+	leaq	l___unnamed_80(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	mov	edi, 1969714497
-	xor	edi, dword ptr [rax]
-	movzx	ebx, word ptr [rax + 4]
-	xor	ebx, 29811
-	or	ebx, edi
+	movl	$1969714497, %edi
+	xorl	(%rax), %edi
+	movzwl	4(%rax), %ebx
+	xorl	$29811, %ebx
+	orl	%edi, %ebx
 	je	LBB47_405
-	cmp	rcx, 9
+	cmpq	$9, %rcx
 	jb	LBB47_247
-	mov	edx, 9
-	lea	rsi, [rip + l___unnamed_136+192]
-	lea	rdi, [rip + l___unnamed_83]
-	cmp	rax, rdi
+	movl	$9, %edx
+	leaq	l___unnamed_136+192(%rip), %rsi
+	leaq	l___unnamed_83(%rip), %rdi
+	cmpq	%rdi, %rax
 	je	LBB47_405
-	movabs	rdi, 7305521828061013331
-	xor	rdi, qword ptr [rax]
-	movzx	ebx, byte ptr [rax + 8]
-	xor	rbx, 114
-	or	rbx, rdi
+	movabsq	$7305521828061013331, %rdi
+	xorq	(%rax), %rdi
+	movzbl	8(%rax), %ebx
+	xorq	$114, %rbx
+	orq	%rdi, %rbx
 	jne	LBB47_247
 LBB47_405:
-	mov	esi, dword ptr [rsi + 16]
-	mov	qword ptr [rbp - 192], rax
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 56], rdx
-	mov	qword ptr [rbp - 72], rcx
-	sub	rcx, rdx
+	movl	16(%rsi), %esi
+	movq	%rax, 128(%rsp)
+	movq	%rcx, 136(%rsp)
+	movq	%rdx, 16(%rsp)
+	movq	%rcx, 32(%rsp)
+	subq	%rdx, %rcx
 	je	LBB47_408
 	jbe	LBB47_744
-	cmp	byte ptr [rax + rdx], -65
+	cmpb	$-65, (%rax,%rdx)
 	jle	LBB47_744
 LBB47_408:
-	add	rax, rdx
-	mov	qword ptr [r14], rax
-	mov	qword ptr [r14 + 8], rcx
-	mov	dword ptr [r13 + 16], esi
-	mov	dword ptr [r15], 15
+	addq	%rdx, %rax
+	movq	%rax, (%r14)
+	movq	%rcx, 8(%r14)
+	movl	%esi, 16(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_409:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_410:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	jne	LBB47_327
 	jmp	LBB47_499
 LBB47_411:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_412:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	jne	LBB47_344
 	jmp	LBB47_499
 LBB47_413:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_414:
-	and	edi, 7
-	shl	edi, 18
-	shl	edx, 6
-	or	edx, edi
-	or	edx, esi
-	mov	esi, edx
-	cmp	edx, 1114112
+	andl	$7, %edi
+	shll	$18, %edi
+	shll	$6, %edx
+	orl	%edi, %edx
+	orl	%esi, %edx
+	movl	%edx, %esi
+	cmpl	$1114112, %edx
 	jne	LBB47_361
 	jmp	LBB47_531
 LBB47_415:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_416
 LBB47_418:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_419:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_420:
-	cmp	esi, 58
+	cmpl	$58, %esi
 	jne	LBB47_424
-	mov	qword ptr [rbp - 192], rcx
-	inc	rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 88], 1
-	mov	qword ptr [rbp - 56], rax
-	cmp	rax, 1
+	movq	%rcx, 128(%rsp)
+	incq	%rcx
+	movq	%rax, 136(%rsp)
+	movq	$1, 48(%rsp)
+	movq	%rax, 16(%rsp)
+	cmpq	$1, %rax
 	je	LBB47_423
-	cmp	byte ptr [rcx], -65
+	cmpb	$-65, (%rcx)
 	jle	LBB47_756
 LBB47_423:
-	dec	rax
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	mov	rdi, r15
-	mov	rsi, r14
-	mov	edx, 77
-	jmp	LBB47_663
+	decq	%rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	movq	%r15, %rdi
+	movq	%r14, %rsi
+	movl	$77, %edx
+	jmp	LBB47_653
 LBB47_424:
-	mov	edx, 14
-	mov	ebx, 58
-	mov	dword ptr [r15], edx
+	movl	$14, %edx
+	movl	$58, %ebx
+	movl	%edx, (%r15)
 	jmp	LBB47_502
 LBB47_425:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_426
 LBB47_428:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_429:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_430:
-	cmp	esi, 58
+	cmpl	$58, %esi
 	jne	LBB47_441
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 232], 1
-	mov	qword ptr [rbp - 224], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 208(%rsp)
+	movq	%rcx, 192(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_433
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_757
 LBB47_433:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 56]
-	mov	rsi, r14
-	mov	edx, 77
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 56]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	16(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$77, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	16(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_443
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_446
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_631
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_438
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_438:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_572
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_626
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_629
 LBB47_627:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_685
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_686
 LBB47_441:
-	mov	eax, 14
-	mov	ebx, 58
+	movl	$14, %eax
+	movl	$58, %ebx
 LBB47_442:
-	mov	dword ptr [rbp - 56], eax
-	mov	dword ptr [rbp - 52], ebx
-	mov	dword ptr [rbp - 48], esi
+	movl	%eax, 16(%rsp)
+	movl	%ebx, 20(%rsp)
+	movl	%esi, 24(%rsp)
 LBB47_443:
-	mov	ebx, dword ptr [rbp - 52]
-	mov	esi, dword ptr [rbp - 48]
+	movl	20(%rsp), %ebx
+	movl	24(%rsp), %esi
 LBB47_444:
-	mov	dword ptr [rbp - 88], eax
-	mov	dword ptr [rbp - 84], ebx
-	mov	dword ptr [rbp - 80], esi
+	movl	%eax, 48(%rsp)
+	movl	%ebx, 52(%rsp)
+	movl	%esi, 56(%rsp)
 LBB47_445:
-	mov	ebx, dword ptr [rbp - 84]
-	mov	esi, dword ptr [rbp - 80]
+	movl	52(%rsp), %ebx
+	movl	56(%rsp), %esi
 	jmp	LBB47_501
 LBB47_446:
 	jmp	LBB47_444
 LBB47_447:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_448:
-	and	edi, 7
-	shl	edi, 18
-	shl	edx, 6
-	or	edx, edi
-	or	edx, esi
-	mov	esi, edx
-	cmp	edx, 1114112
+	andl	$7, %edi
+	shll	$18, %edi
+	shll	$6, %edx
+	orl	%edi, %edx
+	orl	%esi, %edx
+	movl	%edx, %esi
+	cmpl	$1114112, %edx
 	jne	LBB47_368
 	jmp	LBB47_531
 LBB47_449:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_450:
-	and	edx, 7
-	shl	edx, 18
-	shl	ebx, 6
-	or	ebx, edx
-	or	ebx, esi
-	mov	edi, ebx
-	cmp	ebx, 1114112
+	andl	$7, %edx
+	shll	$18, %edx
+	shll	$6, %ebx
+	orl	%edx, %ebx
+	orl	%esi, %ebx
+	movl	%ebx, %edi
+	cmpl	$1114112, %ebx
 	jne	LBB47_375
 LBB47_451:
-	movzx	edi, byte ptr [rcx]
-	test	dil, dil
+	movzbl	(%rcx), %edi
+	testb	%dil, %dil
 	jns	LBB47_463
-	xor	ebx, ebx
-	mov	rsi, r8
-	cmp	rax, 1
+	xorl	%ebx, %ebx
+	movq	%r8, %rsi
+	cmpq	$1, %rax
 	je	LBB47_454
-	lea	rsi, [rcx + 2]
-	movzx	ebx, byte ptr [rcx + 1]
-	and	ebx, 63
+	leaq	2(%rcx), %rsi
+	movzbl	1(%rcx), %ebx
+	andl	$63, %ebx
 LBB47_454:
-	mov	edx, edi
-	and	edx, 31
-	cmp	dil, -33
+	movl	%edi, %edx
+	andl	$31, %edx
+	cmpb	$-33, %dil
 	jbe	LBB47_457
-	cmp	rsi, r8
+	cmpq	%r8, %rsi
 	je	LBB47_458
-	movzx	r10d, byte ptr [rsi]
-	inc	rsi
-	and	r10d, 63
-	shl	ebx, 6
-	or	ebx, r10d
-	cmp	dil, -16
+	movzbl	(%rsi), %r10d
+	incq	%rsi
+	andl	$63, %r10d
+	shll	$6, %ebx
+	orl	%r10d, %ebx
+	cmpb	$-16, %dil
 	jb	LBB47_461
 LBB47_459:
-	cmp	rsi, r8
+	cmpq	%r8, %rsi
 	je	LBB47_534
-	movzx	esi, byte ptr [rsi]
-	and	esi, 63
+	movzbl	(%rsi), %esi
+	andl	$63, %esi
 	jmp	LBB47_535
 LBB47_457:
-	shl	edx, 6
+	shll	$6, %edx
 	jmp	LBB47_462
 LBB47_458:
-	xor	r10d, r10d
-	mov	rsi, r8
-	shl	ebx, 6
-	or	ebx, r10d
-	cmp	dil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %rsi
+	shll	$6, %ebx
+	orl	%r10d, %ebx
+	cmpb	$-16, %dil
 	jae	LBB47_459
 LBB47_461:
-	shl	edx, 12
+	shll	$12, %edx
 LBB47_462:
-	or	ebx, edx
-	mov	edi, ebx
+	orl	%edx, %ebx
+	movl	%ebx, %edi
 LBB47_463:
-	cmp	edi, 43
+	cmpl	$43, %edi
 	jne	LBB47_536
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rax
-	mov	ebx, 1
-	cmp	rax, 1
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	movl	$1, %ebx
+	cmpq	$1, %rax
 	je	LBB47_552
-	cmp	byte ptr [r9], -65
+	cmpb	$-65, (%r9)
 	jg	LBB47_552
 	jmp	LBB47_744
 LBB47_466:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_467
 LBB47_469:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_470:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_471:
-	cmp	esi, 45
+	cmpl	$45, %esi
 	jne	LBB47_498
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 224], 1
-	mov	qword ptr [rbp - 88], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 192(%rsp)
+	movq	%rcx, 48(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_474
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_750
 LBB47_474:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 56]
-	mov	rsi, r14
-	mov	edx, 109
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 56]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	16(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$109, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	16(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_500
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_642
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_649
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_479
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_479:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_573
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_644
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_647
 LBB47_645:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_687
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_688
 LBB47_482:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_483
 LBB47_485:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_486:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_487:
-	cmp	esi, 45
+	cmpl	$45, %esi
 	jne	LBB47_498
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 224], 1
-	mov	qword ptr [rbp - 88], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 192(%rsp)
+	movq	%rcx, 48(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_490
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_750
 LBB47_490:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 56]
-	mov	rsi, r14
-	mov	edx, 98
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 56]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	16(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$98, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	16(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_500
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_642
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
-	jns	LBB47_658
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
+	jns	LBB47_659
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_495
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_495:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_574
-	cmp	r9, r8
-	je	LBB47_653
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
-	jb	LBB47_656
-LBB47_654:
-	cmp	r9, r8
+	cmpq	%r8, %r9
+	je	LBB47_654
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
+	jb	LBB47_657
+LBB47_655:
+	cmpq	%r8, %r9
 	je	LBB47_689
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_690
 LBB47_498:
-	mov	eax, 14
-	mov	ebx, 45
+	movl	$14, %eax
+	movl	$45, %ebx
 LBB47_499:
-	mov	dword ptr [rbp - 56], eax
-	mov	dword ptr [rbp - 52], ebx
-	mov	dword ptr [rbp - 48], esi
+	movl	%eax, 16(%rsp)
+	movl	%ebx, 20(%rsp)
+	movl	%esi, 24(%rsp)
 LBB47_500:
-	mov	ebx, dword ptr [rbp - 52]
-	mov	esi, dword ptr [rbp - 48]
+	movl	20(%rsp), %ebx
+	movl	24(%rsp), %esi
 LBB47_501:
-	mov	dword ptr [r15], eax
+	movl	%eax, (%r15)
 LBB47_502:
-	mov	dword ptr [r15 + 4], ebx
+	movl	%ebx, 4(%r15)
 LBB47_503:
-	mov	dword ptr [r15 + 8], esi
+	movl	%esi, 8(%r15)
 LBB47_504:
-	add	rsp, 216
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	leaq	-40(%rbp), %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	vzeroupper
+	retq
 LBB47_505:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_506
 LBB47_508:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_509:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_510:
-	cmp	esi, 32
+	cmpl	$32, %esi
 	jne	LBB47_521
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 248], 1
-	mov	qword ptr [rbp - 232], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 224(%rsp)
+	movq	%rcx, 208(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_513
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_758
 LBB47_513:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 56]
-	mov	rsi, r14
-	mov	edx, 98
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 56]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	16(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$98, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	16(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_523
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_528
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_670
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_518
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_518:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_575
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_665
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_668
 LBB47_666:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_691
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_692
 LBB47_521:
-	mov	eax, 14
-	mov	ebx, 32
+	movl	$14, %eax
+	movl	$32, %ebx
 LBB47_522:
-	mov	dword ptr [rbp - 56], eax
-	mov	dword ptr [rbp - 52], ebx
-	mov	dword ptr [rbp - 48], esi
+	movl	%eax, 16(%rsp)
+	movl	%ebx, 20(%rsp)
+	movl	%esi, 24(%rsp)
 LBB47_523:
-	mov	ebx, dword ptr [rbp - 52]
-	mov	esi, dword ptr [rbp - 48]
+	movl	20(%rsp), %ebx
+	movl	24(%rsp), %esi
 LBB47_524:
-	mov	dword ptr [rbp - 88], eax
-	mov	dword ptr [rbp - 84], ebx
-	mov	dword ptr [rbp - 80], esi
+	movl	%eax, 48(%rsp)
+	movl	%ebx, 52(%rsp)
+	movl	%esi, 56(%rsp)
 LBB47_525:
-	mov	ebx, dword ptr [rbp - 84]
-	mov	esi, dword ptr [rbp - 80]
+	movl	52(%rsp), %ebx
+	movl	56(%rsp), %esi
 LBB47_526:
-	mov	dword ptr [rbp - 224], eax
-	mov	dword ptr [rbp - 220], ebx
-	mov	dword ptr [rbp - 216], esi
+	movl	%eax, 192(%rsp)
+	movl	%ebx, 196(%rsp)
+	movl	%esi, 200(%rsp)
 LBB47_527:
-	mov	ebx, dword ptr [rbp - 220]
-	mov	esi, dword ptr [rbp - 216]
+	movl	196(%rsp), %ebx
+	movl	200(%rsp), %esi
 	jmp	LBB47_501
 LBB47_528:
 	jmp	LBB47_524
 LBB47_529:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_530:
-	and	edi, 7
-	shl	edi, 18
-	shl	edx, 6
-	or	edx, edi
-	or	edx, esi
-	mov	esi, edx
-	cmp	edx, 1114112
+	andl	$7, %edi
+	shll	$18, %edi
+	shll	$6, %edx
+	orl	%edi, %edx
+	orl	%esi, %edx
+	movl	%edx, %esi
+	cmpl	$1114112, %edx
 	jne	LBB47_385
 LBB47_531:
-	mov	dword ptr [r15], 10
+	movl	$10, (%r15)
 	jmp	LBB47_504
 LBB47_532:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_586
 LBB47_533:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_596
 LBB47_534:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_535:
-	and	edx, 7
-	shl	edx, 18
-	shl	ebx, 6
-	or	ebx, edx
-	or	ebx, esi
-	mov	edi, ebx
-	cmp	ebx, 1114112
+	andl	$7, %edx
+	shll	$18, %edx
+	shll	$6, %ebx
+	orl	%edx, %ebx
+	orl	%esi, %ebx
+	movl	%ebx, %edi
+	cmpl	$1114112, %ebx
 	jne	LBB47_463
 LBB47_536:
-	movzx	edi, byte ptr [rcx]
-	test	dil, dil
+	movzbl	(%rcx), %edi
+	testb	%dil, %dil
 	jns	LBB47_548
-	xor	esi, esi
-	mov	rbx, r8
-	cmp	rax, 1
+	xorl	%esi, %esi
+	movq	%r8, %rbx
+	cmpq	$1, %rax
 	je	LBB47_539
-	lea	rbx, [rcx + 2]
-	movzx	esi, byte ptr [rcx + 1]
-	and	esi, 63
+	leaq	2(%rcx), %rbx
+	movzbl	1(%rcx), %esi
+	andl	$63, %esi
 LBB47_539:
-	mov	edx, edi
-	and	edx, 31
-	cmp	dil, -33
+	movl	%edi, %edx
+	andl	$31, %edx
+	cmpb	$-33, %dil
 	jbe	LBB47_542
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_543
-	movzx	r9d, byte ptr [rbx]
-	inc	rbx
-	and	r9d, 63
-	shl	esi, 6
-	or	esi, r9d
-	cmp	dil, -16
+	movzbl	(%rbx), %r9d
+	incq	%rbx
+	andl	$63, %r9d
+	shll	$6, %esi
+	orl	%r9d, %esi
+	cmpb	$-16, %dil
 	jb	LBB47_546
 LBB47_544:
-	cmp	rbx, r8
+	cmpq	%r8, %rbx
 	je	LBB47_619
-	movzx	edi, byte ptr [rbx]
-	and	edi, 63
+	movzbl	(%rbx), %edi
+	andl	$63, %edi
 	jmp	LBB47_620
 LBB47_542:
-	shl	edx, 6
+	shll	$6, %edx
 	jmp	LBB47_547
 LBB47_543:
-	xor	r9d, r9d
-	mov	rbx, r8
-	shl	esi, 6
-	or	esi, r9d
-	cmp	dil, -16
+	xorl	%r9d, %r9d
+	movq	%r8, %rbx
+	shll	$6, %esi
+	orl	%r9d, %esi
+	cmpb	$-16, %dil
 	jae	LBB47_544
 LBB47_546:
-	shl	edx, 12
+	shll	$12, %edx
 LBB47_547:
-	or	esi, edx
-	mov	edi, esi
+	orl	%edx, %esi
+	movl	%esi, %edi
 LBB47_548:
-	cmp	edi, 45
+	cmpl	$45, %edi
 	jne	LBB47_560
-	mov	qword ptr [rbp - 192], rcx
-	inc	rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rax
-	mov	ebx, -1
-	cmp	rax, 1
+	movq	%rcx, 128(%rsp)
+	incq	%rcx
+	movq	%rax, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	movl	$-1, %ebx
+	cmpq	$1, %rax
 	jne	LBB47_551
-	mov	r9, rcx
+	movq	%rcx, %r9
 	jmp	LBB47_552
 LBB47_551:
-	cmp	byte ptr [rcx], -65
-	mov	r9, rcx
+	cmpb	$-65, (%rcx)
+	movq	%rcx, %r9
 	jle	LBB47_744
 LBB47_552:
-	mov	qword ptr [r14], r9
-	dec	rax
-	mov	qword ptr [r14 + 8], rax
-	mov	esi, 2
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	movq	%r9, (%r14)
+	decq	%rax
+	movq	%rax, 8(%r14)
+	movl	$2, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_560
-	mov	r12, rdx
-	mov	rax, qword ptr [r14 + 8]
-	test	rax, rax
+	movq	%rdx, %r12
+	movq	8(%r14), %rax
+	testq	%rax, %rax
 	je	LBB47_611
-	mov	rcx, qword ptr [r14]
-	movzx	esi, byte ptr [rcx]
-	test	sil, sil
+	movq	(%r14), %rcx
+	movzbl	(%rcx), %esi
+	testb	%sil, %sil
 	jns	LBB47_607
-	lea	r8, [rcx + rax]
-	xor	edx, edx
-	mov	r9, r8
-	cmp	rax, 1
+	leaq	(%rcx,%rax), %r8
+	xorl	%edx, %edx
+	movq	%r8, %r9
+	cmpq	$1, %rax
 	je	LBB47_557
-	lea	r9, [rcx + 2]
-	movzx	edx, byte ptr [rcx + 1]
-	and	edx, 63
+	leaq	2(%rcx), %r9
+	movzbl	1(%rcx), %edx
+	andl	$63, %edx
 LBB47_557:
-	mov	edi, esi
-	and	edi, 31
-	cmp	sil, -33
+	movl	%esi, %edi
+	andl	$31, %edi
+	cmpb	$-33, %sil
 	jbe	LBB47_561
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_602
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edx, 6
-	or	edx, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edx
+	orl	%r10d, %edx
+	cmpb	$-16, %sil
 	jb	LBB47_605
 LBB47_603:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_683
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_684
 LBB47_561:
-	shl	edi, 6
+	shll	$6, %edi
 	jmp	LBB47_606
 LBB47_562:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_563:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_234
 	jmp	LBB47_420
 LBB47_564:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_565:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	jne	LBB47_430
 	jmp	LBB47_442
 LBB47_566:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_567:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	jne	LBB47_471
 	jmp	LBB47_499
 LBB47_568:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_569:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	jne	LBB47_487
 	jmp	LBB47_499
 LBB47_570:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_571:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	jne	LBB47_510
 	jmp	LBB47_522
 LBB47_572:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_630
 LBB47_573:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_648
 LBB47_574:
-	shl	ebx, 6
-	jmp	LBB47_657
+	shll	$6, %ebx
+	jmp	LBB47_658
 LBB47_575:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_669
 LBB47_576:
-	mov	edx, 9
-	lea	rsi, [rip + l___unnamed_134+72]
-	lea	rdi, [rip + l___unnamed_73]
-	cmp	rcx, rdi
+	movl	$9, %edx
+	leaq	l___unnamed_134+72(%rip), %rsi
+	leaq	l___unnamed_73(%rip), %rdi
+	cmpq	%rdi, %rcx
 	je	LBB47_313
-	movabs	rdi, 7017860998831039831
-	xor	rdi, qword ptr [rcx]
-	movzx	ebx, byte ptr [rcx + 8]
-	xor	rbx, 121
-	or	rbx, rdi
+	movabsq	$7017860998831039831, %rdi
+	xorq	(%rcx), %rdi
+	movzbl	8(%rcx), %ebx
+	xorq	$121, %rbx
+	orq	%rdi, %rbx
 	je	LBB47_313
 LBB47_578:
-	mov	edx, 8
-	lea	rsi, [rip + l___unnamed_134+96]
-	lea	rdi, [rip + L___unnamed_71]
-	cmp	rcx, rdi
+	movl	$8, %edx
+	leaq	l___unnamed_134+96(%rip), %rsi
+	leaq	L___unnamed_71(%rip), %rdi
+	cmpq	%rdi, %rcx
 	je	LBB47_313
-	movabs	rdi, 8746382398334527572
-	cmp	qword ptr [rcx], rdi
+	movabsq	$8746382398334527572, %rdi
+	cmpq	%rdi, (%rcx)
 	je	LBB47_313
-	xor	r8d, r8d
-	lea	rsi, [rip + l___unnamed_134+120]
-	lea	rdx, [rip + l___unnamed_74]
-	cmp	rcx, rdx
+	xorl	%r8d, %r8d
+	leaq	l___unnamed_134+120(%rip), %rsi
+	leaq	l___unnamed_74(%rip), %rdx
+	cmpq	%rdx, %rcx
 	jne	LBB47_262
 LBB47_312:
-	mov	edx, 6
+	movl	$6, %edx
 LBB47_313:
-	mov	esi, dword ptr [rsi + 16]
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], rdx
-	mov	qword ptr [rbp - 72], rax
-	sub	rax, rdx
+	movl	16(%rsi), %esi
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	%rdx, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	subq	%rdx, %rax
 	je	LBB47_316
 	jbe	LBB47_744
-	cmp	byte ptr [rcx + rdx], -65
+	cmpb	$-65, (%rcx,%rdx)
 	jle	LBB47_744
 LBB47_316:
-	add	rcx, rdx
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	mov	dword ptr [r13 + 24], esi
-	mov	dword ptr [r15], 15
+	addq	%rdx, %rcx
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	movl	%esi, 24(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_582:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_583
 LBB47_585:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_586:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_587:
-	cmp	esi, 47
+	cmpl	$47, %esi
 	jne	LBB47_591
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 88], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 48(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_590
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_759
 LBB47_590:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	mov	rdi, r15
-	mov	rsi, r14
-	mov	edx, 121
-	jmp	LBB47_663
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	movq	%r15, %rdi
+	movq	%r14, %rsi
+	movl	$121, %edx
+	jmp	LBB47_653
 LBB47_591:
-	mov	eax, 14
-	mov	ebx, 47
+	movl	$14, %eax
+	movl	$47, %ebx
 	jmp	LBB47_501
 LBB47_592:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_593
 LBB47_595:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_596:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_597:
-	cmp	esi, 58
+	cmpl	$58, %esi
 	jne	LBB47_601
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 88], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 48(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_600
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_759
 LBB47_600:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	mov	rdi, r15
-	mov	rsi, r14
-	mov	edx, 83
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	movq	%r15, %rdi
+	movq	%r14, %rsi
+	movl	$83, %edx
 	jmp	LBB47_663
 LBB47_601:
-	mov	eax, 14
-	mov	ebx, 58
+	movl	$14, %eax
+	movl	$58, %ebx
 	jmp	LBB47_501
 LBB47_602:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edx, 6
-	or	edx, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edx
+	orl	%r10d, %edx
+	cmpb	$-16, %sil
 	jae	LBB47_603
 LBB47_605:
-	shl	edi, 12
+	shll	$12, %edi
 LBB47_606:
-	or	edx, edi
-	mov	esi, edx
+	orl	%edi, %edx
+	movl	%edx, %esi
 LBB47_607:
-	cmp	esi, 58
+	cmpl	$58, %esi
 	jne	LBB47_611
-	mov	qword ptr [rbp - 192], rcx
-	inc	rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 1
+	movq	%rcx, 128(%rsp)
+	incq	%rcx
+	movq	%rax, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$1, %rax
 	je	LBB47_610
-	cmp	byte ptr [rcx], -65
+	cmpb	$-65, (%rcx)
 	jle	LBB47_744
 LBB47_610:
-	dec	rax
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
+	decq	%rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
 LBB47_611:
-	mov	esi, 2
-	mov	edx, 2
-	mov	rdi, r14
-	xor	ecx, ecx
-	call	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
-	test	rax, rax
+	movl	$2, %esi
+	movl	$2, %edx
+	movq	%r14, %rdi
+	xorl	%ecx, %ecx
+	callq	__ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE
+	testq	%rax, %rax
 	je	LBB47_560
-	imul	eax, r12d, 60
+	imull	$60, %r12d, %eax
 	jo	LBB47_752
-	imul	eax, eax, 60
+	imull	$60, %eax, %eax
 	jo	LBB47_752
-	imul	ecx, edx, 60
+	imull	$60, %edx, %ecx
 	jo	LBB47_753
-	add	eax, ecx
+	addl	%ecx, %eax
 	jo	LBB47_754
-	imul	ebx, eax
+	imull	%eax, %ebx
 	jo	LBB47_755
-	mov	dword ptr [r13 + 36], ebx
-	mov	dword ptr [r15], 15
+	movl	%ebx, 36(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_619:
-	xor	edi, edi
+	xorl	%edi, %edi
 LBB47_620:
-	and	edx, 7
-	shl	edx, 18
-	shl	esi, 6
-	or	esi, edx
-	or	esi, edi
-	mov	edi, esi
-	cmp	esi, 1114112
+	andl	$7, %edx
+	shll	$18, %edx
+	shll	$6, %esi
+	orl	%edx, %esi
+	orl	%edi, %esi
+	movl	%esi, %edi
+	cmpl	$1114112, %esi
 	jne	LBB47_548
 LBB47_560:
-	mov	dword ptr [r15], 9
+	movl	$9, (%r15)
 	jmp	LBB47_504
 LBB47_622:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_623:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_501
 	jmp	LBB47_587
 LBB47_624:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_625:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_501
 	jmp	LBB47_597
 LBB47_626:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_627
 LBB47_629:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_630:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_631:
-	cmp	esi, 58
+	cmpl	$58, %esi
 	jne	LBB47_643
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 224], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 192(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_634
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_760
 LBB47_634:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 88]
-	mov	rsi, r14
-	mov	edx, 83
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 88]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	48(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$83, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	48(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_445
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_642
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_704
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_639
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_639:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_693
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_699
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_702
 LBB47_700:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_727
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_728
 LBB47_642:
 	jmp	LBB47_501
 LBB47_643:
-	mov	eax, 14
-	mov	ebx, 58
+	movl	$14, %eax
+	movl	$58, %ebx
 	jmp	LBB47_444
 LBB47_644:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_645
 LBB47_647:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_648:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_649:
-	cmp	esi, 45
+	cmpl	$45, %esi
 	jne	LBB47_664
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 88], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 48(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_652
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_759
 LBB47_652:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	mov	rdi, r15
-	mov	rsi, r14
-	mov	edx, 100
-	jmp	LBB47_663
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	movq	%r15, %rdi
+	movq	%r14, %rsi
+	movl	$100, %edx
 LBB47_653:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
-	jae	LBB47_654
-LBB47_656:
-	shl	ebx, 12
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	jmp	LBB47_504
+LBB47_654:
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
+	jae	LBB47_655
 LBB47_657:
-	or	edi, ebx
-	mov	esi, edi
+	shll	$12, %ebx
 LBB47_658:
-	cmp	esi, 45
+	orl	%ebx, %edi
+	movl	%edi, %esi
+LBB47_659:
+	cmpl	$45, %esi
 	jne	LBB47_664
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 88], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
-	je	LBB47_661
-	cmp	byte ptr [rdx], -65
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 48(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
+	je	LBB47_662
+	cmpb	$-65, (%rdx)
 	jle	LBB47_759
-LBB47_661:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	mov	rdi, r15
-	mov	rsi, r14
 LBB47_662:
-	mov	edx, 89
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	movq	%r15, %rdi
+	movq	%r14, %rsi
+	movl	$89, %edx
 LBB47_663:
-	mov	rcx, r13
-	add	rsp, 216
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
+	movq	%r13, %rcx
+	leaq	-40(%rbp), %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
 LBB47_664:
-	mov	eax, 14
-	mov	ebx, 45
+	movl	$14, %eax
+	movl	$45, %ebx
 	jmp	LBB47_501
 LBB47_665:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_666
 LBB47_668:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_669:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_670:
-	cmp	esi, 32
+	cmpl	$32, %esi
 	jne	LBB47_681
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 232], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 208(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_673
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_761
 LBB47_673:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 88]
-	mov	rsi, r14
-	mov	edx, 101
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 88]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	48(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$101, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	48(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_525
-	mov	rcx, qword ptr [r14 + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	8(%r14), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_682
-	mov	rdx, qword ptr [r14]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	(%r14), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_714
-	lea	r8, [rdx + rcx]
-	xor	edi, edi
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%edi, %edi
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_678
-	lea	r9, [rdx + 2]
-	movzx	edi, byte ptr [rdx + 1]
-	and	edi, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %edi
+	andl	$63, %edi
 LBB47_678:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_694
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_709
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jb	LBB47_712
 LBB47_710:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_729
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_730
 LBB47_681:
-	mov	eax, 14
-	mov	ebx, 32
+	movl	$14, %eax
+	movl	$32, %ebx
 	jmp	LBB47_524
 LBB47_682:
 	jmp	LBB47_526
 LBB47_683:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_684:
-	and	edi, 7
-	shl	edi, 18
-	shl	edx, 6
-	or	edx, edi
-	or	edx, esi
-	mov	esi, edx
-	cmp	edx, 1114112
+	andl	$7, %edi
+	shll	$18, %edi
+	shll	$6, %edx
+	orl	%edi, %edx
+	orl	%esi, %edx
+	movl	%edx, %esi
+	cmpl	$1114112, %edx
 	jne	LBB47_607
 	jmp	LBB47_611
 LBB47_685:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_686:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_444
 	jmp	LBB47_631
 LBB47_687:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_688:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_501
 	jmp	LBB47_649
 LBB47_689:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_690:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_501
-	jmp	LBB47_658
+	jmp	LBB47_659
 LBB47_691:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_692:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_524
 	jmp	LBB47_670
 LBB47_693:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_703
 LBB47_694:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_713
 LBB47_695:
-	mov	r15, rbx
-	mov	r14, r8
-	mov	r13, r9
+	movq	%rbx, %r15
+	movq	%r8, %r14
+	movq	%r9, %r13
 LBB47_696:
-	mov	edx, dword ptr [rdx + 16]
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 184], rax
-	mov	qword ptr [rbp - 56], 3
-	mov	qword ptr [rbp - 72], rax
-	cmp	rax, 3
+	movl	16(%rdx), %edx
+	movq	%rcx, 128(%rsp)
+	movq	%rax, 136(%rsp)
+	movq	$3, 16(%rsp)
+	movq	%rax, 32(%rsp)
+	cmpq	$3, %rax
 	je	LBB47_698
-	cmp	byte ptr [rcx + 3], -65
+	cmpb	$-65, 3(%rcx)
 	jle	LBB47_744
 LBB47_698:
-	add	rcx, 3
-	add	rax, -3
-	mov	qword ptr [r14], rcx
-	mov	qword ptr [r14 + 8], rax
-	mov	dword ptr [r13 + 16], edx
-	mov	dword ptr [r15], 15
+	addq	$3, %rcx
+	addq	$-3, %rax
+	movq	%rcx, (%r14)
+	movq	%rax, 8(%r14)
+	movl	%edx, 16(%r13)
+	movl	$15, (%r15)
 	jmp	LBB47_504
 LBB47_699:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_700
 LBB47_702:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_703:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_704:
-	cmp	esi, 32
+	cmpl	$32, %esi
 	jne	LBB47_708
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_707
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_762
 LBB47_707:
-	dec	rcx
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	mov	rdi, r15
-	mov	rsi, r14
-	mov	edx, 112
-	jmp	LBB47_663
+	decq	%rcx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	movq	%r15, %rdi
+	movq	%r14, %rsi
+	movl	$112, %edx
+	jmp	LBB47_653
 LBB47_708:
-	mov	eax, 14
-	mov	ebx, 32
+	movl	$14, %eax
+	movl	$32, %ebx
 	jmp	LBB47_501
 LBB47_709:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	edi, 6
-	or	edi, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %edi
+	orl	%r10d, %edi
+	cmpb	$-16, %sil
 	jae	LBB47_710
 LBB47_712:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_713:
-	or	edi, ebx
-	mov	esi, edi
+	orl	%ebx, %edi
+	movl	%edi, %esi
 LBB47_714:
-	cmp	esi, 32
+	cmpl	$32, %esi
 	jne	LBB47_725
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_717
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_762
 LBB47_717:
-	dec	rcx
-	mov	rbx, r14
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	lea	rdi, [rbp - 224]
-	mov	rsi, r14
-	mov	edx, 84
-	mov	rcx, r13
-	call	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
-	mov	eax, dword ptr [rbp - 224]
-	cmp	eax, 15
+	decq	%rcx
+	movq	%r14, %rbx
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	leaq	192(%rsp), %rdi
+	movq	%r14, %rsi
+	movl	$84, %edx
+	movq	%r13, %rcx
+	callq	__ZN4time5parse10parse_type17h077cc5c77ceed4cdE
+	movl	192(%rsp), %eax
+	cmpl	$15, %eax
 	jne	LBB47_527
-	mov	rdi, r15
-	mov	rcx, qword ptr [rbx + 8]
-	mov	eax, 10
-	test	rcx, rcx
+	movq	%r15, %rdi
+	movq	8(%rbx), %rcx
+	movl	$10, %eax
+	testq	%rcx, %rcx
 	je	LBB47_726
-	mov	r14, rbx
-	mov	rdx, qword ptr [rbx]
-	movzx	esi, byte ptr [rdx]
-	test	sil, sil
+	movq	%rbx, %r14
+	movq	(%rbx), %rdx
+	movzbl	(%rdx), %esi
+	testb	%sil, %sil
 	jns	LBB47_737
-	lea	r8, [rdx + rcx]
-	xor	r11d, r11d
-	mov	r9, r8
-	cmp	rcx, 1
+	leaq	(%rdx,%rcx), %r8
+	xorl	%r11d, %r11d
+	movq	%r8, %r9
+	cmpq	$1, %rcx
 	je	LBB47_722
-	lea	r9, [rdx + 2]
-	movzx	r11d, byte ptr [rdx + 1]
-	and	r11d, 63
+	leaq	2(%rdx), %r9
+	movzbl	1(%rdx), %r11d
+	andl	$63, %r11d
 LBB47_722:
-	mov	ebx, esi
-	and	ebx, 31
-	cmp	sil, -33
+	movl	%esi, %ebx
+	andl	$31, %ebx
+	cmpb	$-33, %sil
 	jbe	LBB47_731
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_732
-	movzx	r10d, byte ptr [r9]
-	inc	r9
-	and	r10d, 63
-	shl	r11d, 6
-	or	r11d, r10d
-	cmp	sil, -16
+	movzbl	(%r9), %r10d
+	incq	%r9
+	andl	$63, %r10d
+	shll	$6, %r11d
+	orl	%r10d, %r11d
+	cmpb	$-16, %sil
 	jb	LBB47_735
 LBB47_733:
-	cmp	r9, r8
+	cmpq	%r8, %r9
 	je	LBB47_742
-	movzx	esi, byte ptr [r9]
-	and	esi, 63
+	movzbl	(%r9), %esi
+	andl	$63, %esi
 	jmp	LBB47_743
 LBB47_725:
-	mov	eax, 14
-	mov	ebx, 32
+	movl	$14, %eax
+	movl	$32, %ebx
 	jmp	LBB47_526
 LBB47_726:
-	mov	r15, rdi
+	movq	%rdi, %r15
 	jmp	LBB47_501
 LBB47_727:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_728:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_501
 	jmp	LBB47_704
 LBB47_729:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_730:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	edi, 6
-	or	edi, ebx
-	or	edi, esi
-	mov	esi, edi
-	cmp	edi, 1114112
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %edi
+	orl	%ebx, %edi
+	orl	%esi, %edi
+	movl	%edi, %esi
+	cmpl	$1114112, %edi
 	je	LBB47_526
 	jmp	LBB47_714
 LBB47_731:
-	shl	ebx, 6
+	shll	$6, %ebx
 	jmp	LBB47_736
 LBB47_732:
-	xor	r10d, r10d
-	mov	r9, r8
-	shl	r11d, 6
-	or	r11d, r10d
-	cmp	sil, -16
+	xorl	%r10d, %r10d
+	movq	%r8, %r9
+	shll	$6, %r11d
+	orl	%r10d, %r11d
+	cmpb	$-16, %sil
 	jae	LBB47_733
 LBB47_735:
-	shl	ebx, 12
+	shll	$12, %ebx
 LBB47_736:
-	or	r11d, ebx
-	mov	esi, r11d
+	orl	%ebx, %r11d
+	movl	%r11d, %esi
 LBB47_737:
-	cmp	esi, 32
+	cmpl	$32, %esi
 	jne	LBB47_741
-	mov	qword ptr [rbp - 192], rdx
-	inc	rdx
-	mov	qword ptr [rbp - 184], rcx
-	mov	qword ptr [rbp - 56], 1
-	mov	qword ptr [rbp - 72], rcx
-	cmp	rcx, 1
+	movq	%rdx, 128(%rsp)
+	incq	%rdx
+	movq	%rcx, 136(%rsp)
+	movq	$1, 16(%rsp)
+	movq	%rcx, 32(%rsp)
+	cmpq	$1, %rcx
 	je	LBB47_740
-	cmp	byte ptr [rdx], -65
+	cmpb	$-65, (%rdx)
 	jle	LBB47_762
 LBB47_740:
-	dec	rcx
-	mov	rsi, r14
-	mov	qword ptr [r14], rdx
-	mov	qword ptr [r14 + 8], rcx
-	jmp	LBB47_662
+	decq	%rcx
+	movq	%r14, %rsi
+	movq	%rdx, (%r14)
+	movq	%rcx, 8(%r14)
+	movl	$89, %edx
+	jmp	LBB47_653
 LBB47_741:
-	mov	eax, 14
-	mov	ebx, 32
-	mov	r15, rdi
+	movl	$14, %eax
+	movl	$32, %ebx
+	movq	%rdi, %r15
 	jmp	LBB47_501
 LBB47_742:
-	xor	esi, esi
+	xorl	%esi, %esi
 LBB47_743:
-	and	ebx, 7
-	shl	ebx, 18
-	shl	r11d, 6
-	or	r11d, ebx
-	or	r11d, esi
-	mov	esi, r11d
-	cmp	r11d, 1114112
-	mov	r15, rdi
+	andl	$7, %ebx
+	shll	$18, %ebx
+	shll	$6, %r11d
+	orl	%ebx, %r11d
+	orl	%esi, %r11d
+	movl	%r11d, %esi
+	cmpl	$1114112, %r11d
+	movq	%rdi, %r15
 	je	LBB47_501
 	jmp	LBB47_737
 LBB47_744:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 56]
-	mov	qword ptr [rbp - 136], rax
-	lea	rax, [rbp - 72]
-	mov	qword ptr [rbp - 128], rax
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	16(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	leaq	32(%rsp), %rax
+	movq	%rax, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_745:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_139]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_139(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_746:
-	lea	rbx, [rbp - 72]
-	mov	rdi, rbx
-	call	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
-	mov	qword ptr [rbp - 56], rbx
-	mov	rax, qword ptr [rip + __ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL]
-	mov	qword ptr [rbp - 48], rax
-	lea	rax, [rip + l___unnamed_140]
-	mov	qword ptr [rbp - 192], rax
-	mov	qword ptr [rbp - 184], 1
-	mov	qword ptr [rbp - 176], 0
-	lea	rax, [rbp - 56]
-	mov	qword ptr [rbp - 160], rax
-	mov	qword ptr [rbp - 152], 1
+	leaq	32(%rsp), %rbx
+	movq	%rbx, %rdi
+	callq	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
+	movq	%rbx, 16(%rsp)
+	movq	__ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL(%rip), %rax
+	movq	%rax, 24(%rsp)
+	leaq	l___unnamed_140(%rip), %rax
+	movq	%rax, 128(%rsp)
+	movq	$1, 136(%rsp)
+	movq	$0, 144(%rsp)
+	leaq	16(%rsp), %rax
+	movq	%rax, 160(%rsp)
+	movq	$1, 168(%rsp)
 Ltmp6:
-	lea	rsi, [rip + l___unnamed_141]
-	lea	rdi, [rbp - 192]
-	call	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
+	leaq	l___unnamed_141(%rip), %rsi
+	leaq	128(%rsp), %rdi
+	callq	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
 Ltmp7:
 	ud2
 LBB47_748:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_142]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_142(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_749:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_143]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_143(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_750:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 224]
-	mov	qword ptr [rbp - 136], rax
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 128], rax
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	192(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	leaq	48(%rsp), %rax
+	movq	%rax, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_751:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_144]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_144(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_752:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_145]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_145(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_753:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_146]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_146(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_754:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_147]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_147(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_755:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_148]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_148(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB47_756:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 136], rax
-	lea	rax, [rbp - 56]
-	mov	qword ptr [rbp - 128], rax
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	48(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	leaq	16(%rsp), %rax
+	movq	%rax, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_757:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 232]
-	mov	qword ptr [rbp - 136], rax
-	lea	rax, [rbp - 224]
-	mov	qword ptr [rbp - 128], rax
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	208(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	leaq	192(%rsp), %rax
+	movq	%rax, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_758:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 248]
-	mov	qword ptr [rbp - 136], rax
-	lea	rax, [rbp - 232]
-	mov	qword ptr [rbp - 128], rax
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	224(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	leaq	208(%rsp), %rax
+	movq	%rax, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_759:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 88]
-	mov	qword ptr [rbp - 136], rax
-	mov	qword ptr [rbp - 128], r12
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	48(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	movq	%r12, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_760:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 224]
-	mov	qword ptr [rbp - 136], rax
-	mov	qword ptr [rbp - 128], r12
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	192(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	movq	%r12, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_761:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 232]
-	mov	qword ptr [rbp - 136], rax
-	mov	qword ptr [rbp - 128], r12
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	208(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	movq	%r12, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_762:
-	lea	rax, [rbp - 192]
-	mov	qword ptr [rbp - 144], rax
-	lea	rax, [rbp - 56]
-	mov	qword ptr [rbp - 136], rax
-	mov	qword ptr [rbp - 128], r12
-	lea	rdi, [rbp - 144]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	128(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	leaq	16(%rsp), %rax
+	movq	%rax, 72(%rsp)
+	movq	%r12, 80(%rsp)
+	leaq	64(%rsp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB47_763:
 Ltmp8:
-	mov	rbx, rax
-	lea	rdi, [rbp - 72]
-	call	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	leaq	32(%rsp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end2:
 	.cfi_endproc
@@ -7591,1242 +7608,1244 @@ Lcst_end2:
 	.p2align	4, 0x90
 __ZN4time5parse16match_digits_i6417ha61d5c033a132e4aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 328
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r13, rdx
-	test	ecx, ecx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	subq	$328, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdx, %r13
+	testl	%ecx, %ecx
 	je	LBB48_58
-	mov	qword ptr [rbp - 216], rsi
-	mov	qword ptr [rbp - 64], r13
-	mov	rsi, qword ptr [rdi]
-	mov	qword ptr [rbp - 72], rdi
-	mov	rdx, qword ptr [rdi + 8]
-	lea	rcx, [rip + l___unnamed_40]
-	lea	rdi, [rbp - 208]
-	mov	r8d, 1
-	mov	qword ptr [rbp - 56], rdx
-	call	__ZN4core3str7pattern11StrSearcher3new17hf20175b25b057116E
-	mov	r10, qword ptr [rbp - 176]
-	mov	r8, qword ptr [rbp - 168]
-	mov	r12, qword ptr [rbp - 208]
-	mov	rsi, qword ptr [rbp - 200]
-	mov	rax, r8
-	sub	rax, 1
-	mov	qword ptr [rbp - 336], rax
-	setb	al
-	cmp	rsi, r8
-	sete	r9b
-	or	r9b, al
-	lea	r15, [r12 + r8]
-	lea	rax, [r12 + rsi]
-	mov	qword ptr [rbp - 232], rax
-	lea	rdi, [r12 + r8 + 1]
-	lea	rax, [r12 + r8 + 2]
-	mov	qword ptr [rbp - 352], rax
-	mov	rax, qword ptr [rbp - 192]
-	mov	r14, qword ptr [rbp - 136]
-	mov	rcx, r14
-	sub	rcx, r8
-	mov	qword ptr [rbp - 296], rcx
-	mov	r11, qword ptr [rbp - 184]
-	mov	rcx, qword ptr [rbp - 144]
-	mov	qword ptr [rbp - 320], rcx
-	lea	rcx, [r11 - 1]
-	mov	qword ptr [rbp - 304], rcx
-	mov	rcx, qword ptr [rbp - 120]
-	mov	qword ptr [rbp - 80], rcx
-	lea	rcx, [r12 + r14]
-	mov	qword ptr [rbp - 240], rcx
-	mov	qword ptr [rbp - 104], rax
-	add	rax, r8
-	mov	qword ptr [rbp - 344], rax
-	mov	qword ptr [rbp - 224], r10
-	mov	qword ptr [rbp - 312], rdi
+	movq	%rsi, -216(%rbp)
+	movq	%r13, -64(%rbp)
+	movq	(%rdi), %rsi
+	movq	%rdi, -72(%rbp)
+	movq	8(%rdi), %rdx
+	leaq	l___unnamed_40(%rip), %rcx
+	leaq	-208(%rbp), %rdi
+	movl	$1, %r8d
+	movq	%rdx, -56(%rbp)
+	callq	__ZN4core3str7pattern11StrSearcher3new17hf20175b25b057116E
+	movq	-176(%rbp), %r10
+	movq	-168(%rbp), %r8
+	movq	-208(%rbp), %r12
+	movq	-200(%rbp), %rsi
+	movq	%r8, %rax
+	subq	$1, %rax
+	movq	%rax, -336(%rbp)
+	setb	%al
+	cmpq	%r8, %rsi
+	sete	%r9b
+	orb	%al, %r9b
+	leaq	(%r12,%r8), %r15
+	leaq	(%r12,%rsi), %rax
+	movq	%rax, -232(%rbp)
+	leaq	(%r12,%r8), %rdi
+	addq	$1, %rdi
+	leaq	2(%r12,%r8), %rax
+	movq	%rax, -352(%rbp)
+	movq	-192(%rbp), %rax
+	movq	-136(%rbp), %r14
+	movq	%r14, %rcx
+	subq	%r8, %rcx
+	movq	%rcx, -296(%rbp)
+	movq	-184(%rbp), %r11
+	movq	-144(%rbp), %rcx
+	movq	%rcx, -320(%rbp)
+	leaq	-1(%r11), %rcx
+	movq	%rcx, -304(%rbp)
+	movq	-120(%rbp), %rcx
+	movq	%rcx, -80(%rbp)
+	leaq	(%r12,%r14), %rcx
+	movq	%rcx, -240(%rbp)
+	movq	%rax, -104(%rbp)
+	addq	%r8, %rax
+	movq	%rax, -344(%rbp)
+	movq	%r10, -224(%rbp)
+	movq	%rdi, -312(%rbp)
 LBB48_2:
-	mov	bl, byte ptr [rbp - 152]
-	mov	qword ptr [rbp - 88], r14
-	mov	ecx, ebx
-	test	r10, r10
+	movb	-152(%rbp), %bl
+	movq	%r14, -88(%rbp)
+	movl	%ebx, %ecx
+	testq	%r10, %r10
 	je	LBB48_11
 	.p2align	4, 0x90
 LBB48_3:
-	mov	byte ptr [rbp - 152], cl
-	cmp	r14, rsi
+	movb	%cl, -152(%rbp)
+	cmpq	%rsi, %r14
 	je	LBB48_78
-	lea	rdi, [r14 + r11 - 1]
-	cmp	rdi, rsi
-	mov	rcx, qword ptr [rbp - 80]
+	leaq	(%r14,%r11), %rdi
+	addq	$-1, %rdi
+	cmpq	%rsi, %rdi
+	movq	-80(%rbp), %rcx
 	jae	LBB48_79
-	lea	r13, [r14 + r11]
-	mov	rax, qword ptr [rbp - 152]
-	lea	rdx, [rax + r14]
-	mov	qword ptr [rbp - 288], rdx
-	cmp	rcx, -1
-	mov	byte ptr [rbp - 41], r9b
+	leaq	(%r14,%r11), %r13
+	movq	-152(%rbp), %rax
+	leaq	(%rax,%r14), %rdx
+	movq	%rdx, -288(%rbp)
+	cmpq	$-1, %rcx
+	movb	%r9b, -41(%rbp)
 	je	LBB48_42
-	mov	rdx, r11
-	sub	rdx, rax
-	mov	qword ptr [rbp - 328], rdx
-	mov	r9, rcx
-	mov	rcx, r14
-	mov	rdx, qword ptr [rbp - 104]
-	mov	qword ptr [rbp - 88], r13
-	cmp	r14, rcx
+	movq	%r11, %rdx
+	subq	%rax, %rdx
+	movq	%rdx, -328(%rbp)
+	movq	%rcx, %r9
+	movq	%r14, %rcx
+	movq	-104(%rbp), %rdx
+	movq	%r13, -88(%rbp)
+	cmpq	%rcx, %r14
 	je	LBB48_30
 	jmp	LBB48_64
 LBB48_7:
-	shl	r14d, 6
+	shll	$6, %r14d
 LBB48_8:
-	or	r10d, r14d
-	mov	edx, r10d
-	mov	r14, qword ptr [rbp - 88]
-	mov	r10, qword ptr [rbp - 224]
-	mov	r9d, r13d
+	orl	%r14d, %r10d
+	movl	%r10d, %edx
+	movq	-88(%rbp), %r14
+	movq	-224(%rbp), %r10
+	movl	%r13d, %r9d
 	.p2align	4, 0x90
 LBB48_9:
-	test	cl, cl
+	testb	%cl, %cl
 	je	LBB48_59
 LBB48_10:
-	mov	ecx, ebx
-	test	r10, r10
+	movl	%ebx, %ecx
+	testq	%r10, %r10
 	jne	LBB48_3
 LBB48_11:
-	test	cl, cl
-	sete	bl
-	mov	qword ptr [rbp - 256], r12
-	mov	qword ptr [rbp - 248], rsi
-	mov	qword ptr [rbp - 360], r8
-	mov	qword ptr [rbp - 96], rsi
-	test	r9b, r9b
+	testb	%cl, %cl
+	sete	%bl
+	movq	%r12, -256(%rbp)
+	movq	%rsi, -248(%rbp)
+	movq	%r8, -360(%rbp)
+	movq	%rsi, -96(%rbp)
+	testb	%r9b, %r9b
 	jne	LBB48_14
-	cmp	rsi, r8
+	cmpq	%r8, %rsi
 	jbe	LBB48_125
-	cmp	byte ptr [r15], -65
+	cmpb	$-65, (%r15)
 	jle	LBB48_125
 LBB48_14:
-	mov	edx, 1114112
-	cmp	rsi, r8
+	movl	$1114112, %edx
+	cmpq	%r8, %rsi
 	je	LBB48_9
-	movzx	edx, byte ptr [r15]
-	test	dl, dl
+	movzbl	(%r15), %edx
+	testb	%dl, %dl
 	jns	LBB48_9
-	mov	r13d, r9d
-	mov	r9, qword ptr [rbp - 232]
-	cmp	rdi, r9
+	movl	%r9d, %r13d
+	movq	-232(%rbp), %r9
+	cmpq	%r9, %rdi
 	je	LBB48_20
-	movzx	r10d, byte ptr [rdi]
-	and	r10d, 63
-	mov	r9, qword ptr [rbp - 352]
-	mov	r14d, edx
-	and	r14d, 31
-	cmp	dl, -33
+	movzbl	(%rdi), %r10d
+	andl	$63, %r10d
+	movq	-352(%rbp), %r9
+	movl	%edx, %r14d
+	andl	$31, %r14d
+	cmpb	$-33, %dl
 	jbe	LBB48_7
 LBB48_18:
-	mov	rdi, qword ptr [rbp - 232]
-	cmp	r9, rdi
+	movq	-232(%rbp), %rdi
+	cmpq	%rdi, %r9
 	je	LBB48_21
-	movzx	eax, byte ptr [r9]
-	inc	r9
-	and	eax, 63
+	movzbl	(%r9), %eax
+	incq	%r9
+	andl	$63, %eax
 	jmp	LBB48_22
 LBB48_20:
-	xor	r10d, r10d
-	mov	r14d, edx
-	and	r14d, 31
-	cmp	dl, -33
+	xorl	%r10d, %r10d
+	movl	%edx, %r14d
+	andl	$31, %r14d
+	cmpb	$-33, %dl
 	ja	LBB48_18
 	jmp	LBB48_7
 LBB48_21:
-	xor	eax, eax
-	mov	r9, rdi
+	xorl	%eax, %eax
+	movq	%rdi, %r9
 LBB48_22:
-	shl	r10d, 6
-	or	r10d, eax
-	cmp	dl, -16
-	mov	rdi, qword ptr [rbp - 312]
+	shll	$6, %r10d
+	orl	%eax, %r10d
+	cmpb	$-16, %dl
+	movq	-312(%rbp), %rdi
 	jb	LBB48_25
-	cmp	r9, qword ptr [rbp - 232]
+	cmpq	-232(%rbp), %r9
 	je	LBB48_26
-	movzx	eax, byte ptr [r9]
-	and	eax, 63
+	movzbl	(%r9), %eax
+	andl	$63, %eax
 	jmp	LBB48_27
 LBB48_25:
-	shl	r14d, 12
+	shll	$12, %r14d
 	jmp	LBB48_8
 LBB48_26:
-	xor	eax, eax
+	xorl	%eax, %eax
 LBB48_27:
-	mov	r9d, r13d
-	and	r14d, 7
-	shl	r14d, 18
-	shl	r10d, 6
-	or	r10d, r14d
-	or	r10d, eax
-	mov	edx, r10d
-	mov	r14, qword ptr [rbp - 88]
-	mov	r10, qword ptr [rbp - 224]
-	test	cl, cl
+	movl	%r13d, %r9d
+	andl	$7, %r14d
+	shll	$18, %r14d
+	shll	$6, %r10d
+	orl	%r14d, %r10d
+	orl	%eax, %r10d
+	movl	%r10d, %edx
+	movq	-88(%rbp), %r14
+	movq	-224(%rbp), %r10
+	testb	%cl, %cl
 	jne	LBB48_10
 	jmp	LBB48_59
 	.p2align	4, 0x90
 LBB48_28:
-	xor	r9d, r9d
-	mov	rcx, r13
-	mov	rax, qword ptr [rbp - 304]
-	lea	rdi, [rcx + rax]
-	cmp	rdi, rsi
+	xorl	%r9d, %r9d
+	movq	%r13, %rcx
+	movq	-304(%rbp), %rax
+	leaq	(%rcx,%rax), %rdi
+	cmpq	%rsi, %rdi
 	jae	LBB48_65
 LBB48_29:
-	cmp	r14, rcx
+	cmpq	%rcx, %r14
 	jne	LBB48_64
 LBB48_30:
-	movzx	eax, byte ptr [r12 + rdi]
-	mov	rcx, qword ptr [rbp - 320]
-	bt	rcx, rax
+	movzbl	(%r12,%rdi), %eax
+	movq	-320(%rbp), %rcx
+	btq	%rax, %rcx
 	jae	LBB48_28
-	cmp	r8, r9
-	mov	rbx, r9
-	cmova	rbx, r8
-	mov	rax, qword ptr [rbp - 296]
-	lea	rcx, [rax + rbx]
-	lea	rax, [rdx + rbx]
-	lea	rdi, [r14 + rbx]
+	cmpq	%r9, %r8
+	movq	%r9, %rbx
+	cmovaq	%r8, %rbx
+	movq	-296(%rbp), %rax
+	leaq	(%rax,%rbx), %rcx
+	leaq	(%rdx,%rbx), %rax
+	leaq	(%r14,%rbx), %rdi
 	.p2align	4, 0x90
 LBB48_32:
-	cmp	rbx, r11
+	cmpq	%r11, %rbx
 	jae	LBB48_36
-	cmp	rdi, rsi
+	cmpq	%rsi, %rdi
 	jae	LBB48_126
-	movzx	edx, byte ptr [rax]
-	inc	rcx
-	inc	rax
-	inc	rdi
-	mov	r13, qword ptr [rbp - 240]
-	cmp	dl, byte ptr [r13 + rbx]
-	lea	rbx, [rbx + 1]
+	movzbl	(%rax), %edx
+	incq	%rcx
+	incq	%rax
+	incq	%rdi
+	movq	-240(%rbp), %r13
+	cmpb	(%r13,%rbx), %dl
+	leaq	1(%rbx), %rbx
 	je	LBB48_32
-	xor	r9d, r9d
-	mov	rdx, qword ptr [rbp - 104]
-	mov	r13, qword ptr [rbp - 88]
-	mov	rax, qword ptr [rbp - 304]
-	lea	rdi, [rcx + rax]
-	cmp	rdi, rsi
+	xorl	%r9d, %r9d
+	movq	-104(%rbp), %rdx
+	movq	-88(%rbp), %r13
+	movq	-304(%rbp), %rax
+	leaq	(%rcx,%rax), %rdi
+	cmpq	%rsi, %rdi
 	jb	LBB48_29
 	jmp	LBB48_65
 	.p2align	4, 0x90
 LBB48_36:
-	mov	rdi, r8
-	mov	rdx, qword ptr [rbp - 104]
-	mov	r13, qword ptr [rbp - 88]
+	movq	%r8, %rdi
+	movq	-104(%rbp), %rdx
+	movq	-88(%rbp), %r13
 	.p2align	4, 0x90
 LBB48_37:
-	cmp	r9, rdi
+	cmpq	%rdi, %r9
 	jae	LBB48_57
-	dec	rdi
-	cmp	rdi, r11
+	decq	%rdi
+	cmpq	%r11, %rdi
 	jae	LBB48_128
-	lea	rcx, [rdi + r14]
-	cmp	rcx, rsi
+	leaq	(%rdi,%r14), %rcx
+	cmpq	%rsi, %rcx
 	jae	LBB48_129
-	movzx	eax, byte ptr [rdx + rdi]
-	cmp	al, byte ptr [r12 + rcx]
+	movzbl	(%rdx,%rdi), %eax
+	cmpb	(%r12,%rcx), %al
 	je	LBB48_37
-	mov	r9, qword ptr [rbp - 328]
-	mov	rcx, qword ptr [rbp - 288]
-	mov	rax, qword ptr [rbp - 304]
-	lea	rdi, [rcx + rax]
-	cmp	rdi, rsi
+	movq	-328(%rbp), %r9
+	movq	-288(%rbp), %rcx
+	movq	-304(%rbp), %rax
+	leaq	(%rcx,%rax), %rdi
+	cmpq	%rsi, %rdi
 	jb	LBB48_29
 	jmp	LBB48_65
 LBB48_42:
-	mov	rcx, r14
-	cmp	r14, rcx
+	movq	%r14, %rcx
+	cmpq	%rcx, %r14
 	je	LBB48_46
 	jmp	LBB48_66
 LBB48_43:
-	mov	rcx, qword ptr [rbp - 288]
+	movq	-288(%rbp), %rcx
 	.p2align	4, 0x90
 LBB48_44:
-	mov	rax, qword ptr [rbp - 304]
-	lea	rdi, [rcx + rax]
-	cmp	rdi, rsi
+	movq	-304(%rbp), %rax
+	leaq	(%rcx,%rax), %rdi
+	cmpq	%rsi, %rdi
 	jae	LBB48_75
-	cmp	r14, rcx
+	cmpq	%rcx, %r14
 	jne	LBB48_66
 LBB48_46:
-	movzx	eax, byte ptr [r12 + rdi]
-	mov	rcx, qword ptr [rbp - 320]
-	bt	rcx, rax
-	mov	rcx, r13
+	movzbl	(%r12,%rdi), %eax
+	movq	-320(%rbp), %rcx
+	btq	%rax, %rcx
+	movq	%r13, %rcx
 	jae	LBB48_44
-	xor	eax, eax
-	mov	rbx, qword ptr [rbp - 344]
-	mov	rcx, r14
+	xorl	%eax, %eax
+	movq	-344(%rbp), %rbx
+	movq	%r14, %rcx
 	.p2align	4, 0x90
 LBB48_48:
-	lea	rdi, [r8 + rax]
-	cmp	rdi, r11
+	leaq	(%r8,%rax), %rdi
+	cmpq	%r11, %rdi
 	jae	LBB48_51
-	lea	rdi, [r8 + rcx]
-	cmp	rdi, rsi
+	leaq	(%r8,%rcx), %rdi
+	cmpq	%rsi, %rdi
 	jae	LBB48_127
-	movzx	edx, byte ptr [rbx]
-	inc	rbx
-	inc	rax
-	cmp	dl, byte ptr [r15 + rcx]
-	lea	rcx, [rcx + 1]
+	movzbl	(%rbx), %edx
+	incq	%rbx
+	incq	%rax
+	cmpb	(%r15,%rcx), %dl
+	leaq	1(%rcx), %rcx
 	je	LBB48_48
 	jmp	LBB48_44
 LBB48_51:
-	mov	rdi, qword ptr [rbp - 336]
-	mov	rdx, qword ptr [rbp - 104]
+	movq	-336(%rbp), %rdi
+	movq	-104(%rbp), %rdx
 	.p2align	4, 0x90
 LBB48_52:
-	cmp	rdi, -1
+	cmpq	$-1, %rdi
 	je	LBB48_56
-	cmp	rdi, r11
+	cmpq	%r11, %rdi
 	jae	LBB48_133
-	lea	rcx, [r14 + rdi]
-	cmp	rcx, rsi
+	leaq	(%r14,%rdi), %rcx
+	cmpq	%rsi, %rcx
 	jae	LBB48_134
-	movzx	eax, byte ptr [rdx + rdi]
-	mov	rcx, qword ptr [rbp - 240]
-	cmp	al, byte ptr [rcx + rdi]
-	lea	rdi, [rdi - 1]
+	movzbl	(%rdx,%rdi), %eax
+	movq	-240(%rbp), %rcx
+	cmpb	(%rcx,%rdi), %al
+	leaq	-1(%rdi), %rdi
 	je	LBB48_52
 	jmp	LBB48_43
 LBB48_56:
-	mov	r9, -1
+	movq	$-1, %r9
 LBB48_57:
-	cmp	qword ptr [rbp - 80], -1
-	mov	eax, 0
-	cmovne	r9, rax
-	add	qword ptr [rbp - 296], r11
-	add	qword ptr [rbp - 240], r11
-	mov	qword ptr [rbp - 80], r9
-	mov	r14, r13
-	mov	r9b, byte ptr [rbp - 41]
-	mov	rdi, qword ptr [rbp - 312]
+	cmpq	$-1, -80(%rbp)
+	movl	$0, %eax
+	cmovneq	%rax, %r9
+	addq	%r11, -296(%rbp)
+	addq	%r11, -240(%rbp)
+	movq	%r9, -80(%rbp)
+	movq	%r13, %r14
+	movb	-41(%rbp), %r9b
+	movq	-312(%rbp), %rdi
 	jmp	LBB48_2
 LBB48_58:
-	mov	r9, qword ptr [rdi + 8]
-	xor	ebx, ebx
+	movq	8(%rdi), %r9
+	xorl	%ebx, %ebx
 	jmp	LBB48_86
 LBB48_59:
-	mov	byte ptr [rbp - 152], bl
-	mov	rax, qword ptr [rbp - 80]
-	mov	qword ptr [rbp - 120], rax
-	mov	qword ptr [rbp - 136], r14
-	mov	r10, qword ptr [rbp - 56]
-	mov	r14, r10
-	cmp	edx, 1114112
-	mov	rdi, qword ptr [rbp - 72]
-	mov	r13, qword ptr [rbp - 64]
-	mov	rsi, qword ptr [rbp - 216]
+	movb	%bl, -152(%rbp)
+	movq	-80(%rbp), %rax
+	movq	%rax, -120(%rbp)
+	movq	%r14, -136(%rbp)
+	movq	-56(%rbp), %r10
+	movq	%r10, %r14
+	cmpl	$1114112, %edx
+	movq	-72(%rbp), %rdi
+	movq	-64(%rbp), %r13
+	movq	-216(%rbp), %rsi
 	je	LBB48_83
-	mov	eax, 1
-	cmp	edx, 128
+	movl	$1, %eax
+	cmpl	$128, %edx
 	jb	LBB48_63
-	mov	eax, 2
-	cmp	edx, 2048
+	movl	$2, %eax
+	cmpl	$2048, %edx
 	jb	LBB48_63
-	cmp	edx, 65536
-	mov	eax, 4
-	sbb	rax, 0
+	cmpl	$65536, %edx
+	movl	$4, %eax
+	sbbq	$0, %rax
 LBB48_63:
-	add	rax, r8
-	mov	qword ptr [rbp - 168], rax
-	mov	r14, r8
+	addq	%r8, %rax
+	movq	%rax, -168(%rbp)
+	movq	%r8, %r14
 	jmp	LBB48_83
 LBB48_64:
-	mov	qword ptr [rbp - 136], rcx
-	mov	qword ptr [rbp - 120], r9
+	movq	%rcx, -136(%rbp)
+	movq	%r9, -120(%rbp)
 	jmp	LBB48_67
 LBB48_65:
-	mov	qword ptr [rbp - 136], rcx
-	mov	qword ptr [rbp - 120], r9
+	movq	%rcx, -136(%rbp)
+	movq	%r9, -120(%rbp)
 	jmp	LBB48_80
 LBB48_66:
-	mov	qword ptr [rbp - 120], -1
-	mov	qword ptr [rbp - 136], rcx
+	movq	$-1, -120(%rbp)
+	movq	%rcx, -136(%rbp)
 LBB48_67:
-	test	rcx, rcx
-	mov	rdi, qword ptr [rbp - 72]
-	mov	r13, qword ptr [rbp - 64]
-	mov	r10, qword ptr [rbp - 56]
+	testq	%rcx, %rcx
+	movq	-72(%rbp), %rdi
+	movq	-64(%rbp), %r13
+	movq	-56(%rbp), %r10
 	je	LBB48_77
-	cmp	rsi, rcx
+	cmpq	%rcx, %rsi
 	je	LBB48_77
-	lea	rdx, [rsi - 1]
-	mov	rbx, rcx
+	leaq	-1(%rsi), %rdx
+	movq	%rcx, %rbx
 	.p2align	4, 0x90
 LBB48_70:
-	cmp	rsi, rbx
+	cmpq	%rbx, %rsi
 	jbe	LBB48_72
-	cmp	byte ptr [r12 + rbx], -64
+	cmpb	$-64, (%r12,%rbx)
 	jge	LBB48_124
 LBB48_72:
-	mov	rax, rbx
-	inc	rax
+	movq	%rbx, %rax
+	incq	%rax
 	je	LBB48_74
-	cmp	rdx, rbx
-	mov	rbx, rax
+	cmpq	%rbx, %rdx
+	movq	%rax, %rbx
 	jne	LBB48_70
 LBB48_74:
-	mov	rsi, rcx
-	mov	rcx, rax
+	movq	%rcx, %rsi
+	movq	%rax, %rcx
 	jmp	LBB48_81
 LBB48_77:
-	mov	rsi, rcx
+	movq	%rcx, %rsi
 	jmp	LBB48_81
 LBB48_75:
-	mov	qword ptr [rbp - 120], -1
-	mov	qword ptr [rbp - 136], rcx
+	movq	$-1, -120(%rbp)
+	movq	%rcx, -136(%rbp)
 	jmp	LBB48_80
 LBB48_78:
-	mov	rax, qword ptr [rbp - 80]
-	mov	qword ptr [rbp - 120], rax
-	mov	qword ptr [rbp - 136], rsi
-	mov	r10, qword ptr [rbp - 56]
-	mov	r14, r10
-	mov	rdi, qword ptr [rbp - 72]
-	mov	r13, qword ptr [rbp - 64]
+	movq	-80(%rbp), %rax
+	movq	%rax, -120(%rbp)
+	movq	%rsi, -136(%rbp)
+	movq	-56(%rbp), %r10
+	movq	%r10, %r14
+	movq	-72(%rbp), %rdi
+	movq	-64(%rbp), %r13
 	jmp	LBB48_82
 LBB48_79:
-	mov	qword ptr [rbp - 120], rcx
-	mov	qword ptr [rbp - 136], r14
+	movq	%rcx, -120(%rbp)
+	movq	%r14, -136(%rbp)
 LBB48_80:
-	mov	qword ptr [rbp - 136], rsi
-	mov	rcx, rsi
-	mov	rdi, qword ptr [rbp - 72]
-	mov	r13, qword ptr [rbp - 64]
-	mov	r10, qword ptr [rbp - 56]
+	movq	%rsi, -136(%rbp)
+	movq	%rsi, %rcx
+	movq	-72(%rbp), %rdi
+	movq	-64(%rbp), %r13
+	movq	-56(%rbp), %r10
 LBB48_81:
-	cmp	rcx, rsi
-	cmova	rsi, rcx
-	mov	qword ptr [rbp - 136], rsi
+	cmpq	%rsi, %rcx
+	cmovaq	%rcx, %rsi
+	movq	%rsi, -136(%rbp)
 LBB48_82:
-	mov	rsi, qword ptr [rbp - 216]
+	movq	-216(%rbp), %rsi
 LBB48_83:
-	sub	r10, r14
-	mov	r9, qword ptr [rdi + 8]
-	mov	rbx, r9
-	sub	rbx, r10
+	subq	%r14, %r10
+	movq	8(%rdi), %r9
+	movq	%r9, %rbx
+	subq	%r10, %rbx
 	jb	LBB48_137
-	cmp	rbx, r13
+	cmpq	%r13, %rbx
 	jbe	LBB48_86
-	xor	eax, eax
+	xorl	%eax, %eax
 	jmp	LBB48_123
 LBB48_86:
-	mov	r8, qword ptr [rdi]
-	mov	qword ptr [rbp - 280], r8
-	mov	qword ptr [rbp - 272], r9
-	mov	qword ptr [rbp - 96], rbx
-	mov	qword ptr [rbp - 256], r9
-	test	rbx, rbx
+	movq	(%rdi), %r8
+	movq	%r8, -280(%rbp)
+	movq	%r9, -272(%rbp)
+	movq	%rbx, -96(%rbp)
+	movq	%r9, -256(%rbp)
+	testq	%rbx, %rbx
 	je	LBB48_90
-	cmp	r9, rbx
+	cmpq	%rbx, %r9
 	je	LBB48_90
 	jbe	LBB48_135
-	cmp	byte ptr [r8 + rbx], -65
+	cmpb	$-65, (%r8,%rbx)
 	jle	LBB48_135
 LBB48_90:
-	mov	rax, r13
-	sub	rax, rbx
+	movq	%r13, %rax
+	subq	%rbx, %rax
 	jb	LBB48_136
-	test	rax, rax
+	testq	%rax, %rax
 	je	LBB48_115
-	lea	r10, [r8 + r9]
-	lea	r12, [r8 + rbx]
-	xor	edx, edx
+	leaq	(%r8,%r9), %r10
+	leaq	(%r8,%rbx), %r12
+	xorl	%edx, %edx
 	.p2align	4, 0x90
 LBB48_93:
-	cmp	r10, r12
+	cmpq	%r12, %r10
 	je	LBB48_116
-	lea	rax, [r12 + 1]
-	movzx	ecx, byte ptr [r12]
-	test	cl, cl
+	leaq	1(%r12), %rax
+	movzbl	(%r12), %ecx
+	testb	%cl, %cl
 	js	LBB48_96
-	mov	r12, rax
-	cmp	ecx, 1114112
+	movq	%rax, %r12
+	cmpl	$1114112, %ecx
 	je	LBB48_116
 LBB48_110:
-	lea	eax, [rcx - 48]
-	cmp	eax, 9
+	leal	-48(%rcx), %eax
+	cmpl	$9, %eax
 	ja	LBB48_116
-	imul	rdx, rdx, 10
+	imulq	$10, %rdx, %rdx
 	jo	LBB48_130
-	mov	eax, ecx
-	add	rax, -48
-	add	rdx, rax
+	movl	%ecx, %eax
+	addq	$-48, %rax
+	addq	%rax, %rdx
 	jo	LBB48_131
-	inc	rbx
+	incq	%rbx
 	je	LBB48_132
-	cmp	r13, rbx
+	cmpq	%rbx, %r13
 	jne	LBB48_93
 	jmp	LBB48_116
 	.p2align	4, 0x90
 LBB48_96:
-	cmp	rax, r10
+	cmpq	%r10, %rax
 	je	LBB48_102
-	movzx	r15d, byte ptr [r12 + 1]
-	add	r12, 2
-	and	r15d, 63
-	mov	r11, r12
-	mov	eax, ecx
-	and	eax, 31
-	cmp	cl, -33
+	movzbl	1(%r12), %r15d
+	addq	$2, %r12
+	andl	$63, %r15d
+	movq	%r12, %r11
+	movl	%ecx, %eax
+	andl	$31, %eax
+	cmpb	$-33, %cl
 	jbe	LBB48_103
 LBB48_98:
-	cmp	r11, r10
+	cmpq	%r10, %r11
 	je	LBB48_104
-	movzx	r14d, byte ptr [r11]
-	inc	r11
-	and	r14d, 63
-	mov	r12, r11
-	shl	r15d, 6
-	or	r15d, r14d
-	cmp	cl, -16
+	movzbl	(%r11), %r14d
+	incq	%r11
+	andl	$63, %r14d
+	movq	%r11, %r12
+	shll	$6, %r15d
+	orl	%r14d, %r15d
+	cmpb	$-16, %cl
 	jb	LBB48_105
 LBB48_100:
-	cmp	r11, r10
+	cmpq	%r10, %r11
 	je	LBB48_107
-	movzx	ecx, byte ptr [r11]
-	inc	r11
-	and	ecx, 63
-	mov	r12, r11
+	movzbl	(%r11), %ecx
+	incq	%r11
+	andl	$63, %ecx
+	movq	%r11, %r12
 	jmp	LBB48_108
 LBB48_102:
-	xor	r15d, r15d
-	mov	r12, rax
-	mov	r11, r10
-	mov	eax, ecx
-	and	eax, 31
-	cmp	cl, -33
+	xorl	%r15d, %r15d
+	movq	%rax, %r12
+	movq	%r10, %r11
+	movl	%ecx, %eax
+	andl	$31, %eax
+	cmpb	$-33, %cl
 	ja	LBB48_98
 LBB48_103:
-	shl	eax, 6
+	shll	$6, %eax
 	jmp	LBB48_106
 LBB48_104:
-	xor	r14d, r14d
-	mov	r11, r10
-	shl	r15d, 6
-	or	r15d, r14d
-	cmp	cl, -16
+	xorl	%r14d, %r14d
+	movq	%r10, %r11
+	shll	$6, %r15d
+	orl	%r14d, %r15d
+	cmpb	$-16, %cl
 	jae	LBB48_100
 LBB48_105:
-	shl	eax, 12
+	shll	$12, %eax
 LBB48_106:
-	or	r15d, eax
-	mov	ecx, r15d
-	cmp	ecx, 1114112
+	orl	%eax, %r15d
+	movl	%r15d, %ecx
+	cmpl	$1114112, %ecx
 	jne	LBB48_110
 	jmp	LBB48_116
 LBB48_107:
-	xor	ecx, ecx
+	xorl	%ecx, %ecx
 LBB48_108:
-	and	eax, 7
-	shl	eax, 18
-	shl	r15d, 6
-	or	r15d, eax
-	or	r15d, ecx
-	mov	ecx, r15d
-	cmp	r15d, 1114112
+	andl	$7, %eax
+	shll	$18, %eax
+	shll	$6, %r15d
+	orl	%eax, %r15d
+	orl	%ecx, %r15d
+	movl	%r15d, %ecx
+	cmpl	$1114112, %r15d
 	je	LBB48_116
 	.p2align	4, 0x90
-	cmp	ecx, 1114112
+	cmpl	$1114112, %ecx
 	jne	LBB48_110
 	jmp	LBB48_116
 LBB48_115:
-	xor	edx, edx
+	xorl	%edx, %edx
 LBB48_116:
-	xor	eax, eax
-	cmp	rbx, rsi
+	xorl	%eax, %eax
+	cmpq	%rsi, %rbx
 	jb	LBB48_123
-	cmp	rbx, r13
+	cmpq	%r13, %rbx
 	ja	LBB48_123
-	mov	qword ptr [rbp - 280], r8
-	mov	qword ptr [rbp - 272], r9
-	mov	qword ptr [rbp - 96], rbx
-	mov	qword ptr [rbp - 256], r9
-	test	rbx, rbx
+	movq	%r8, -280(%rbp)
+	movq	%r9, -272(%rbp)
+	movq	%rbx, -96(%rbp)
+	movq	%r9, -256(%rbp)
+	testq	%rbx, %rbx
 	je	LBB48_122
-	cmp	r9, rbx
+	cmpq	%rbx, %r9
 	je	LBB48_122
 	jbe	LBB48_135
-	cmp	byte ptr [r8 + rbx], -65
+	cmpb	$-65, (%r8,%rbx)
 	jle	LBB48_135
 LBB48_122:
-	add	r8, rbx
-	sub	r9, rbx
-	mov	qword ptr [rdi], r8
-	mov	qword ptr [rdi + 8], r9
-	mov	eax, 1
+	addq	%rbx, %r8
+	subq	%rbx, %r9
+	movq	%r8, (%rdi)
+	movq	%r9, 8(%rdi)
+	movl	$1, %eax
 LBB48_123:
-	add	rsp, 328
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	$328, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB48_124:
-	mov	rsi, rcx
-	mov	rcx, rbx
+	movq	%rcx, %rsi
+	movq	%rbx, %rcx
 	jmp	LBB48_81
 LBB48_125:
-	mov	byte ptr [rbp - 152], bl
-	mov	rax, qword ptr [rbp - 80]
-	mov	qword ptr [rbp - 120], rax
-	mov	qword ptr [rbp - 136], r14
-	lea	rax, [rbp - 256]
-	mov	qword ptr [rbp - 280], rax
-	lea	rax, [rbp - 360]
-	mov	qword ptr [rbp - 272], rax
-	lea	rax, [rbp - 96]
-	mov	qword ptr [rbp - 264], rax
-	lea	rdi, [rbp - 280]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	movb	%bl, -152(%rbp)
+	movq	-80(%rbp), %rax
+	movq	%rax, -120(%rbp)
+	movq	%r14, -136(%rbp)
+	leaq	-256(%rbp), %rax
+	movq	%rax, -280(%rbp)
+	leaq	-360(%rbp), %rax
+	movq	%rax, -272(%rbp)
+	leaq	-96(%rbp), %rax
+	movq	%rax, -264(%rbp)
+	leaq	-280(%rbp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB48_126:
-	mov	qword ptr [rbp - 136], r14
-	mov	qword ptr [rbp - 120], r9
-	lea	rdx, [rip + l___unnamed_149]
-	call	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
+	movq	%r14, -136(%rbp)
+	movq	%r9, -120(%rbp)
+	leaq	l___unnamed_149(%rip), %rdx
+	callq	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
 LBB48_127:
-	mov	qword ptr [rbp - 120], -1
-	mov	qword ptr [rbp - 136], r14
-	lea	rdx, [rip + l___unnamed_149]
-	call	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
+	movq	$-1, -120(%rbp)
+	movq	%r14, -136(%rbp)
+	leaq	l___unnamed_149(%rip), %rdx
+	callq	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
 LBB48_128:
-	mov	qword ptr [rbp - 136], r14
-	mov	qword ptr [rbp - 120], r9
-	lea	rdx, [rip + l___unnamed_150]
-	mov	rsi, r11
-	call	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
+	movq	%r14, -136(%rbp)
+	movq	%r9, -120(%rbp)
+	leaq	l___unnamed_150(%rip), %rdx
+	movq	%r11, %rsi
+	callq	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
 LBB48_129:
-	mov	qword ptr [rbp - 136], r14
-	mov	qword ptr [rbp - 120], r9
-	lea	rdx, [rip + l___unnamed_151]
-	mov	rdi, rcx
-	call	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
+	movq	%r14, -136(%rbp)
+	movq	%r9, -120(%rbp)
+	leaq	l___unnamed_151(%rip), %rdx
+	movq	%rcx, %rdi
+	callq	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
 LBB48_130:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_152]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_152(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB48_131:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_152]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_152(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB48_132:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_153]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_153(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB48_133:
-	mov	qword ptr [rbp - 120], -1
-	mov	qword ptr [rbp - 136], r14
-	lea	rdx, [rip + l___unnamed_150]
-	mov	rsi, r11
-	call	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
+	movq	$-1, -120(%rbp)
+	movq	%r14, -136(%rbp)
+	leaq	l___unnamed_150(%rip), %rdx
+	movq	%r11, %rsi
+	callq	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
 LBB48_134:
-	mov	qword ptr [rbp - 120], -1
-	mov	qword ptr [rbp - 136], r14
-	lea	rdx, [rip + l___unnamed_151]
-	mov	rdi, rcx
-	call	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
+	movq	$-1, -120(%rbp)
+	movq	%r14, -136(%rbp)
+	leaq	l___unnamed_151(%rip), %rdx
+	movq	%rcx, %rdi
+	callq	__ZN4core9panicking18panic_bounds_check17habe69d236c55e3edE
 LBB48_135:
-	lea	rax, [rbp - 280]
-	mov	qword ptr [rbp - 208], rax
-	lea	rax, [rbp - 96]
-	mov	qword ptr [rbp - 200], rax
-	lea	rax, [rbp - 256]
-	mov	qword ptr [rbp - 192], rax
-	lea	rdi, [rbp - 208]
-	call	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
+	leaq	-280(%rbp), %rax
+	movq	%rax, -208(%rbp)
+	leaq	-96(%rbp), %rax
+	movq	%rax, -200(%rbp)
+	leaq	-256(%rbp), %rax
+	movq	%rax, -192(%rbp)
+	leaq	-208(%rbp), %rdi
+	callq	__ZN4core3str6traits105_$LT$impl$u20$core..slice..SliceIndex$LT$str$GT$$u20$for$u20$core..ops..range..RangeFrom$LT$usize$GT$$GT$5index28_$u7b$$u7b$closure$u7d$$u7d$17h13a1c725af8681beE
 LBB48_136:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_154]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_154(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB48_137:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_155]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_155(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time3sys5inner3mac4info17h80a4b2035e1636d9E
 	.p2align	4, 0x90
 __ZN4time3sys5inner3mac4info17h80a4b2035e1636d9E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 16
-	mov	rax, qword ptr [rip + __ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E]
-	cmp	rax, 3
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	__ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E(%rip), %rax
+	cmpq	$3, %rax
 	jne	LBB49_1
-	lea	rax, [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	add	rsp, 16
-	pop	rbp
-	ret
+	leaq	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	retq
 LBB49_1:
-	mov	byte ptr [rbp - 1], 1
-	lea	rax, [rbp - 1]
-	mov	qword ptr [rbp - 16], rax
-	lea	rdi, [rip + __ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E]
-	lea	rcx, [rip + l___unnamed_156]
-	lea	rdx, [rbp - 16]
-	xor	esi, esi
-	call	__ZN3std4sync4once4Once10call_inner17h78f35ea5a056ddbcE
-	lea	rax, [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	add	rsp, 16
-	pop	rbp
-	ret
+	movb	$1, -1(%rbp)
+	leaq	-1(%rbp), %rax
+	movq	%rax, -16(%rbp)
+	leaq	__ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E(%rip), %rdi
+	leaq	l___unnamed_156(%rip), %rcx
+	leaq	-16(%rbp), %rdx
+	xorl	%esi, %esi
+	callq	__ZN3std4sync4once4Once10call_inner17h78f35ea5a056ddbcE
+	leaq	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN107_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hdf6a9c397e366657E
 	.p2align	4, 0x90
 __ZN107_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hdf6a9c397e366657E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	movabs	rcx, -9223372036854775808
-	test	edx, edx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movabsq	$-9223372036854775808, %rcx
+	testl	%edx, %edx
 	je	LBB50_9
-	cmp	rsi, rcx
+	cmpq	%rcx, %rsi
 	je	LBB50_12
-	mov	ecx, 1000000000
-	sub	ecx, edx
+	movl	$1000000000, %ecx
+	subl	%edx, %ecx
 	jo	LBB50_13
-	not	rsi
-	mov	rdx, rsi
-	test	rsi, rsi
+	notq	%rsi
+	movq	%rsi, %rdx
+	testq	%rsi, %rsi
 	jns	LBB50_6
 LBB50_5:
-	xor	edx, edx
-	test	ecx, ecx
-	setg	dl
-	add	rdx, rsi
+	xorl	%edx, %edx
+	testl	%ecx, %ecx
+	setg	%dl
+	addq	%rsi, %rdx
 LBB50_6:
-	imul	rdx, rdx, 1000000000
+	imulq	$1000000000, %rdx, %rdx
 	jo	LBB50_8
-	lea	edi, [rcx - 1000000000]
-	test	rsi, rsi
-	cmovns	edi, ecx
-	test	ecx, ecx
-	cmovle	edi, ecx
-	movsxd	rcx, edi
-	add	rdx, rcx
+	leal	-1000000000(%rcx), %edi
+	testq	%rsi, %rsi
+	cmovnsl	%ecx, %edi
+	testl	%ecx, %ecx
+	cmovlel	%ecx, %edi
+	movslq	%edi, %rcx
+	addq	%rcx, %rdx
 	jo	LBB50_8
-	add	rax, rdx
+	addq	%rdx, %rax
 	jo	LBB50_16
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB50_9:
-	cmp	rsi, rcx
+	cmpq	%rcx, %rsi
 	je	LBB50_11
-	neg	rsi
-	xor	ecx, ecx
-	mov	rdx, rsi
-	test	rsi, rsi
+	negq	%rsi
+	xorl	%ecx, %ecx
+	movq	%rsi, %rdx
+	testq	%rsi, %rsi
 	jns	LBB50_6
 	jmp	LBB50_5
 LBB50_8:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_157]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_157(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB50_16:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_158]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_158(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB50_12:
-	lea	rdi, [rip + _str.6]
-	lea	rdx, [rip + l___unnamed_127]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.6(%rip), %rdi
+	leaq	l___unnamed_127(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB50_13:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_128]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_128(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB50_11:
-	lea	rdi, [rip + _str.6]
-	lea	rdx, [rip + l___unnamed_129]
-	mov	esi, 31
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.6(%rip), %rdi
+	leaq	l___unnamed_129(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN107_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h75e3af388aa4650bE
 	.p2align	4, 0x90
 __ZN107_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h75e3af388aa4650bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	rcx, rsi
-	test	rsi, rsi
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rsi, %rcx
+	testq	%rsi, %rsi
 	jns	LBB51_2
-	xor	ecx, ecx
-	test	edx, edx
-	setg	cl
-	add	rcx, rsi
+	xorl	%ecx, %ecx
+	testl	%edx, %edx
+	setg	%cl
+	addq	%rsi, %rcx
 LBB51_2:
-	imul	rcx, rcx, 1000000000
+	imulq	$1000000000, %rcx, %rcx
 	jo	LBB51_6
-	lea	edi, [rdx - 1000000000]
-	test	edx, edx
-	cmovle	edi, edx
-	test	rsi, rsi
-	cmovns	edi, edx
-	movsxd	rdx, edi
-	add	rcx, rdx
+	leal	-1000000000(%rdx), %edi
+	testl	%edx, %edx
+	cmovlel	%edx, %edi
+	testq	%rsi, %rsi
+	cmovnsl	%edx, %edi
+	movslq	%edi, %rdx
+	addq	%rdx, %rcx
 	jo	LBB51_6
-	add	rax, rcx
+	addq	%rcx, %rax
 	jo	LBB51_5
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB51_6:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_157]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_157(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB51_5:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_158]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_158(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time8Timespec3new17hd7ff6426c86dea82E
 	.p2align	4, 0x90
 __ZN4time8Timespec3new17hd7ff6426c86dea82E:
 	.cfi_startproc
-	cmp	esi, 999999999
+	cmpl	$999999999, %esi
 	ja	LBB52_2
-	mov	edx, esi
-	mov	rax, rdi
-	ret
+	movl	%esi, %edx
+	movq	%rdi, %rax
+	retq
 LBB52_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h82a5846b13bead18E
 	.p2align	4, 0x90
 __ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h82a5846b13bead18E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, rdx
-	mov	edx, esi
-	mov	rax, rdi
-	mov	r10, r8
-	test	r8, r8
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdx, %r8
+	movl	%esi, %edx
+	movq	%rdi, %rax
+	movq	%r8, %r10
+	testq	%r8, %r8
 	jns	LBB53_2
-	xor	r10d, r10d
-	test	ecx, ecx
-	setg	r10b
-	add	r10, r8
+	xorl	%r10d, %r10d
+	testl	%ecx, %ecx
+	setg	%r10b
+	addq	%r8, %r10
 LBB53_2:
-	movabs	r9, -9223372036854776
-	xor	edi, edi
-	cmp	r10, r9
-	setne	dil
-	mov	esi, 255
-	cmovge	esi, edi
-	inc	sil
-	cmp	sil, 2
+	movabsq	$-9223372036854776, %r9
+	xorl	%edi, %edi
+	cmpq	%r9, %r10
+	setne	%dil
+	movl	$255, %esi
+	cmovgel	%edi, %esi
+	incb	%sil
+	cmpb	$2, %sil
 	jb	LBB53_27
-	movabs	rsi, 9223372036854776
-	cmp	r10, rsi
+	movabsq	$9223372036854776, %rsi
+	cmpq	%rsi, %r10
 	jge	LBB53_27
-	sub	r8, r10
+	subq	%r10, %r8
 	jo	LBB53_13
-	test	ecx, ecx
+	testl	%ecx, %ecx
 	js	LBB53_6
-	mov	rdi, r8
-	test	r8, r8
+	movq	%r8, %rdi
+	testq	%r8, %r8
 	js	LBB53_9
 LBB53_10:
-	imul	rdi, rdi, 1000000000
+	imulq	$1000000000, %rdi, %rdi
 	jno	LBB53_11
 	jmp	LBB53_12
 LBB53_6:
-	dec	r8
+	decq	%r8
 	jo	LBB53_14
-	add	ecx, 1000000000
-	mov	rdi, r8
-	test	r8, r8
+	addl	$1000000000, %ecx
+	movq	%r8, %rdi
+	testq	%r8, %r8
 	jns	LBB53_10
 LBB53_9:
-	xor	edi, edi
-	test	ecx, ecx
-	setg	dil
-	add	rdi, r8
-	imul	rdi, rdi, 1000000000
+	xorl	%edi, %edi
+	testl	%ecx, %ecx
+	setg	%dil
+	addq	%r8, %rdi
+	imulq	$1000000000, %rdi, %rdi
 	jo	LBB53_12
 LBB53_11:
-	lea	esi, [rcx - 1000000000]
-	test	ecx, ecx
-	cmovle	esi, ecx
-	test	r8, r8
-	cmovns	esi, ecx
-	movsxd	rcx, esi
-	add	rdi, rcx
+	leal	-1000000000(%rcx), %esi
+	testl	%ecx, %ecx
+	cmovlel	%ecx, %esi
+	testq	%r8, %r8
+	cmovnsl	%ecx, %esi
+	movslq	%esi, %rcx
+	addq	%rcx, %rdi
 	jo	LBB53_12
-	add	rax, r10
+	addq	%r10, %rax
 	jo	LBB53_22
-	add	edx, edi
+	addl	%edi, %edx
 	jo	LBB53_23
-	cmp	edx, 999999999
+	cmpl	$999999999, %edx
 	jle	LBB53_18
-	inc	rax
-	mov	ecx, -1000000000
+	incq	%rax
+	movl	$-1000000000, %ecx
 	jno	LBB53_20
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_161]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_161(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB53_18:
-	test	edx, edx
+	testl	%edx, %edx
 	jns	LBB53_21
-	dec	rax
-	mov	ecx, 1000000000
+	decq	%rax
+	movl	$1000000000, %ecx
 	jo	LBB53_26
 LBB53_20:
-	add	edx, ecx
-	cmp	edx, 1000000000
+	addl	%ecx, %edx
+	cmpl	$1000000000, %edx
 	jae	LBB53_28
 LBB53_21:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB53_27:
-	lea	rdi, [rip + l___unnamed_162]
-	lea	rdx, [rip + l___unnamed_163]
-	mov	esi, 31
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_162(%rip), %rdi
+	leaq	l___unnamed_163(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB53_12:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_164]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_164(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB53_13:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_108]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_108(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB53_22:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_165]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_165(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB53_23:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_166]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_166(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB53_28:
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB53_14:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_110]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_110(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB53_26:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_167]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_167(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17h2671a62ca020b724E
 	.p2align	4, 0x90
 __ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17h2671a62ca020b724E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	r8, rdx
-	mov	edx, esi
-	mov	rax, rdi
-	mov	r10, r8
-	test	r8, r8
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdx, %r8
+	movl	%esi, %edx
+	movq	%rdi, %rax
+	movq	%r8, %r10
+	testq	%r8, %r8
 	jns	LBB54_2
-	xor	r10d, r10d
-	test	ecx, ecx
-	setg	r10b
-	add	r10, r8
+	xorl	%r10d, %r10d
+	testl	%ecx, %ecx
+	setg	%r10b
+	addq	%r8, %r10
 LBB54_2:
-	movabs	r9, -9223372036854776
-	xor	edi, edi
-	cmp	r10, r9
-	setne	dil
-	mov	esi, 255
-	cmovge	esi, edi
-	inc	sil
-	cmp	sil, 2
+	movabsq	$-9223372036854776, %r9
+	xorl	%edi, %edi
+	cmpq	%r9, %r10
+	setne	%dil
+	movl	$255, %esi
+	cmovgel	%edi, %esi
+	incb	%sil
+	cmpb	$2, %sil
 	jb	LBB54_27
-	movabs	rsi, 9223372036854776
-	cmp	r10, rsi
+	movabsq	$9223372036854776, %rsi
+	cmpq	%rsi, %r10
 	jge	LBB54_27
-	sub	r8, r10
+	subq	%r10, %r8
 	jo	LBB54_13
-	test	ecx, ecx
+	testl	%ecx, %ecx
 	js	LBB54_6
-	mov	rdi, r8
-	test	r8, r8
+	movq	%r8, %rdi
+	testq	%r8, %r8
 	js	LBB54_9
 LBB54_10:
-	imul	rdi, rdi, 1000000000
+	imulq	$1000000000, %rdi, %rdi
 	jno	LBB54_11
 	jmp	LBB54_12
 LBB54_6:
-	dec	r8
+	decq	%r8
 	jo	LBB54_14
-	add	ecx, 1000000000
-	mov	rdi, r8
-	test	r8, r8
+	addl	$1000000000, %ecx
+	movq	%r8, %rdi
+	testq	%r8, %r8
 	jns	LBB54_10
 LBB54_9:
-	xor	edi, edi
-	test	ecx, ecx
-	setg	dil
-	add	rdi, r8
-	imul	rdi, rdi, 1000000000
+	xorl	%edi, %edi
+	testl	%ecx, %ecx
+	setg	%dil
+	addq	%r8, %rdi
+	imulq	$1000000000, %rdi, %rdi
 	jo	LBB54_12
 LBB54_11:
-	lea	esi, [rcx - 1000000000]
-	test	ecx, ecx
-	cmovle	esi, ecx
-	test	r8, r8
-	cmovns	esi, ecx
-	movsxd	rcx, esi
-	add	rdi, rcx
+	leal	-1000000000(%rcx), %esi
+	testl	%ecx, %ecx
+	cmovlel	%ecx, %esi
+	testq	%r8, %r8
+	cmovnsl	%ecx, %esi
+	movslq	%esi, %rcx
+	addq	%rcx, %rdi
 	jo	LBB54_12
-	sub	rax, r10
+	subq	%r10, %rax
 	jo	LBB54_22
-	sub	edx, edi
+	subl	%edi, %edx
 	jo	LBB54_23
-	cmp	edx, 999999999
+	cmpl	$999999999, %edx
 	jle	LBB54_18
-	inc	rax
-	mov	ecx, -1000000000
+	incq	%rax
+	movl	$-1000000000, %ecx
 	jno	LBB54_20
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_168]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_168(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB54_18:
-	test	edx, edx
+	testl	%edx, %edx
 	jns	LBB54_21
-	dec	rax
-	mov	ecx, 1000000000
+	decq	%rax
+	movl	$1000000000, %ecx
 	jo	LBB54_26
 LBB54_20:
-	add	edx, ecx
-	cmp	edx, 1000000000
+	addl	%ecx, %edx
+	cmpl	$1000000000, %edx
 	jae	LBB54_28
 LBB54_21:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 LBB54_27:
-	lea	rdi, [rip + l___unnamed_162]
-	lea	rdx, [rip + l___unnamed_163]
-	mov	esi, 31
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_162(%rip), %rdi
+	leaq	l___unnamed_163(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB54_12:
-	lea	rdi, [rip + l___unnamed_1]
-	lea	rdx, [rip + l___unnamed_169]
-	mov	esi, 43
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_1(%rip), %rdi
+	leaq	l___unnamed_169(%rip), %rdx
+	movl	$43, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB54_13:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_108]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_108(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB54_22:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_170]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_170(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB54_23:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_171]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_171(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB54_28:
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB54_14:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_110]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_110(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB54_26:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_172]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_172(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN56_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$GT$3sub17h0a1668b339914011E
 	.p2align	4, 0x90
 __ZN56_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$GT$3sub17h0a1668b339914011E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rdi, rdx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	%rdx, %rdi
 	jo	LBB55_11
-	sub	esi, ecx
+	subl	%ecx, %esi
 	jo	LBB55_12
-	movabs	rax, -9223372036854776
-	xor	ecx, ecx
-	cmp	rdi, rax
-	setne	cl
-	mov	eax, 255
-	cmovge	eax, ecx
-	inc	al
-	cmp	al, 2
+	movabsq	$-9223372036854776, %rax
+	xorl	%ecx, %ecx
+	cmpq	%rax, %rdi
+	setne	%cl
+	movl	$255, %eax
+	cmovgel	%ecx, %eax
+	incb	%al
+	cmpb	$2, %al
 	jb	LBB55_13
-	movabs	rax, 9223372036854776
-	cmp	rdi, rax
+	movabsq	$9223372036854776, %rax
+	cmpq	%rax, %rdi
 	jge	LBB55_13
-	movsxd	rcx, esi
-	movabs	rdx, 1237940039285380275
-	mov	rax, rcx
-	imul	rdx
-	mov	rax, rdx
-	shr	rax, 63
-	sar	rdx, 26
-	add	rdx, rax
-	imul	rax, rdx, 1000000000
-	sub	rcx, rax
-	mov	rax, rcx
-	sar	rax, 63
-	add	rax, rdx
-	add	rdi, rax
+	movslq	%esi, %rcx
+	movabsq	$1237940039285380275, %rdx
+	movq	%rcx, %rax
+	imulq	%rdx
+	movq	%rdx, %rax
+	shrq	$63, %rax
+	sarq	$26, %rdx
+	addq	%rax, %rdx
+	imulq	$1000000000, %rdx, %rax
+	subq	%rax, %rcx
+	movq	%rcx, %rax
+	sarq	$63, %rax
+	addq	%rdx, %rax
+	addq	%rax, %rdi
 	jo	LBB55_9
-	lea	edx, [rcx + 1000000000]
-	test	rcx, rcx
-	cmovns	edx, ecx
-	cmp	edx, 1000000000
+	leal	1000000000(%rcx), %edx
+	testq	%rcx, %rcx
+	cmovnsl	%ecx, %edx
+	cmpl	$1000000000, %edx
 	jl	LBB55_8
-	inc	rdi
+	incq	%rdi
 	jo	LBB55_10
-	add	edx, -1000000000
+	addl	$-1000000000, %edx
 LBB55_8:
-	mov	rax, rdi
-	pop	rbp
-	ret
+	movq	%rdi, %rax
+	popq	%rbp
+	retq
 LBB55_13:
-	lea	rdi, [rip + l___unnamed_162]
-	lea	rdx, [rip + l___unnamed_163]
-	mov	esi, 31
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_162(%rip), %rdi
+	leaq	l___unnamed_163(%rip), %rdx
+	movl	$31, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 LBB55_11:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_173]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_173(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB55_12:
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_174]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_174(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB55_9:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_105]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_105(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB55_10:
-	lea	rdi, [rip + _str.5]
-	lea	rdx, [rip + l___unnamed_107]
-	mov	esi, 28
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.5(%rip), %rdi
+	leaq	l___unnamed_107(%rip), %rdx
+	movl	$28, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time8get_time17h1f29d362fa342bb1E
 	.p2align	4, 0x90
 __ZN4time8get_time17h1f29d362fa342bb1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 16
-	mov	qword ptr [rbp - 16], 0
-	mov	dword ptr [rbp - 8], 0
-	lea	rdi, [rbp - 16]
-	xor	esi, esi
-	call	_gettimeofday
-	imul	edx, dword ptr [rbp - 8], 1000
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	$0, -16(%rbp)
+	movl	$0, -8(%rbp)
+	leaq	-16(%rbp), %rdi
+	xorl	%esi, %esi
+	callq	_gettimeofday
+	imull	$1000, -8(%rbp), %edx
 	jo	LBB56_3
-	cmp	edx, 1000000000
+	cmpl	$1000000000, %edx
 	jae	LBB56_4
-	mov	rax, qword ptr [rbp - 16]
-	add	rsp, 16
-	pop	rbp
-	ret
+	movq	-16(%rbp), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	retq
 LBB56_3:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_175]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_175(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB56_4:
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 	.cfi_endproc
 
 	.section	__TEXT,__literal16,16byte_literals
@@ -8848,163 +8867,181 @@ LCPI57_2:
 	.p2align	4, 0x90
 __ZN4time14precise_time_s17h48085aea96730cabE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	sub	rsp, 24
-	.cfi_offset rbx, -24
-	call	_mach_absolute_time
-	mov	rbx, rax
-	mov	rax, qword ptr [rip + __ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E]
-	cmp	rax, 3
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	subq	$24, %rsp
+	.cfi_offset %rbx, -24
+	callq	_mach_absolute_time
+	movq	%rax, %rbx
+	movq	__ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E(%rip), %rax
+	cmpq	$3, %rax
 	jne	LBB57_1
-	mov	ecx, dword ptr [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	mov	rax, rbx
-	mul	rcx
-	jo	LBB57_5
+	movl	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %ecx
+	movq	%rbx, %rax
+	mulq	%rcx
+	jo	LBB57_8
 LBB57_3:
-	mov	ecx, dword ptr [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E+4]
-	test	rcx, rcx
-	je	LBB57_6
-	xor	edx, edx
-	div	rcx
-	movq	xmm0, rax
-	punpckldq	xmm0, xmmword ptr [rip + LCPI57_0]
-	subpd	xmm0, xmmword ptr [rip + LCPI57_1]
-	haddpd	xmm0, xmm0
-	divsd	xmm0, qword ptr [rip + LCPI57_2]
-	add	rsp, 24
-	pop	rbx
-	pop	rbp
-	ret
-LBB57_1:
-	mov	byte ptr [rbp - 9], 1
-	lea	rax, [rbp - 9]
-	mov	qword ptr [rbp - 24], rax
-	lea	rdi, [rip + __ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E]
-	lea	rcx, [rip + l___unnamed_156]
-	lea	rdx, [rbp - 24]
-	xor	esi, esi
-	call	__ZN3std4sync4once4Once10call_inner17h78f35ea5a056ddbcE
-	mov	ecx, dword ptr [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	mov	rax, rbx
-	mul	rcx
-	jno	LBB57_3
+	movl	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E+4(%rip), %ecx
+	testq	%rcx, %rcx
+	je	LBB57_9
+	movq	%rax, %rdx
+	shrq	$32, %rdx
+	je	LBB57_5
+	xorl	%edx, %edx
+	divq	%rcx
+	jmp	LBB57_7
 LBB57_5:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_176]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB57_6:
-	lea	rdi, [rip + _str.1]
-	lea	rdx, [rip + l___unnamed_176]
-	mov	esi, 25
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	xorl	%edx, %edx
+	divl	%ecx
+LBB57_7:
+	vmovq	%rax, %xmm0
+	vpunpckldq	LCPI57_0(%rip), %xmm0, %xmm0
+	vsubpd	LCPI57_1(%rip), %xmm0, %xmm0
+	vhaddpd	%xmm0, %xmm0, %xmm0
+	vdivsd	LCPI57_2(%rip), %xmm0, %xmm0
+	addq	$24, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
+LBB57_1:
+	movb	$1, -9(%rbp)
+	leaq	-9(%rbp), %rax
+	movq	%rax, -24(%rbp)
+	leaq	__ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E(%rip), %rdi
+	leaq	l___unnamed_156(%rip), %rcx
+	leaq	-24(%rbp), %rdx
+	xorl	%esi, %esi
+	callq	__ZN3std4sync4once4Once10call_inner17h78f35ea5a056ddbcE
+	movl	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %ecx
+	movq	%rbx, %rax
+	mulq	%rcx
+	jno	LBB57_3
+LBB57_8:
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_176(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB57_9:
+	leaq	_str.1(%rip), %rdi
+	leaq	l___unnamed_176(%rip), %rdx
+	movl	$25, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN4time10SteadyTime3now17h414e8f9424833f74E
 	.p2align	4, 0x90
 __ZN4time10SteadyTime3now17h414e8f9424833f74E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	sub	rsp, 24
-	.cfi_offset rbx, -24
-	call	_mach_absolute_time
-	mov	rbx, rax
-	mov	rax, qword ptr [rip + __ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E]
-	cmp	rax, 3
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	subq	$24, %rsp
+	.cfi_offset %rbx, -24
+	callq	_mach_absolute_time
+	movq	%rax, %rbx
+	movq	__ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E(%rip), %rax
+	cmpq	$3, %rax
 	jne	LBB58_1
-	mov	ecx, dword ptr [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	mov	rax, rbx
-	mul	rcx
-	jo	LBB58_5
+	movl	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %ecx
+	movq	%rbx, %rax
+	mulq	%rcx
+	jo	LBB58_8
 LBB58_3:
-	mov	ecx, dword ptr [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E+4]
-	test	rcx, rcx
-	je	LBB58_6
-	xor	edx, edx
-	div	rcx
-	add	rsp, 24
-	pop	rbx
-	pop	rbp
-	ret
-LBB58_1:
-	mov	byte ptr [rbp - 9], 1
-	lea	rax, [rbp - 9]
-	mov	qword ptr [rbp - 24], rax
-	lea	rdi, [rip + __ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E]
-	lea	rcx, [rip + l___unnamed_156]
-	lea	rdx, [rbp - 24]
-	xor	esi, esi
-	call	__ZN3std4sync4once4Once10call_inner17h78f35ea5a056ddbcE
-	mov	ecx, dword ptr [rip + __ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E]
-	mov	rax, rbx
-	mul	rcx
-	jno	LBB58_3
+	movl	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E+4(%rip), %ecx
+	testq	%rcx, %rcx
+	je	LBB58_9
+	movq	%rax, %rdx
+	shrq	$32, %rdx
+	je	LBB58_5
+	xorl	%edx, %edx
+	divq	%rcx
+	addq	$24, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 LBB58_5:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_176]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
-LBB58_6:
-	lea	rdi, [rip + _str.1]
-	lea	rdx, [rip + l___unnamed_176]
-	mov	esi, 25
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	xorl	%edx, %edx
+	divl	%ecx
+	addq	$24, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
+LBB58_1:
+	movb	$1, -9(%rbp)
+	leaq	-9(%rbp), %rax
+	movq	%rax, -24(%rbp)
+	leaq	__ZN4time3sys5inner3mac4info4ONCE17hc94ad1dfed8a6a13E(%rip), %rdi
+	leaq	l___unnamed_156(%rip), %rcx
+	leaq	-24(%rbp), %rdx
+	xorl	%esi, %esi
+	callq	__ZN3std4sync4once4Once10call_inner17h78f35ea5a056ddbcE
+	movl	__ZN4time3sys5inner3mac4info4INFO17h3ef712fb47ef0bd5E(%rip), %ecx
+	movq	%rbx, %rax
+	mulq	%rcx
+	jno	LBB58_3
+LBB58_8:
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_176(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
+LBB58_9:
+	leaq	_str.1(%rip), %rdi
+	leaq	l___unnamed_176(%rip), %rdx
+	movl	$25, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN58_$LT$time..SteadyTime$u20$as$u20$core..ops..arith..Sub$GT$3sub17h8af9c9e59719ee6fE
 	.p2align	4, 0x90
 __ZN58_$LT$time..SteadyTime$u20$as$u20$core..ops..arith..Sub$GT$3sub17h8af9c9e59719ee6fE:
 	.cfi_startproc
-	sub	rdi, rsi
+	subq	%rsi, %rdi
 	jo	LBB59_2
-	movabs	rcx, 1237940039285380275
-	mov	rax, rdi
-	imul	rcx
-	mov	rax, rdx
-	shr	rax, 63
-	sar	rdx, 26
-	add	rdx, rax
-	imul	rax, rdx, 1000000000
-	sub	rdi, rax
-	mov	rax, rdi
-	sar	rax, 63
-	add	rax, rdx
-	lea	edx, [rdi + 1000000000]
-	test	rdi, rdi
-	cmovns	edx, edi
-	ret
+	movabsq	$1237940039285380275, %rcx
+	movq	%rdi, %rax
+	imulq	%rcx
+	movq	%rdx, %rax
+	shrq	$63, %rax
+	sarq	$26, %rdx
+	addq	%rax, %rdx
+	imulq	$1000000000, %rdx, %rax
+	subq	%rax, %rdi
+	movq	%rdi, %rax
+	sarq	$63, %rax
+	addq	%rdx, %rax
+	leal	1000000000(%rdi), %edx
+	testq	%rdi, %rdi
+	cmovnsl	%edi, %edx
+	retq
 LBB59_2:
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	lea	rdi, [rip + _str.0]
-	lea	rdx, [rip + l___unnamed_177]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	_str.0(%rip), %rdi
+	leaq	l___unnamed_177(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 	.cfi_endproc
 
 	.globl	__ZN90_$LT$time..SteadyTime$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hd8dfec551035b79cE
 	.p2align	4, 0x90
 __ZN90_$LT$time..SteadyTime$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hd8dfec551035b79cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
 	jmp	__ZN107_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hdf6a9c397e366657E
 	.cfi_endproc
 
@@ -9012,12 +9049,12 @@ __ZN90_$LT$time..SteadyTime$u20$as$u20$core..ops..arith..Sub$LT$time..duration..
 	.p2align	4, 0x90
 __ZN4time5tzset17h252da367866cd93dE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
 	jmp	_tzset
 	.cfi_endproc
 
@@ -9025,109 +9062,109 @@ __ZN4time5tzset17h252da367866cd93dE:
 	.p2align	4, 0x90
 __ZN82_$LT$time..Tm$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h39e2939ec36aa50aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14d, ecx
-	mov	r15, rdx
-	mov	rbx, rdi
-	mov	rdi, rsi
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	rdi, rax
-	mov	esi, edx
-	mov	rdx, r15
-	mov	ecx, r14d
-	call	__ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h82a5846b13bead18E
-	mov	rdi, rbx
-	mov	rsi, rax
-	call	__ZN4time6at_utc17h44104f6fb8092b29E
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movl	%ecx, %r14d
+	movq	%rdx, %r15
+	movq	%rdi, %rbx
+	movq	%rsi, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rax, %rdi
+	movl	%edx, %esi
+	movq	%r15, %rdx
+	movl	%r14d, %ecx
+	callq	__ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Add$LT$time..duration..Duration$GT$$GT$3add17h82a5846b13bead18E
+	movq	%rbx, %rdi
+	movq	%rax, %rsi
+	callq	__ZN4time6at_utc17h44104f6fb8092b29E
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN82_$LT$time..Tm$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hced840dbd9fc2efaE
 	.p2align	4, 0x90
 __ZN82_$LT$time..Tm$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17hced840dbd9fc2efaE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14d, ecx
-	mov	r15, rdx
-	mov	rbx, rdi
-	mov	rdi, rsi
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	rdi, rax
-	mov	esi, edx
-	mov	rdx, r15
-	mov	ecx, r14d
-	call	__ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17h2671a62ca020b724E
-	mov	rdi, rbx
-	mov	rsi, rax
-	call	__ZN4time6at_utc17h44104f6fb8092b29E
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movl	%ecx, %r14d
+	movq	%rdx, %r15
+	movq	%rdi, %rbx
+	movq	%rsi, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rax, %rdi
+	movl	%edx, %esi
+	movq	%r15, %rdx
+	movl	%r14d, %ecx
+	callq	__ZN88_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$LT$time..duration..Duration$GT$$GT$3sub17h2671a62ca020b724E
+	movq	%rbx, %rdi
+	movq	%rax, %rsi
+	callq	__ZN4time6at_utc17h44104f6fb8092b29E
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN50_$LT$time..Tm$u20$as$u20$core..ops..arith..Sub$GT$3sub17h04fbdb86abe16338E
 	.p2align	4, 0x90
 __ZN50_$LT$time..Tm$u20$as$u20$core..ops..arith..Sub$GT$3sub17h04fbdb86abe16338E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	r14, rsi
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	rbx, rax
-	mov	r15d, edx
-	mov	rdi, r14
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	ecx, edx
-	mov	rdi, rbx
-	mov	esi, r15d
-	mov	rdx, rax
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rsi, %r14
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rax, %rbx
+	movl	%edx, %r15d
+	movq	%r14, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movl	%edx, %ecx
+	movq	%rbx, %rdi
+	movl	%r15d, %esi
+	movq	%rax, %rdx
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
 	jmp	__ZN56_$LT$time..Timespec$u20$as$u20$core..ops..arith..Sub$GT$3sub17h0a1668b339914011E
 	.cfi_endproc
 
@@ -9135,63 +9172,61 @@ __ZN50_$LT$time..Tm$u20$as$u20$core..ops..arith..Sub$GT$3sub17h04fbdb86abe16338E
 	.p2align	4, 0x90
 __ZN43_$LT$time..Tm$u20$as$u20$core..cmp..Ord$GT$3cmp17h98be69d3cff32e38E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	rbx, rsi
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	r15, rax
-	mov	r14d, edx
-	mov	rdi, rbx
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	rcx, rax
-	xor	eax, eax
-	cmp	r15, rcx
-	setne	al
-	mov	ecx, 255
-	cmovl	eax, ecx
-	test	al, al
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rsi, %rbx
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rax, %r15
+	movl	%edx, %r14d
+	movq	%rbx, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rax, %rcx
+	xorl	%eax, %eax
+	cmpq	%rcx, %r15
+	setne	%al
+	movl	$255, %ecx
+	cmovll	%ecx, %eax
+	testb	%al, %al
 	jne	LBB65_2
-	xor	eax, eax
-	cmp	r14d, edx
-	setne	al
-	cmovl	eax, ecx
+	xorl	%eax, %eax
+	cmpl	%edx, %r14d
+	setne	%al
+	cmovll	%ecx, %eax
 LBB65_2:
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time8empty_tm17h4a46cfd8629b1bf7E
 	.p2align	4, 0x90
 __ZN4time8empty_tm17h4a46cfd8629b1bf7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	dword ptr [rdi + 40], 0
-	mov	qword ptr [rdi + 32], 0
-	mov	qword ptr [rdi + 24], 0
-	mov	qword ptr [rdi + 16], 0
-	mov	qword ptr [rdi + 8], 0
-	mov	qword ptr [rdi], 0
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 12(%rdi)
+	vmovups	%ymm0, (%rdi)
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time6at_utc17h44104f6fb8092b29E
@@ -9201,70 +9236,69 @@ Lfunc_begin3:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception3
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 144
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	r14d, edx
-	mov	rbx, rdi
-	mov	qword ptr [rbp - 24], rsi
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 64], xmm0
-	movaps	xmmword ptr [rbp - 80], xmm0
-	movaps	xmmword ptr [rbp - 96], xmm0
-	mov	qword ptr [rbp - 48], 0
-	lea	rdi, [rbp - 24]
-	lea	rsi, [rbp - 96]
-	call	_gmtime_r
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	andq	$-32, %rsp
+	subq	$160, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movl	%edx, %r14d
+	movq	%rdi, %rbx
+	movq	%rsi, 8(%rsp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 120(%rsp)
+	vmovaps	%ymm0, 96(%rsp)
+	leaq	8(%rsp), %rdi
+	leaq	96(%rsp), %rsi
+	vzeroupper
+	callq	_gmtime_r
+	testq	%rax, %rax
 	je	LBB67_1
-	movaps	xmm0, xmmword ptr [rbp - 96]
-	movaps	xmm1, xmmword ptr [rbp - 80]
-	mov	eax, dword ptr [rbp - 64]
-	movups	xmmword ptr [rbx], xmm0
-	movups	xmmword ptr [rbx + 16], xmm1
-	mov	dword ptr [rbx + 32], eax
-	mov	dword ptr [rbx + 36], 0
-	mov	dword ptr [rbx + 40], r14d
-	mov	rax, rbx
-	add	rsp, 144
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	vmovaps	96(%rsp), %ymm0
+	movl	128(%rsp), %eax
+	vmovups	%ymm0, (%rbx)
+	movl	%eax, 32(%rbx)
+	movl	$0, 36(%rbx)
+	movl	%r14d, 40(%rbx)
+	movq	%rbx, %rax
+	leaq	-16(%rbp), %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	vzeroupper
+	retq
 LBB67_1:
-	lea	rbx, [rbp - 160]
-	mov	rdi, rbx
-	call	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
-	mov	qword ptr [rbp - 40], rbx
-	mov	rax, qword ptr [rip + __ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL]
-	mov	qword ptr [rbp - 32], rax
-	lea	rax, [rip + l___unnamed_140]
-	mov	qword ptr [rbp - 144], rax
-	mov	qword ptr [rbp - 136], 1
-	mov	qword ptr [rbp - 128], 0
-	lea	rax, [rbp - 40]
-	mov	qword ptr [rbp - 112], rax
-	mov	qword ptr [rbp - 104], 1
+	leaq	80(%rsp), %rbx
+	movq	%rbx, %rdi
+	callq	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
+	movq	%rbx, 16(%rsp)
+	movq	__ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL(%rip), %rax
+	movq	%rax, 24(%rsp)
+	leaq	l___unnamed_140(%rip), %rax
+	movq	%rax, 32(%rsp)
+	movq	$1, 40(%rsp)
+	movq	$0, 48(%rsp)
+	leaq	16(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	movq	$1, 72(%rsp)
 Ltmp9:
-	lea	rsi, [rip + l___unnamed_141]
-	lea	rdi, [rbp - 144]
-	call	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
+	leaq	l___unnamed_141(%rip), %rsi
+	leaq	32(%rsp), %rdi
+	callq	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
 Ltmp10:
 	ud2
 LBB67_2:
 Ltmp11:
-	mov	rbx, rax
-	lea	rdi, [rbp - 160]
-	call	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	leaq	80(%rsp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end3:
 	.cfi_endproc
@@ -9297,42 +9331,42 @@ Lcst_end3:
 	.p2align	4, 0x90
 __ZN4time7now_utc17h9d2f468ebc7ae21bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	sub	rsp, 24
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	qword ptr [rbp - 24], 0
-	mov	dword ptr [rbp - 16], 0
-	lea	rdi, [rbp - 24]
-	xor	esi, esi
-	call	_gettimeofday
-	imul	edx, dword ptr [rbp - 16], 1000
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	subq	$24, %rsp
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movq	$0, -24(%rbp)
+	movl	$0, -16(%rbp)
+	leaq	-24(%rbp), %rdi
+	xorl	%esi, %esi
+	callq	_gettimeofday
+	imull	$1000, -16(%rbp), %edx
 	jo	LBB68_3
-	cmp	edx, 1000000000
+	cmpl	$1000000000, %edx
 	jae	LBB68_4
-	mov	rsi, qword ptr [rbp - 24]
-	mov	rdi, rbx
-	call	__ZN4time6at_utc17h44104f6fb8092b29E
-	mov	rax, rbx
-	add	rsp, 24
-	pop	rbx
-	pop	rbp
-	ret
+	movq	-24(%rbp), %rsi
+	movq	%rbx, %rdi
+	callq	__ZN4time6at_utc17h44104f6fb8092b29E
+	movq	%rbx, %rax
+	addq	$24, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 LBB68_3:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_175]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_175(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB68_4:
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 	.cfi_endproc
 
 	.globl	__ZN4time2at17h05801cc4815f0cedE
@@ -9342,71 +9376,70 @@ Lfunc_begin4:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception4
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 144
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	r14d, edx
-	mov	rbx, rdi
-	mov	qword ptr [rbp - 24], rsi
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 64], xmm0
-	movaps	xmmword ptr [rbp - 80], xmm0
-	movaps	xmmword ptr [rbp - 96], xmm0
-	mov	qword ptr [rbp - 48], 0
-	lea	rdi, [rbp - 24]
-	lea	rsi, [rbp - 96]
-	call	_localtime_r
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	andq	$-32, %rsp
+	subq	$160, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movl	%edx, %r14d
+	movq	%rdi, %rbx
+	movq	%rsi, 8(%rsp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 120(%rsp)
+	vmovaps	%ymm0, 96(%rsp)
+	leaq	8(%rsp), %rdi
+	leaq	96(%rsp), %rsi
+	vzeroupper
+	callq	_localtime_r
+	testq	%rax, %rax
 	je	LBB69_1
-	mov	eax, dword ptr [rbp - 56]
-	movaps	xmm0, xmmword ptr [rbp - 96]
-	movaps	xmm1, xmmword ptr [rbp - 80]
-	mov	ecx, dword ptr [rbp - 64]
-	movups	xmmword ptr [rbx], xmm0
-	movups	xmmword ptr [rbx + 16], xmm1
-	mov	dword ptr [rbx + 32], ecx
-	mov	dword ptr [rbx + 36], eax
-	mov	dword ptr [rbx + 40], r14d
-	mov	rax, rbx
-	add	rsp, 144
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	movl	136(%rsp), %eax
+	vmovaps	96(%rsp), %ymm0
+	movl	128(%rsp), %ecx
+	vmovups	%ymm0, (%rbx)
+	movl	%ecx, 32(%rbx)
+	movl	%eax, 36(%rbx)
+	movl	%r14d, 40(%rbx)
+	movq	%rbx, %rax
+	leaq	-16(%rbp), %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	vzeroupper
+	retq
 LBB69_1:
-	lea	rbx, [rbp - 160]
-	mov	rdi, rbx
-	call	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
-	mov	qword ptr [rbp - 40], rbx
-	mov	rax, qword ptr [rip + __ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL]
-	mov	qword ptr [rbp - 32], rax
-	lea	rax, [rip + l___unnamed_17]
-	mov	qword ptr [rbp - 144], rax
-	mov	qword ptr [rbp - 136], 1
-	mov	qword ptr [rbp - 128], 0
-	lea	rax, [rbp - 40]
-	mov	qword ptr [rbp - 112], rax
-	mov	qword ptr [rbp - 104], 1
+	leaq	80(%rsp), %rbx
+	movq	%rbx, %rdi
+	callq	__ZN3std2io5error5Error13last_os_error17h5c14d716e3637a11E
+	movq	%rbx, 16(%rsp)
+	movq	__ZN60_$LT$std..io..error..Error$u20$as$u20$core..fmt..Display$GT$3fmt17hd5a23906ccc4fffdE@GOTPCREL(%rip), %rax
+	movq	%rax, 24(%rsp)
+	leaq	l___unnamed_17(%rip), %rax
+	movq	%rax, 32(%rsp)
+	movq	$1, 40(%rsp)
+	movq	$0, 48(%rsp)
+	leaq	16(%rsp), %rax
+	movq	%rax, 64(%rsp)
+	movq	$1, 72(%rsp)
 Ltmp12:
-	lea	rsi, [rip + l___unnamed_18]
-	lea	rdi, [rbp - 144]
-	call	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
+	leaq	l___unnamed_18(%rip), %rsi
+	leaq	32(%rsp), %rdi
+	callq	__ZN3std9panicking15begin_panic_fmt17h2e6dba6f5c07d155E
 Ltmp13:
 	ud2
 LBB69_2:
 Ltmp14:
-	mov	rbx, rax
-	lea	rdi, [rbp - 160]
-	call	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	leaq	80(%rsp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17h661d1aa1bd98fe22E
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end4:
 	.cfi_endproc
@@ -9439,437 +9472,425 @@ Lcst_end4:
 	.p2align	4, 0x90
 __ZN4time3now17h5328e06b278b3d25E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	sub	rsp, 24
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	qword ptr [rbp - 24], 0
-	mov	dword ptr [rbp - 16], 0
-	lea	rdi, [rbp - 24]
-	xor	esi, esi
-	call	_gettimeofday
-	imul	edx, dword ptr [rbp - 16], 1000
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	subq	$24, %rsp
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movq	$0, -24(%rbp)
+	movl	$0, -16(%rbp)
+	leaq	-24(%rbp), %rdi
+	xorl	%esi, %esi
+	callq	_gettimeofday
+	imull	$1000, -16(%rbp), %edx
 	jo	LBB70_3
-	cmp	edx, 1000000000
+	cmpl	$1000000000, %edx
 	jae	LBB70_4
-	mov	rsi, qword ptr [rbp - 24]
-	mov	rdi, rbx
-	call	__ZN4time2at17h05801cc4815f0cedE
-	mov	rax, rbx
-	add	rsp, 24
-	pop	rbx
-	pop	rbp
-	ret
+	movq	-24(%rbp), %rsi
+	movq	%rbx, %rdi
+	callq	__ZN4time2at17h05801cc4815f0cedE
+	movq	%rbx, %rax
+	addq	$24, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 LBB70_3:
-	lea	rdi, [rip + _str.3]
-	lea	rdx, [rip + l___unnamed_175]
-	mov	esi, 33
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	_str.3(%rip), %rdi
+	leaq	l___unnamed_175(%rip), %rdx
+	movl	$33, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 LBB70_4:
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
 	.p2align	4, 0x90
 __ZN4time2Tm11to_timespec17hccd00210cf261bf1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	sub	rsp, 56
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	cmp	dword ptr [rdi + 36], 0
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	andq	$-32, %rsp
+	subq	$96, %rsp
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	cmpl	$0, 36(%rdi)
 	je	LBB71_2
-	lea	rdi, [rbp - 64]
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 32], xmm0
-	movaps	xmmword ptr [rbp - 48], xmm0
-	movaps	xmmword ptr [rbp - 64], xmm0
-	mov	qword ptr [rbp - 16], 0
-	movups	xmm0, xmmword ptr [rbx]
-	movaps	xmmword ptr [rbp - 64], xmm0
-	movups	xmm0, xmmword ptr [rbx + 16]
-	movaps	xmmword ptr [rbp - 48], xmm0
-	mov	eax, dword ptr [rbx + 32]
-	mov	dword ptr [rbp - 32], eax
-	call	_mktime
-	mov	edx, dword ptr [rbx + 40]
-	cmp	edx, 1000000000
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 24(%rsp)
+	vmovaps	%ymm0, (%rsp)
+	movq	%rsp, %rdi
+	vmovups	(%rbx), %ymm0
+	vmovaps	%ymm0, (%rsp)
+	movl	32(%rbx), %eax
+	movl	%eax, 32(%rsp)
+	vzeroupper
+	callq	_mktime
+	movl	40(%rbx), %edx
+	cmpl	$1000000000, %edx
 	jae	LBB71_5
 LBB71_4:
-	add	rsp, 56
-	pop	rbx
-	pop	rbp
-	ret
+	leaq	-8(%rbp), %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 LBB71_2:
-	lea	rdi, [rbp - 64]
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 32], xmm0
-	movaps	xmmword ptr [rbp - 48], xmm0
-	movaps	xmmword ptr [rbp - 64], xmm0
-	mov	qword ptr [rbp - 16], 0
-	movups	xmm0, xmmword ptr [rbx]
-	movaps	xmmword ptr [rbp - 64], xmm0
-	movups	xmm0, xmmword ptr [rbx + 16]
-	movaps	xmmword ptr [rbp - 48], xmm0
-	mov	eax, dword ptr [rbx + 32]
-	mov	dword ptr [rbp - 32], eax
-	call	_timegm
-	mov	edx, dword ptr [rbx + 40]
-	cmp	edx, 1000000000
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%ymm0, 24(%rsp)
+	vmovaps	%ymm0, (%rsp)
+	movq	%rsp, %rdi
+	vmovups	(%rbx), %ymm0
+	vmovaps	%ymm0, (%rsp)
+	movl	32(%rbx), %eax
+	movl	%eax, 32(%rsp)
+	vzeroupper
+	callq	_timegm
+	movl	40(%rbx), %edx
+	cmpl	$1000000000, %edx
 	jb	LBB71_4
 LBB71_5:
-	lea	rdi, [rip + l___unnamed_159]
-	lea	rdx, [rip + l___unnamed_160]
-	mov	esi, 50
-	call	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
+	leaq	l___unnamed_159(%rip), %rdi
+	leaq	l___unnamed_160(%rip), %rdx
+	movl	$50, %esi
+	callq	__ZN3std9panicking11begin_panic17h747b3a393d9a2f04E
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm8to_local17hc381b00735ca8d21E
 	.p2align	4, 0x90
 __ZN4time2Tm8to_local17hc381b00735ca8d21E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	mov	rdi, rsi
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	rdi, rbx
-	mov	rsi, rax
-	call	__ZN4time2at17h05801cc4815f0cedE
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	movq	%rsi, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rbx, %rdi
+	movq	%rax, %rsi
+	callq	__ZN4time2at17h05801cc4815f0cedE
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm6to_utc17h8b28c8a9a13a804bE
 	.p2align	4, 0x90
 __ZN4time2Tm6to_utc17h8b28c8a9a13a804bE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	rbx
-	push	rax
-	.cfi_offset rbx, -24
-	mov	rbx, rdi
-	cmp	dword ptr [rsi + 36], 0
-	je	LBB73_3
-	mov	rdi, rsi
-	call	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
-	mov	rdi, rbx
-	mov	rsi, rax
-	call	__ZN4time6at_utc17h44104f6fb8092b29E
-	jmp	LBB73_2
-LBB73_3:
-	mov	eax, dword ptr [rsi + 40]
-	mov	dword ptr [rbx + 40], eax
-	mov	rax, qword ptr [rsi + 32]
-	mov	qword ptr [rbx + 32], rax
-	mov	rax, qword ptr [rsi + 24]
-	mov	qword ptr [rbx + 24], rax
-	mov	rax, qword ptr [rsi + 16]
-	mov	qword ptr [rbx + 16], rax
-	mov	rax, qword ptr [rsi]
-	mov	rcx, qword ptr [rsi + 8]
-	mov	qword ptr [rbx + 8], rcx
-	mov	qword ptr [rbx], rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%rbx
+	pushq	%rax
+	.cfi_offset %rbx, -24
+	movq	%rdi, %rbx
+	cmpl	$0, 36(%rsi)
+	je	LBB73_2
+	movq	%rsi, %rdi
+	callq	__ZN4time2Tm11to_timespec17hccd00210cf261bf1E
+	movq	%rbx, %rdi
+	movq	%rax, %rsi
+	callq	__ZN4time6at_utc17h44104f6fb8092b29E
+	jmp	LBB73_3
 LBB73_2:
-	mov	rax, rbx
-	add	rsp, 8
-	pop	rbx
-	pop	rbp
-	ret
+	vmovups	(%rsi), %ymm0
+	vmovups	12(%rsi), %ymm1
+	vmovups	%ymm1, 12(%rbx)
+	vmovups	%ymm0, (%rbx)
+LBB73_3:
+	movq	%rbx, %rax
+	addq	$8, %rsp
+	popq	%rbx
+	popq	%rbp
+	vzeroupper
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm5ctime17h7afd4a502ba82921E
 	.p2align	4, 0x90
 __ZN4time2Tm5ctime17h7afd4a502ba82921E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	qword ptr [rdi], rsi
-	mov	qword ptr [rdi + 8], 2
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rsi, (%rdi)
+	movq	$2, 8(%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm7asctime17hf7b5dce01f1ebbc1E
 	.p2align	4, 0x90
 __ZN4time2Tm7asctime17hf7b5dce01f1ebbc1E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	qword ptr [rdi], rsi
-	mov	qword ptr [rdi + 8], 0
-	lea	rcx, [rip + l___unnamed_14]
-	mov	qword ptr [rdi + 16], rcx
-	mov	qword ptr [rdi + 24], 2
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rsi, (%rdi)
+	movq	$0, 8(%rdi)
+	leaq	l___unnamed_14(%rip), %rcx
+	movq	%rcx, 16(%rdi)
+	movq	$2, 24(%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm8strftime17h3106059ac9464c9eE
 	.p2align	4, 0x90
 __ZN4time2Tm8strftime17h3106059ac9464c9eE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rax, rdi
-	mov	ebx, dword ptr [rsi + 16]
-	mov	edi, dword ptr [rsi + 24]
-	cmp	edi, 6
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rax
+	movl	16(%rsi), %ebx
+	movl	24(%rsi), %edi
+	cmpl	$6, %edi
 	ja	LBB76_39
-	cmp	ebx, 12
+	cmpl	$12, %ebx
 	jae	LBB76_39
-	test	rcx, rcx
+	testq	%rcx, %rcx
 	je	LBB76_41
-	lea	r9, [rdx + rcx]
-	lea	r8, [rip + LJTI76_0]
-	mov	rbx, rdx
-	lea	r14, [rbx + 1]
-	movzx	edi, byte ptr [rbx]
-	test	dil, dil
+	leaq	(%rdx,%rcx), %r9
+	leaq	LJTI76_0(%rip), %r8
+	movq	%rdx, %rbx
+	leaq	1(%rbx), %r14
+	movzbl	(%rbx), %edi
+	testb	%dil, %dil
 	jns	LBB76_7
 	jmp	LBB76_12
 LBB76_25:
-	shl	r11d, 6
-	or	r10d, r11d
-	mov	edi, r10d
-	cmp	edi, 37
+	shll	$6, %r11d
+	orl	%r11d, %r10d
+	movl	%r10d, %edi
+	cmpl	$37, %edi
 	je	LBB76_8
 	.p2align	4, 0x90
 LBB76_4:
-	cmp	edi, 1114112
+	cmpl	$1114112, %edi
 	je	LBB76_41
 LBB76_5:
-	mov	rbx, r14
-	cmp	r14, r9
+	movq	%r14, %rbx
+	cmpq	%r9, %r14
 	je	LBB76_41
-	lea	r14, [rbx + 1]
-	movzx	edi, byte ptr [rbx]
-	test	dil, dil
+	leaq	1(%rbx), %r14
+	movzbl	(%rbx), %edi
+	testb	%dil, %dil
 	js	LBB76_12
 LBB76_7:
-	cmp	edi, 37
+	cmpl	$37, %edi
 	jne	LBB76_4
 LBB76_8:
-	cmp	r14, r9
+	cmpq	%r9, %r14
 	je	LBB76_38
-	lea	rdi, [r14 + 1]
-	movzx	r11d, byte ptr [r14]
-	test	r11b, r11b
+	leaq	1(%r14), %rdi
+	movzbl	(%r14), %r11d
+	testb	%r11b, %r11b
 	js	LBB76_18
-	mov	r14, rdi
-	lea	edi, [r11 - 37]
-	cmp	edi, 85
+	movq	%rdi, %r14
+	leal	-37(%r11), %edi
+	cmpl	$85, %edi
 	ja	LBB76_37
 LBB76_11:
-	movsxd	rdi, dword ptr [r8 + 4*rdi]
-	add	rdi, r8
-	jmp	rdi
+	movslq	(%r8,%rdi,4), %rdi
+	addq	%r8, %rdi
+	jmpq	*%rdi
 	.p2align	4, 0x90
 LBB76_12:
-	cmp	r14, r9
+	cmpq	%r9, %r14
 	je	LBB76_24
-	movzx	r10d, byte ptr [rbx + 1]
-	add	rbx, 2
-	and	r10d, 63
-	mov	r14, rbx
-	mov	r11d, edi
-	and	r11d, 31
-	cmp	dil, -33
+	movzbl	1(%rbx), %r10d
+	addq	$2, %rbx
+	andl	$63, %r10d
+	movq	%rbx, %r14
+	movl	%edi, %r11d
+	andl	$31, %r11d
+	cmpb	$-33, %dil
 	jbe	LBB76_25
 LBB76_14:
-	cmp	r14, r9
+	cmpq	%r9, %r14
 	je	LBB76_26
-	movzx	ebx, byte ptr [r14]
-	inc	r14
-	and	ebx, 63
-	shl	r10d, 6
-	or	r10d, ebx
-	cmp	dil, -16
+	movzbl	(%r14), %ebx
+	incq	%r14
+	andl	$63, %ebx
+	shll	$6, %r10d
+	orl	%ebx, %r10d
+	cmpb	$-16, %dil
 	jb	LBB76_27
 LBB76_16:
-	cmp	r14, r9
+	cmpq	%r9, %r14
 	je	LBB76_31
-	movzx	edi, byte ptr [r14]
-	inc	r14
-	and	edi, 63
+	movzbl	(%r14), %edi
+	incq	%r14
+	andl	$63, %edi
 	jmp	LBB76_32
 LBB76_18:
-	cmp	rdi, r9
+	cmpq	%r9, %rdi
 	je	LBB76_28
-	movzx	r10d, byte ptr [r14 + 1]
-	add	r14, 2
-	and	r10d, 63
-	mov	edi, r11d
-	and	edi, 31
-	cmp	r11b, -33
+	movzbl	1(%r14), %r10d
+	addq	$2, %r14
+	andl	$63, %r10d
+	movl	%r11d, %edi
+	andl	$31, %edi
+	cmpb	$-33, %r11b
 	jbe	LBB76_29
 LBB76_20:
-	cmp	r14, r9
+	cmpq	%r9, %r14
 	je	LBB76_33
-	movzx	ebx, byte ptr [r14]
-	inc	r14
-	and	ebx, 63
-	shl	r10d, 6
-	or	r10d, ebx
-	cmp	r11b, -16
+	movzbl	(%r14), %ebx
+	incq	%r14
+	andl	$63, %ebx
+	shll	$6, %r10d
+	orl	%ebx, %r10d
+	cmpb	$-16, %r11b
 	jb	LBB76_34
 LBB76_22:
-	cmp	r14, r9
+	cmpq	%r9, %r14
 	je	LBB76_35
-	movzx	r11d, byte ptr [r14]
-	inc	r14
-	and	r11d, 63
+	movzbl	(%r14), %r11d
+	incq	%r14
+	andl	$63, %r11d
 	jmp	LBB76_36
 LBB76_24:
-	xor	r10d, r10d
-	mov	r14, r9
-	mov	r11d, edi
-	and	r11d, 31
-	cmp	dil, -33
+	xorl	%r10d, %r10d
+	movq	%r9, %r14
+	movl	%edi, %r11d
+	andl	$31, %r11d
+	cmpb	$-33, %dil
 	ja	LBB76_14
 	jmp	LBB76_25
 LBB76_26:
-	xor	ebx, ebx
-	mov	r14, r9
-	shl	r10d, 6
-	or	r10d, ebx
-	cmp	dil, -16
+	xorl	%ebx, %ebx
+	movq	%r9, %r14
+	shll	$6, %r10d
+	orl	%ebx, %r10d
+	cmpb	$-16, %dil
 	jae	LBB76_16
 LBB76_27:
-	shl	r11d, 12
-	or	r10d, r11d
-	mov	edi, r10d
-	cmp	edi, 37
+	shll	$12, %r11d
+	orl	%r11d, %r10d
+	movl	%r10d, %edi
+	cmpl	$37, %edi
 	jne	LBB76_4
 	jmp	LBB76_8
 LBB76_28:
-	xor	r10d, r10d
-	mov	r14, r9
-	mov	edi, r11d
-	and	edi, 31
-	cmp	r11b, -33
+	xorl	%r10d, %r10d
+	movq	%r9, %r14
+	movl	%r11d, %edi
+	andl	$31, %edi
+	cmpb	$-33, %r11b
 	ja	LBB76_20
 LBB76_29:
-	shl	edi, 6
+	shll	$6, %edi
 	jmp	LBB76_30
 LBB76_31:
-	xor	edi, edi
+	xorl	%edi, %edi
 LBB76_32:
-	and	r11d, 7
-	shl	r11d, 18
-	shl	r10d, 6
-	or	r10d, r11d
-	or	r10d, edi
-	mov	edi, r10d
-	cmp	edi, 37
+	andl	$7, %r11d
+	shll	$18, %r11d
+	shll	$6, %r10d
+	orl	%r11d, %r10d
+	orl	%edi, %r10d
+	movl	%r10d, %edi
+	cmpl	$37, %edi
 	jne	LBB76_4
 	jmp	LBB76_8
 LBB76_33:
-	xor	ebx, ebx
-	mov	r14, r9
-	shl	r10d, 6
-	or	r10d, ebx
-	cmp	r11b, -16
+	xorl	%ebx, %ebx
+	movq	%r9, %r14
+	shll	$6, %r10d
+	orl	%ebx, %r10d
+	cmpb	$-16, %r11b
 	jae	LBB76_22
 LBB76_34:
-	shl	edi, 12
+	shll	$12, %edi
 LBB76_30:
-	or	r10d, edi
-	mov	r11d, r10d
-	lea	edi, [r11 - 37]
-	cmp	edi, 85
+	orl	%edi, %r10d
+	movl	%r10d, %r11d
+	leal	-37(%r11), %edi
+	cmpl	$85, %edi
 	jbe	LBB76_11
 	jmp	LBB76_37
 LBB76_35:
-	xor	r11d, r11d
+	xorl	%r11d, %r11d
 LBB76_36:
-	and	edi, 7
-	shl	edi, 18
-	shl	r10d, 6
-	or	r10d, edi
-	or	r10d, r11d
-	mov	r11d, r10d
-	lea	edi, [r11 - 37]
-	cmp	edi, 85
+	andl	$7, %edi
+	shll	$18, %edi
+	shll	$6, %r10d
+	orl	%edi, %r10d
+	orl	%r11d, %r10d
+	movl	%r10d, %r11d
+	leal	-37(%r11), %edi
+	cmpl	$85, %edi
 	jbe	LBB76_11
 LBB76_37:
-	cmp	r11d, 1114112
+	cmpl	$1114112, %r11d
 	jne	LBB76_45
 LBB76_38:
-	mov	dword ptr [rax + 4], 12
+	movl	$12, 4(%rax)
 	jmp	LBB76_46
 LBB76_39:
-	cmp	ebx, 12
+	cmpl	$12, %ebx
 	jae	LBB76_42
-	mov	dword ptr [rax + 4], 6
+	movl	$6, 4(%rax)
 	jmp	LBB76_46
 LBB76_41:
-	mov	qword ptr [rax + 8], rsi
-	mov	qword ptr [rax + 16], 0
-	mov	qword ptr [rax + 24], rdx
-	mov	qword ptr [rax + 32], rcx
-	xor	ecx, ecx
+	movq	%rsi, 8(%rax)
+	movq	$0, 16(%rax)
+	movq	%rdx, 24(%rax)
+	movq	%rcx, 32(%rax)
+	xorl	%ecx, %ecx
 	jmp	LBB76_47
 LBB76_42:
-	cmp	edi, 7
+	cmpl	$7, %edi
 	jae	LBB76_44
-	mov	dword ptr [rax + 4], 4
+	movl	$4, 4(%rax)
 	jmp	LBB76_46
 LBB76_44:
-	mov	dword ptr [rax + 4], 3
+	movl	$3, 4(%rax)
 	jmp	LBB76_46
 LBB76_45:
-	mov	dword ptr [rax + 4], 13
-	mov	dword ptr [rax + 8], r11d
+	movl	$13, 4(%rax)
+	movl	%r11d, 8(%rax)
 LBB76_46:
-	mov	ecx, 1
+	movl	$1, %ecx
 LBB76_47:
-	mov	dword ptr [rax], ecx
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	movl	%ecx, (%rax)
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 	.p2align	2, 0x90
 	.data_region jt32
@@ -9968,190 +9989,190 @@ LJTI76_0:
 	.p2align	4, 0x90
 __ZN4time2Tm6rfc82217hc7e8aaaca0089e48E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	xor	ecx, ecx
-	cmp	dword ptr [rsi + 36], 0
-	sete	cl
-	lea	rdx, [rip + l___unnamed_178]
-	lea	rdi, [rip + l___unnamed_179]
-	cmove	rdi, rdx
-	or	rcx, 18
-	mov	qword ptr [rax], rsi
-	mov	qword ptr [rax + 8], 0
-	mov	qword ptr [rax + 16], rdi
-	mov	qword ptr [rax + 24], rcx
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	xorl	%ecx, %ecx
+	cmpl	$0, 36(%rsi)
+	sete	%cl
+	leaq	l___unnamed_178(%rip), %rdx
+	leaq	l___unnamed_179(%rip), %rdi
+	cmoveq	%rdx, %rdi
+	orq	$18, %rcx
+	movq	%rsi, (%rax)
+	movq	$0, 8(%rax)
+	movq	%rdi, 16(%rax)
+	movq	%rcx, 24(%rax)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm7rfc822z17h145629c167dc8131E
 	.p2align	4, 0x90
 __ZN4time2Tm7rfc822z17h145629c167dc8131E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	qword ptr [rdi], rsi
-	mov	qword ptr [rdi + 8], 0
-	lea	rcx, [rip + l___unnamed_180]
-	mov	qword ptr [rdi + 16], rcx
-	mov	qword ptr [rdi + 24], 18
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rsi, (%rdi)
+	movq	$0, 8(%rdi)
+	leaq	l___unnamed_180(%rip), %rcx
+	movq	%rcx, 16(%rdi)
+	movq	$18, 24(%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN4time2Tm7rfc333917h48b4535ec2c6584cE
 	.p2align	4, 0x90
 __ZN4time2Tm7rfc333917h48b4535ec2c6584cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	rax, rdi
-	mov	qword ptr [rdi], rsi
-	mov	qword ptr [rdi + 8], 1
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%rdi, %rax
+	movq	%rsi, (%rdi)
+	movq	$1, 8(%rdi)
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN55_$LT$time..ParseError$u20$as$u20$core..fmt..Display$GT$3fmt17h158d24ff36571648E
 	.p2align	4, 0x90
 __ZN55_$LT$time..ParseError$u20$as$u20$core..fmt..Display$GT$3fmt17h158d24ff36571648E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	sub	rsp, 112
-	mov	rax, rsi
-	mov	esi, dword ptr [rdi]
-	cmp	rsi, 13
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$112, %rsp
+	movq	%rsi, %rax
+	movl	(%rdi), %esi
+	cmpq	$13, %rsi
 	je	LBB80_16
-	cmp	rsi, 14
+	cmpq	$14, %rsi
 	jne	LBB80_2
-	mov	ecx, dword ptr [rdi + 4]
-	mov	dword ptr [rbp - 4], ecx
-	mov	ecx, dword ptr [rdi + 8]
-	mov	dword ptr [rbp - 24], ecx
-	lea	rcx, [rbp - 4]
-	mov	qword ptr [rbp - 56], rcx
-	mov	rcx, qword ptr [rip + __ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL]
-	mov	qword ptr [rbp - 48], rcx
-	lea	rdx, [rbp - 24]
-	mov	qword ptr [rbp - 40], rdx
-	mov	qword ptr [rbp - 32], rcx
-	lea	rcx, [rip + l___unnamed_181]
-	mov	qword ptr [rbp - 104], rcx
-	mov	qword ptr [rbp - 96], 3
+	movl	4(%rdi), %ecx
+	movl	%ecx, -4(%rbp)
+	movl	8(%rdi), %ecx
+	movl	%ecx, -24(%rbp)
+	leaq	-4(%rbp), %rcx
+	movq	%rcx, -56(%rbp)
+	movq	__ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL(%rip), %rcx
+	movq	%rcx, -48(%rbp)
+	leaq	-24(%rbp), %rdx
+	movq	%rdx, -40(%rbp)
+	movq	%rcx, -32(%rbp)
+	leaq	l___unnamed_181(%rip), %rcx
+	movq	%rcx, -104(%rbp)
+	movq	$3, -96(%rbp)
 	jmp	LBB80_18
 LBB80_16:
-	mov	ecx, dword ptr [rdi + 4]
-	mov	dword ptr [rbp - 4], ecx
-	lea	rcx, [rip + l___unnamed_182]
-	mov	qword ptr [rbp - 24], rcx
-	mov	qword ptr [rbp - 16], 24
-	lea	rcx, [rbp - 24]
-	mov	qword ptr [rbp - 56], rcx
-	lea	rcx, [rip + __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E]
-	mov	qword ptr [rbp - 48], rcx
-	lea	rcx, [rbp - 4]
-	mov	qword ptr [rbp - 40], rcx
-	mov	rcx, qword ptr [rip + __ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL]
-	mov	qword ptr [rbp - 32], rcx
-	lea	rcx, [rip + l___unnamed_183]
-	mov	qword ptr [rbp - 104], rcx
-	mov	qword ptr [rbp - 96], 2
+	movl	4(%rdi), %ecx
+	movl	%ecx, -4(%rbp)
+	leaq	l___unnamed_182(%rip), %rcx
+	movq	%rcx, -24(%rbp)
+	movq	$24, -16(%rbp)
+	leaq	-24(%rbp), %rcx
+	movq	%rcx, -56(%rbp)
+	leaq	__ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E(%rip), %rcx
+	movq	%rcx, -48(%rbp)
+	leaq	-4(%rbp), %rcx
+	movq	%rcx, -40(%rbp)
+	movq	__ZN43_$LT$char$u20$as$u20$core..fmt..Display$GT$3fmt17h6751376c1412eca9E@GOTPCREL(%rip), %rcx
+	movq	%rcx, -32(%rbp)
+	leaq	l___unnamed_183(%rip), %rcx
+	movq	%rcx, -104(%rbp)
+	movq	$2, -96(%rbp)
 LBB80_18:
-	mov	qword ptr [rbp - 88], 0
-	lea	rcx, [rbp - 56]
-	mov	qword ptr [rbp - 72], rcx
-	mov	qword ptr [rbp - 64], 2
+	movq	$0, -88(%rbp)
+	leaq	-56(%rbp), %rcx
+	movq	%rcx, -72(%rbp)
+	movq	$2, -64(%rbp)
 	jmp	LBB80_19
 LBB80_2:
-	lea	rcx, [rip + l___unnamed_184]
-	mov	edx, 15
-	lea	rdi, [rip + LJTI80_0]
-	movsxd	rsi, dword ptr [rdi + 4*rsi]
-	add	rsi, rdi
-	jmp	rsi
+	leaq	l___unnamed_184(%rip), %rcx
+	movl	$15, %edx
+	leaq	LJTI80_0(%rip), %rdi
+	movslq	(%rdi,%rsi,4), %rsi
+	addq	%rdi, %rsi
+	jmpq	*%rsi
 LBB80_3:
-	lea	rcx, [rip + l___unnamed_185]
+	leaq	l___unnamed_185(%rip), %rcx
 	jmp	LBB80_15
 LBB80_4:
-	lea	rcx, [rip + l___unnamed_186]
-	mov	edx, 13
+	leaq	l___unnamed_186(%rip), %rcx
+	movl	$13, %edx
 	jmp	LBB80_15
 LBB80_5:
-	lea	rcx, [rip + l___unnamed_187]
-	mov	edx, 12
+	leaq	l___unnamed_187(%rip), %rcx
+	movl	$12, %edx
 	jmp	LBB80_15
 LBB80_6:
-	lea	rcx, [rip + l___unnamed_188]
-	mov	edx, 14
+	leaq	l___unnamed_188(%rip), %rcx
+	movl	$14, %edx
 	jmp	LBB80_15
 LBB80_7:
-	lea	rcx, [rip + l___unnamed_189]
-	mov	edx, 13
+	leaq	l___unnamed_189(%rip), %rcx
+	movl	$13, %edx
 	jmp	LBB80_15
 LBB80_8:
-	lea	rcx, [rip + l___unnamed_190]
-	mov	edx, 24
+	leaq	l___unnamed_190(%rip), %rcx
+	movl	$24, %edx
 	jmp	LBB80_15
 LBB80_9:
-	lea	rcx, [rip + l___unnamed_191]
-	mov	edx, 25
+	leaq	l___unnamed_191(%rip), %rcx
+	movl	$25, %edx
 	jmp	LBB80_15
 LBB80_10:
-	lea	rcx, [rip + l___unnamed_192]
-	mov	edx, 24
+	leaq	l___unnamed_192(%rip), %rcx
+	movl	$24, %edx
 	jmp	LBB80_15
 LBB80_11:
-	lea	rcx, [rip + l___unnamed_193]
-	mov	edx, 20
+	leaq	l___unnamed_193(%rip), %rcx
+	movl	$20, %edx
 	jmp	LBB80_15
 LBB80_12:
-	lea	rcx, [rip + l___unnamed_194]
-	mov	edx, 13
+	leaq	l___unnamed_194(%rip), %rcx
+	movl	$13, %edx
 	jmp	LBB80_15
 LBB80_13:
-	lea	rcx, [rip + l___unnamed_195]
-	mov	edx, 28
+	leaq	l___unnamed_195(%rip), %rcx
+	movl	$28, %edx
 	jmp	LBB80_15
 LBB80_14:
-	lea	rcx, [rip + l___unnamed_196]
-	mov	edx, 34
+	leaq	l___unnamed_196(%rip), %rcx
+	movl	$34, %edx
 LBB80_15:
-	mov	qword ptr [rbp - 56], rcx
-	mov	qword ptr [rbp - 48], rdx
-	lea	rcx, [rbp - 56]
-	mov	qword ptr [rbp - 24], rcx
-	lea	rcx, [rip + __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E]
-	mov	qword ptr [rbp - 16], rcx
-	lea	rcx, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 104], rcx
-	mov	qword ptr [rbp - 96], 1
-	mov	qword ptr [rbp - 88], 0
-	lea	rcx, [rbp - 24]
-	mov	qword ptr [rbp - 72], rcx
-	mov	qword ptr [rbp - 64], 1
+	movq	%rcx, -56(%rbp)
+	movq	%rdx, -48(%rbp)
+	leaq	-56(%rbp), %rcx
+	movq	%rcx, -24(%rbp)
+	leaq	__ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h2d7755669f68d894E(%rip), %rcx
+	movq	%rcx, -16(%rbp)
+	leaq	l___unnamed_23(%rip), %rcx
+	movq	%rcx, -104(%rbp)
+	movq	$1, -96(%rbp)
+	movq	$0, -88(%rbp)
+	leaq	-24(%rbp), %rcx
+	movq	%rcx, -72(%rbp)
+	movq	$1, -64(%rbp)
 LBB80_19:
-	lea	rsi, [rbp - 104]
-	mov	rdi, rax
-	call	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
-	add	rsp, 112
-	pop	rbp
-	ret
+	leaq	-104(%rbp), %rsi
+	movq	%rax, %rdi
+	callq	__ZN4core3fmt9Formatter9write_fmt17h3dc2bf45afed3069E
+	addq	$112, %rsp
+	popq	%rbp
+	retq
 	.cfi_endproc
 	.p2align	2, 0x90
 	.data_region jt32
@@ -10188,86 +10209,86 @@ LJTI80_0:
 	.p2align	4, 0x90
 __ZN54_$LT$time..ParseError$u20$as$u20$std..error..Error$GT$11description17h9435175fe34aea16E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	mov	ecx, dword ptr [rdi]
-	lea	rax, [rip + l___unnamed_197]
-	mov	edx, 21
-	lea	rsi, [rip + LJTI81_0]
-	movsxd	rcx, dword ptr [rsi + 4*rcx]
-	add	rcx, rsi
-	jmp	rcx
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	(%rdi), %ecx
+	leaq	l___unnamed_197(%rip), %rax
+	movl	$21, %edx
+	leaq	LJTI81_0(%rip), %rsi
+	movslq	(%rsi,%rcx,4), %rcx
+	addq	%rsi, %rcx
+	jmpq	*%rcx
 LBB81_1:
-	lea	rax, [rip + l___unnamed_184]
-	mov	edx, 15
-	pop	rbp
-	ret
+	leaq	l___unnamed_184(%rip), %rax
+	movl	$15, %edx
+	popq	%rbp
+	retq
 LBB81_2:
-	lea	rax, [rip + l___unnamed_185]
-	mov	edx, 15
-	pop	rbp
-	ret
+	leaq	l___unnamed_185(%rip), %rax
+	movl	$15, %edx
+	popq	%rbp
+	retq
 LBB81_3:
-	lea	rax, [rip + l___unnamed_186]
-	mov	edx, 13
-	pop	rbp
-	ret
+	leaq	l___unnamed_186(%rip), %rax
+	movl	$13, %edx
+	popq	%rbp
+	retq
 LBB81_4:
-	lea	rax, [rip + l___unnamed_187]
-	mov	edx, 12
-	pop	rbp
-	ret
+	leaq	l___unnamed_187(%rip), %rax
+	movl	$12, %edx
+	popq	%rbp
+	retq
 LBB81_5:
-	lea	rax, [rip + l___unnamed_188]
-	mov	edx, 14
-	pop	rbp
-	ret
+	leaq	l___unnamed_188(%rip), %rax
+	movl	$14, %edx
+	popq	%rbp
+	retq
 LBB81_6:
-	lea	rax, [rip + l___unnamed_189]
-	mov	edx, 13
-	pop	rbp
-	ret
+	leaq	l___unnamed_189(%rip), %rax
+	movl	$13, %edx
+	popq	%rbp
+	retq
 LBB81_7:
-	lea	rax, [rip + l___unnamed_190]
+	leaq	l___unnamed_190(%rip), %rax
 	jmp	LBB81_15
 LBB81_8:
-	lea	rax, [rip + l___unnamed_191]
-	mov	edx, 25
-	pop	rbp
-	ret
+	leaq	l___unnamed_191(%rip), %rax
+	movl	$25, %edx
+	popq	%rbp
+	retq
 LBB81_9:
-	lea	rax, [rip + l___unnamed_192]
+	leaq	l___unnamed_192(%rip), %rax
 	jmp	LBB81_15
 LBB81_10:
-	lea	rax, [rip + l___unnamed_193]
-	mov	edx, 20
-	pop	rbp
-	ret
+	leaq	l___unnamed_193(%rip), %rax
+	movl	$20, %edx
+	popq	%rbp
+	retq
 LBB81_11:
-	lea	rax, [rip + l___unnamed_194]
-	mov	edx, 13
-	pop	rbp
-	ret
+	leaq	l___unnamed_194(%rip), %rax
+	movl	$13, %edx
+	popq	%rbp
+	retq
 LBB81_12:
-	lea	rax, [rip + l___unnamed_195]
-	mov	edx, 28
-	pop	rbp
-	ret
+	leaq	l___unnamed_195(%rip), %rax
+	movl	$28, %edx
+	popq	%rbp
+	retq
 LBB81_13:
-	lea	rax, [rip + l___unnamed_196]
-	mov	edx, 34
-	pop	rbp
-	ret
+	leaq	l___unnamed_196(%rip), %rax
+	movl	$34, %edx
+	popq	%rbp
+	retq
 LBB81_14:
-	lea	rax, [rip + l___unnamed_182]
+	leaq	l___unnamed_182(%rip), %rax
 LBB81_15:
-	mov	edx, 24
+	movl	$24, %edx
 LBB81_16:
-	pop	rbp
-	ret
+	popq	%rbp
+	retq
 	.cfi_endproc
 	.p2align	2, 0x90
 	.data_region jt32
@@ -10311,141 +10332,133 @@ Lfunc_begin5:
 	.cfi_startproc
 	.cfi_personality 155, _rust_eh_personality
 	.cfi_lsda 16, Lexception5
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	sub	rsp, 184
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	rax, rdx
-	mov	rdx, rsi
-	mov	rbx, rdi
-	lea	rdi, [rbp - 152]
-	mov	rsi, rcx
-	mov	rcx, rax
-	call	__ZN4time2Tm8strftime17h3106059ac9464c9eE
-	cmp	dword ptr [rbp - 152], 1
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	subq	$184, %rsp
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdx, %rax
+	movq	%rsi, %rdx
+	movq	%rdi, %rbx
+	leaq	-168(%rbp), %rdi
+	movq	%rcx, %rsi
+	movq	%rax, %rcx
+	callq	__ZN4time2Tm8strftime17h3106059ac9464c9eE
+	cmpl	$1, -168(%rbp)
 	jne	LBB82_2
-	mov	eax, dword ptr [rbp - 140]
-	mov	dword ptr [rbx + 12], eax
-	mov	rax, qword ptr [rbp - 148]
-	mov	qword ptr [rbx + 4], rax
-	mov	dword ptr [rbx], 1
+	movl	-156(%rbp), %eax
+	movl	%eax, 12(%rbx)
+	movq	-164(%rbp), %rax
+	movq	%rax, 4(%rbx)
+	movl	$1, (%rbx)
 	jmp	LBB82_16
 LBB82_2:
-	mov	rax, qword ptr [rbp - 120]
-	mov	qword ptr [rbp - 176], rax
-	mov	rax, qword ptr [rbp - 128]
-	mov	qword ptr [rbp - 184], rax
-	mov	rax, qword ptr [rbp - 144]
-	mov	rcx, qword ptr [rbp - 136]
-	mov	qword ptr [rbp - 192], rcx
-	mov	qword ptr [rbp - 200], rax
-	lea	rax, [rbp - 200]
-	mov	qword ptr [rbp - 56], rax
-	mov	qword ptr [rbp - 48], 1
-	mov	qword ptr [rbp - 40], 0
-	mov	qword ptr [rbp - 32], 0
-	lea	rax, [rbp - 56]
-	mov	qword ptr [rbp - 168], rax
-	lea	rax, [rip + __ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h22f145ccee285b48E]
-	mov	qword ptr [rbp - 160], rax
-	lea	rax, [rbp - 48]
-	mov	qword ptr [rbp - 64], rax
-	lea	rax, [rip + l___unnamed_23]
-	mov	qword ptr [rbp - 112], rax
-	mov	qword ptr [rbp - 104], 1
-	mov	qword ptr [rbp - 96], 0
-	lea	rax, [rbp - 168]
-	mov	qword ptr [rbp - 80], rax
-	mov	qword ptr [rbp - 72], 1
+	vmovups	-160(%rbp), %ymm0
+	vmovups	%ymm0, -208(%rbp)
+	leaq	-208(%rbp), %rax
+	movq	%rax, -56(%rbp)
+	movq	$1, -48(%rbp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovups	%xmm0, -40(%rbp)
+	leaq	-56(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	leaq	__ZN44_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$3fmt17h22f145ccee285b48E(%rip), %rax
+	movq	%rax, -120(%rbp)
+	leaq	-48(%rbp), %rax
+	movq	%rax, -64(%rbp)
+	leaq	l___unnamed_23(%rip), %rax
+	movq	%rax, -112(%rbp)
+	movq	$1, -104(%rbp)
+	movq	$0, -96(%rbp)
+	leaq	-128(%rbp), %rax
+	movq	%rax, -80(%rbp)
+	movq	$1, -72(%rbp)
 Ltmp15:
-	lea	rsi, [rip + l___unnamed_9]
-	lea	rdi, [rbp - 64]
-	lea	rdx, [rbp - 112]
-	call	__ZN4core3fmt5write17h26bd57c1fd6e9c98E
+	leaq	l___unnamed_9(%rip), %rsi
+	leaq	-64(%rbp), %rdi
+	leaq	-112(%rbp), %rdx
+	vzeroupper
+	callq	__ZN4core3fmt5write17h26bd57c1fd6e9c98E
 Ltmp16:
-	test	al, al
+	testb	%al, %al
 	jne	LBB82_4
-	mov	rsi, qword ptr [rbp - 40]
-	mov	r14, qword ptr [rbp - 32]
-	cmp	rsi, r14
+	movq	-40(%rbp), %rsi
+	movq	-32(%rbp), %r14
+	cmpq	%r14, %rsi
 	je	LBB82_15
 	jb	LBB82_12
-	test	rsi, rsi
+	testq	%rsi, %rsi
 	je	LBB82_15
-	mov	rdi, qword ptr [rbp - 48]
-	test	rdi, rdi
+	movq	-48(%rbp), %rdi
+	testq	%rdi, %rdi
 	je	LBB82_15
-	test	r14, r14
+	testq	%r14, %r14
 	je	LBB82_11
-	mov	edx, 1
-	mov	rcx, r14
-	call	___rust_realloc
-	mov	r15, rax
-	test	rax, rax
+	movl	$1, %edx
+	movq	%r14, %rcx
+	callq	___rust_realloc
+	movq	%rax, %r15
+	testq	%rax, %rax
 	jne	LBB82_14
-	mov	esi, 1
-	mov	rdi, r14
-	call	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
+	movl	$1, %esi
+	movq	%r14, %rdi
+	callq	__ZN5alloc5alloc18handle_alloc_error17hbc0ab0ed90816c07E
 LBB82_11:
-	mov	r15d, 1
-	mov	edx, 1
-	call	___rust_dealloc
+	movl	$1, %r15d
+	movl	$1, %edx
+	callq	___rust_dealloc
 LBB82_14:
-	mov	qword ptr [rbp - 48], r15
-	mov	qword ptr [rbp - 40], r14
+	movq	%r15, -48(%rbp)
+	movq	%r14, -40(%rbp)
 LBB82_15:
-	mov	rax, qword ptr [rbp - 32]
-	mov	qword ptr [rbp - 96], rax
-	mov	rcx, qword ptr [rbp - 48]
-	mov	rdx, qword ptr [rbp - 40]
-	mov	qword ptr [rbp - 104], rdx
-	mov	qword ptr [rbp - 112], rcx
-	mov	qword ptr [rbx + 24], rax
-	mov	qword ptr [rbx + 16], rdx
-	mov	qword ptr [rbx + 8], rcx
-	mov	dword ptr [rbx], 0
+	movq	-32(%rbp), %rax
+	movq	%rax, -96(%rbp)
+	vmovups	-48(%rbp), %xmm0
+	vmovaps	%xmm0, -112(%rbp)
+	movq	%rax, 24(%rbx)
+	vmovups	%xmm0, 8(%rbx)
+	movl	$0, (%rbx)
 LBB82_16:
-	mov	rax, rbx
-	add	rsp, 184
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	movq	%rbx, %rax
+	addq	$184, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB82_4:
 Ltmp19:
-	lea	rdi, [rip + l___unnamed_198]
-	lea	rcx, [rip + l___unnamed_199]
-	lea	r8, [rip + l___unnamed_200]
-	lea	rdx, [rbp - 112]
-	mov	esi, 55
-	call	__ZN4core6result13unwrap_failed17hb5a510096a5fc85fE
+	leaq	l___unnamed_198(%rip), %rdi
+	leaq	l___unnamed_199(%rip), %rcx
+	leaq	l___unnamed_200(%rip), %r8
+	leaq	-112(%rbp), %rdx
+	movl	$55, %esi
+	callq	__ZN4core6result13unwrap_failed17hb5a510096a5fc85fE
 Ltmp20:
 	jmp	LBB82_5
 LBB82_12:
 Ltmp17:
-	lea	rdi, [rip + l___unnamed_201]
-	lea	rdx, [rip + l___unnamed_202]
-	mov	esi, 36
-	call	__ZN4core9panicking5panic17h736ee47a631475c0E
+	leaq	l___unnamed_201(%rip), %rdi
+	leaq	l___unnamed_202(%rip), %rdx
+	movl	$36, %esi
+	callq	__ZN4core9panicking5panic17h736ee47a631475c0E
 Ltmp18:
 LBB82_5:
 	ud2
 LBB82_18:
 Ltmp21:
-	mov	rbx, rax
-	lea	rdi, [rbp - 48]
-	call	__ZN4core3ptr13drop_in_place17hfbf67dab9d628559E
-	mov	rdi, rbx
-	call	__Unwind_Resume
+	movq	%rax, %rbx
+	leaq	-48(%rbp), %rdi
+	callq	__ZN4core3ptr13drop_in_place17hfbf67dab9d628559E
+	movq	%rbx, %rdi
+	callq	__Unwind_Resume
 	ud2
 Lfunc_end5:
 	.cfi_endproc
@@ -10474,464 +10487,464 @@ Lcst_end5:
 	.p2align	4, 0x90
 __ZN61_$LT$time..duration..Duration$u20$as$u20$core..fmt..Debug$GT$3fmt17hc1b6a88194d66bdcE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + L___unnamed_203]
-	lea	r14, [rbp - 40]
-	mov	ecx, 8
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	add	rbx, 8
-	lea	rsi, [rip + L___unnamed_204]
-	lea	r8, [rip + l___unnamed_205]
-	lea	rcx, [rbp - 24]
-	mov	edx, 4
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_206]
-	lea	r8, [rip + l___unnamed_207]
-	lea	rcx, [rbp - 24]
-	mov	edx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	L___unnamed_203(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$8, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	addq	$8, %rbx
+	leaq	L___unnamed_204(%rip), %rsi
+	leaq	l___unnamed_205(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$4, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_206(%rip), %rsi
+	leaq	l___unnamed_207(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$5, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN68_$LT$time..duration..OutOfRangeError$u20$as$u20$core..fmt..Debug$GT$3fmt17h190f6a635636e057E
 	.p2align	4, 0x90
 __ZN68_$LT$time..duration..OutOfRangeError$u20$as$u20$core..fmt..Debug$GT$3fmt17h190f6a635636e057E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_208]
-	lea	r14, [rbp - 48]
-	mov	ecx, 15
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 24], rbx
-	lea	rdx, [rip + l___unnamed_209]
-	lea	rsi, [rbp - 24]
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_208(%rip), %rdx
+	leaq	-48(%rbp), %r14
+	movl	$15, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_209(%rip), %rdx
+	leaq	-24(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN70_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..fmt..Debug$GT$3fmt17hd76263844b360192E
 	.p2align	4, 0x90
 __ZN70_$LT$time..sys..inner..mac..SteadyTime$u20$as$u20$core..fmt..Debug$GT$3fmt17hd76263844b360192E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_5]
-	lea	r14, [rbp - 40]
-	mov	ecx, 10
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_6]
-	lea	r8, [rip + l___unnamed_7]
-	lea	rcx, [rbp - 24]
-	mov	edx, 1
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_5(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$10, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_6(%rip), %rsi
+	leaq	l___unnamed_7(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$1, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN51_$LT$time..Timespec$u20$as$u20$core..fmt..Debug$GT$3fmt17hc8a663520ab0167eE
 	.p2align	4, 0x90
 __ZN51_$LT$time..Timespec$u20$as$u20$core..fmt..Debug$GT$3fmt17hc8a663520ab0167eE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + L___unnamed_210]
-	lea	r14, [rbp - 40]
-	mov	ecx, 8
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	add	rbx, 8
-	lea	rsi, [rip + l___unnamed_211]
-	lea	r8, [rip + l___unnamed_205]
-	lea	rcx, [rbp - 24]
-	mov	edx, 3
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + L___unnamed_212]
-	lea	r8, [rip + l___unnamed_207]
-	lea	rcx, [rbp - 24]
-	mov	edx, 4
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	L___unnamed_210(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$8, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	addq	$8, %rbx
+	leaq	l___unnamed_211(%rip), %rsi
+	leaq	l___unnamed_205(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$3, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%rbx, -24(%rbp)
+	leaq	L___unnamed_212(%rip), %rsi
+	leaq	l___unnamed_207(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$4, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN53_$LT$time..SteadyTime$u20$as$u20$core..fmt..Debug$GT$3fmt17hf31304b13193b11cE
 	.p2align	4, 0x90
 __ZN53_$LT$time..SteadyTime$u20$as$u20$core..fmt..Debug$GT$3fmt17hf31304b13193b11cE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_5]
-	lea	r14, [rbp - 48]
-	mov	ecx, 10
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 24], rbx
-	lea	rdx, [rip + l___unnamed_213]
-	lea	rsi, [rbp - 24]
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_5(%rip), %rdx
+	leaq	-48(%rbp), %r14
+	movl	$10, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_213(%rip), %rdx
+	leaq	-24(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN45_$LT$time..Tm$u20$as$u20$core..fmt..Debug$GT$3fmt17ha600475a5d25b0e2E
 	.p2align	4, 0x90
 __ZN45_$LT$time..Tm$u20$as$u20$core..fmt..Debug$GT$3fmt17ha600475a5d25b0e2E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 88
-	.cfi_offset rbx, -56
-	.cfi_offset r12, -48
-	.cfi_offset r13, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_214]
-	lea	r14, [rbp - 120]
-	mov	ecx, 2
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 48], rbx
-	lea	r13, [rbx + 4]
-	lea	r15, [rbx + 8]
-	lea	r12, [rbx + 12]
-	lea	rax, [rbx + 16]
-	mov	qword ptr [rbp - 56], rax
-	lea	rax, [rbx + 20]
-	mov	qword ptr [rbp - 64], rax
-	lea	rax, [rbx + 24]
-	mov	qword ptr [rbp - 72], rax
-	lea	rax, [rbx + 28]
-	mov	qword ptr [rbp - 80], rax
-	lea	rax, [rbx + 32]
-	mov	qword ptr [rbp - 88], rax
-	lea	rax, [rbx + 36]
-	mov	qword ptr [rbp - 96], rax
-	lea	rax, [rbx + 40]
-	mov	qword ptr [rbp - 104], rax
-	lea	rsi, [rip + l___unnamed_215]
-	lea	rbx, [rip + l___unnamed_207]
-	lea	rcx, [rbp - 48]
-	mov	edx, 6
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	qword ptr [rbp - 48], r13
-	lea	rsi, [rip + l___unnamed_216]
-	lea	rcx, [rbp - 48]
-	mov	edx, 6
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	qword ptr [rbp - 48], r15
-	lea	rsi, [rip + l___unnamed_217]
-	lea	rcx, [rbp - 48]
-	mov	edx, 7
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	qword ptr [rbp - 48], r12
-	lea	rsi, [rip + l___unnamed_218]
-	lea	rcx, [rbp - 48]
-	mov	edx, 7
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 56]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + l___unnamed_219]
-	lea	rcx, [rbp - 48]
-	mov	edx, 6
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 64]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + l___unnamed_220]
-	lea	rcx, [rbp - 48]
-	mov	edx, 7
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 72]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + l___unnamed_221]
-	lea	rcx, [rbp - 48]
-	mov	edx, 7
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 80]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + l___unnamed_222]
-	lea	rcx, [rbp - 48]
-	mov	edx, 7
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 88]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + L___unnamed_223]
-	lea	rcx, [rbp - 48]
-	mov	edx, 8
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 96]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + l___unnamed_224]
-	lea	rcx, [rbp - 48]
-	mov	edx, 9
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rax, qword ptr [rbp - 104]
-	mov	qword ptr [rbp - 48], rax
-	lea	rsi, [rip + l___unnamed_225]
-	lea	rcx, [rbp - 48]
-	mov	edx, 7
-	mov	rdi, r14
-	mov	r8, rbx
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 88
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	subq	$88, %rsp
+	.cfi_offset %rbx, -56
+	.cfi_offset %r12, -48
+	.cfi_offset %r13, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_214(%rip), %rdx
+	leaq	-120(%rbp), %r14
+	movl	$2, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -48(%rbp)
+	leaq	4(%rbx), %r13
+	leaq	8(%rbx), %r15
+	leaq	12(%rbx), %r12
+	leaq	16(%rbx), %rax
+	movq	%rax, -56(%rbp)
+	leaq	20(%rbx), %rax
+	movq	%rax, -64(%rbp)
+	leaq	24(%rbx), %rax
+	movq	%rax, -72(%rbp)
+	leaq	28(%rbx), %rax
+	movq	%rax, -80(%rbp)
+	leaq	32(%rbx), %rax
+	movq	%rax, -88(%rbp)
+	leaq	36(%rbx), %rax
+	movq	%rax, -96(%rbp)
+	leaq	40(%rbx), %rax
+	movq	%rax, -104(%rbp)
+	leaq	l___unnamed_215(%rip), %rsi
+	leaq	l___unnamed_207(%rip), %rbx
+	leaq	-48(%rbp), %rcx
+	movl	$6, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r13, -48(%rbp)
+	leaq	l___unnamed_216(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$6, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r15, -48(%rbp)
+	leaq	l___unnamed_217(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$7, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r12, -48(%rbp)
+	leaq	l___unnamed_218(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$7, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-56(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	l___unnamed_219(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$6, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-64(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	l___unnamed_220(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$7, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-72(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	l___unnamed_221(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$7, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-80(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	l___unnamed_222(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$7, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-88(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	L___unnamed_223(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$8, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-96(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	l___unnamed_224(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$9, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	-104(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	leaq	l___unnamed_225(%rip), %rsi
+	leaq	-48(%rbp), %rcx
+	movl	$7, %edx
+	movq	%r14, %rdi
+	movq	%rbx, %r8
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$88, %rsp
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN53_$LT$time..ParseError$u20$as$u20$core..fmt..Debug$GT$3fmt17hed59ea75bd1536a7E
 	.p2align	4, 0x90
 __ZN53_$LT$time..ParseError$u20$as$u20$core..fmt..Debug$GT$3fmt17hed59ea75bd1536a7E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r15
-	push	r14
-	push	rbx
-	sub	rsp, 40
-	.cfi_offset rbx, -40
-	.cfi_offset r14, -32
-	.cfi_offset r15, -24
-	mov	rbx, rdi
-	mov	eax, dword ptr [rdi]
-	lea	rcx, [rip + LJTI89_0]
-	movsxd	rax, dword ptr [rcx + 4*rax]
-	add	rax, rcx
-	jmp	rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%rbx
+	subq	$40, %rsp
+	.cfi_offset %rbx, -40
+	.cfi_offset %r14, -32
+	.cfi_offset %r15, -24
+	movq	%rdi, %rbx
+	movl	(%rdi), %eax
+	leaq	LJTI89_0(%rip), %rcx
+	movslq	(%rcx,%rax,4), %rax
+	addq	%rcx, %rax
+	jmpq	*%rax
 LBB89_2:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_226]
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_226(%rip), %rdx
 	jmp	LBB89_3
 LBB89_5:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_227]
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_227(%rip), %rdx
 LBB89_3:
-	mov	ecx, 13
+	movl	$13, %ecx
 	jmp	LBB89_4
 LBB89_6:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_228]
-	mov	ecx, 11
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_228(%rip), %rdx
+	movl	$11, %ecx
 	jmp	LBB89_4
 LBB89_8:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_229]
-	mov	ecx, 10
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_229(%rip), %rdx
+	movl	$10, %ecx
 	jmp	LBB89_4
 LBB89_9:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_230]
-	mov	ecx, 12
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_230(%rip), %rdx
+	movl	$12, %ecx
 	jmp	LBB89_4
 LBB89_10:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_231]
-	mov	ecx, 11
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_231(%rip), %rdx
+	movl	$11, %ecx
 	jmp	LBB89_4
 LBB89_11:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + L___unnamed_232]
-	mov	ecx, 16
+	leaq	-56(%rbp), %r14
+	leaq	L___unnamed_232(%rip), %rdx
+	movl	$16, %ecx
 	jmp	LBB89_4
 LBB89_13:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_233]
-	mov	ecx, 17
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_233(%rip), %rdx
+	movl	$17, %ecx
 	jmp	LBB89_4
 LBB89_15:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + L___unnamed_234]
-	mov	ecx, 16
+	leaq	-56(%rbp), %r14
+	leaq	L___unnamed_234(%rip), %rdx
+	movl	$16, %ecx
 	jmp	LBB89_4
 LBB89_16:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_235]
-	mov	ecx, 17
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_235(%rip), %rdx
+	movl	$17, %ecx
 	jmp	LBB89_4
 LBB89_17:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_236]
-	mov	ecx, 11
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_236(%rip), %rdx
+	movl	$11, %ecx
 	jmp	LBB89_4
 LBB89_18:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_237]
-	mov	ecx, 24
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_237(%rip), %rdx
+	movl	$24, %ecx
 	jmp	LBB89_4
 LBB89_19:
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_238]
-	mov	ecx, 22
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_238(%rip), %rdx
+	movl	$22, %ecx
 LBB89_4:
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
 LBB89_22:
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
-	add	rsp, 40
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
+	addq	$40, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	retq
 LBB89_20:
-	add	rbx, 4
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_239]
-	mov	ecx, 22
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 32], rbx
-	lea	rdx, [rip + l___unnamed_240]
-	lea	rsi, [rbp - 32]
-	mov	rdi, r14
+	addq	$4, %rbx
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_239(%rip), %rdx
+	movl	$22, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%rbx, -32(%rbp)
+	leaq	l___unnamed_240(%rip), %rdx
+	leaq	-32(%rbp), %rsi
+	movq	%r14, %rdi
 	jmp	LBB89_21
 LBB89_1:
-	lea	r15, [rbx + 4]
-	add	rbx, 8
-	lea	r14, [rbp - 56]
-	lea	rdx, [rip + l___unnamed_241]
-	mov	ecx, 19
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 32], r15
-	lea	r15, [rip + l___unnamed_240]
-	lea	rsi, [rbp - 32]
-	mov	rdi, r14
-	mov	rdx, r15
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
-	mov	qword ptr [rbp - 32], rbx
-	lea	rsi, [rbp - 32]
-	mov	rdi, r14
-	mov	rdx, r15
+	leaq	4(%rbx), %r15
+	addq	$8, %rbx
+	leaq	-56(%rbp), %r14
+	leaq	l___unnamed_241(%rip), %rdx
+	movl	$19, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%r15, -32(%rbp)
+	leaq	l___unnamed_240(%rip), %r15
+	leaq	-32(%rbp), %rsi
+	movq	%r14, %rdi
+	movq	%r15, %rdx
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	movq	%rbx, -32(%rbp)
+	leaq	-32(%rbp), %rsi
+	movq	%r14, %rdi
+	movq	%r15, %rdx
 LBB89_21:
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
 	jmp	LBB89_22
 	.cfi_endproc
 	.p2align	2, 0x90
@@ -10973,97 +10986,97 @@ LJTI89_0:
 	.p2align	4, 0x90
 __ZN48_$LT$time..TmFmt$u20$as$u20$core..fmt..Debug$GT$3fmt17h2e4fb498635588f6E:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rbx, rdi
-	lea	rdx, [rip + l___unnamed_242]
-	lea	r14, [rbp - 40]
-	mov	ecx, 5
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
-	mov	qword ptr [rbp - 24], rbx
-	add	rbx, 8
-	lea	rsi, [rip + l___unnamed_243]
-	lea	r8, [rip + l___unnamed_244]
-	lea	rcx, [rbp - 24]
-	mov	edx, 2
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	qword ptr [rbp - 24], rbx
-	lea	rsi, [rip + l___unnamed_245]
-	lea	r8, [rip + l___unnamed_246]
-	lea	rcx, [rbp - 24]
-	mov	edx, 6
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	%rdi, %rbx
+	leaq	l___unnamed_242(%rip), %rdx
+	leaq	-40(%rbp), %r14
+	movl	$5, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter12debug_struct17h985c0158d1fc7193E
+	movq	%rbx, -24(%rbp)
+	addq	$8, %rbx
+	leaq	l___unnamed_243(%rip), %rsi
+	leaq	l___unnamed_244(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$2, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_245(%rip), %rsi
+	leaq	l___unnamed_246(%rip), %r8
+	leaq	-24(%rbp), %rcx
+	movl	$6, %edx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct5field17h9c15dc155278eed2E
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders11DebugStruct6finish17h26808393f3fed630E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.globl	__ZN46_$LT$time..Fmt$u20$as$u20$core..fmt..Debug$GT$3fmt17hde5380b111a3cf1aE
 	.p2align	4, 0x90
 __ZN46_$LT$time..Fmt$u20$as$u20$core..fmt..Debug$GT$3fmt17hde5380b111a3cf1aE:
 	.cfi_startproc
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset rbp, -16
-	mov	rbp, rsp
-	.cfi_def_cfa_register rbp
-	push	r14
-	push	rbx
-	sub	rsp, 32
-	.cfi_offset rbx, -32
-	.cfi_offset r14, -24
-	mov	rax, qword ptr [rdi]
-	test	rax, rax
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r14
+	pushq	%rbx
+	subq	$32, %rsp
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	movq	(%rdi), %rax
+	testq	%rax, %rax
 	je	LBB91_3
-	lea	r14, [rbp - 48]
-	cmp	rax, 1
+	leaq	-48(%rbp), %r14
+	cmpq	$1, %rax
 	je	LBB91_4
-	lea	rdx, [rip + l___unnamed_247]
-	mov	ecx, 5
+	leaq	l___unnamed_247(%rip), %rdx
+	movl	$5, %ecx
 	jmp	LBB91_5
 LBB91_3:
-	mov	rbx, rdi
-	add	rbx, 8
-	lea	r14, [rbp - 48]
-	lea	rdx, [rip + l___unnamed_248]
-	mov	ecx, 3
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
-	mov	qword ptr [rbp - 24], rbx
-	lea	rdx, [rip + l___unnamed_249]
-	lea	rsi, [rbp - 24]
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
+	movq	%rdi, %rbx
+	addq	$8, %rbx
+	leaq	-48(%rbp), %r14
+	leaq	l___unnamed_248(%rip), %rdx
+	movl	$3, %ecx
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%rbx, -24(%rbp)
+	leaq	l___unnamed_249(%rip), %rdx
+	leaq	-24(%rbp), %rsi
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple5field17hf36121153a94f236E
 	jmp	LBB91_6
 LBB91_4:
-	lea	rdx, [rip + l___unnamed_250]
-	mov	ecx, 7
+	leaq	l___unnamed_250(%rip), %rdx
+	movl	$7, %ecx
 LBB91_5:
-	mov	rdi, r14
-	call	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt9Formatter11debug_tuple17h15ca25ad759edd1cE
 LBB91_6:
-	mov	rdi, r14
-	call	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
-	add	rsp, 32
-	pop	rbx
-	pop	r14
-	pop	rbp
-	ret
+	movq	%r14, %rdi
+	callq	__ZN4core3fmt8builders10DebugTuple6finish17h68acf09c6f6593f2E
+	addq	$32, %rsp
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	retq
 	.cfi_endproc
 
 	.section	__DATA,__const
@@ -11667,12 +11680,12 @@ l___unnamed_111:
 	.asciz	"]\000\000\000\000\000\000\000X\001\000\000\024\000\000"
 
 	.p2align	3
-l___unnamed_112:
+l___unnamed_113:
 	.quad	l___unnamed_257
 	.asciz	"]\000\000\000\000\000\000\000a\001\000\000\030\000\000"
 
 	.p2align	3
-l___unnamed_113:
+l___unnamed_112:
 	.quad	l___unnamed_257
 	.asciz	"]\000\000\000\000\000\000\000b\001\000\000!\000\000"
 
