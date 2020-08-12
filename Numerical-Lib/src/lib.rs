@@ -6,34 +6,6 @@ use packed_simd::*;
 use rustc_cfg::Cfg;
 use rayon::prelude::*;
 
-pub trait ASub<RHS=Self>{
-    type Output;
-    #[must_use]
-    fn sub(self,rhs:RHS) -> Self::Output;
-}
-
-impl ASub<f32> for f32{
-    type Output = f32;
-
-    fn sub(self, other: f32) -> f32{
-        self - other
-    }
-}
-
-impl ASub<f64> for f64{
-    type Output = f64;
-
-    fn sub(self, other: f64) -> f64{
-        self - other
-    }
-}
-
-
-pub fn fsum<T:ASub<Output = T>>(a:T,b:T) -> T{
-    a.sub(b)
-}
-
-
 //---------rnl_sin---------
 pub trait RNLsin{
     fn rnlsin(&mut self);
