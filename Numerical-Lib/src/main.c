@@ -19,7 +19,7 @@ double third_input(struct Array arr) {
 
 	printf("-------------MKL_cblas_dasum-------------\n");
     float float_a[5] = {1.0, 2.0, 3.4, 7.0, 50.0};
-    double result2 = cblas_sasum(5,float_a,0);
+    double result2 = cblas_sasum(5,&float_a,0);
     return *(arr.pointer+2);
 }
 

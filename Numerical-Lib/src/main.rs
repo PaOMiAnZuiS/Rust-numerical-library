@@ -38,7 +38,7 @@ fn main() {
     
     //let output = unsafe { MKL_cblas_dasum(input) };
     //println!("{}", output);
-    let n = 100000;
+    let n = 10000;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input
@@ -119,29 +119,287 @@ fn main() {
     //println!("The first input:{:?}",&input1);
     println!("");
     //println!("The second input:{:?}",&input2);
+    //println!("{:?}",f64a);
+    //println!("{:?}",f64a);
+    //let re = rnlsum(&f32b);
+    //println!("{}",re);
 
     //this is only for test
     let start = time::now();
     f32sum(&f32a,16);
     let end = time::now(); 
-    println!("--------------------------------f32swap-----------------------------------------");
+
+
+    println!("--------------------------------for_loop_sin------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i].sin();
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of sin is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_sin-----------------------------------------");
 
     let start = time::now();
-    f32swap(&mut f32a, &mut f32b);
+    rnl_sin(&mut f32a);
+    let end = time::now();
+    //println!("result of simd sin is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------for_loop_cos------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i].cos();
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of cos is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_cos-----------------------------------------");
+
+    let start = time::now();
+    rnl_cos(&mut f32a);
+    let end = time::now();
+    //println!("result of simd cos is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------for_loop_tan------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i].sin()/f32a[i].cos();
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of tan is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_tan-----------------------------------------");
+
+    let start = time::now();
+    rnl_tan(&mut f32a);
+    let end = time::now();
+    //println!("result of simd tan is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------for_loop_cot------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i].cos()/f32a[i].sin();
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of cot is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_cot-----------------------------------------");
+
+    let start = time::now();
+    rnl_cot(&mut f32a);
+    let end = time::now();
+    //println!("result of simd cot is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------for_loop_exp------------------------------------");
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i].exp();
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of exp is:{:?}", &output);
+    println!("{:?}",end-start);
+    println!("--------------------------------rnl_exp-----------------------------------------");
+
+    let start = time::now();
+    rnl_exp(&mut f32a);
+    let end = time::now();
+    //println!("result of simd exp is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------rnl_scal----------------------------------------");
+
+    let start = time::now();
+    rnl_scal(&mut f32a,2.0);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------rnl_max----------------------------------------");
+
+    let start = time::now();
+    let x = rnl_max(&f32a);
+    let end = time::now();
+    //println!("result is:{:?}", &x);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_min----------------------------------------");
+
+    let start = time::now();
+    let x = rnl_min(&f32a);
+    let end = time::now();
+    //println!("result is:{:?}", &x);
+    println!("{:?}",end-start);
+
+   println!("--------------------------------rnl_add-----------------------------------------");
+    
+    let start = time::now();
+    rnl_add(&mut f32a,&f32b);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start); 
+
+    println!("--------------------------------for_loop_sub------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i] - f32b[i];
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of sub is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_sub-----------------------------------------");
+    
+    let start = time::now();
+    rnl_sub(&mut f32a,&f32b);
+    let end = time::now();
+    //println!("result of simd sub is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------for_loop_pro------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i] * f32b[i];
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of pro is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_mul-----------------------------------------");
+
+    let start = time::now();
+    rnl_mul(&mut f32a,&f32b);
+    let end = time::now();
+    //println!("result of simd pro is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------for_loop_div------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i] / f32b[i];
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of div is:{:?}", &output);
+    println!("{:?}",end-start);
+    println!("--------------------------------rnl_div-----------------------------------------");
+
+    let start = time::now();
+    rnl_div(&mut f32a,&f32b);
+    let end = time::now();
+    //println!("result of simd div is:{:?}", &f32a);
+    println!("{:?}",end-start);
+    
+
+    println!("--------------------------------for_loop_mod------------------------------------");
+
+    let mut output = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = f32a[i] % f32b[i];
+        output.push(g3);
+    }
+    let end = time::now();
+    //println!("result of mod is:{:?}", &output);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_mod-----------------------------------------");
+
+    let start = time::now();
+    rnl_mod(&mut f32a,&f32b);
+    let end = time::now();
+    //println!("result of simd mod is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------rnl_copy----------------------------------------");
+
+    let start = time::now();
+    rnl_copy(&mut f32a, &f32b);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------rnl_axpy----------------------------------------");
+
+    let start = time::now();
+    rnl_axpy(&mut f32a, &f32b, 10.0);
+    let end = time::now();
+    //println!("result is:{:?}", &f32a);
+    println!("{:?}",end-start);
+
+
+    println!("--------------------------------for_loop_rot------------------------------------");
+
+    let mut output = vec![];
+    let mut output1 = vec![];
+    let start = time::now();
+    for i in 0..n{
+        let g3:f32 = 2.0 * f32a[i] + 3.0 * f32b[i];
+        let g4:f32 = 2.0 * f32b[i] - 3.0 * f32a[i];
+        output.push(g3);
+        output1.push(g4);
+    }
+    let end = time::now();
+    //println!("result of output1 is:{:?}", &output);
+    //println!("result of output2 is:{:?}", &output1);
+    println!("{:?}",end-start);
+    println!("--------------------------------rnl_rot----------------------------------------");
+
+    let start = time::now();
+    rnl_rot(&mut f32a, &mut f32b, 2.0, 3.0);
     let end = time::now();
     //println!("result is:{:?}", &f32a);
     //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
 
 
-    println!("--------------------------------f64swap-----------------------------------------");
+    println!("--------------------------------rnl_swap----------------------------------------");
 
     let start = time::now();
-    f64swap(&mut f64a, &mut f64b);
+    rnl_swap(&mut f32a, &mut f32b);
     let end = time::now();
-    //println!("result is:{:?}", &f64a);
-    //println!("result is:{:?}", &f64b);
+    //println!("result is:{:?}", &f32a);
+    //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
+
+
     println!("--------------------------------for_loop_sum------------------------------------");
     let mut output = 0.0;
     let start = time::now();
@@ -151,6 +409,29 @@ fn main() {
     let end = time::now();
     //println!("result is:{:?}", &output);
     println!("{:?}",end-start);
+    println!("--------------------------------rnl_sum----------------------------------------");
+
+    let start = time::now();
+    let rnl_sum = rnl_sum(&f32a,16);
+    let end = time::now();
+    //println!("result is:{:?}", &f32sum);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_dot-----------------------------------------");
+
+    let start = time::now();
+    let rnl_dot = rnl_dot(&f32a,&f32b,16);
+    let end = time::now();
+    //println!("result is:{:?}", &f32dot);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_nrm2----------------------------------------");
+
+    let start = time::now();
+    let rnl_nrm = rnl_nrm2(&f32a,16);
+    let end = time::now();
+    //println!("result is:{:?}", &f32nrm);
+    println!("{:?}",end-start);  
     println!("--------------------------------f32sum-----------------------------------------");
 
     let start = time::now();
@@ -349,404 +630,5 @@ fn main() {
     //println!("result is:{:?}", &f64nrm);
     println!("{:?}",end-start);  
 
-
-    println!("--------------------------------for_loop_add------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] + f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32add------------------------------------------");
-    
-    let start = time::now();
-    f32add(&mut f32a,&f32b);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);    
-    println!("--------------------------------f64add------------------------------------------");
-    
-    let start = time::now();
-    f64add(&mut f64a,&f64b);
-    let end = time::now();
-    //println!("result is:{:?}", &f64a);
-    println!("{:?}",end-start);    
-    println!("--------------------------------for_loop_sub------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] - f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of sub is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32sub------------------------------------------");
-    
-    let start = time::now();
-    f32sub(&mut f32a,&f32b);
-    let end = time::now();
-    //println!("result of simd sub is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64sub------------------------------------------");
-    
-    let start = time::now();
-    f64sub(&mut f64a,&f64b);
-    let end = time::now();
-    //println!("result of simd sub is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------for_loop_pro------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] * f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of pro is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32pro------------------------------------------");
-
-    let start = time::now();
-    f32pro(&mut f32a,&f32b);
-    let end = time::now();
-    //println!("result of simd pro is:{:?}", &f32a);
-    println!("{:?}",end-start);
-    println!("--------------------------------f64pro------------------------------------------");
-
-    let start = time::now();
-    f64pro(&mut f64a,&f64b);
-    let end = time::now();
-    //println!("result of simd pro is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------for_loop_div------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] / f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of div is:{:?}", &output);
-    println!("{:?}",end-start);
-    println!("--------------------------------f32div------------------------------------------");
-
-    let start = time::now();
-    f32div(&mut f32a,&f32b);
-    let end = time::now();
-    //println!("result of simd div is:{:?}", &f32a);
-    println!("{:?}",end-start);
-    
-
-    println!("--------------------------------f64div------------------------------------------");
-
-    let start = time::now();
-    f64div(&mut f64a,&f64b);
-    let end = time::now();
-    //println!("result of simd div is:{:?}", &f64a);
-    println!("{:?}",end-start);
-       
-
-    println!("--------------------------------for_loop_mod------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] % f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of mod is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32mod------------------------------------------");
-
-    let start = time::now();
-    f32mod(&mut f32a,&f32b);
-    let end = time::now();
-    //println!("result of simd mod is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64mod------------------------------------------");
-
-    let start = time::now();
-    f64mod(&mut f64a,&f64b);
-    let end = time::now();
-    //println!("result of simd mod is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-
-
-    println!("--------------------------------for_loop_sin------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].sin();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of sin is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32sin------------------------------------------");
-
-    let start = time::now();
-    f32sin(&mut f32a);
-    let end = time::now();
-    //println!("result of simd sin is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64sin------------------------------------------");
-
-    let start = time::now();
-    f64sin(&mut f64a);
-    let end = time::now();
-    //println!("result of simd sin is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------for_loop_cos------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].cos();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of cos is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32cos------------------------------------------");
-
-    let start = time::now();
-    f32cos(&mut f32a);
-    let end = time::now();
-    //println!("result of simd cos is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64cos------------------------------------------");
-
-    let start = time::now();
-    f64cos(&mut f64a);
-    let end = time::now();
-    //println!("result of simd cos is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-
-
-    println!("--------------------------------for_loop_tan------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].sin()/f32a[i].cos();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of tan is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32tan------------------------------------------");
-
-    let start = time::now();
-    f32tan(&mut f32a);
-    let end = time::now();
-    //println!("result of simd tan is:{:?}", &f32a);
-    println!("{:?}",end-start);
-    println!("--------------------------------f64tan------------------------------------------");
-
-    let start = time::now();
-    f64tan(&mut f64a);
-    let end = time::now();
-    //println!("result of simd tan is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------for_loop_cot------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].cos()/f32a[i].sin();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of cot is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32cot------------------------------------------");
-
-    let start = time::now();
-    f32cot(&mut f32a);
-    let end = time::now();
-    //println!("result of simd cot is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64cot------------------------------------------");
-
-    let start = time::now();
-    f64cot(&mut f64a);
-    let end = time::now();
-    //println!("result of simd cot is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------for_loop_exp------------------------------------");
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].exp();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of exp is:{:?}", &output);
-    println!("{:?}",end-start);
-    println!("--------------------------------f32exp------------------------------------------");
-
-    let start = time::now();
-    f32exp(&mut f32a);
-    let end = time::now();
-    //println!("result of simd exp is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64exp------------------------------------------");
-
-    let start = time::now();
-    f64exp(&mut f64a);
-    let end = time::now();
-    //println!("result of simd exp is:{:?}", &f64a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32scal-----------------------------------------");
-
-    let start = time::now();
-    f32scal(&mut f32a, &f32b[0]);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------f64scal-----------------------------------------");
-
-    let start = time::now();
-    f64scal(&mut f64a, &f64b[0]);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32axpy-----------------------------------------");
-
-    let start = time::now();
-    f32axpy(&mut f32a, &f32b, &10.0);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------f64axpy-----------------------------------------");
-
-    let start = time::now();
-    f64axpy(&mut f64a, &f64b, &10.0);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32copy-----------------------------------------");
-
-    let start = time::now();
-    f32copy(&mut f32a, &f32b);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------f64copy-----------------------------------------");
-
-    let start = time::now();
-    f64copy(&mut f64a, &f64b);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    println!("{:?}",end-start);
-    println!("--------------------------------for_loop_rot------------------------------------");
-
-    let mut output = vec![];
-    let mut output1 = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = 2.0 * f32a[i] + 3.0 * f32b[i];
-        let g4:f32 = 2.0 * f32b[i] - 3.0 * f32a[i];
-        output.push(g3);
-        output1.push(g4);
-    }
-    let end = time::now();
-    //println!("result of output1 is:{:?}", &output);
-    //println!("result of output2 is:{:?}", &output1);
-    println!("{:?}",end-start);
-    println!("--------------------------------f32rot-----------------------------------------");
-
-    let start = time::now();
-    f32rot(&mut f32a, &mut f32b, &2.0, &3.0);
-    let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    //println!("result is:{:?}", &f32b);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------f64rot-----------------------------------------");
-
-    let start = time::now();
-    f64rot(&mut f64a, &mut f64b, &2.0, &3.0);
-    let end = time::now();
-    //println!("result is:{:?}", &f64a);
-    //println!("result is:{:?}", &f64b);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32max-----------------------------------------");
-
-    let start = time::now();
-    let x = f32max(&f32a);
-    let end = time::now();
-    //println!("result is:{:?}", &x);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------f64max-----------------------------------------");
-
-    let start = time::now();
-    let x = f64max(&f64a);
-    let end = time::now();
-    //println!("result is:{:?}", &x);
-    println!("{:?}",end-start);
-    
-    println!("--------------------------------f32min-----------------------------------------");
-
-    let start = time::now();
-    let x = f32min(&f32a);
-    let end = time::now();
-    //println!("result is:{:?}", &x);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------f64min-----------------------------------------");
-
-    let start = time::now();
-    let x = f64min(&f64a);
-    let end = time::now();
-    //println!("result is:{:?}", &x);
-    println!("{:?}",end-start);
 
 }
