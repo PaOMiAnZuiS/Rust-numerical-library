@@ -276,12 +276,34 @@ fn main() {
     //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
 
+    println!("--------------------------------for_loop_sin------------------------------------");
+
+    let mut output = 0.0;
+    let start = time::now();
+    for i in 0..n{
+        output += f32a[i];
+    }
+    let end = time::now();
+    println!("result of sum is:{:?}", &output);
+    println!("{:?}",end-start);
+
     println!("--------------------------------rnl_sum----------------------------------------");
 
     let start = time::now();
     let rnl_sum = rnl_sum(&f32a,16);
     let end = time::now();
-    //println!("result is:{:?}", &f32sum);
+    println!("result is:{:?}", &rnl_sum);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------for_loop_dot------------------------------------");
+
+    let mut output = 0.0;
+    let start = time::now();
+    for i in 0..n{
+        output += f32a[i] * f32b[i];
+    }
+    let end = time::now();
+    println!("result of sum is:{:?}", &output);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_dot-----------------------------------------");
@@ -289,7 +311,7 @@ fn main() {
     let start = time::now();
     let rnl_dot = rnl_dot(&f32a,&f32b,16);
     let end = time::now();
-    //println!("result is:{:?}", &f32dot);
+    println!("result is:{:?}", &rnl_dot);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_nrm2----------------------------------------");

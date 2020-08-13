@@ -36,8 +36,8 @@ RNL-f32swap:
 |         | RNL-rnl_sum | 51000 |
 |         | MKL-cblas_dasum | 56000 |
 |         | RNL-rnl_sum | 89000 |
-| Dot product | MKL-cblas_sdot | 71000 |
-|        | RNL-rnl_dot | 110000 | 
+| Dot product | MKL-cblas_sdot | 80000 |
+|        | RNL-rnl_dot | 70000 | 
 | Norm | MKL-cblas_snrm2 | 129000 |
 |           | RNL- rnl_nrm2 | 67000 |
 | Vector-scalar product and adds | MKL- cblas_saxpy | 266000 |
