@@ -86,24 +86,87 @@ RNL-f32swap:
 |           | rnl_nrm2(a: &Vec\<f64\>, w:u8)  (options for w: 2,4,8) | Find the norm in the vector in type of f64 |
 | Scale | rnl_scal(a: &mut Vec\<f32\>, b: &f32) | Array a scale b, store the result in array a |
 |           | rnl_scal(a: &mut Vec\<f64\>, b: &f64) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<u8\>, b: &u8) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<u16\>, b: &u16) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<u32\>, b: &u32) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<u64\>, b: &u64) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<i8\>, b: &i8) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<i16\>, b: &i16) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<i32\>, b: &i32) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<i64\>, b: &i64) | Array a scale b, store the result in array a |
+|           | rnl_scal(a: &mut Vec\<usize\>, b: &usize) | Array a scale b, store the result in array a |
 |  Vector-scalar product and adds | rnl_axpy(a: &mut Vec\<f32\>,b: &Vec\<f32\>,  s: &f32) | a := a*s + b where: s is a scalar, a and b are vectors each with a number of elements that equals n |
 |           | rnl_axpy(a: &mut Vec\<f64\>, b: &Vec\<f64\> , s:&f64 ) |  a := a*s + b where: s is a scalar, a and b are vectors each with a number of elements that equals n |
 | Copy | rnl_copy(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Copy all of the elements of b into a |
 |           | rnl_copy(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Copy all of the elements of b into a  |
+|           | rnl_copy(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Copy all of the elements of b into a  |
 | Rotation | rnl_rot(a: &mut Vec\<f32\>, b: &Vec\<f32\>,  c: &f32, s: &f32) | Performs rotation of points in the plane |
 |           | rnl_rot(a: &mut Vec\<f64\>, b: &Vec\<f64\> , c: &f64, s: &f64) | Performs rotation of points in the plane  |
 | Swap | rnl_swap(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Swap all of the elements in a and b by index |
 |           | rnl_swap(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Swap all of the elements in a and b by index  |
+|           | rnl_swap(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Swap all of the elements in a and b by index  |
 | Add | rnl_add(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a add array b, store the result in array a |
 |         | rnl_add(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Array a add array b, store the results in array a |
+|         | rnl_add(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a add array b, store the results in array a |
 | Sub | rnl_sub(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a sub array b, store the result in array a  |
 |         | rnl_sub(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a sub array b, store the result in array a |
-| Product | rnl_pro(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a product array b, store the result in array a  |
-|               | rnl_pro(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a product array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Array a sub array b, store the result in array a |
+|         | rnl_sub(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a sub array b, store the result in array a |
+| Product | rnl_mul(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a product array b, store the result in array a  |
+|               | rnl_mut(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a product array b, store the result in array a |
 | Div | rnl_div(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a div array b, store the result in array a  |
 |        | rnl_div(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a div array b, store the result in array a |
 | Mod | rnl_mod(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a mod array b, store the result in array a  |
 |         | rnl_mod(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Array a mod array b, store the result in array a |
+|         | rnl_mod(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a mod array b, store the result in array a |
 | SIn | rnl_sin(a: &mut Vec\<f32\>) | Do sin() operation for each element in array a  |
 |        | rnl_sin(a: &mut Vec\<f64\>) | Do sin() operation for each element in array a |
 | Cos | rnl_cos(a: &mut Vec\<f32\>) | Do cos() operation for each element in array a  |
@@ -116,5 +179,23 @@ RNL-f32swap:
 |        | rnl_exp(a: &mut Vec\<f64\>) | Do exp() operation for each element in array a |
 | Max | rnl_max(a: &Vec\<f32\>) | Find the maximum element in the f32 array  |
 |         | rnl_max(a: &Vec\<f64\>) | Find the maximum element in the f64 array |
+|         | rnl_max(a: &Vec\<u8\>) | Find the maximum element in the u8 array |
+|         | rnl_max(a: &Vec\<u16\>) | Find the maximum element in the u16 array |
+|         | rnl_max(a: &Vec\<u32\>) | Find the maximum element in the u32 array |
+|         | rnl_max(a: &Vec\<u32\>) | Find the maximum element in the u32 array |
+|         | rnl_max(a: &Vec\<i8\>) | Find the maximum element in the i8 array |
+|         | rnl_max(a: &Vec\<i16\>) | Find the maximum element in the i16 array |
+|         | rnl_max(a: &Vec\<i32\>) | Find the maximum element in the i32 array |
+|         | rnl_max(a: &Vec\<i32\>) | Find the maximum element in the i32 array |
+|         | rnl_max(a: &Vec\<usize\>) | Find the maximum element in the usize array |
 | MIn | rnl_min(a: &Vec\<f32\>) | Find the minimum element in the f32 array  |
 |        | rnl_min(a: &Vec\<f64\>) | Find the minimum element in the f64 array |
+|        | rnl_min(a: &Vec\<u8\>) | Find the minimum element in the u8 array |
+|        | rnl_min(a: &Vec\<u16\>) | Find the minimum element in the u16 array |
+|        | rnl_min(a: &Vec\<u32\>) | Find the minimum element in the u32 array |
+|        | rnl_min(a: &Vec\<u64\>) | Find the minimum element in the u64 array |
+|        | rnl_min(a: &Vec\<i8\>) | Find the minimum element in the i8 array |
+|        | rnl_min(a: &Vec\<i16\>) | Find the minimum element in the i16 array |
+|        | rnl_min(a: &Vec\<i32\>) | Find the minimum element in the i32 array |
+|        | rnl_min(a: &Vec\<i64\>) | Find the minimum element in the i64 array |
+|        | rnl_min(a: &Vec\<usize\>) | Find the minimum element in the usize array |

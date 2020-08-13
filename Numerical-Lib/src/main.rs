@@ -118,18 +118,14 @@ fn main() {
 
     //println!("The first input:{:?}",&input1);
     println!("");
-    //println!("The second input:{:?}",&input2);
-    //println!("{:?}",f64a);
-    //println!("{:?}",f64a);
-    //let re = rnlsum(&f32b);
-    //println!("{}",re);
 
     //this is only for test
     let start = time::now();
-    f32sum(&f32a,16);
+    rnl_sum(&f32a,16);
     let end = time::now(); 
-
-
+    println!("--------------------------------RNL---------------------------------------------");
+    
+    println!("");
     println!("--------------------------------for_loop_sin------------------------------------");
 
     let mut output = vec![];
@@ -150,38 +146,12 @@ fn main() {
     //println!("result of simd sin is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------for_loop_cos------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].cos();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of cos is:{:?}", &output);
-    println!("{:?}",end-start);
-
     println!("--------------------------------rnl_cos-----------------------------------------");
 
     let start = time::now();
     rnl_cos(&mut f32a);
     let end = time::now();
     //println!("result of simd cos is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-
-    println!("--------------------------------for_loop_tan------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].sin()/f32a[i].cos();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of tan is:{:?}", &output);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_tan-----------------------------------------");
@@ -192,19 +162,6 @@ fn main() {
     //println!("result of simd tan is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------for_loop_cot------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].cos()/f32a[i].sin();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of cot is:{:?}", &output);
-    println!("{:?}",end-start);
-
     println!("--------------------------------rnl_cot-----------------------------------------");
 
     let start = time::now();
@@ -213,17 +170,6 @@ fn main() {
     //println!("result of simd cot is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------for_loop_exp------------------------------------");
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].exp();
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of exp is:{:?}", &output);
-    println!("{:?}",end-start);
     println!("--------------------------------rnl_exp-----------------------------------------");
 
     let start = time::now();
@@ -232,7 +178,6 @@ fn main() {
     //println!("result of simd exp is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-
     println!("--------------------------------rnl_scal----------------------------------------");
 
     let start = time::now();
@@ -240,7 +185,6 @@ fn main() {
     let end = time::now();
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
-
 
     println!("--------------------------------rnl_max----------------------------------------");
 
@@ -258,7 +202,7 @@ fn main() {
     //println!("result is:{:?}", &x);
     println!("{:?}",end-start);
 
-   println!("--------------------------------rnl_add-----------------------------------------");
+    println!("--------------------------------rnl_add-----------------------------------------");
     
     let start = time::now();
     rnl_add(&mut f32a,&f32b);
@@ -266,36 +210,12 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start); 
 
-    println!("--------------------------------for_loop_sub------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] - f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of sub is:{:?}", &output);
-    println!("{:?}",end-start);
-
     println!("--------------------------------rnl_sub-----------------------------------------");
     
     let start = time::now();
     rnl_sub(&mut f32a,&f32b);
     let end = time::now();
     //println!("result of simd sub is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------for_loop_pro------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] * f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of pro is:{:?}", &output);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_mul-----------------------------------------");
@@ -306,17 +226,6 @@ fn main() {
     //println!("result of simd pro is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-    println!("--------------------------------for_loop_div------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] / f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of div is:{:?}", &output);
-    println!("{:?}",end-start);
     println!("--------------------------------rnl_div-----------------------------------------");
 
     let start = time::now();
@@ -325,19 +234,6 @@ fn main() {
     //println!("result of simd div is:{:?}", &f32a);
     println!("{:?}",end-start);
     
-
-    println!("--------------------------------for_loop_mod------------------------------------");
-
-    let mut output = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i] % f32b[i];
-        output.push(g3);
-    }
-    let end = time::now();
-    //println!("result of mod is:{:?}", &output);
-    println!("{:?}",end-start);
-
     println!("--------------------------------rnl_mod-----------------------------------------");
 
     let start = time::now();
@@ -345,7 +241,6 @@ fn main() {
     let end = time::now();
     //println!("result of simd mod is:{:?}", &f32a);
     println!("{:?}",end-start);
-
 
     println!("--------------------------------rnl_copy----------------------------------------");
 
@@ -355,7 +250,6 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-
     println!("--------------------------------rnl_axpy----------------------------------------");
 
     let start = time::now();
@@ -364,22 +258,6 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------for_loop_rot------------------------------------");
-
-    let mut output = vec![];
-    let mut output1 = vec![];
-    let start = time::now();
-    for i in 0..n{
-        let g3:f32 = 2.0 * f32a[i] + 3.0 * f32b[i];
-        let g4:f32 = 2.0 * f32b[i] - 3.0 * f32a[i];
-        output.push(g3);
-        output1.push(g4);
-    }
-    let end = time::now();
-    //println!("result of output1 is:{:?}", &output);
-    //println!("result of output2 is:{:?}", &output1);
-    println!("{:?}",end-start);
     println!("--------------------------------rnl_rot----------------------------------------");
 
     let start = time::now();
@@ -388,7 +266,6 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
-
 
     println!("--------------------------------rnl_swap----------------------------------------");
 
@@ -399,16 +276,6 @@ fn main() {
     //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
 
-
-    println!("--------------------------------for_loop_sum------------------------------------");
-    let mut output = 0.0;
-    let start = time::now();
-    for i in 0..n{
-        output += f32a[i];
-    }
-    let end = time::now();
-    //println!("result is:{:?}", &output);
-    println!("{:?}",end-start);
     println!("--------------------------------rnl_sum----------------------------------------");
 
     let start = time::now();
@@ -431,203 +298,6 @@ fn main() {
     let rnl_nrm = rnl_nrm2(&f32a,16);
     let end = time::now();
     //println!("result is:{:?}", &f32nrm);
-    println!("{:?}",end-start);  
-    println!("--------------------------------f32sum-----------------------------------------");
-
-    let start = time::now();
-    let f32sum = f32sum(&f32a,16);
-    let end = time::now();
-    //println!("result is:{:?}", &f32sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------f64sum-----------------------------------------");
-
-    let start = time::now();
-    let f64sum = f64sum(&f64a,8);
-    let end = time::now();
-    //println!("result is:{:?}", &f64sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------u8sum-----------------------------------------");
-
-    let start = time::now();
-    //let u8sum = u8sum(&u8a,64);
-    let end = time::now();
-    //println!("result is:{:?}", &u8sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------u16sum-----------------------------------------");
-
-    let start = time::now();
-    //let u16sum = u16sum(&u16a,32);
-    let end = time::now();
-    //println!("result is:{:?}", &u16sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------u32sum-----------------------------------------");
-
-    let start = time::now();
-    let u32sum = u32sum(&u32a,16);
-    let end = time::now();
-    //println!("result is:{:?}", &u32sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------u64sum-----------------------------------------");
-
-    let start = time::now();
-    let u64sum = u64sum(&u64a,8);
-    let end = time::now();
-    //println!("result is:{:?}", &u64sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------i8sum-----------------------------------------");
-
-    let start = time::now();
-    //let i8sum = i8sum(&i8a,64);
-    let end = time::now();
-    //println!("result is:{:?}", &i8sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------i16sum-----------------------------------------");
-
-    let start = time::now();
-    //let i16sum = i16sum(&i16a,32);
-    let end = time::now();
-    //println!("result is:{:?}", &i16sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------i32sum-----------------------------------------");
-
-    let start = time::now();
-    let i32sum = i32sum(&i32a,16);
-    let end = time::now();
-    //println!("result is:{:?}", &i32sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------i64sum-----------------------------------------");
-
-    let start = time::now();
-    let i64sum = i64sum(&i64a,8);
-    let end = time::now();
-    //println!("result is:{:?}", &i64sum);
-    println!("{:?}",end-start);
-    println!("--------------------------------usizesum----------------------------------------");
-
-    let start = time::now();
-    let usizesum = usizesum(&usizea,8);
-    let end = time::now();
-    //println!("result is:{:?}", &usizesum);
-    println!("{:?}",end-start);
-    println!("--------------------------------for_loop_dotproduct-----------------------------");
-    
-    let mut output = 0.0;
-    let start = time::now();
-    //if length of a and b are not equal, return false
-    for i in 0..n{
-        output += f32a[i] * f32b[i];
-    }
-    let end = time::now();
-    //println!("result is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32dot------------------------------------------");
-
-    let start = time::now();
-    let f32dot = f32dot(&f32a,&f32b,16);
-    let end = time::now();
-    //println!("result is:{:?}", &f32dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f64dot------------------------------------------");
-
-    let start = time::now();
-    let f64dot = f64dot(&f64a,&f64b,8);
-    let end = time::now();
-    //println!("result is:{:?}", &f64dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------u8dot------------------------------------------");
-
-    let start = time::now();
-    //let u8dot = u8dot(&u8a,&u8b,64);
-    let end = time::now();
-    //println!("result is:{:?}", &u8dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------u16dot------------------------------------------");
-
-    let start = time::now();
-    //let u16dot = u16dot(&u16a,&u16b,32);
-    let end = time::now();
-    //println!("result is:{:?}", &u16dot);
-    println!("{:?}",end-start);
-    println!("--------------------------------u32dot------------------------------------------");
-
-    let start = time::now();
-    let u32dot = u32dot(&u32a,&u32b,16);
-    let end = time::now();
-    //println!("result is:{:?}", &u32dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------u64dot------------------------------------------");
-
-    let start = time::now();
-    let u64dot = u64dot(&u64a,&u64b,8);
-    let end = time::now();
-    //println!("result is:{:?}", &u64dot);
-    println!("{:?}",end-start);
-    println!("--------------------------------i8dot------------------------------------------");
-
-    let start = time::now();
-    //let i8dot = i8dot(&i8a,&i8b,64);
-    let end = time::now();
-    //println!("result is:{:?}", &i8dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------i16dot------------------------------------------");
-
-    let start = time::now();
-    //let i16dot = i16dot(&i16a,&i16b,32);
-    let end = time::now();
-    //println!("result is:{:?}", &i16dot);
-    println!("{:?}",end-start);
-    println!("--------------------------------i32dot------------------------------------------");
-
-    let start = time::now();
-    let i32dot = i32dot(&i32a,&i32b,16);
-    let end = time::now();
-    //println!("result is:{:?}", &i32dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------i64dot------------------------------------------");
-
-    let start = time::now();
-    let i64dot = i64dot(&i64a,&i64b,8);
-    let end = time::now();
-    //println!("result is:{:?}", &i64dot);
-    println!("{:?}",end-start);
-    println!("--------------------------------usizedot----------------------------------------");
-
-    let start = time::now();
-    let usizedot = usizedot(&usizea,&usizeb,8);
-    let end = time::now();
-   // println!("result is:{:?}", &usizedot);
-    println!("{:?}",end-start);
-    println!("--------------------------------forloop_EuclideanNorm---------------------------");
-    let mut output = 0.0;
-    let start = time::now();
-    for i in 0..n{
-        output += f32a[i]*f32a[i];
-    }
-    output = output.sqrt();
-    let end = time::now();
-    //println!("result is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------f32nrm2-----------------------------------------");
-
-    let start = time::now();
-    let f32nrm = f32nrm2(&f32a,16);
-    let end = time::now();
-    //println!("result is:{:?}", &f32nrm);
-    println!("{:?}",end-start);  
-    println!("--------------------------------f64nrm2-----------------------------------------");
-
-    let start = time::now();
-    let f64nrm = f64nrm2(&f64a,8);
-    let end = time::now();
-    //println!("result is:{:?}", &f64nrm);
     println!("{:?}",end-start);  
 
 

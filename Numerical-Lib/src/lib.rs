@@ -154,6 +154,134 @@ impl RNLadd<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLadd<Vec<f64>> for Vec<f64>{
+    fn rnladd(&mut self, other: &Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<u8>> for Vec<u8>{
+    fn rnladd(&mut self, other: &Vec<u8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<u16>> for Vec<u16>{
+    fn rnladd(&mut self, other: &Vec<u16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<u32>> for Vec<u32>{
+    fn rnladd(&mut self, other: &Vec<u32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<u64>> for Vec<u64>{
+    fn rnladd(&mut self, other: &Vec<u64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+impl RNLadd<Vec<i8>> for Vec<i8>{
+    fn rnladd(&mut self, other: &Vec<i8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<i16>> for Vec<i16>{
+    fn rnladd(&mut self, other: &Vec<i16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<i32>> for Vec<i32>{
+    fn rnladd(&mut self, other: &Vec<i32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<i64>> for Vec<i64>{
+    fn rnladd(&mut self, other: &Vec<i64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
+
+impl RNLadd<Vec<usize>> for Vec<usize>{
+    fn rnladd(&mut self, other: &Vec<usize>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai += *bi;
+        }
+    }
+}
 
 pub fn rnl_add<T:RNLadd<T>>(a:&mut T, b: &T){
     a.rnladd(b)
@@ -177,6 +305,135 @@ impl RNLsub<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLsub<Vec<f64>> for Vec<f64>{
+    fn rnlsub(&mut self, other: &Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<u8>> for Vec<u8>{
+    fn rnlsub(&mut self, other: &Vec<u8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<u16>> for Vec<u16>{
+    fn rnlsub(&mut self, other: &Vec<u16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<u32>> for Vec<u32>{
+    fn rnlsub(&mut self, other: &Vec<u32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<u64>> for Vec<u64>{
+    fn rnlsub(&mut self, other: &Vec<u64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<i8>> for Vec<i8>{
+    fn rnlsub(&mut self, other: &Vec<i8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<i16>> for Vec<i16>{
+    fn rnlsub(&mut self, other: &Vec<i16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<i32>> for Vec<i32>{
+    fn rnlsub(&mut self, other: &Vec<i32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<i64>> for Vec<i64>{
+    fn rnlsub(&mut self, other: &Vec<i64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
+
+impl RNLsub<Vec<usize>> for Vec<usize>{
+    fn rnlsub(&mut self, other: &Vec<usize>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai -= *bi;
+        }
+    }
+}
 
 pub fn rnl_sub<T:RNLsub<T>>(a:&mut T, b: &T){
     a.rnlsub(b)
@@ -200,6 +457,135 @@ impl RNLmul<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLmul<Vec<f64>> for Vec<f64>{
+    fn rnlmul(&mut self, other: &Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<u8>> for Vec<u8>{
+    fn rnlmul(&mut self, other: &Vec<u8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<u16>> for Vec<u16>{
+    fn rnlmul(&mut self, other: &Vec<u16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<u32>> for Vec<u32>{
+    fn rnlmul(&mut self, other: &Vec<u32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<u64>> for Vec<u64>{
+    fn rnlmul(&mut self, other: &Vec<u64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<i8>> for Vec<i8>{
+    fn rnlmul(&mut self, other: &Vec<i8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<i16>> for Vec<i16>{
+    fn rnlmul(&mut self, other: &Vec<i16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<i32>> for Vec<i32>{
+    fn rnlmul(&mut self, other: &Vec<i32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<i64>> for Vec<i64>{
+    fn rnlmul(&mut self, other: &Vec<i64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
+
+impl RNLmul<Vec<usize>> for Vec<usize>{
+    fn rnlmul(&mut self, other: &Vec<usize>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi * *ai;
+        }
+    }
+}
 
 pub fn rnl_mul<T:RNLmul<T>>(a:&mut T, b: &T){
     a.rnlmul(b)
@@ -224,6 +610,18 @@ impl RNLdiv<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLdiv<Vec<f64>> for Vec<f64>{
+    fn rnldiv(&mut self, other: &Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai / *bi;
+        }
+    }
+}
 
 pub fn rnl_div<T:RNLdiv<T>>(a:&mut T, b: &T){
     a.rnldiv(b)
@@ -247,6 +645,135 @@ impl RNLmod<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLmod<Vec<f64>> for Vec<f64>{
+    fn rnlmod(&mut self, other: &Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<u8>> for Vec<u8>{
+    fn rnlmod(&mut self, other: &Vec<u8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<u16>> for Vec<u16>{
+    fn rnlmod(&mut self, other: &Vec<u16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<u32>> for Vec<u32>{
+    fn rnlmod(&mut self, other: &Vec<u32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<u64>> for Vec<u64>{
+    fn rnlmod(&mut self, other: &Vec<u64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<i8>> for Vec<i8>{
+    fn rnlmod(&mut self, other: &Vec<i8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<i16>> for Vec<i16>{
+    fn rnlmod(&mut self, other: &Vec<i16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<i32>> for Vec<i32>{
+    fn rnlmod(&mut self, other: &Vec<i32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<i64>> for Vec<i64>{
+    fn rnlmod(&mut self, other: &Vec<i64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
+
+impl RNLmod<Vec<usize>> for Vec<usize>{
+    fn rnlmod(&mut self, other: &Vec<usize>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *ai % *bi;
+        }
+    }
+}
 
 pub fn rnl_mod<T:RNLmod<T>>(a:&mut T, b: &T){
     a.rnlmod(b)
@@ -270,6 +797,135 @@ impl RNLcopy<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLcopy<Vec<f64>> for Vec<f64>{
+    fn rnlcopy(&mut self, other: &Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<u8>> for Vec<u8>{
+    fn rnlcopy(&mut self, other: &Vec<u8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<u16>> for Vec<u16>{
+    fn rnlcopy(&mut self, other: &Vec<u16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<u32>> for Vec<u32>{
+    fn rnlcopy(&mut self, other: &Vec<u32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<u64>> for Vec<u64>{
+    fn rnlcopy(&mut self, other: &Vec<u64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<i8>> for Vec<i8>{
+    fn rnlcopy(&mut self, other: &Vec<i8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<i16>> for Vec<i16>{
+    fn rnlcopy(&mut self, other: &Vec<i16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<i32>> for Vec<i32>{
+    fn rnlcopy(&mut self, other: &Vec<i32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<i64>> for Vec<i64>{
+    fn rnlcopy(&mut self, other: &Vec<i64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
+
+impl RNLcopy<Vec<usize>> for Vec<usize>{
+    fn rnlcopy(&mut self, other: &Vec<usize>){
+        //if length of a and b are not equal, return false
+        if self.len() != other.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other) {
+            *ai = *bi;
+        }
+    }
+}
 
 pub fn rnl_copy<T:RNLcopy<T>>(a:&mut T, b: &T){
     a.rnlcopy(b)
@@ -282,6 +938,76 @@ pub trait RNLscal<RHS>{
 
 impl RNLscal<f32> for Vec<f32>{
     fn rnlscal(&mut self,other: f32){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<f64> for Vec<f64>{
+    fn rnlscal(&mut self,other: f64){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<u8> for Vec<u8>{
+    fn rnlscal(&mut self,other: u8){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<u16> for Vec<u16>{
+    fn rnlscal(&mut self,other: u16){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<u32> for Vec<u32>{
+    fn rnlscal(&mut self,other: u32){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<u64> for Vec<u64>{
+    fn rnlscal(&mut self,other: u64){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<i8> for Vec<i8>{
+    fn rnlscal(&mut self,other: i8){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<i16> for Vec<i16>{
+    fn rnlscal(&mut self,other: i16){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<i32> for Vec<i32>{
+    fn rnlscal(&mut self,other: i32){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<i64> for Vec<i64>{
+    fn rnlscal(&mut self,other: i64){
+        self.par_iter_mut()
+            .for_each(|a| *a = *a * other);
+    }
+}
+
+impl RNLscal<usize> for Vec<usize>{
+    fn rnlscal(&mut self,other: usize){
         self.par_iter_mut()
             .for_each(|a| *a = *a * other);
     }
@@ -310,6 +1036,19 @@ impl RNLaxpy<Vec<f32>,f32> for Vec<f32>{
     }
 }
 
+impl RNLaxpy<Vec<f64>,f64> for Vec<f64>{
+    fn rnlaxpy(&mut self, other0: &Vec<f64>, other1: f64){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = *bi * other1;
+        }
+    }
+}
+
 pub fn rnl_axpy<T:RNLaxpy<T,U>, U:std::ops::Mul>(a:&mut T, b: &T, s:U){
     a.rnlaxpy(b,s)
 }
@@ -322,6 +1061,20 @@ pub trait RNLrot<RHS0,RHS1,RHS2>{
 
 impl RNLrot<Vec<f32>,f32,f32> for Vec<f32>{
     fn rnlrot(&mut self,  other0: &mut Vec<f32>, other1: f32, other2: f32){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<f64>,f64,f64> for Vec<f64>{
+    fn rnlrot(&mut self,  other0: &mut Vec<f64>, other1: f64, other2: f64){
         //if length of a and b are not equal, return false
         if self.len() != other0.len(){
             panic!("The length of input arrays must be same");
@@ -359,6 +1112,149 @@ impl RNLswap<Vec<f32>> for Vec<f32>{
     }
 }
 
+impl RNLswap<Vec<f64>> for Vec<f64>{
+    fn rnlswap(&mut self,  other0: &mut Vec<f64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+
+impl RNLswap<Vec<u8>> for Vec<u8>{
+    fn rnlswap(&mut self,  other0: &mut Vec<u8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+
+impl RNLswap<Vec<u16>> for Vec<u16>{
+    fn rnlswap(&mut self,  other0: &mut Vec<u16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+impl RNLswap<Vec<u32>> for Vec<u32>{
+    fn rnlswap(&mut self,  other0: &mut Vec<u32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+impl RNLswap<Vec<u64>> for Vec<u64>{
+    fn rnlswap(&mut self,  other0: &mut Vec<u64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+impl RNLswap<Vec<i8>> for Vec<i8>{
+    fn rnlswap(&mut self,  other0: &mut Vec<i8>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+
+impl RNLswap<Vec<i16>> for Vec<i16>{
+    fn rnlswap(&mut self,  other0: &mut Vec<i16>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+impl RNLswap<Vec<i32>> for Vec<i32>{
+    fn rnlswap(&mut self,  other0: &mut Vec<i32>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+impl RNLswap<Vec<i64>> for Vec<i64>{
+    fn rnlswap(&mut self,  other0: &mut Vec<i64>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
+impl RNLswap<Vec<usize>> for Vec<usize>{
+    fn rnlswap(&mut self,  other0: &mut Vec<usize>){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
+            *ai = *bi;  
+            *bi = ac;  
+        }
+    }
+}
 pub fn rnl_swap<T:RNLswap<T>>(a:&mut T, b: &mut T){
     a.rnlswap(b)
 }
@@ -381,6 +1277,125 @@ impl RNLmax<f32> for Vec<f32>{
     }
 }
 
+impl RNLmax<f64> for Vec<f64>{
+    fn rnlmax(&self) -> f64{
+        let mut x:f64  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<u8> for Vec<u8>{
+    fn rnlmax(&self) -> u8{
+        let mut x:u8  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<u16> for Vec<u16>{
+    fn rnlmax(&self) -> u16{
+        let mut x:u16  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<u32> for Vec<u32>{
+    fn rnlmax(&self) -> u32{
+        let mut x:u32  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<u64> for Vec<u64>{
+    fn rnlmax(&self) -> u64{
+        let mut x:u64  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+impl RNLmax<i8> for Vec<i8>{
+    fn rnlmax(&self) -> i8{
+        let mut x:i8  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<i16> for Vec<i16>{
+    fn rnlmax(&self) -> i16{
+        let mut x:i16  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<i32> for Vec<i32>{
+    fn rnlmax(&self) -> i32{
+        let mut x:i32  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<i64> for Vec<i64>{
+    fn rnlmax(&self) -> i64{
+        let mut x:i64  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmax<usize> for Vec<usize>{
+    fn rnlmax(&self) -> usize{
+        let mut x:usize  = self[0];
+        for ai in self.iter() {
+            if x < *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
 pub fn rnl_max<T:RNLmax<U>,U>(a:&T) -> U{
     a.rnlmax()
 }
@@ -394,6 +1409,125 @@ pub trait RNLmin<Result>{
 impl RNLmin<f32> for Vec<f32>{
     fn rnlmin(&self) -> f32{
         let mut x:f32  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<f64> for Vec<f64>{
+    fn rnlmin(&self) -> f64{
+        let mut x:f64  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<u8> for Vec<u8>{
+    fn rnlmin(&self) -> u8{
+        let mut x:u8  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<u16> for Vec<u16>{
+    fn rnlmin(&self) -> u16{
+        let mut x:u16  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<u32> for Vec<u32>{
+    fn rnlmin(&self) -> u32{
+        let mut x:u32  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<u64> for Vec<u64>{
+    fn rnlmin(&self) -> u64{
+        let mut x:u64  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+impl RNLmin<i8> for Vec<i8>{
+    fn rnlmin(&self) -> i8{
+        let mut x:i8  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<i16> for Vec<i16>{
+    fn rnlmin(&self) -> i16{
+        let mut x:i16  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<i32> for Vec<i32>{
+    fn rnlmin(&self) -> i32{
+        let mut x:i32  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<i64> for Vec<i64>{
+    fn rnlmin(&self) -> i64{
+        let mut x:i64  = self[0];
+        for ai in self.iter() {
+            if x > *ai{
+                x = *ai;
+            }
+        }
+        x
+    }
+}
+
+impl RNLmin<usize> for Vec<usize>{
+    fn rnlmin(&self) -> usize{
+        let mut x:usize  = self[0];
         for ai in self.iter() {
             if x > *ai{
                 x = *ai;
@@ -653,11 +1787,646 @@ impl RNLsum<u8,u8> for Vec<u8>{
     }
 }
 
+impl RNLsum<u8,u16> for Vec<u16>{
+    fn rnlsum(&self,  other0: u8) -> u16{
+        match other0{
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32) 
+                    .map(u16x32::from_slice_unaligned) 
+                    .sum::<u16x32>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16) 
+                    .map(u16x16::from_slice_unaligned) 
+                    .sum::<u16x16>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(u16x8::from_slice_unaligned) 
+                    .sum::<u16x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(u16x4::from_slice_unaligned) 
+                    .sum::<u16x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(u16x2::from_slice_unaligned) 
+                    .sum::<u16x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+
+impl RNLsum<u8,u32> for Vec<u32>{
+    fn rnlsum(&self,  other0: u8) -> u32{
+        match other0{
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16) 
+                    .map(u32x16::from_slice_unaligned) 
+                    .sum::<u32x16>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(u32x8::from_slice_unaligned) 
+                    .sum::<u32x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(u32x4::from_slice_unaligned) 
+                    .sum::<u32x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(u32x2::from_slice_unaligned) 
+                    .sum::<u32x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLsum<u8,u64> for Vec<u64>{
+    fn rnlsum(&self,  other0: u8) -> u64{
+        match other0{
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(u64x8::from_slice_unaligned) 
+                    .sum::<u64x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(u64x4::from_slice_unaligned) 
+                    .sum::<u64x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(u64x2::from_slice_unaligned) 
+                    .sum::<u64x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLsum<u8,u128> for Vec<u128>{
+    fn rnlsum(&self,  other0: u8) -> u128{
+        match other0{
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(u128x4::from_slice_unaligned) 
+                    .sum::<u128x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(u128x2::from_slice_unaligned) 
+                    .sum::<u128x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+
+impl RNLsum<u8,i8> for Vec<i8>{
+    fn rnlsum(&self,  other0: u8) -> i8{
+        match other0{
+            64 => {
+                let residual = self.len()%64;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(64) 
+                    .map(i8x64::from_slice_unaligned) 
+                    .sum::<i8x64>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32) 
+                    .map(i8x32::from_slice_unaligned) 
+                    .sum::<i8x32>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16) 
+                    .map(i8x16::from_slice_unaligned) 
+                    .sum::<i8x16>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(i8x8::from_slice_unaligned) 
+                    .sum::<i8x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(i8x4::from_slice_unaligned) 
+                    .sum::<i8x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(i8x2::from_slice_unaligned) 
+                    .sum::<i8x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLsum<u8,i16> for Vec<i16>{
+    fn rnlsum(&self,  other0: u8) -> i16{
+        match other0{
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32) 
+                    .map(i16x32::from_slice_unaligned) 
+                    .sum::<i16x32>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16) 
+                    .map(i16x16::from_slice_unaligned) 
+                    .sum::<i16x16>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(i16x8::from_slice_unaligned) 
+                    .sum::<i16x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(i16x4::from_slice_unaligned) 
+                    .sum::<i16x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(i16x2::from_slice_unaligned) 
+                    .sum::<i16x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+
+impl RNLsum<u8,i32> for Vec<i32>{
+    fn rnlsum(&self,  other0: u8) -> i32{
+        match other0{
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16) 
+                    .map(i32x16::from_slice_unaligned) 
+                    .sum::<i32x16>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(i32x8::from_slice_unaligned) 
+                    .sum::<i32x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(i32x4::from_slice_unaligned) 
+                    .sum::<i32x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(i32x2::from_slice_unaligned) 
+                    .sum::<i32x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLsum<u8,i64> for Vec<i64>{
+    fn rnlsum(&self,  other0: u8) -> i64{
+        match other0{
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8) 
+                    .map(i64x8::from_slice_unaligned) 
+                    .sum::<i64x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(i64x4::from_slice_unaligned) 
+                    .sum::<i64x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(i64x2::from_slice_unaligned) 
+                    .sum::<i64x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLsum<u8,i128> for Vec<i128>{
+    fn rnlsum(&self,  other0: u8) -> i128{
+        match other0{
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(4) 
+                    .map(i128x4::from_slice_unaligned) 
+                    .sum::<i128x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2) 
+                    .map(i128x2::from_slice_unaligned) 
+                    .sum::<i128x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
 
 pub fn rnl_sum<T:RNLsum<U,V>,U,V>(a:&T, b: U) -> V{
     a.rnlsum(b)
 }
-
 
 
 //---------rnl_dot---------
@@ -691,9 +2460,9 @@ impl RNLdot<Vec<f32>,u8,f32> for Vec<f32>{
                 let residual = self.len()%8;
                 let sa = &self[0..self.len()-residual];
 
-                let mut result = sa.par_chunks(16)
+                let mut result = sa.par_chunks(8)
                     .map(f32x8::from_slice_unaligned)
-                    .zip(other0.par_chunks(16).map(f32x8::from_slice_unaligned))
+                    .zip(other0.par_chunks(8).map(f32x8::from_slice_unaligned))
                     .map(|(a, b)| a * b)
                     .sum::<f32x8>()
                     .sum();
@@ -709,9 +2478,9 @@ impl RNLdot<Vec<f32>,u8,f32> for Vec<f32>{
                 let residual = self.len()%4;
                 let sa = &self[0..self.len()-residual];
                 
-                let mut result = sa.par_chunks(16)
+                let mut result = sa.par_chunks(4)
                     .map(f32x4::from_slice_unaligned)
-                    .zip(other0.par_chunks(16).map(f32x4::from_slice_unaligned))
+                    .zip(other0.par_chunks(4).map(f32x4::from_slice_unaligned))
                     .map(|(a, b)| a * b)
                     .sum::<f32x4>()
                     .sum();
@@ -727,9 +2496,9 @@ impl RNLdot<Vec<f32>,u8,f32> for Vec<f32>{
                 let residual = self.len()%2;
                 let sa = &self[0..self.len()-residual];
 
-                let mut result = sa.par_chunks(16)
+                let mut result = sa.par_chunks(2)
                     .map(f32x2::from_slice_unaligned)
-                    .zip(other0.par_chunks(16).map(f32x2::from_slice_unaligned))
+                    .zip(other0.par_chunks(2).map(f32x2::from_slice_unaligned))
                     .map(|(a, b)| a * b)
                     .sum::<f32x2>()
                     .sum();
@@ -748,6 +2517,873 @@ impl RNLdot<Vec<f32>,u8,f32> for Vec<f32>{
     }
 }
 
+impl RNLdot<Vec<f64>,u8,f64> for Vec<f64>{
+    fn rnldot(&self,  other0: &Vec<f64>, other1: u8) -> f64{
+        match other1{
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(f64x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(f64x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<f64x8>()
+                    .sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(f64x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(f64x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<f64x4>()
+                    .sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(f64x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(f64x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<f64x2>()
+                    .sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<u8>,u8,u8> for Vec<u8>{
+    fn rnldot(&self,  other0: &Vec<u8>, other1: u8) -> u8{
+        match other1{
+            64 => {
+                let residual = self.len()%64;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(64)
+                    .map(u8x64::from_slice_unaligned)
+                    .zip(other0.par_chunks(64).map(u8x64::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u8x64>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32)
+                    .map(u8x32::from_slice_unaligned)
+                    .zip(other0.par_chunks(32).map(u8x32::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u8x32>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16)
+                    .map(u8x16::from_slice_unaligned)
+                    .zip(other0.par_chunks(16).map(u8x16::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u8x16>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(u8x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(u8x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u8x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(u8x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(u8x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u8x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(u8x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(u8x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u8x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<u16>,u8,u16> for Vec<u16>{
+    fn rnldot(&self,  other0: &Vec<u16>, other1: u8) -> u16{
+        match other1{
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32)
+                    .map(u16x32::from_slice_unaligned)
+                    .zip(other0.par_chunks(32).map(u16x32::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u16x32>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16)
+                    .map(u16x16::from_slice_unaligned)
+                    .zip(other0.par_chunks(16).map(u16x16::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u16x16>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(u16x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(u16x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u16x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(u16x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(u16x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u16x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(u16x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(u16x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u16x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<u32>,u8,u32> for Vec<u32>{
+    fn rnldot(&self,  other0: &Vec<u32>, other1: u8) -> u32{
+        match other1{
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16)
+                    .map(u32x16::from_slice_unaligned)
+                    .zip(other0.par_chunks(16).map(u32x16::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u32x16>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(u32x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(u32x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u32x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(u32x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(u32x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u32x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(u32x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(u32x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u32x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<u64>,u8,u64> for Vec<u64>{
+    fn rnldot(&self,  other0: &Vec<u64>, other1: u8) -> u64{
+        match other1{
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(u64x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(u64x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u64x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(u64x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(u64x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u64x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(u64x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(u64x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<u64x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<i8>,u8,i8> for Vec<i8>{
+    fn rnldot(&self,  other0: &Vec<i8>, other1: u8) -> i8{
+        match other1{
+            64 => {
+                let residual = self.len()%64;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(64)
+                    .map(i8x64::from_slice_unaligned)
+                    .zip(other0.par_chunks(64).map(i8x64::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i8x64>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32)
+                    .map(i8x32::from_slice_unaligned)
+                    .zip(other0.par_chunks(32).map(i8x32::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i8x32>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16)
+                    .map(i8x16::from_slice_unaligned)
+                    .zip(other0.par_chunks(16).map(i8x16::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i8x16>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(i8x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(i8x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i8x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(i8x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(i8x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i8x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(i8x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(i8x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i8x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<i16>,u8,i16> for Vec<i16>{
+    fn rnldot(&self,  other0: &Vec<i16>, other1: u8) -> i16{
+        match other1{
+            32 => {
+                let residual = self.len()%32;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(32)
+                    .map(i16x32::from_slice_unaligned)
+                    .zip(other0.par_chunks(32).map(i16x32::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i16x32>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16)
+                    .map(i16x16::from_slice_unaligned)
+                    .zip(other0.par_chunks(16).map(i16x16::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i16x16>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(i16x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(i16x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i16x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(i16x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(i16x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i16x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(i16x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(i16x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i16x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<i32>,u8,i32> for Vec<i32>{
+    fn rnldot(&self,  other0: &Vec<i32>, other1: u8) -> i32{
+        match other1{
+            16 => {
+                let residual = self.len()%16;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(16)
+                    .map(i32x16::from_slice_unaligned)
+                    .zip(other0.par_chunks(16).map(i32x16::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i32x16>()
+                    .wrapping_sum();
+
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(i32x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(i32x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i32x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(i32x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(i32x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i32x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(i32x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(i32x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i32x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<i64>,u8,i64> for Vec<i64>{
+    fn rnldot(&self,  other0: &Vec<i64>, other1: u8) -> i64{
+        match other1{
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(i64x8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(i64x8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i64x8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(i64x4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(i64x4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i64x4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(i64x2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(i64x2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<i64x2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
+
+impl RNLdot<Vec<usize>,u8,usize> for Vec<usize>{
+    fn rnldot(&self,  other0: &Vec<usize>, other1: u8) -> usize{
+        match other1{
+            8 => {
+                let residual = self.len()%8;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(8)
+                    .map(usizex8::from_slice_unaligned)
+                    .zip(other0.par_chunks(8).map(usizex8::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<usizex8>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            4 => {
+                let residual = self.len()%4;
+                let sa = &self[0..self.len()-residual];
+                
+                let mut result = sa.par_chunks(4)
+                    .map(usizex4::from_slice_unaligned)
+                    .zip(other0.par_chunks(4).map(usizex4::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<usizex4>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            },
+            2 => {
+                let residual = self.len()%2;
+                let sa = &self[0..self.len()-residual];
+
+                let mut result = sa.par_chunks(2)
+                    .map(usizex2::from_slice_unaligned)
+                    .zip(other0.par_chunks(2).map(usizex2::from_slice_unaligned))
+                    .map(|(a, b)| a * b)
+                    .sum::<usizex2>()
+                    .wrapping_sum();
+
+                if residual != 0{
+                    for i in (self.len()-residual)..self.len(){
+                        result += self[i];
+                    }
+                }
+                result
+            }
+            _ => {
+                panic!("The width of simd type not exist");
+            }
+        }
+    }
+}
 pub fn rnl_dot<T:RNLdot<T,U,V>,U,V>(a:&T, b:&T, c:U) -> V{
     a.rnldot(b,c)
 }
@@ -837,1962 +3473,5 @@ impl RNLnrm2<u8,f64> for Vec<f64>{
 pub fn rnl_nrm2<T:RNLnrm2<U,V>,U,V>(a:&T, b:U) -> V{
     a.rnlnrm2(b)
 }
-
-pub fn f32sum(a: &Vec<f32>, w: u8) -> f32{
-    match w{
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16) 
-                .map(f32x16::from_slice_unaligned) 
-                .sum::<f32x16>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8) 
-                .map(f32x8::from_slice_unaligned) 
-                .sum::<f32x8>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4) 
-                .map(f32x4::from_slice_unaligned) 
-                .sum::<f32x4>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2) 
-                .map(f32x2::from_slice_unaligned) 
-                .sum::<f32x2>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        }
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-
-
-}
-
-pub fn f64sum(a: &Vec<f64>, w: u8) -> f64{
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(f64x8::from_slice_unaligned) 
-                .sum::<f64x8>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(f64x4::from_slice_unaligned) 
-                .sum::<f64x4>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(f64x2::from_slice_unaligned) 
-                .sum::<f64x2>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u8sum(a: &Vec<u8>,w: u8) -> u8{
-    match w{
-        64 => {
-            let residual = a.len()%64;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(64)
-                .map(u8x64::from_slice_unaligned) 
-                .sum::<u8x64>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        }, 
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(u8x32::from_slice_unaligned) 
-                .sum::<u8x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(u8x16::from_slice_unaligned) 
-                .sum::<u8x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u8x8::from_slice_unaligned) 
-                .sum::<u8x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u8x4::from_slice_unaligned) 
-                .sum::<u8x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u8x2::from_slice_unaligned) 
-                .sum::<u8x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u16sum(a: &Vec<u16> ,w:u8) -> u16{
-    match w{
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(u16x32::from_slice_unaligned) 
-                .sum::<u16x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-        result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(u16x16::from_slice_unaligned) 
-                .sum::<u16x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u16x8::from_slice_unaligned) 
-                .sum::<u16x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u16x4::from_slice_unaligned) 
-                .sum::<u16x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u16x2::from_slice_unaligned) 
-                .sum::<u16x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u32sum(a: &Vec<u32>, w:u8 ) -> u32{
-    match w{
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(u32x16::from_slice_unaligned) 
-                .sum::<u32x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u32x8::from_slice_unaligned) 
-                .sum::<u32x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u32x4::from_slice_unaligned) 
-                .sum::<u32x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u32x2::from_slice_unaligned) 
-                .sum::<u32x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u64sum(a: &Vec<u64> ,w: u8) -> u64{
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u64x8::from_slice_unaligned) 
-                .sum::<u64x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u64x4::from_slice_unaligned) 
-                .sum::<u64x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u64x2::from_slice_unaligned) 
-                .sum::<u64x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u128sum(a: &Vec<u128> ,w: u8) -> u128{
-    match w{
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u128x4::from_slice_unaligned) 
-                .sum::<u128x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u128x2::from_slice_unaligned) 
-                .sum::<u128x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        1 =>{
-            a.par_chunks(1)
-                .map(u128x1::from_slice_unaligned) 
-                .sum::<u128x1>()
-                .wrapping_sum()
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-
-pub fn i8sum(a: &Vec<i8>,w: u8) -> i8{
-    match w{
-        64 => {
-            let residual = a.len()%64;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(64)
-                .map(i8x64::from_slice_unaligned) 
-                .sum::<i8x64>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(i8x32::from_slice_unaligned) 
-                .sum::<i8x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(i8x16::from_slice_unaligned) 
-                .sum::<i8x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i8x8::from_slice_unaligned) 
-                .sum::<i8x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i8x4::from_slice_unaligned) 
-                .sum::<i8x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i8x2::from_slice_unaligned) 
-                .sum::<i8x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn i16sum(a: &Vec<i16> ,w:u8) -> i16{
-    match w{
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(i16x32::from_slice_unaligned) 
-                .sum::<i16x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(i16x16::from_slice_unaligned) 
-                .sum::<i16x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i16x8::from_slice_unaligned) 
-                .sum::<i16x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i16x4::from_slice_unaligned) 
-                .sum::<i16x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i16x2::from_slice_unaligned) 
-                .sum::<i16x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ =>  {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn i32sum(a: &Vec<i32>, w:u8 ) -> i32{
-    match w{
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(i32x16::from_slice_unaligned) 
-                .sum::<i32x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i32x8::from_slice_unaligned) 
-                .sum::<i32x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i32x4::from_slice_unaligned) 
-                .sum::<i32x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i32x2::from_slice_unaligned) 
-                .sum::<i32x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn i64sum(a: &Vec<i64> ,w: u8) -> i64{
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i64x8::from_slice_unaligned) 
-                .sum::<i64x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i64x4::from_slice_unaligned) 
-                .sum::<i64x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },        
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i64x2::from_slice_unaligned) 
-                .sum::<i64x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-        result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn i128sum(a: &Vec<i128> ,w: u8) -> i128{
-    match w{
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i128x4::from_slice_unaligned) 
-                .sum::<i128x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i128x2::from_slice_unaligned) 
-                .sum::<i128x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                   result += a[i];
-                }
-            }
-            result
-        },
-        1 => {
-            a.par_chunks(1)
-                .map(i128x1::from_slice_unaligned) 
-                .sum::<i128x1>()
-                .wrapping_sum()
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn usizesum(a: &Vec<usize> ,w: u8) -> usize{
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(usizex8::from_slice_unaligned) 
-                .sum::<usizex8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(usizex4::from_slice_unaligned) 
-                .sum::<usizex4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(usizex2::from_slice_unaligned) 
-                .sum::<usizex2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i];
-                }
-            }
-        result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-
-
-pub fn f32dot(a: &Vec<f32>, b: &Vec<f32>, w: u8) -> f32 {
-    if a.len() != b.len(){
-            panic!("The lengths of input arrays must be same");
-        }
-    match w{
-        16 => {
-            let residual = a.len()%16;
-
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(f32x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(f32x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f32x16>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(f32x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(f32x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f32x8>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(f32x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(f32x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f32x4>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(f32x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(f32x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f32x2>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-
-pub fn f64dot(a: &Vec<f64>, b: &Vec<f64>, w:u8) -> f64 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        8 => {
-            let residual = a.len()%8;
-
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(f64x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(f64x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f64x8>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(f64x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(f64x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f64x4>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(f64x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(f64x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<f64x2>()
-                .sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u8dot(a: &Vec<u8>, b: &Vec<u8>, w:u8) -> u8 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        64 => {
-            let residual = a.len()%64;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(64)
-                .map(u8x64::from_slice_unaligned)
-                .zip(b.par_chunks(64).map(u8x64::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u8x64>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(u8x32::from_slice_unaligned)
-                .zip(b.par_chunks(32).map(u8x32::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u8x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(u8x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(u8x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u8x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u8x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(u8x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u8x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u8x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(u8x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u8x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u8x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(u8x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u8x2>()
-                .wrapping_sum();
-
-                if residual != 0{
-                    for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u16dot(a: &Vec<u16>, b: &Vec<u16>, w:u8) -> u16 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(u16x32::from_slice_unaligned)
-                .zip(b.par_chunks(32).map(u16x32::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u16x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(u16x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(u16x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u16x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u16x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(u16x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u16x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u16x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(u16x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u16x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 =>   {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u16x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(u16x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u16x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }   
-}
-
-pub fn u32dot(a: &Vec<u32>, b: &Vec<u32>, w:u8) -> u32 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        16 => { 
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(u32x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(u32x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u32x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u32x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(u32x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u32x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u32x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(u32x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u32x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u32x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(u32x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u32x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ =>  {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn u64dot(a: &Vec<u64>, b: &Vec<u64>, w:u8) -> u64 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(u64x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(u64x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u64x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(u64x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(u64x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u64x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(u64x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(u64x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<u64x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-        panic!("The width of simd type not exist");
-        }
-    }
-}
-pub fn i8dot(a: &Vec<i8>, b: &Vec<i8>, w:u8) -> i8 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        64 => {
-            let residual = a.len()%64;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(64)
-                .map(i8x64::from_slice_unaligned)
-                .zip(b.par_chunks(64).map(i8x64::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i8x64>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        }
-
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(i8x32::from_slice_unaligned)
-                .zip(b.par_chunks(32).map(i8x32::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i8x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(i8x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(i8x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i8x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i8x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(i8x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i8x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i8x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(i8x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i8x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i8x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(i8x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i8x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-pub fn i16dot(a: &Vec<i16>, b: &Vec<i16>, w:u8) -> i16 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        32 => {
-            let residual = a.len()%32;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(32)
-                .map(i16x32::from_slice_unaligned)
-                .zip(b.par_chunks(32).map(i16x32::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i16x32>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(i16x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(i16x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i16x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i16x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(i16x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i16x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i16x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(i16x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i16x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i16x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(i16x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i16x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ =>{
-            panic!("The width of simd type not exist");
-        }
-    }   
-}
-
-pub fn i32dot(a: &Vec<i32>, b: &Vec<i32>, w:u8) -> i32 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        16 => {
-            let residual = a.len()%16;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(16)
-                .map(i32x16::from_slice_unaligned)
-                .zip(b.par_chunks(16).map(i32x16::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i32x16>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i32x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(i32x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i32x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i32x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(i32x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i32x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i32x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(i32x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i32x2>()
-                .wrapping_sum();
-
-           if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn i64dot(a: &Vec<i64>, b: &Vec<i64>, w:u8) -> i64 {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(i64x8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(i64x8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i64x8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        4 =>{
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(i64x4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(i64x4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i64x4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(i64x2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(i64x2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<i64x2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn usizedot(a: &Vec<usize>, b: &Vec<usize>, w:u8) -> usize {
-    if a.len() != b.len(){
-        panic!("The lengths of input arrays must be same");
-    }
-    match w{
-        8 => {
-            let residual = a.len()%8;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(8)
-                .map(usizex8::from_slice_unaligned)
-                .zip(b.par_chunks(8).map(usizex8::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<usizex8>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-
-        4 => {
-            let residual = a.len()%4;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(4)
-                .map(usizex4::from_slice_unaligned)
-                .zip(b.par_chunks(4).map(usizex4::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<usizex4>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        2 => {
-            let residual = a.len()%2;
-            let sa = &a[0..a.len()-residual];
-
-            let mut result = sa.par_chunks(2)
-                .map(usizex2::from_slice_unaligned)
-                .zip(b.par_chunks(2).map(usizex2::from_slice_unaligned))
-                .map(|(a, b)| a * b)
-                .sum::<usizex2>()
-                .wrapping_sum();
-
-            if residual != 0{
-                for i in (a.len()-residual)..a.len(){
-                    result += a[i] * b[i];
-                }
-            }
-            result
-        },
-        _ =>  {
-            panic!("The width of simd type not exist");
-        }
-    }
-}
-
-pub fn f32nrm2(a: &Vec<f32>,w:u8) -> f32 {
-    match w{
-        16 => {
-            a.par_chunks(16)
-                .map(f32x16::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f32x16>()
-                .sum()
-                .sqrt()
-        },
-        8 => {
-            a.par_chunks(8)
-                .map(f32x8::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f32x8>()
-                .sum()
-                .sqrt()
-        },
-        4 => {
-            a.par_chunks(4)
-                .map(f32x4::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f32x4>()
-                .sum()
-                .sqrt()
-        },
-        2 => {
-            a.par_chunks(2)
-                .map(f32x2::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f32x2>()
-                .sum()
-                .sqrt()
-        },
-        _ =>{
-            panic!("The width of simd type not exist");
-        }
-    }
-}   
-
-pub fn f64nrm2(a: &Vec<f64>,w:u8) -> f64 {
-    match w{
-        8 => {
-            a.par_chunks(8)
-                .map(f64x8::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f64x8>()
-                .sum()
-                .sqrt()
-        },
-        4 => {
-            a.par_chunks(4)
-                .map(f64x4::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f64x4>()
-                .sum()
-                .sqrt()
-        },
-        2 => {
-            a.par_chunks(2)
-                .map(f64x2::from_slice_unaligned)
-                .map(|a| a*a)
-                .sum::<f64x2>()
-                .sum()
-                .sqrt()
-        },
-        _ => {
-            panic!("The width of simd type not exist");
-        }
-    }
-
-}
-
-
-
 
 }
