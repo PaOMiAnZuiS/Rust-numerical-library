@@ -1544,15 +1544,15 @@ pub fn rnl_min<T:RNLmin<U>,U>(a:&T) -> U{
 
 //---------rnl_sum---------
 pub trait RNLsum<RHS,Result>{
-    fn rnlsum(&self,rhs:RHS) ->Result;
+    fn rnlsum(&self,rhs:RHS) -> Result;
 }
 
 impl RNLsum<u8,f32> for Vec<f32>{
     fn rnlsum(&self,  other0: u8) -> f32{
         match other0{
             16 => {
-                self.par_chunks(16) 
-                    .map(f32x16::from_slice_unaligned) 
+                self.par_chunks(16)
+                    .map(f32x16::from_slice_unaligned)
                     .sum::<f32x16>()
                     .sum()
             },

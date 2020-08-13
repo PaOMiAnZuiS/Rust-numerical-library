@@ -120,23 +120,53 @@ fn main() {
     println!("");
 
     //this is only for test
-    let start = time::now();
-    rnl_sum(&f32a,16);
-    let end = time::now(); 
+    rnl_sin(&mut f32a);
+    rnl_nrm2(&f32a,16);
+    rnl_dot(&f32a,&f32b,16);
+    time::now();
     println!("--------------------------------RNL---------------------------------------------");
     
     println!("");
-    println!("--------------------------------for_loop_sin------------------------------------");
 
-    let mut output = vec![];
+    println!("--------------------------------rnl_swap----------------------------------------");
+
     let start = time::now();
-    for i in 0..n{
-        let g3:f32 = f32a[i].sin();
-        output.push(g3);
-    }
+    rnl_swap(&mut f32a, &mut f32b);
     let end = time::now();
-    //println!("result of sin is:{:?}", &output);
+    //println!("result is:{:?}", &f32a);
+    //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
+    
+    println!("--------------------------------rnl_dot-----------------------------------------");
+
+    let start = time::now();
+    let rnl_dot = rnl_dot(&f32a,&f32b,16);
+    let end = time::now();
+    //println!("result is:{:?}", &rnl_dot);
+    println!("{:?}",end-start);
+
+    println!("--------------------------------rnl_nrm2----------------------------------------");
+
+    let start = time::now();
+    let rnl_nrm = rnl_nrm2(&f32a,16);
+    let end = time::now();
+    //println!("result is:{:?}", &f32nrm);
+    println!("{:?}",end-start);  
+
+    println!("--------------------------------rnl_sum----------------------------------------");
+
+    let start0 = time::now();
+    let rnl_sum1 = rnl_sum(&f32a,16);
+    let end0 = time::now();
+    //println!("result is:{:?}", &rnl_sum);
+    println!("{:?}",end0-start0);    
+    println!("--------------------------------rnl_sum2----------------------------------------");
+
+    let start0 = time::now();
+    let rnl_sum1 = rnl_sum(&f64a,8);
+    let end0 = time::now();
+    //println!("result is:{:?}", &rnl_sum);
+    println!("{:?}",end0-start0);
 
     println!("--------------------------------rnl_sin-----------------------------------------");
 
@@ -177,6 +207,7 @@ fn main() {
     let end = time::now();
     //println!("result of simd exp is:{:?}", &f32a);
     println!("{:?}",end-start);
+
 
     println!("--------------------------------rnl_scal----------------------------------------");
 
@@ -275,52 +306,6 @@ fn main() {
     //println!("result is:{:?}", &f32a);
     //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
-
-    println!("--------------------------------for_loop_sin------------------------------------");
-
-    let mut output = 0.0;
-    let start = time::now();
-    for i in 0..n{
-        output += f32a[i];
-    }
-    let end = time::now();
-    println!("result of sum is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------rnl_sum----------------------------------------");
-
-    let start = time::now();
-    let rnl_sum = rnl_sum(&f32a,16);
-    let end = time::now();
-    println!("result is:{:?}", &rnl_sum);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------for_loop_dot------------------------------------");
-
-    let mut output = 0.0;
-    let start = time::now();
-    for i in 0..n{
-        output += f32a[i] * f32b[i];
-    }
-    let end = time::now();
-    println!("result of sum is:{:?}", &output);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------rnl_dot-----------------------------------------");
-
-    let start = time::now();
-    let rnl_dot = rnl_dot(&f32a,&f32b,16);
-    let end = time::now();
-    println!("result is:{:?}", &rnl_dot);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------rnl_nrm2----------------------------------------");
-
-    let start = time::now();
-    let rnl_nrm = rnl_nrm2(&f32a,16);
-    let end = time::now();
-    //println!("result is:{:?}", &f32nrm);
-    println!("{:?}",end-start);  
 
 
 }

@@ -33,9 +33,9 @@ RNL-f32swap:
 | Function | library | TImes(nanos) | 
 | ---------- | ------- | --------------- |  
 | Sum | MKL-cblas_sasum | 26000 |
-|         | RNL-rnl_sum | 51000 |
+|         | RNL-rnl_sum | 47000 |
 |         | MKL-cblas_dasum | 56000 |
-|         | RNL-rnl_sum | 89000 |
+|         | RNL-rnl_sum | 61000 |
 | Dot product | MKL-cblas_sdot | 80000 |
 |        | RNL-rnl_dot | 70000 | 
 | Norm | MKL-cblas_snrm2 | 129000 |
@@ -52,6 +52,8 @@ RNL-f32swap:
 |         | RNL-rnl_max | 1000 |
 | Min  | MKL_cblas_isamin | 1000 | 
 |         | RNL-rnl_min | 1000 | 
+
+![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-MKL-Compare.png)
 
 (Updating...)
 
