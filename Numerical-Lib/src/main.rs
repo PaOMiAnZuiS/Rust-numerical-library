@@ -38,7 +38,7 @@ fn main() {
     
     //let output = unsafe { MKL_cblas_dasum(input) };
     //println!("{}", output);
-    let n = 10000;
+    let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input

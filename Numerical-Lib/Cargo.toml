@@ -20,6 +20,9 @@ opt-level = 3
 
 [profile.release]
 overflow-checks = true
+lto = "fat"
+panic = "abort"
+codegen-units = 1
 
 [build-dependencies]
 cc = "1.0.58"

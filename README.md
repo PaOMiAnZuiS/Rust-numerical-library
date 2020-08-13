@@ -33,25 +33,25 @@ RNL-f32swap:
 | Function | library | TImes(nanos) | 
 | ---------- | ------- | --------------- |  
 | Sum | MKL-cblas_sasum | 26000 |
-|         | RNL-rnl_sum | 60000 |
+|         | RNL-rnl_sum | 51000 |
 |         | MKL-cblas_dasum | 56000 |
 |         | RNL-rnl_sum | 89000 |
 | Dot product | MKL-cblas_sdot | 71000 |
-|        | RNL-f32dot | 110000 | 
+|        | RNL-rnl_dot | 110000 | 
 | Norm | MKL-cblas_snrm2 | 129000 |
-|           | RNL- f32nrm2 | 85000 |
+|           | RNL- rnl_nrm2 | 67000 |
 | Vector-scalar product and adds | MKL- cblas_saxpy | 266000 |
-|          | RNL-f32axpy | 34000 | 
+|          | RNL-rnl_axpy | 15000 | 
 | Swap | MKL-cblas_sswap | 147000 | 
-|           | RNL-f32swap | 61000 | 
+|           | RNL-rnl_swap | 21000 | 
 | Rotation | MKL-cblas_srot | 618000 |
-|          | RNL-f32rot | 34000 | 
+|          | RNL-rnl_rot | 28000 | 
 | Scale | MKL_cblas-sscal | 493000 | 
-|          | RNL-f32scal | 57000 | 
+|          | RNL-rnl_scal | 57000 | 
 | Max | MKL_cblas-isamax | 2000 |
-|         | RNL-f32max | 1000 |
+|         | RNL-rnl_max | 1000 |
 | Min  | MKL_cblas_isamin | 1000 | 
-|         | RNL-f32min | 1000 | 
+|         | RNL-rnl_min | 1000 | 
 
 (Updating...)
 
