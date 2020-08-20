@@ -2,8 +2,6 @@ extern crate rand;
 extern crate time;
 extern crate libc;
 extern crate rayon;
-extern crate rustc_cfg;
-
 mod lib;
 //import all the simd_operator
 use lib::simd_operator::*;
@@ -120,9 +118,9 @@ fn main() {
     println!("");
 
     //this is only for test
-    rnl_sin(&mut f32a);
-    rnl_nrm2(&f32a,16);
     rnl_dot(&f32a,&f32b,16);
+    rnl_sum(&f32a,16);
+    rnl_sum(&f64a,8);
     time::now();
     println!("--------------------------------RNL---------------------------------------------");
     
@@ -155,18 +153,19 @@ fn main() {
 
     println!("--------------------------------rnl_sum----------------------------------------");
 
-    let start0 = time::now();
-    let rnl_sum1 = rnl_sum(&f32a,16);
-    let end0 = time::now();
+    let start = time::now();
+    let rnl_sum0 = rnl_sum(&f32a,8);
+    let end = time::now();
     //println!("result is:{:?}", &rnl_sum);
-    println!("{:?}",end0-start0);    
+    println!("{:?}",end-start);   
+
     println!("--------------------------------rnl_sum2----------------------------------------");
 
-    let start0 = time::now();
-    let rnl_sum1 = rnl_sum(&f64a,8);
-    let end0 = time::now();
+    let start = time::now();
+    let rnl_sum0 = rnl_sum(&f64a,8);
+    let end = time::now();
     //println!("result is:{:?}", &rnl_sum);
-    println!("{:?}",end0-start0);
+    println!("{:?}",end-start);
 
     println!("--------------------------------rnl_sin-----------------------------------------");
 
@@ -175,7 +174,7 @@ fn main() {
     let end = time::now();
     //println!("result of simd sin is:{:?}", &f32a);
     println!("{:?}",end-start);
-
+ 
     println!("--------------------------------rnl_cos-----------------------------------------");
 
     let start = time::now();

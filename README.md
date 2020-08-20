@@ -15,6 +15,8 @@ This is a library for fast numerical evaluation.This library using packed_simd a
 
 To use the API of MKL, users should find the location of mkl library on his system, and paste it into "mkl_path" in build.rs.
 
+Use command "cargo run --release" to speed up the performance.
+
 
 **Here are some screenshots of comparation of the performances between this library(RNL) and Intel-MKL**
 
@@ -146,7 +148,7 @@ RNL-f32swap:
 |         | rnl_sub(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Array a sub array b, store the result in array a |
 |         | rnl_sub(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a sub array b, store the result in array a |
 | Product | rnl_mul(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a product array b, store the result in array a  |
-|               | rnl_mut(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a product array b, store the result in array a |
+|               | rnl_mul(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a product array b, store the result in array a |
 |               | rnl_mul(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Array a product array b, store the result in array a |
 |               | rnl_mul(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Array a product array b, store the result in array a |
 |               | rnl_mul(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Array a product array b, store the result in array a |
@@ -158,18 +160,7 @@ RNL-f32swap:
 |               | rnl_mul(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a product array b, store the result in array a |
 | Div | rnl_div(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a div array b, store the result in array a  |
 |        | rnl_div(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a div array b, store the result in array a |
-| Mod | rnl_mod(a: &mut Vec\<f32\>, b: &Vec\<f32\>) | Array a mod array b, store the result in array a  |
-|         | rnl_mod(a: &mut Vec\<f64\>, b: &Vec\<f64\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<u8\>, b: &Vec\<u8\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<u16\>, b: &Vec\<u16\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<u32\>, b: &Vec\<u32\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<u64\>, b: &Vec\<u64\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<i8\>, b: &Vec\<i8\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<i16\>, b: &Vec\<i16\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<i32\>, b: &Vec\<i32\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<i64\>, b: &Vec\<i64\>) | Array a mod array b, store the result in array a |
-|         | rnl_mod(a: &mut Vec\<usize\>, b: &Vec\<usize\>) | Array a mod array b, store the result in array a |
-| SIn | rnl_sin(a: &mut Vec\<f32\>) | Do sin() operation for each element in array a  |
+| Sin | rnl_sin(a: &mut Vec\<f32\>) | Do sin() operation for each element in array a  |
 |        | rnl_sin(a: &mut Vec\<f64\>) | Do sin() operation for each element in array a |
 | Cos | rnl_cos(a: &mut Vec\<f32\>) | Do cos() operation for each element in array a  |
 |        | rnl_cos(a: &mut Vec\<f64\>) | Do cos() operation for each element in array a |
@@ -190,7 +181,7 @@ RNL-f32swap:
 |         | rnl_max(a: &Vec\<i32\>) | Find the maximum element in the i32 array |
 |         | rnl_max(a: &Vec\<i32\>) | Find the maximum element in the i32 array |
 |         | rnl_max(a: &Vec\<usize\>) | Find the maximum element in the usize array |
-| MIn | rnl_min(a: &Vec\<f32\>) | Find the minimum element in the f32 array  |
+| Min | rnl_min(a: &Vec\<f32\>) | Find the minimum element in the f32 array  |
 |        | rnl_min(a: &Vec\<f64\>) | Find the minimum element in the f64 array |
 |        | rnl_min(a: &Vec\<u8\>) | Find the minimum element in the u8 array |
 |        | rnl_min(a: &Vec\<u16\>) | Find the minimum element in the u16 array |
