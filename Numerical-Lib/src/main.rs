@@ -120,7 +120,6 @@ fn main() {
     //this is only for test
     rnl_dot(&f32a,&f32b,16);
     rnl_sum(&f32a,16);
-    rnl_sum(&f64a,8);
     time::now();
     println!("--------------------------------RNL---------------------------------------------");
     
@@ -154,10 +153,11 @@ fn main() {
     println!("--------------------------------rnl_sum----------------------------------------");
 
     let start = time::now();
-    let rnl_sum0 = rnl_sum(&f32a,8);
+    let rnl_sum0 = rnl_sum(&f32a,16);
     let end = time::now();
     //println!("result is:{:?}", &rnl_sum);
-    println!("{:?}",end-start);   
+    println!("{:?}",end-start);
+
 
     println!("--------------------------------rnl_sum2----------------------------------------");
 
@@ -264,14 +264,6 @@ fn main() {
     //println!("result of simd div is:{:?}", &f32a);
     println!("{:?}",end-start);
     
-    println!("--------------------------------rnl_mod-----------------------------------------");
-
-    let start = time::now();
-    rnl_mod(&mut f32a,&f32b);
-    let end = time::now();
-    //println!("result of simd mod is:{:?}", &f32a);
-    println!("{:?}",end-start);
-
     println!("--------------------------------rnl_copy----------------------------------------");
 
     let start = time::now();

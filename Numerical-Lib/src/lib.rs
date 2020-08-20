@@ -1724,6 +1724,7 @@ impl RNLsum<u8,i32> for Vec<i32>{
                     .map(i32x16::from_slice_unaligned) 
                     .sum::<i32x16>()
                     .wrapping_sum()
+
             },
             8 => {
                 self.par_chunks(8) 
