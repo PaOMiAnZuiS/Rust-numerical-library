@@ -34,8 +34,8 @@ fn main() {
 
     let input = 4.0;
     
-    //let output = unsafe { MKL_cblas_dasum(input) };
-    //println!("{}", output);
+    let output = unsafe { MKL_cblas_dasum(input) };
+    println!("{}", output);
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
@@ -119,7 +119,6 @@ fn main() {
 
     //this is only for test
     rnl_dot(&f32a,&f32b,16);
-    rnl_sum(&f32a,16);
     time::now();
     println!("--------------------------------RNL---------------------------------------------");
     
