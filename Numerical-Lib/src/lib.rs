@@ -1,5 +1,3 @@
-extern crate rayon;
-
 pub mod simd_operator{
 use packed_simd::*;
 use rayon::prelude::*;
@@ -637,9 +635,9 @@ impl RNLcopy<Vec<f32>> for Vec<f32>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -650,9 +648,9 @@ impl RNLcopy<Vec<f64>> for Vec<f64>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -663,9 +661,9 @@ impl RNLcopy<Vec<u8>> for Vec<u8>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -676,9 +674,9 @@ impl RNLcopy<Vec<u16>> for Vec<u16>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -689,9 +687,9 @@ impl RNLcopy<Vec<u32>> for Vec<u32>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -702,9 +700,9 @@ impl RNLcopy<Vec<u64>> for Vec<u64>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -715,9 +713,9 @@ impl RNLcopy<Vec<i8>> for Vec<i8>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -728,9 +726,9 @@ impl RNLcopy<Vec<i16>> for Vec<i16>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -741,9 +739,9 @@ impl RNLcopy<Vec<i32>> for Vec<i32>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -754,9 +752,9 @@ impl RNLcopy<Vec<i64>> for Vec<i64>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 
@@ -767,9 +765,9 @@ impl RNLcopy<Vec<usize>> for Vec<usize>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other) {
-            *ai = *bi;
-        }
+        self.par_iter_mut()
+            .zip(other.par_iter())
+            .for_each(|(a,b)| *a = *b);
     }
 }
 

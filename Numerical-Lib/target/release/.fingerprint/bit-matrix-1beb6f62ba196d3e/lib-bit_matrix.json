@@ -1,0 +1,1 @@
+{"rustc":1392210074234315346,"features":"[\"default\", \"std\"]","target":14763169277179734448,"profile":15100687797727999414,"path":3517281957053957195,"deps":[[17887852849433168551,"bit_vec",false,2163419999303041387]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/bit-matrix-1beb6f62ba196d3e/dep-lib-bit_matrix"}}],"rustflags":[],"metadata":5229617364368281228}
