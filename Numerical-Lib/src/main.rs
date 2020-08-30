@@ -271,15 +271,6 @@ fn main() {
     
     println!("--------------------------------rnl_copy----------------------------------------");
 
-    //println!("result is:{:?}", &f32a);
-    //println!("result is:{:?}", &f32b);
-    let start = time::now();
-    f32a.par_iter_mut()
-        .zip(f32b.par_iter())
-        .for_each(|(a,b)| *a = *b);
-    let end = time::now();
-    println!("{:?}",end-start);
-    //println!("result is:{:?}", &f32a);
     let start = time::now();
     rnl_copy(&mut f32a, &f32b);
     let end = time::now();

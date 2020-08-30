@@ -874,9 +874,9 @@ impl RNLaxpy<Vec<f32>,f32> for Vec<f32>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other0) {
-            *ai = *bi * other1;
-        }
+        self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
     }
 }
 
@@ -887,9 +887,126 @@ impl RNLaxpy<Vec<f64>,f64> for Vec<f64>{
             panic!("The length of input arrays must be same");
         }
 
-        for (ai, bi) in self.iter_mut().zip(other0) {
-            *ai = *bi * other1;
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<i8>,i8> for Vec<i8>{
+    fn rnlaxpy(&mut self, other0: &Vec<i8>, other1: i8){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
         }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<u8>,u8> for Vec<u8>{
+    fn rnlaxpy(&mut self, other0: &Vec<u8>, other1: u8){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<i16>,i16> for Vec<i16>{
+    fn rnlaxpy(&mut self, other0: &Vec<i16>, other1: i16){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<u16>,u16> for Vec<u16>{
+    fn rnlaxpy(&mut self, other0: &Vec<u16>, other1: u16){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<i32>,i32> for Vec<i32>{
+    fn rnlaxpy(&mut self, other0: &Vec<i32>, other1: i32){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<u32>,u32> for Vec<u32>{
+    fn rnlaxpy(&mut self, other0: &Vec<u32>, other1: u32){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<i64>,i64> for Vec<i64>{
+    fn rnlaxpy(&mut self, other0: &Vec<i64>, other1: i64){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<u64>,u64> for Vec<u64>{
+    fn rnlaxpy(&mut self, other0: &Vec<u64>, other1: u64){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+impl RNLaxpy<Vec<usize>,usize> for Vec<usize>{
+    fn rnlaxpy(&mut self, other0: &Vec<usize>, other1: usize){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+         self.par_iter_mut()
+            .zip(other0.par_iter())
+            .for_each(|(a,b)| *a = *a + *b * other1);
     }
 }
 
@@ -919,6 +1036,132 @@ impl RNLrot<Vec<f32>,f32,f32> for Vec<f32>{
 
 impl RNLrot<Vec<f64>,f64,f64> for Vec<f64>{
     fn rnlrot(&mut self,  other0: &mut Vec<f64>, other1: f64, other2: f64){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<i8>,i8,i8> for Vec<i8>{
+    fn rnlrot(&mut self,  other0: &mut Vec<i8>, other1: i8, other2: i8){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<u8>,u8,u8> for Vec<u8>{
+    fn rnlrot(&mut self,  other0: &mut Vec<u8>, other1: u8, other2: u8){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<i16>,i16,i16> for Vec<i16>{
+    fn rnlrot(&mut self,  other0: &mut Vec<i16>, other1: i16, other2: i16){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<u16>,u16,u16> for Vec<u16>{
+    fn rnlrot(&mut self,  other0: &mut Vec<u16>, other1: u16, other2: u16){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<i32>,i32,i32> for Vec<i32>{
+    fn rnlrot(&mut self,  other0: &mut Vec<i32>, other1: i32, other2: i32){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<u32>,u32,u32> for Vec<u32>{
+    fn rnlrot(&mut self,  other0: &mut Vec<u32>, other1: u32, other2: u32){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<i64>,i64,i64> for Vec<i64>{
+    fn rnlrot(&mut self,  other0: &mut Vec<i64>, other1: i64, other2: i64){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<u64>,u64,u64> for Vec<u64>{
+    fn rnlrot(&mut self,  other0: &mut Vec<u64>, other1: u64, other2: u64){
+        //if length of a and b are not equal, return false
+        if self.len() != other0.len(){
+            panic!("The length of input arrays must be same");
+        }
+
+        for (ai, bi) in self.iter_mut().zip(other0) {
+            *ai = other1 * *ai + *bi * other2;
+            *bi = *bi * other1 - other2 * *ai;
+        }
+    }
+}
+
+impl RNLrot<Vec<usize>,usize,usize> for Vec<usize>{
+    fn rnlrot(&mut self,  other0: &mut Vec<usize>, other1: usize, other2: usize){
         //if length of a and b are not equal, return false
         if self.len() != other0.len(){
             panic!("The length of input arrays must be same");
