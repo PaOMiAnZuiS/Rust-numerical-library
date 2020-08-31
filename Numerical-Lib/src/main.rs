@@ -33,7 +33,7 @@ fn main() {
     
     // let output = unsafe { MKL_cblas_dasum(input) };
     //println!("{}", output);
-    let n = 10000000;
+    let n = 96;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input
@@ -296,14 +296,10 @@ fn main() {
 
     println!("--------------------------------rnl_swap----------------------------------------");
 
-    f32a.par_iter_mut()
-        .zip(f32b.par_iter_mut())
-        .for_each(|(a,b)| *a = *b);
+
     let start = time::now();
     rnl_swap(&mut f32a, &mut f32b);
     let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
 
 

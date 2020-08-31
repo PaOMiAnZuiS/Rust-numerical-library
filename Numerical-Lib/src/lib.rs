@@ -1192,9 +1192,8 @@ impl RNLswap<Vec<f32>> for Vec<f32>{
         }
 
         for (ai, bi) in self.iter_mut().zip(other0) {
-            let ac = ai.clone();
             *ai = *bi;  
-            *bi = ac;  
+            *bi = *ai;  
         }
     }
 }
