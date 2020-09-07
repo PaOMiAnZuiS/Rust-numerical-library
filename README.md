@@ -13,9 +13,7 @@ This is a library for fast numerical evaluation.This library using packed_simd a
 
 ***Hint:***
 
-To use the API of MKL, users should find the location of mkl library on his system, and paste it into "mkl_path" in build.rs.
-
-Use command "cargo run --release" to speed up the performance.
+The optimazation level have been set to 3 for both release and dev mode.
 
 
 **Here are some screenshots of comparation of the performances between this library(RNL) and Intel-MKL**
