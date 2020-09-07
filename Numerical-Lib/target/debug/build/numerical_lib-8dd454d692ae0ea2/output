@@ -27,16 +27,7 @@ cargo:warning=                                                ^
 cargo:warning=src/main.c:22:12: warning: unused variable 'result2' [-Wunused-variable]
 cargo:warning=    double result2 = cblas_sasum(5,&float_a,0);
 cargo:warning=           ^
-cargo:warning=src/main.c:26:32: warning: unused parameter 'input' [-Wunused-parameter]
-cargo:warning=struct Array copy_input(double input, int len){
-cargo:warning=                               ^
-cargo:warning=src/main.c:26:43: warning: unused parameter 'len' [-Wunused-parameter]
-cargo:warning=struct Array copy_input(double input, int len){
-cargo:warning=                                          ^
-cargo:warning=src/main.c:28:1: warning: non-void function does not return a value [-Wreturn-type]
-cargo:warning=}
-cargo:warning=^
-cargo:warning=6 warnings generated.
+cargo:warning=3 warnings generated.
 exit code: 0
 AR_x86_64-apple-darwin = None
 AR_x86_64_apple_darwin = None

@@ -54,10 +54,11 @@ pub fn rnl_cos<T:RNLcos>(a:&mut T){
 }
 
 
-//---------rnl_tan---------
+//---------rnl_tan---------i
 pub trait RNLtan{
     fn rnltan(&mut self);
 }
+
 
 impl RNLtan for Vec<f32>{
     fn rnltan(&mut self){
@@ -1192,8 +1193,9 @@ impl RNLswap<Vec<f32>> for Vec<f32>{
         }
 
         for (ai, bi) in self.iter_mut().zip(other0) {
+            let ac = ai.clone();
             *ai = *bi;  
-            *bi = *ai;  
+            *bi = ac;  
         }
     }
 }

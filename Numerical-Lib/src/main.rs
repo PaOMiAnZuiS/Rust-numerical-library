@@ -8,7 +8,6 @@ use rayon::prelude::*;
 extern "C" {
     //fn double_input(input: libc::c_double) -> libc::c_double;
     fn third_input(input: Array) -> f64;
-    fn MKL_cblas_dasum(input: libc::c_double) -> libc::c_double;
 }
 
 struct Array{
@@ -29,14 +28,11 @@ fn main() {
     //let output = unsafe { third_input(arr) };
     //println!("Input first input:{} The third input:{}", input[0], output);
 
-    let input = 4.0;
-    
-    // let output = unsafe { MKL_cblas_dasum(input) };
-    //println!("{}", output);
+    let input = 4.0; 
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
-    //generate two vec to store the input
+    //generate vecs to store the input
     let mut f32a = vec![];
     let mut f32b = vec![];
     let mut f64a = vec![];
@@ -117,7 +113,6 @@ fn main() {
     //this is only for test
     rnl_dot(&f32a,&f32b,16);
     rnl_sum(&f32a,16);
-    time::now();
     println!("--------------------------------RNL---------------------------------------------");
     
     println!("");
