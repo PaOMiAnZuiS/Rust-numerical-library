@@ -35,7 +35,7 @@ RNL-f32swap:
 | Function | library | TImes(nanos) | 
 | ---------- | ------- | --------------- |  
 | Sum | MKL-cblas_sasum | 26000 |
-|         | RNL-rnl_sum | 47000 |
+|         | RNL-rnl_sum | 39000 |
 |         | MKL-cblas_dasum | 56000 |
 |         | RNL-rnl_sum | 61000 |
 | Dot product | MKL-cblas_sdot | 80000 |
@@ -48,16 +48,21 @@ RNL-f32swap:
 |           | RNL-rnl_swap | 21000 | 
 | Rotation | MKL-cblas_srot | 618000 |
 |          | RNL-rnl_rot | 28000 | 
-| Scale | MKL_cblas-sscal | 493000 | 
+| Scale | MKL_cblas-sscal | 373000 | 
 |          | RNL-rnl_scal | 57000 | 
 | Max | MKL_cblas-isamax | 2000 |
 |         | RNL-rnl_max | 1000 |
-| Min  | MKL_cblas_isamin | 1000 | 
+| Min  | MKL_cblas-isamin | 1000 | 
 |         | RNL-rnl_min | 1000 | 
+| Add  | MKL_vsAdd | 216000 | 
+|         | RNL-rnl_add | 72000 | 
+| Sin  | MKL_vsSin | 2150000 | 
+|         | RNL-rnl_sin | 185000 | 
+| Copy  | MKL_cblas_scopy | 507000 | 
+|         | RNL-rnl_copy | 68000 | 
+
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-MKL-Compare.png)
-
-(Updating...)
 
 ***Document:***
 

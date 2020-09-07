@@ -33,7 +33,7 @@ fn main() {
     
     // let output = unsafe { MKL_cblas_dasum(input) };
     //println!("{}", output);
-    let n = 96;
+    let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
     //generate two vec to store the input
@@ -115,8 +115,8 @@ fn main() {
     println!("");
 
     //this is only for test
-    //rnl_dot(&f32a,&f32b,16);
-    //rnl_sum(&f32a,16);
+    rnl_dot(&f32a,&f32b,16);
+    rnl_sum(&f32a,16);
     time::now();
     println!("--------------------------------RNL---------------------------------------------");
     
@@ -218,7 +218,7 @@ fn main() {
     let start = time::now();
     let x = rnl_max(&u32a);
     let end = time::now();
-    println!("result is:{:?}", &x);
+    //println!("result is:{:?}", &x);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_min----------------------------------------");
@@ -292,14 +292,6 @@ fn main() {
     let end = time::now();
     //println!("result is:{:?}", &f32a);
     //println!("result is:{:?}", &f32b);
-    println!("{:?}",end-start);
-
-    println!("--------------------------------rnl_swap----------------------------------------");
-
-
-    let start = time::now();
-    rnl_swap(&mut f32a, &mut f32b);
-    let end = time::now();
     println!("{:?}",end-start);
 
 
