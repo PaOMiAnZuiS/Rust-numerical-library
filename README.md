@@ -62,7 +62,7 @@ RNL-f32swap:
 
 ![image](https://github.com/PaOMiAnZuiS/Rust-numerical-library/blob/master/IMG/RNL-MKL-Compare.png)
 
-***Document:***
+***Documentation:***
 
 | Operation | Function | Description |
 | ----------- | ----------- | ------------ |

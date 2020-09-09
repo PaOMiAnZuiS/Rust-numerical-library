@@ -23,6 +23,13 @@ impl RNLsin for Vec<f64>{
     }
 }
 
+//error handling
+impl RNLsin for [f32;0]{
+    fn rnlsin(&mut self){
+        panic!("The input vector cannot be empty!");
+    }
+}
+
 pub fn rnl_sin<T:RNLsin>(a:&mut T){
     a.rnlsin()
 }
@@ -46,6 +53,13 @@ impl RNLcos for Vec<f64>{
         self.par_iter_mut()
             .for_each(|a| *a = a.cos());
 
+    }
+}
+
+//error handling
+impl RNLcos for [f32;0]{
+    fn rnlcos(&mut self){
+        panic!("The input vector cannot be empty!");
     }
 }
 
@@ -76,6 +90,13 @@ impl RNLtan for Vec<f64>{
     }
 }
 
+//error handling
+impl RNLtan for [f32;0]{
+    fn rnltan(&mut self){
+        panic!("The input vector cannot be empty!");
+    }
+}
+
 pub fn rnl_tan<T:RNLtan>(a:&mut T){
     a.rnltan()
 }
@@ -98,6 +119,13 @@ impl RNLcot for Vec<f64>{
         self.par_iter_mut()
             .for_each(|a| *a = a.cos()/a.sin());
 
+    }
+}
+
+//error handling
+impl RNLcot for [f32;0]{
+    fn rnlcot(&mut self){
+        panic!("The input vector cannot be empty!");
     }
 }
 
@@ -124,6 +152,13 @@ impl RNLexp for Vec<f64>{
         self.par_iter_mut()
             .for_each(|a| *a = a.exp());
 
+    }
+}
+
+//error handling
+impl RNLexp for [f32;0]{
+    fn rnlexp(&mut self){
+        panic!("The input vector cannot be empty!");
     }
 }
 
@@ -280,7 +315,14 @@ impl RNLadd<Vec<usize>> for Vec<usize>{
     }
 }
 
-pub fn rnl_add<T:RNLadd<T>>(a:&mut T, b: &T){
+//error handling
+impl RNLadd<[f32;0]> for [f32;0]{
+    fn rnladd(&mut self, _other: &[f32;0]){
+        panic!("The input arrays cannot be empty");
+    }
+}
+
+pub fn rnl_add<T:RNLadd<T> + PartialOrd>(a:&mut T, b: &T){
     a.rnladd(b)
 }
 
@@ -429,6 +471,13 @@ impl RNLsub<Vec<usize>> for Vec<usize>{
         for (ai, bi) in self.iter_mut().zip(other) {
             *ai -= *bi;
         }
+    }
+}
+
+//error handling
+impl RNLsub<[f32;0]> for [f32;0]{
+    fn rnlsub(&mut self, _other: &[f32;0]){
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -584,6 +633,13 @@ impl RNLmul<Vec<usize>> for Vec<usize>{
     }
 }
 
+//error handling
+impl RNLmul<[f32;0]> for [f32;0]{
+    fn rnlmul(&mut self, _other: &[f32;0]){
+        panic!("The input arrays cannot be empty");
+    }
+}
+
 pub fn rnl_mul<T:RNLmul<T>>(a:&mut T, b: &T){
     a.rnlmul(b)
 }
@@ -617,6 +673,13 @@ impl RNLdiv<Vec<f64>> for Vec<f64>{
         for (ai, bi) in self.iter_mut().zip(other) {
             *ai = *ai / *bi;
         }
+    }
+}
+
+//error handling
+impl RNLdiv<[f32;0]> for [f32;0]{
+    fn rnldiv(&mut self, _other: &[f32;0]){
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -772,6 +835,13 @@ impl RNLcopy<Vec<usize>> for Vec<usize>{
     }
 }
 
+//error handling
+impl RNLcopy<[f32;0]> for [f32;0]{
+    fn rnlcopy(&mut self, _other: &[f32;0]){
+        panic!("The input arrays cannot be empty");
+    }
+}
+
 pub fn rnl_copy<T:RNLcopy<T>>(a:&mut T, b: &T){
     a.rnlcopy(b)
 }
@@ -855,6 +925,13 @@ impl RNLscal<usize> for Vec<usize>{
     fn rnlscal(&mut self,other: usize){
         self.par_iter_mut()
             .for_each(|a| *a = *a * other);
+    }
+}
+
+//error handling
+impl RNLscal<[f32;0]> for [f32;0]{
+    fn rnlscal(&mut self, _other: [f32;0]){
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -1008,6 +1085,13 @@ impl RNLaxpy<Vec<usize>,usize> for Vec<usize>{
          self.par_iter_mut()
             .zip(other0.par_iter())
             .for_each(|(a,b)| *a = *a + *b * other1);
+    }
+}
+
+//error handling
+impl RNLaxpy<[f32;0], usize> for [f32;0]{
+    fn rnlaxpy(&mut self, _other0: &[f32;0], _other1: usize){
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -1175,6 +1259,13 @@ impl RNLrot<Vec<usize>,usize,usize> for Vec<usize>{
     }
 }
 
+//error handling
+impl RNLrot<[f32;0], usize, usize> for [f32;0]{
+    fn rnlrot(&mut self, _other0: &mut [f32;0], _other1: usize, _other2:usize){
+        panic!("The input arrays cannot be empty");
+    }
+}
+
 pub fn rnl_rot<T:RNLrot<T,U,U>, U:std::ops::Mul>(a:&mut T, b: &mut T, c:U, s:U){
     a.rnlrot(b,c,s)
 }
@@ -1244,6 +1335,7 @@ impl RNLswap<Vec<u16>> for Vec<u16>{
         }
     }
 }
+
 impl RNLswap<Vec<u32>> for Vec<u32>{
     fn rnlswap(&mut self,  other0: &mut Vec<u32>){
         //if length of a and b are not equal, return false
@@ -1258,6 +1350,7 @@ impl RNLswap<Vec<u32>> for Vec<u32>{
         }
     }
 }
+
 impl RNLswap<Vec<u64>> for Vec<u64>{
     fn rnlswap(&mut self,  other0: &mut Vec<u64>){
         //if length of a and b are not equal, return false
@@ -1272,6 +1365,7 @@ impl RNLswap<Vec<u64>> for Vec<u64>{
         }
     }
 }
+
 impl RNLswap<Vec<i8>> for Vec<i8>{
     fn rnlswap(&mut self,  other0: &mut Vec<i8>){
         //if length of a and b are not equal, return false
@@ -1301,6 +1395,7 @@ impl RNLswap<Vec<i16>> for Vec<i16>{
         }
     }
 }
+
 impl RNLswap<Vec<i32>> for Vec<i32>{
     fn rnlswap(&mut self,  other0: &mut Vec<i32>){
         //if length of a and b are not equal, return false
@@ -1315,6 +1410,7 @@ impl RNLswap<Vec<i32>> for Vec<i32>{
         }
     }
 }
+
 impl RNLswap<Vec<i64>> for Vec<i64>{
     fn rnlswap(&mut self,  other0: &mut Vec<i64>){
         //if length of a and b are not equal, return false
@@ -1329,6 +1425,7 @@ impl RNLswap<Vec<i64>> for Vec<i64>{
         }
     }
 }
+
 impl RNLswap<Vec<usize>> for Vec<usize>{
     fn rnlswap(&mut self,  other0: &mut Vec<usize>){
         //if length of a and b are not equal, return false
@@ -1343,6 +1440,14 @@ impl RNLswap<Vec<usize>> for Vec<usize>{
         }
     }
 }
+
+//error handling
+impl RNLswap<[f32;0]> for [f32;0]{
+    fn rnlswap(&mut self, _other0: &mut [f32;0]){
+        panic!("The input arrays cannot be empty");
+    }
+}
+
 pub fn rnl_swap<T:RNLswap<T>>(a:&mut T, b: &mut T){
     a.rnlswap(b)
 }
@@ -1424,6 +1529,7 @@ impl RNLmax<u64> for Vec<u64>{
         x
     }
 }
+
 impl RNLmax<i8> for Vec<i8>{
     fn rnlmax(&self) -> i8{
         let mut x:i8  = self[0];
@@ -1481,6 +1587,13 @@ impl RNLmax<usize> for Vec<usize>{
             }
         }
         x
+    }
+}
+
+//error handling
+impl RNLmax<f32> for [f32;0]{
+    fn rnlmax(&self) -> f32{
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -1622,6 +1735,13 @@ impl RNLmin<usize> for Vec<usize>{
             }
         }
         x
+    }
+}
+
+//error handling
+impl RNLmin<f32> for [f32;0]{
+    fn rnlmin(&self) -> f32{
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -2040,6 +2160,13 @@ impl RNLsum<u8,i128> for Vec<i128>{
                 panic!("The width of simd type not exist");
             }
         }
+    }
+}
+
+//error handling
+impl RNLsum<u8,f32> for [f32;0]{
+    fn rnlsum(&self, _other0: u8) -> f32{
+        panic!("The input arrays cannot be empty");
     }
 }
 
@@ -2530,6 +2657,14 @@ impl RNLdot<Vec<usize>,u8,usize> for Vec<usize>{
         }
     }
 }
+
+//error handling
+impl RNLdot<[f32;0],u8,f32> for [f32;0]{
+    fn rnldot(&self, _other0: &[f32;0], _other1: u8) -> f32{
+        panic!("The input arrays cannot be empty");
+    }
+}
+
 pub fn rnl_dot<T:RNLdot<T,U,V>,U,V>(a:&T, b:&T, c:U) -> V{
     a.rnldot(b,c)
 }
@@ -2613,6 +2748,13 @@ impl RNLnrm2<u8,f64> for Vec<f64>{
                 panic!("The width of simd type not exist");
             }
         }
+    }
+}
+
+//error handling
+impl RNLnrm2<u8,f32> for [f32;0]{
+    fn rnlnrm2(&self, _other1: u8) -> f32{
+        panic!("The input arrays cannot be empty");
     }
 }
 

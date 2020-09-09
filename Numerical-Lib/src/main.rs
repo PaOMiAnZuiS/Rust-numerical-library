@@ -4,31 +4,9 @@ use lib::simd_operator::*;
 use rand::Rng;
 use libc::size_t;
 use rayon::prelude::*;
-#[link(name = "MKL-Rust")]
-extern "C" {
-    //fn double_input(input: libc::c_double) -> libc::c_double;
-    fn third_input(input: Array) -> f64;
-}
-
-struct Array{
-   pointer: *const f64,
-   length: size_t,
-}
 
 fn main() {
 
-    println!("--------------------------------MKL---------------------------------------------");
-    
-    let input  = [1000.0, 2.0, 3.4, 7.0, 50.0];
-    let inputslice = &input[0] as *const f64;
-    let arr = Array{
-        pointer: inputslice,
-        length:5,
-    };
-    //let output = unsafe { third_input(arr) };
-    //println!("Input first input:{} The third input:{}", input[0], output);
-
-    let input = 4.0; 
     let n = 100000;
     //generate the random seed
     let mut rng =rand::thread_rng();
@@ -122,41 +100,34 @@ fn main() {
     let start = time::now();
     rnl_swap(&mut f32a, &mut f32b);
     let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
     
     println!("--------------------------------rnl_dot-----------------------------------------");
 
     let start = time::now();
-    let rnl_dot = rnl_dot(&f32a,&f32b,16);
+    rnl_dot(&f32a,&f32b,16);
     let end = time::now();
-    //println!("result is:{:?}", &rnl_dot);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_nrm2----------------------------------------");
 
     let start = time::now();
-    let rnl_nrm = rnl_nrm2(&f32a,16);
+    rnl_nrm2(&f32a,16);
     let end = time::now();
-    //println!("result is:{:?}", &f32nrm);
     println!("{:?}",end-start);  
 
     println!("--------------------------------rnl_sum----------------------------------------");
 
     let start = time::now();
-    let rnl_sum0 = rnl_sum(&f32a,16);
+    rnl_sum(&f32a,16);
     let end = time::now();
-    //println!("result is:{:?}", &rnl_sum);
     println!("{:?}",end-start);
-
 
     println!("--------------------------------rnl_sum2----------------------------------------");
 
     let start = time::now();
-    let rnl_sum0 = rnl_sum(&f64a,8);
+    rnl_sum(&f64a,8);
     let end = time::now();
-    //println!("result is:{:?}", &rnl_sum);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_sin-----------------------------------------");
@@ -164,7 +135,6 @@ fn main() {
     let start = time::now();
     rnl_sin(&mut f32a);
     let end = time::now();
-    //println!("result of simd sin is:{:?}", &f32a);
     println!("{:?}",end-start);
  
     println!("--------------------------------rnl_cos-----------------------------------------");
@@ -172,7 +142,6 @@ fn main() {
     let start = time::now();
     rnl_cos(&mut f32a);
     let end = time::now();
-    //println!("result of simd cos is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_tan-----------------------------------------");
@@ -180,7 +149,6 @@ fn main() {
     let start = time::now();
     rnl_tan(&mut f32a);
     let end = time::now();
-    //println!("result of simd tan is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_cot-----------------------------------------");
@@ -188,7 +156,6 @@ fn main() {
     let start = time::now();
     rnl_cot(&mut f32a);
     let end = time::now();
-    //println!("result of simd cot is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_exp-----------------------------------------");
@@ -196,7 +163,6 @@ fn main() {
     let start = time::now();
     rnl_exp(&mut f32a);
     let end = time::now();
-    //println!("result of simd exp is:{:?}", &f32a);
     println!("{:?}",end-start);
 
 
@@ -205,23 +171,20 @@ fn main() {
     let start = time::now();
     rnl_scal(&mut f32a,2.0);
     let end = time::now();
-    //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_max----------------------------------------");
 
     let start = time::now();
-    let x = rnl_max(&u32a);
+    rnl_max(&f32a);
     let end = time::now();
-    //println!("result is:{:?}", &x);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_min----------------------------------------");
 
     let start = time::now();
-    let x = rnl_min(&f32a);
+    rnl_min(&f32a);
     let end = time::now();
-    //println!("result is:{:?}", &x);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_add-----------------------------------------");
@@ -230,14 +193,12 @@ fn main() {
     let ADD = f32a.par_iter()
         .zip(f32b.par_iter())
         .map(|(a,b)| *a + *b);
-    let DDD: Vec<_> = ADD.collect();
+    let result: Vec<_> = ADD.collect();
     let end = time::now();
     println!("Performance of parallel add:{:?} nanos",end-start); 
-    //println!("{:?}",DDD);
     let start = time::now();
     rnl_add(&mut f32a,&f32b);
     let end = time::now();
-    ///println!("result is:{:?}", &f32a);
     println!("Performance of not parallel add:{:?} nanos",end-start); 
 
     println!("--------------------------------rnl_sub-----------------------------------------");
@@ -245,7 +206,6 @@ fn main() {
     let start = time::now();
     rnl_sub(&mut f32a,&f32b);
     let end = time::now();
-    //println!("result of simd sub is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_mul-----------------------------------------");
@@ -253,7 +213,6 @@ fn main() {
     let start = time::now();
     rnl_mul(&mut f32a,&f32b);
     let end = time::now();
-    //println!("result of simd pro is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_div-----------------------------------------");
@@ -261,7 +220,6 @@ fn main() {
     let start = time::now();
     rnl_div(&mut f32a,&f32b);
     let end = time::now();
-    //println!("result of simd div is:{:?}", &f32a);
     println!("{:?}",end-start);
     
     println!("--------------------------------rnl_copy----------------------------------------");
@@ -269,7 +227,6 @@ fn main() {
     let start = time::now();
     rnl_copy(&mut f32a, &f32b);
     let end = time::now();
-    //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_axpy----------------------------------------");
@@ -277,7 +234,6 @@ fn main() {
     let start = time::now();
     rnl_axpy(&mut f32a, &f32b, 10.0);
     let end = time::now();
-    //println!("result is:{:?}", &f32a);
     println!("{:?}",end-start);
 
     println!("--------------------------------rnl_rot----------------------------------------");
@@ -285,8 +241,6 @@ fn main() {
     let start = time::now();
     rnl_rot(&mut f32a, &mut f32b, 2.0, 3.0);
     let end = time::now();
-    //println!("result is:{:?}", &f32a);
-    //println!("result is:{:?}", &f32b);
     println!("{:?}",end-start);
 
 
