@@ -2,7 +2,6 @@ mod lib;
 //import all the simd_operator
 use lib::simd_operator::*;
 use rand::Rng;
-use libc::size_t;
 use rayon::prelude::*;
 
 fn main() {
