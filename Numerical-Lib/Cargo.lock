@@ -230,21 +230,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "numerical_lib"
-version = "0.1.0"
-dependencies = [
- "cargo-emit",
- "cc",
- "cfg",
- "libc",
- "packed_simd",
- "rand",
- "rayon",
- "rustc-cfg",
- "time",
-]
-
-[[package]]
 name = "object"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -353,6 +338,21 @@ dependencies = [
  "crossbeam-utils",
  "lazy_static",
  "num_cpus",
+]
+
+[[package]]
+name = "rust_numerical_lib"
+version = "1.0.0"
+dependencies = [
+ "cargo-emit",
+ "cc",
+ "cfg",
+ "libc",
+ "packed_simd",
+ "rand",
+ "rayon",
+ "rustc-cfg",
+ "time",
 ]
 
 [[package]]
